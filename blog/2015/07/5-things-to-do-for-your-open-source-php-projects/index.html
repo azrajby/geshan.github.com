@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>5 Things to Do for Your Open Source PHP Projects, a Checklist - Geshan&#8217;s Blog</title>
+  <meta name="author" content="Geshan Manandhar">
+
+  
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://geshan.com.np/blog/2015/07/5-things-to-do-for-your-open-source-php-projects">
+  <link href="/favicon.png" type="image/png" rel="icon">
+  <link href="/atom.xml" rel="alternate" title="Geshan's Blog" type="application/atom+xml">
+
+  <!-- http://opengraphprotocol.org/ -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://geshan.com.np/blog/2015/07/5-things-to-do-for-your-open-source-php-projects">
+  <meta property="og:title" content="5 Things to Do for Your Open Source PHP Projects, a Checklist - Geshan's Blog">
+  
+
+  <link href="/assets/bootstrap/dist/css/bootstrap.united.min.css" rel="stylesheet" type="text/css">
+
+<meta property="og:image:width" content="450"/>
+<meta property="og:image:height" content="298"/>
+<meta name="p:domain_verify" content="e654c68562abebfa25c291f59d7d00e8"/>
+
+
+  
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+
+  
+   <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-56310304-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+
+
+</head>
+
+  <body   >
+    <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+    <div id="wrap">
+      <header role="banner">
+        <nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Geshan&#8217;s Blog</a>
+        </div>
+
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="active">
+                    <a rel="index" href="/">Blog</a>
+                </li>
+                <li >
+                    <a href="/blog/archives">Archives</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a class="subscribe-rss" href="/atom.xml" title="subscribe via RSS">
+                        <span class="visible-xs">RSS</span>
+                        <img class="hidden-xs" src="/images/rss.png" alt="RSS">
+                    </a>
+                </li>
+                
+            </ul>
+            
+                <form class="search navbar-form navbar-right" action="https://www.google.com/search" method="GET">
+                    <input type="hidden" name="sitesearch" value="geshan.com.np" />
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="q" placeholder="Search">
+                    </div>
+                </form>
+            
+        </div>
+    </div>
+</nav>
+
+
+      </header>
+      <div id="main" class="container">
+        <div id="content">
+          <div class="row">
+  <div class="page-content col-md-8" itemscope itemtype="http://schema.org/Blog">
+    <meta itemprop="name" content="Geshan's Blog" />
+    <meta itemprop="description" content="A blog about technology, open source, web development etc." />
+    <meta itemprop="url" content="http://geshan.com.np" />
+    <article class="hentry" role="article" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+      
+  <header class="page-header">
+    
+      <p class="meta text-muted text-uppercase">
+        
+
+
+
+
+
+
+
+
+
+
+
+
+<span class="glyphicon glyphicon-calendar"></span> <time datetime="2015-07-18T13:01:00+10:00"  data-updated="true" itemprop="datePublished dateCreated"><time class='entry-date' datetime='2015-07-18T13:01:00+10:00'><span class='date'><span class='date-month'>Jul</span> <span class='date-day'>18</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>1:01 pm</span></time></time>
+        
+           | <a href="#disqus_thread" itemprop="discussionUrl"
+             data-disqus-identifier="http://geshan.com.np">Comments</a>
+        
+      </p>
+    
+    
+    <h1 class="entry-title" itemprop="name headline">
+        5 Things to Do for Your Open Source PHP Projects, a Checklist
+        
+    </h1>
+    
+  </header>
+
+
+<div class="entry-content clearfix" itemprop="articleBody description"><p>Open source software (oss) are very popular in the software world, be it the server serving your web pages or the
+language/framework your website/webapp or even mobile app is written on, it is highly likely that its based on an
+open source software. As programmers this sprint of giving back to the community and helping others in form of
+Free and open source software is amazing. There are many open source PHP projects as well from frameworks to small
+libraries. It is a difficult yet rewarding experience to lead/support an open source project. If you are thinking
+of starting an open source project or open sourcing some part(s) of your existing system, this post has a checklist
+to assist you with it.</p>
+
+<p><img class="center" src="/images/php-oss-checklist/example-foss.png" title="An example open source php project" alt="Example open source project"></p>
+
+<!-- more -->
+
+
+<h2>Intro</h2>
+
+<p>It is taken for granted that you do the basics correctly like having a optimally descriptive readme, a license and
+probably a contribution guide on your project&rsquo;s Github repo. It is also assumed that as its PHP you are doing the
+basis right following <a href="http://www.php-fig.org/">FIG</a>&rsquo;s PSR standards like
+<a href="https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md">PSR-2</a> coding style guide
+and <a href="https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader.md">PSR-4</a> auto-loader standard.
+For this post I will use a template/boilerplate <a href="https://github.com/geshan/dataprovider-example">dataprovider-example</a>
+as and example, the links will open for this project for services mentioned below. So after getting the basics
+right what more do you need to consider, lets have a look at the checklist:</p>
+
+<h2>1. Check and maintain Code Quality</h2>
+
+<p>Just writing code that works might not be ideal for an open source project, also because the code you write can be read by
+anyone and used by anyone checking coding standard and code quality become a must. If you want to check your
+coding standard you can do it locally with <a href="https://github.com/squizlabs/PHP_CodeSniffer">PHP Code Sniffer</a>,
+fix coding standard issues with <a href="http://cs.sensiolabs.org/">PHP CS Fixer</a>. For other local tools you can check <a href="http://phpqatools.org/">PHP QA tools</a>.
+In case you want a continuous integration service you can use <a href="https://styleci.io/">Style CI</a> which will check your coding
+standard matches PSR-2 or not on each push. It is free for open source projects.</p>
+
+<p>In case of the code quality, there are many providers to choose from and again all of them are free to use for open
+source projects. They love open source software as we do too. Below is the list of some providers I have used/tried out:</p>
+
+<ul>
+<li><a href="https://codeclimate.com/github/geshan/pdepend-analyzer">CodeClimate</a> - Very good service, ranks your code in a GPA of 4. Has good code analysis and reports.</li>
+<li><a href="https://scrutinizer-ci.com/g/geshan/dataprovider-example/">Scrutinizer CI</a> - Great code analysis, ranks your code in a scale of 10. Extensive settings and code reports.</li>
+<li><a href="https://insight.sensiolabs.com/projects/56ff09b2-7954-4cb2-a6da-6af863775107">Sensiolabs Insight</a> - Great code analysis, ranks your code with medals. Quite extensive code reports.</li>
+<li><a href="https://www.codacy.com/app/geshan/dataprovider-example/dashboard">Codacy</a> - Good code analysis, ranks your code with A, B, C, D scale. Good settings and code reports.</li>
+</ul>
+
+
+<p>As an example I am using a project with just 2 PHP files so you can see how powerful and deep the analysis for the code is
+for each of the above services. Which one to choose from the above, the choice is yours :)</p>
+
+<h2>2. Write Tests</h2>
+
+<p>Writing tests for code is also important to verify that the code does what you expect and intend it to do. As generally
+open source projects are libraries Unit tests is recommended more than functional/integration tests. You can
+see an example test <a href="https://github.com/geshan/dataprovider-example/blob/master/tests/DataProvider/Example/Test/CheckoutTest.php">here</a>.
+Below are the two main choices of framework you have for writing tests depending on the style of testing:</p>
+
+<ul>
+<li><a href="https://phpunit.de/">PHPUnit</a> - The most popular PHP test framework, you can use it for a Test Driven Development approach.</li>
+<li><a href="http://www.phpspec.net/">PHPSpec</a> - The new emerging concept which some say are better than PHPunit, follows Behavior Driven Development approach.</li>
+</ul>
+
+
+<p>Well the question is always there do you write test first or code first, IMHO whatever you do have tests that cover your
+code for the cases you know and you think are important.</p>
+
+<h2>3. Enable Continuous Integration</h2>
+
+<p>Just writing tests will not be enough if it does not run on each push to the version control system (VCS) like git. So
+if you get fast feedback on what your new code did to the existing or new tests that would be very helpful to decide if
+your code in form of a Pull Request (PR) can be merged to the main branch (generally master). It is very important for
+open source so as to maintain stability and not break the application of anyone using your open source code. Bonus
+points if you submit the code coverage report to above mentioned code analysis services. Here too
+you have mainly 2 choices both of them are free for open source projects:</p>
+
+<ul>
+<li><a href="https://travis-ci.org/geshan/dataprovider-example">Travis CI</a> - The most popular continuous integration, fast and easy to integrate with any project.</li>
+<li><a href="https://shippable.com">Shippable CI</a> - A new player based on docker. Good and easy to integrate but can&rsquo;t show test runs even for open source projects.</li>
+</ul>
+
+
+<p>There are lots of other CI services these days and most of them are free for open source projects, still I think Travis
+makes a good choice for open source projects. The decision is yours again.</p>
+
+<h2>4. Publish to Packagist with sermver</h2>
+
+<p>OK so you have setup a git repo and done all the above mentioned things. Next logical step will be to submit your open
+source PHP project to <a href="https://packagist.org/packages/data-provider/example">Packagist</a>. It is supported by <a href="https://getcomposer.org/">Composer</a>
+php package manager and has as of writing has more than <a href="https://packagist.org/statistics">64650</a> open source projects.
+You will need to <a href="https://packagist.org/packages/submit">register</a> and have a well
+formatted <a href="https://github.com/geshan/dataprovider-example/blob/master/composer.json">composer.json</a> in your git
+repository to submit your package to Packagist. After you submit your project, any one looking for something similar like
+your project and search for your package and download it using composer. For clarity in version do use Semantic
+Versioning a.k.a <a href="http://semver.org/">SemVer</a>.</p>
+
+<h2>5. Issue board with HuBoard</h2>
+
+<p>Finally your project is being downloaded and used by other people and you are getting requests in form of issues to
+make changes or add features. Other generous and talented programmers are sending PRs to your project but how do you
+show what is being done and reflect on status of the project issues visually. Here is where
+<a href="https://huboard.com/geshan/dataprovider-example/">HuBorad</a> comes to
+your rescue. You can show the status of the issues as below to make all the interested people clear of what is happening
+in the form of a Agileish Kanban board:</p>
+
+<p><img class="center" src="/images/php-oss-checklist/huBoard.png" title="An example of issues on HuBoard" alt="Example of issues on HuBoard"></p>
+
+<h2>Conclusion</h2>
+
+<p>After checking all the items in the above checklist, be sure to be alert about issues and pull requests for the open source
+project. Successful open source project lead/members are quite alert and responsive to both issues created and pull requests
+sent to the project. You can use the data-provider example as a base template for writing your next open source project. Happy Coding.</p>
+</div>
+
+
+      <footer>
+        <p class="meta text-muted">
+          
+  
+
+<span class="glyphicon glyphicon-user"></span> <span class="byline author vcard" itemprop="author" itemscope itemtype="http://schema.org/Person">Posted by <span class="fn" itemprop="name">Geshan Manandhar</span></span>
+
+          
+
+
+
+
+
+
+
+
+
+
+
+
+<span class="glyphicon glyphicon-calendar"></span> <time datetime="2015-07-18T13:01:00+10:00"  data-updated="true" itemprop="datePublished dateCreated"><time class='entry-date' datetime='2015-07-18T13:01:00+10:00'><span class='date'><span class='date-month'>Jul</span> <span class='date-day'>18</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>1:01 pm</span></time></time>
+          
+
+<span class="glyphicon glyphicon-tags"></span>&nbsp;
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/foss/'>foss</a>, <a class='category' href='/blog/categories/php/'>php</a>, <a class='category' href='/blog/categories/programming/'>programming</a>, <a class='category' href='/blog/categories/technology/'>technology</a>
+  
+</span>
+
+
+        </p>
+        
+          <div class='shareaholic-canvas' data-app='share_buttons' data-app-id='11665322'></div>
+
+        
+        
+          <ul class="meta text-muted pager">
+            
+            <li class="previous"><a href="/blog/2015/07/how-to-split-a-new-feature-into-independent-parts-before-coding-it/" title="Previous Post: How to split a new feature into independent parts before coding it">&laquo; How to split a new feature into independent parts before coding it</a></li>
+            
+            
+            <li class="next"><a href="/blog/2015/07/getting-started-with-unit-testing-in-laravel/" title="Next Post: Getting started with unit testing in Laravel">Getting started with unit testing in Laravel &raquo;</a></li>
+            
+          </ul>
+        
+      </footer>
+    </article>
+    
+      <section>
+        <h1>Comments</h1>
+        <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+      </section>
+    
+  </div>
+
+  
+  <aside class="sidebar col-md-4">
+    
+      <section class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Recent Posts</h3>
+  </div>
+  
+  <div id="recent_posts" class="list-group">
+    
+    <a class="list-group-item " href="/blog/2018/09/7-practical-steps-to-land-your-first-tech-job/">5 Practical Steps to Land Your First Tech Job</a>
+    
+    <a class="list-group-item " href="/blog/2018/05/how-to-do-a-zero-downtime-database-db-migration-schema-change-with-a-practical-example/">How to Do a Zero Downtime Database (DB) Migration (Schema Change) With a Practical Example</a>
+    
+    <a class="list-group-item " href="/blog/2017/08/convert-your-tech-hiring-funnel-into-an-hour-glass/">Convert Your Tech Hiring Funnel Into an Hour Glass, Retain Your Tech Talent</a>
+    
+    <a class="list-group-item " href="/blog/2017/08/adopt-a-painless-continuous-delivery-culture/">Adopt a Painless Continuous Delivery Culture, Add More Business Value [Slides]</a>
+    
+    <a class="list-group-item " href="/blog/2017/06/software-companies-tech-competency-matrix/">Software Companies Tech Competency Matrix</a>
+    
+  </div>
+</section>
+<section class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">Categories</h3>
+    </div>
+    <div class="list-group">
+        
+        
+        <a class="list-group-item " href="/blog/categories/misc/">
+            <span class="badge">188</span>
+            misc
+        </a>
+        
+        
+        <a class="list-group-item " href="/blog/categories/mobiles/">
+            <span class="badge">8</span>
+            mobiles
+        </a>
+        
+        
+        <a class="list-group-item " href="/blog/categories/technology/">
+            <span class="badge">130</span>
+            technology
+        </a>
+        
+        
+        <a class="list-group-item " href="/blog/categories/foss/">
+            <span class="badge">15</span>
+            foss
+        </a>
+        
+        
+        <a class="list-group-item " href="/blog/categories/drupal/">
+            <span class="badge">37</span>
+            drupal
+        </a>
+        
+        
+        <a class="list-group-item " href="/blog/categories/programming/">
+            <span class="badge">26</span>
+            programming
+        </a>
+        
+        
+        <a class="list-group-item " href="/blog/categories/tutorial/">
+            <span class="badge">20</span>
+            tutorial
+        </a>
+        
+        
+        <a class="list-group-item " href="/blog/categories/about-me/">
+            <span class="badge">2</span>
+            about me
+        </a>
+        
+        
+        <a class="list-group-item " href="/blog/categories/learn-php/">
+            <span class="badge">4</span>
+            learn php
+        </a>
+        
+        
+        <a class="list-group-item " href="/blog/categories/php/">
+            <span class="badge">21</span>
+            php
+        </a>
+        
+        
+        <a class="list-group-item " href="/blog/categories/codeigniter/">
+            <span class="badge">1</span>
+            codeigniter
+        </a>
+        
+        
+        <a class="list-group-item " href="/blog/categories/git/">
+            <span class="badge">7</span>
+            git
+        </a>
+        
+        
+        <a class="list-group-item " href="/blog/categories/apps/">
+            <span class="badge">4</span>
+            apps
+        </a>
+        
+        
+        <a class="list-group-item " href="/blog/categories/android/">
+            <span class="badge">2</span>
+            android
+        </a>
+        
+        
+        <a class="list-group-item " href="/blog/categories/infographics/">
+            <span class="badge">7</span>
+            infographics
+        </a>
+        
+        
+        <a class="list-group-item " href="/blog/categories/testing/">
+            <span class="badge">5</span>
+            testing
+        </a>
+        
+        
+        <a class="list-group-item " href="/blog/categories/javascript/">
+            <span class="badge">1</span>
+            javascript
+        </a>
+        
+        
+        <a class="list-group-item " href="/blog/categories/symfony/">
+            <span class="badge">3</span>
+            symfony
+        </a>
+        
+        
+        <a class="list-group-item " href="/blog/categories/talks/">
+            <span class="badge">11</span>
+            talks
+        </a>
+        
+        
+        <a class="list-group-item " href="/blog/categories/laravel/">
+            <span class="badge">2</span>
+            laravel
+        </a>
+        
+        
+        <a class="list-group-item " href="/blog/categories/deployment/">
+            <span class="badge">6</span>
+            deployment
+        </a>
+        
+        
+        <a class="list-group-item " href="/blog/categories/logging/">
+            <span class="badge">2</span>
+            logging
+        </a>
+        
+        
+        <a class="list-group-item " href="/blog/categories/api/">
+            <span class="badge">1</span>
+            api
+        </a>
+        
+        
+        <a class="list-group-item " href="/blog/categories/docker/">
+            <span class="badge">2</span>
+            docker
+        </a>
+        
+        
+        <a class="list-group-item " href="/blog/categories/database/">
+            <span class="badge">1</span>
+            database
+        </a>
+        
+    </div>
+</section>
+<section id="twitter-timeline" class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">
+            Latest Tweets
+            
+            <small class="pull-right">
+              <a class="btn" href="//twitter.com/geshan" title="@geshan on Twitter" target="_blank">
+                <i class="icon-external-link"></i>
+              </a>
+            </small>
+            
+        </h3>
+    </div>
+    <div class="list-group">
+          <a class="twitter-timeline" data-dnt="true" href="//twitter.com/geshan"  data-widget-id="518273942725722112"  data-link-color="#049cdb" data-tweet-limit="" data-chrome="noheader nofooter transparent noscrollbar">Tweets by @geshan</a>
+          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    </div>
+</section>
+
+
+<section class="panel panel-default clearfix">
+  <div class="panel-heading">
+      <h3 class="panel-title">GitHub Repos</h3>
+  </div>
+  <div class="list-group" id="gh_repos">
+    <p class="loading">Status updating&#8230;</p>
+  </div>
+  
+    <div class="gh-profile-link pull-right text-muted">
+      <a href="https://github.com/geshan">@geshan</a> on GitHub
+    </div>
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'geshan',
+            count: 5,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+    
+  </aside>
+  
+</div>
+
+        </div>
+      </div>
+    </div>
+    <footer role="contentinfo"><div class="container">
+    <p class="text-muted credits">
+  Copyright &copy; 2018 - Geshan Manandhar<br>
+  <small>
+      <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>,
+      <span class="credit">customized with <a href="https://github.com/kAworu/octostrap3">octostrap3</a></span>.
+  </small>
+</p>
+
+</div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+<!-- shareaholic start -->
+<script type="text/javascript">
+    //<![CDATA[
+    (function() {
+        var shr = document.createElement('script');
+        shr.setAttribute('data-cfasync', 'false');
+        shr.src = '//dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.js';
+        shr.type = 'text/javascript'; shr.async = 'true';
+        shr.onload = shr.onreadystatechange = function() {
+            var rs = this.readyState;
+            if (rs && rs != 'complete' && rs != 'loaded') return;
+            var site_id = '053dbd80f9ee1f48b1d3735743458511';
+            try { Shareaholic.init(site_id); } catch (e) {}
+        };
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(shr, s);
+    })();
+    //]]>
+</script>
+<!-- shareaholic end -->
+</footer>
+    
+
+<script type="text/javascript">
+      var disqus_shortname = 'geshanblog';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://geshan.com.np/blog/2015/07/5-things-to-do-for-your-open-source-php-projects/';
+        var disqus_url = 'http://geshan.com.np/blog/2015/07/5-things-to-do-for-your-open-source-php-projects/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+<script src="/assets/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="/javascripts/modernizr-2.0.js"></script>
+
+
+  </body>
+</html>

@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Deployment | Geshan's Blog]]></title>
+  <link href="http://geshan.com.np/blog/categories/deployment/atom.xml" rel="self"/>
+  <link href="http://geshan.com.np/"/>
+  <updated>2018-09-29T17:33:06+10:00</updated>
+  <id>http://geshan.com.np/</id>
+  <author>
+    <name><![CDATA[Geshan Manandhar]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[How to Do a Zero Downtime Database (DB) Migration (Schema Change) With a Practical Example]]></title>
+    <link href="http://geshan.com.np/blog/2018/05/how-to-do-a-zero-downtime-database-db-migration-schema-change-with-a-practical-example/"/>
+    <updated>2018-05-01T04:00:41+10:00</updated>
+    <id>http://geshan.com.np/blog/2018/05/how-to-do-a-zero-downtime-database-db-migration-schema-change-with-a-practical-example</id>
+    <content type="html"><![CDATA[<p>Database migration on a production database is never simple. Depending on the volume of requests some teams schedule database migration to off hours. You can run your alter statements with zero or minimal downtime following the steps mentioned below with a practical example.</p>
+
+<p><img class="center" src="/images/db-migration/db-migration.png" title="&lsquo;How to do a zero downtime database&rsquo; &lsquo;How to do a zero downtime database&rsquo;" ></p>
+
+<!-- more -->
+
+
+<h2>Example</h2>
+
+<p>As an example for this post, let&rsquo;s assume you work for an E-commerce company which has both recurring and new customers. You have partners who publicize a discount code valid for a given date range and get a percent of the order&rsquo;s total tracked by their discount code. Below is the schema for the partner and coupon code. Below is the initial schema before any change:</p>
+
+<p><img class="center" src="/images/db-migration/schema-01.png" title="&lsquo;Initial DB schema&rsquo; &lsquo;Initial DB Schema&rsquo;" ></p>
+
+<p>Now the new requirement is to track different commission percent for the new and recurring customer. New and recurring customers are evaluated by a different system/microservice and it is also responsible for commission calculation based on order total which is out of the scope of this focused example.</p>
+
+<p>To do commission tracking by customer type we would decide to add 2 new columns commission_percent_new_customer, commission_percent_recurring_customer, the difficult question is how to roll it out without downtime.</p>
+
+<p><img class="center" src="/images/db-migration/schema-02.png" title="&lsquo;Updated schema with 2 new columns&rsquo; &lsquo;Updated schema with 2 new columns&rsquo;" ></p>
+
+<h3>Migration script (DB schema alter statement)</h3>
+
+<p>The following migration script will update the DB schema to be in the above state for MYSQL DB:</p>
+
+<pre><code>ALTER TABLE `partner_discount_code` ADD `commission_percent_new_customer` DECIMAL NULL AFTER `commission_percent`,
+ADD `commission_percent_recurring_customer` DECIMAL NULL AFTER `commission_percent_new_customer`, 
+,algorithm=inplace,lock=none;
+</code></pre>
+
+<p>Notice the <code>algorithm=inplace,lock=none</code> it is discussed below.</p>
+
+<h2>Evaluating Downtime</h2>
+
+<p>In the above example there can be 2 types of downtime as follows:</p>
+
+<ol>
+<li>Tables locked while migration runs</li>
+<li>Downtime because of newly introduced columns and code not matching to it</li>
+</ol>
+
+
+<p>For the first downtime issue depending on the database, it can be mitigated to a significant level with executing proper alter SQL statements. For example in MYSQL if <code>,algorithm=inplace, lock=none</code> is suffixed with your alter it will run with 0 to minimum table lock allowing reads and writes while the migration runs. This is especially important when altering tables with millions of rows as the alter can take minutes depending on the structure and data volume of the tables involved.</p>
+
+<p>For the second issue, if db alter and code release is deployed in a specific sequence it can be handled much better. The deployment steps are listed below:</p>
+
+<h2>Deployment Steps</h2>
+
+<ol>
+<li>Add the two new columns to the partner_discount_code, let&rsquo;s say the code is in v 1.1 now</li>
+<li>Deploy code v 1.2 which adds and edits all 3 columns - commission_percent, commission_percent_new_customer and commission_percent_recurring_customer.</li>
+<li>Test that all the things work as expected, even if you need to roll back nothing breaks and it&rsquo;s fully backward compatible</li>
+<li>When everything is fine, deploy code v 1.3 that adds or edits only on the 2 new columns</li>
+<li>Test it for a day or two, then as per need you can drop the commission_percent column on the partner_discount_code table as it&rsquo;s not used anymore</li>
+</ol>
+
+
+<h3>Final schema after dropping commission_percent column</h3>
+
+<p><img class="center" src="/images/db-migration/schema-03.png" title="&lsquo;Updated schema with 1 column less&rsquo; &lsquo;Updated schema with 1 column less&rsquo;" ></p>
+
+<h2>Things to consider</h2>
+
+<ul>
+<li>Always be careful with database migration. It&rsquo;s is surely safe to take a backup of the table you will run the alter statement on before executive it.</li>
+<li>Don&rsquo;t deploy the code first that write to new columns then run the migration, it will result in errors as the code will try to access non-existing column(s).</li>
+<li>Always think of backward compatibility usually without a revert migration. Generally, access to production database is only given to a select few.</li>
+<li>Run drop or rename columns only after you are fully satisfied that the new changes are not breaking anything.</li>
+<li>It is better to run migrations (alter SQL) manually than part of the deployment to keep things segregated and more predictable.</li>
+</ul>
+
+
+<h2>Conclusion</h2>
+
+<p>Database migration is not difficult if it is done the right way. Hope this post helps you run your DB migrations in a smoother fashion.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Embrace chatOps, Stop Installing Deployment Software [Slides and Video]]]></title>
+    <link href="http://geshan.com.np/blog/2016/04/embrace-chatops-stop-installing-deployment-software/"/>
+    <updated>2016-04-03T20:03:09+10:00</updated>
+    <id>http://geshan.com.np/blog/2016/04/embrace-chatops-stop-installing-deployment-software</id>
+    <content type="html"><![CDATA[<p>On 1-Apr-2016 For <a href="http://dubai2016.codemotionworld.com/">CodeMotion Dubai 2016</a> conference I talked about chatOps at Namshi.
+The main topics of the talk were:</p>
+
+<ol>
+<li>What is chatOps?</li>
+<li>Why do chatOps?</li>
+<li>How we do chatOps at Namshi</li>
+<li>How you can start chatOps in minutes</li>
+</ol>
+
+
+<p><img class="center" src="/images/chatops/chatops-hubot.jpg" title="&lsquo;Embrace chatOps, stop installing deployment software [Slides and Video]&rsquo; &lsquo;Embrace chatOps, stop installing deployment software [Slides and Video]&rsquo;" >
+(Illustration by Anjan Shrestha - AnjHero.me)</p>
+
+<p>This post has the slides and the video of the whole talk.</p>
+
+<!-- more -->
+
+
+<p>I liked the overall experience of being a conference  speaker :).
+I think the audience also had something new to fiddle around with by the end of the talk.</p>
+
+<p><img class="center" src="/images/chatops/speaker.jpg" title="&lsquo;Speaker at Codemotion Dubai 2016&rsquo; &lsquo;Speaker at Codemotion Dubai 2016&rsquo;" ></p>
+
+<p>The speaker lineup for day 1 was very good:</p>
+
+<p><img class="center" src="/images/chatops/codemodubai-speakers-day-1.jpg" title="&lsquo;Codemotion Dubai 2016 Speaker lineup&rsquo; &lsquo;Codemotion Dubai 2016 Speaker lineup&rsquo;" ></p>
+
+<p>For all the other news and views check the <a href="https://twitter.com/hashtag/codemodubai?src=hash">#codemodubai</a> hash tag on twitter
+and on <a href="https://www.facebook.com/codemotiondubai/">facebook</a>.</p>
+
+<h3>Talk Abstract</h3>
+
+<p>Are you still deploying with capistrano? It is high time to put the chat bots to work. Using chatops to deploy your
+software gives visibility to all team members. It also gives a consistent interface to deploy. Software Engineers do not
+need to install any extra software to deploy. Ops is happy because software engineers do not need SSH access to servers
+anymore. Namshi is a Rocket Internet e-commerce venture in Dubai. At Namshi, we deploy all our apps with chatbots built
+with hubot. In this session, I will uncover some real life use cases of chat bots at Namshi.</p>
+
+<h3>Some lessons learnt</h3>
+
+<p>Just a summary:</p>
+
+<ol>
+<li>Don&rsquo;t be the last speaker of the day, people are already tired and ready to head home :)</li>
+<li>Have a useful links slide that you can show towards the end while answering questions.</li>
+<li>Content is king. Image intensive or text intensive slides matter less than the real content you want to deliver.</li>
+</ol>
+
+
+<p><img class="center" src="/images/chatops/chatops-talk.jpg" title="&lsquo;Embrace chatOps, stop installing deployment software [Slides and Video]&rsquo; &lsquo;Embrace chatOps, stop installing deployment software [Slides and Video]&rsquo;" ></p>
+
+<h3>Slides</h3>
+
+<script async class="speakerdeck-embed" data-id="75a57171f12c40e3939b9504c6748f74" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
+
+
+<h3>Video</h3>
+
+<center>
+<iframe width="640" height="480" src="https://www.youtube-nocookie.com/embed/GVa1I2QiZs4?rel=0" frameborder="0" allowfullscreen></iframe>
+</center>
+
+
+<p>(Thanks <a href="http://www.lprakash.com.np/">Prakash</a> for the photo and video)</p>
+
+<p>I hope the talk about chatOps was interesting for you. Cheers!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Wercker CI the Best CI/CD Service Is Free Till Now, Use It [Slides]]]></title>
+    <link href="http://geshan.com.np/blog/2016/03/wercker-ci-the-best-ci-slash-cd-service-is-free-till-now/"/>
+    <updated>2016-03-09T16:34:08+11:00</updated>
+    <id>http://geshan.com.np/blog/2016/03/wercker-ci-the-best-ci-slash-cd-service-is-free-till-now</id>
+    <content type="html"><![CDATA[<p>On 7-Mar-2016 I did a short talk titled &ldquo;The best CI/CD service is free (till now), lets use it&rdquo; at <a href="http://namshi.com">Namshi</a>.
+It was a quick rundown of <a href="http://wercker.com/">Wercker</a> CI (Continuous Integration) features and how it works.</p>
+
+<p><img class="center" src="/images/wercker/wercker-talk.jpg" title="&lsquo;Wercker CI the best CI-CD service is free till now, use it&rsquo; &lsquo;Wercker CI the best CI-CD service is free till now, use it&rsquo;" ></p>
+
+<!-- more -->
+
+
+<p>We are currently using <a href="https://travis-ci.com/">Travis CI</a> for running our tests and our own open source
+<a href="https://github.com/namshi/roger">Roger</a> app to build docker images. The main objectives of the talk were:</p>
+
+<ul>
+<li><p>Suggest using Wercker CI to combine running our tests and building our containers in a sequence. This will prevent us from deploying broken builds</p></li>
+<li><p>Inform about a free service that can run 2 concurrent workers to build and deploy containers. It supports closed source projects too.</p></li>
+</ul>
+
+
+<p>Here are the slides:</p>
+
+<center>
+<script async class="speakerdeck-embed" data-id="48dcb61db6eb4a50b03bfea1320bfeb4" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script> 
+</center>
+
+
+<p><br/></p>
+
+<p>We discussed how it&rsquo;s still in beta, which might cause issues in the future.
+We also discussed on how Continuous Delivery and Continuous Deployment are different.</p>
+
+<p>Hope you like it :), comments and suggestions are always welcome.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[4 Pillars of a Solid Software Application and Tools to Support It]]></title>
+    <link href="http://geshan.com.np/blog/2015/10/4-pillars-of-a-solid-software-application-and-tools-to-support-it/"/>
+    <updated>2015-10-10T17:21:52+11:00</updated>
+    <id>http://geshan.com.np/blog/2015/10/4-pillars-of-a-solid-software-application-and-tools-to-support-it</id>
+    <content type="html"><![CDATA[<p>Software development is not just punching some code on the keyboard for desired output. The business side of software development always takes priority than the technicalities of it.</p>
+
+<p>I have seen some software development teams are slow because they have a lot of technical debt. Some teams are naive, the members don&rsquo;t want to explore new things . They are stuck with 5 year old technology like FTP, old legacy framework etc. In this post, I will shed some light on the four basic and important things of a solid software application. This contents of post is language and framework agnostic. It is applicable to any software project.</p>
+
+<p><img class="center" src="/images/4-pillars-software-application/4-pillars-software-application.png" title="&lsquo;4 pillars of a solid software application&rsquo; &lsquo;4 pillars of a solid software application&rsquo;" ></p>
+
+<!-- more -->
+
+
+<p><strong>Assumptions</strong></p>
+
+<p>For this post I have made the following assumptions:</p>
+
+<ul>
+<li>The software development team is using some Version Control System (VCS) like git.</li>
+<li>There is some form of project management and team structure in place.</li>
+</ul>
+
+
+<h2>Maintainable Code</h2>
+
+<p>Making software work is super important, making it just work is a problem. I have seen teams writing code for the sake of making it work. Sometimes it feels like the code is there just for compilers/interpreters not humans. Code, simple, readable and maintainable is also important. We have discussed some rules about making code maintainable do <a href="http://blog.yipl.com.np/7-golden-rules-of-simple-clean-code/">read</a> it. <a href="http://www.slideshare.net/pirhilton/how-to-name-things-the-hardest-problem-in-programming">Naming things well</a> and writing relevant code comments is also undermined.</p>
+
+<p>Having a culture of code review always helps. If someone else can check your code before its merged to the main branch, it is a good practice to follow. It opens up more ways to learn how to code in a practical way. Code reviews are better done in systems like <a href="http://github.com">Github</a>, <a href="http://bitbucket.org">Bitbucket</a> and <a href="http://gitlab.com">Gitlab</a>.</p>
+
+<h2>Automated Testing with Continuous Integration</h2>
+
+<p>Having automated tests is important. Opt for the test type that matches your team&rsquo;s current skill set. Unit testing are good to have. Writing testable code and giving team members the skill to do unit testing is an investment. Best way to approach unit testing will be grab the low hanging fruit. It will be better to start with Smoke Tests or basic functional tests. Doing a web application on each push/deployment? Check that all pages respond with a 200 HTTP response.</p>
+
+<p>Step by step add more tests and time for your team members to gain more skills. As soon as you have some form of automated tests, wire it up with a <a href="https://en.wikipedia.org/wiki/Continuous_integration">Continuous Integration (CI)</a> service. Some good options are <a href="https://travis-ci.com">Travis CI</a>, <a href="http://wercker.com">Wercker</a>, <a href="http://shippable.com">Shippable CI</a>.</p>
+
+<h2>Automated Deployment</h2>
+
+<p>Finished feature should reach production from developer&rsquo;s machine in less time. It will be possible using automated deployment using latest tools. Are you using File Transfer Protocol (FTP) in 2015? You should stop it now, the first step towards automation for a FTP user is use <a href="http://git-ftp.github.io/git-ftp/">GitFTP</a>. It is an automated way to get the changed files to server than copying it over a FTP client.</p>
+
+<p>Do one step deployment and least human work. Tools like <a href="http://capistranorb.com/">Capistrano</a>, <a href="http://www.fabfile.org/">Fabric</a>, <a href="http://rocketeer.autopergamene.eu/">Rocketeer</a> are used for automated deployment process. To sum it up, <a href="http://geshan.com.np/blog/2015/08/the-best-automated-deployment-tool-the-one-that-fits-your-needs/">the best deployment tool is&hellip; the one that fits your needs</a>.</p>
+
+<h2>Logging with Monitoring</h2>
+
+<p>Logs are the only way your software application talks back to you. Gather all your system, application logs and make it accessible via a web interface. Follow the logging <a href="https://tools.ietf.org/html/rfc5424">standard</a> and use free SAAS to render your logs in a readable way that gives you value. If dog is a man’s best friend, log is a developer’s best friend. Understand and exploit <a href="http://geshan.com.np/blog/2015/08/importance-of-logging-in-your-applications/">the importance of logging in your software application</a>.</p>
+
+<p>Just having logs is not enough, view your logs after each change. Always check your logs after each deployment to track any suspicious activity. You can use <a href="http://logentries.com">Logentries</a> or <a href="http://loggly.com">Loggly</a> for cloud logging.</p>
+
+<h2>Conclusion</h2>
+
+<p>I have not focused on the server and devOps part of the software application and deployment. These are the practices all software engineers should adhere to. These should be the goals whenever a new project starts.</p>
+
+<blockquote><p>Without 4 stable legs even a chair falls. Save your application from going down follow these 4 practices.</p></blockquote>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[The Best Automated Deployment Tool Is... The One That Fits Your Needs]]></title>
+    <link href="http://geshan.com.np/blog/2015/08/the-best-automated-deployment-tool-the-one-that-fits-your-needs/"/>
+    <updated>2015-08-29T21:22:48+10:00</updated>
+    <id>http://geshan.com.np/blog/2015/08/the-best-automated-deployment-tool-the-one-that-fits-your-needs</id>
+    <content type="html"><![CDATA[<p>The process of getting completed feature or bug fix code from the development environment to
+your web servers is web software deployment. We have been deploying code in various ways, a
+decade back we were used to uploading our files using File Transfer Protocol (FTP). I would
+not considering copying files from the development machine to a web server a form of automated
+deployment, basically it was a necessary evil at that time.</p>
+
+<p>If you still use FTP at this time like <a href="http://bit.ly/sw-eng-np-pt3">22%</a> of Nepali developers you really need to move on. In this post I will briefly mention some deployment tools and try to analyze their pros and cons. Still as the title reads the best automated deployment tool is the one that best fits your needs.</p>
+
+<p><img class="center" src="/images/deployment-tools/fabric-deployment.png" title="&lsquo;Automated Deployment demo&rsquo; &lsquo;Automated Deployment demo&rsquo;" ></p>
+
+<!-- more -->
+
+
+<h2>What is automated Deployment?</h2>
+
+<p>Generally web application deployment needs some pre-defined steps to be done so that the software
+changes are shipped from the development environment to staging/production environment. It is done
+so that the changes are available for customers/users to use the new features developed by the
+engineering team. If some or most parts of your deployment process is manual it is not automated
+deployment. For example if you ssh into your server and do a git pull it can&rsquo;t really be considered
+automated deployment process.</p>
+
+<blockquote><p>Automated deployment is a form of deployment where the defined steps for shipping code from a
+development environment to staging/production environment is one step procedure and fully or partially
+automated.</p></blockquote>
+
+<p>In my opinion, automated deployment is a language/framework agnostic need for every application as it
+saves lots of time and it can be one of the first steps towards devops culture. It is something both
+the development and system admin/devops team can work together to automate things. It will also open
+doors to further automation like continuous delivery, for example your tests pass on a CI service and
+the code can be deployed automatically to your staging servers.</p>
+
+<h2>Automated deployment characteristics</h2>
+
+<p>It should have the following characteristics :</p>
+
+<ul>
+<li>It can be trigged with just one action like one command on the command line and it will do the job.</li>
+<li>The steps will be pre-defined, reproducible and predictable.</li>
+<li>There is little or no human intervention from the start to the end.</li>
+<li>It should show the deployment progress as it happens, better feedback</li>
+<li>It should be atomic, which means either all the steps are completed or nothing happens.</li>
+</ul>
+
+
+<h2>Good to have features</h2>
+
+<p>Some good to have features for automated deployment tools are</p>
+
+<ul>
+<li>It should be able to deploy the same code in multiple servers</li>
+<li>Each deployment should be done from a given branch/tag/commit of a Version Control System (VCS) like git</li>
+<li>It should trigger notification in the form of email/chat message</li>
+<li>Everyone should be able to view which branch/tag is deployed</li>
+<li>When a deployment is in progress, it should stop other deployment to start</li>
+<li>Rollback of the last deployment should be easy and fast.</li>
+</ul>
+
+
+<h2>Free Tools available</h2>
+
+<p>Lets look at the free tools available and their popularity as per github activity
+in the table below:</p>
+
+<table>
+<thead>
+<tr>
+<th> No. </th>
+<th> Name       </th>
+<th> Written In </th>
+<th> GitHub Link </th>
+<th> Github Stars </th>
+<th> Github Watchers </th>
+<th> Github Forks </th>
+<th> Open Issues </th>
+<th> Open PRs </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> 1   </td>
+<td> <a href="http://capistranorb.com/">Capistrano</a> </td>
+<td> Ruby       </td>
+<td> <a href="https://github.com/capistrano/capistrano">Link</a>        </td>
+<td> 7457         </td>
+<td> 328             </td>
+<td> 1253         </td>
+<td> 47          </td>
+<td> 3        </td>
+</tr>
+<tr>
+<td> 2   </td>
+<td> <a href="http://www.fabfile.org/">Fabric</a>     </td>
+<td> Python     </td>
+<td> <a href="https://github.com/fabric/fabric">Link</a>        </td>
+<td> 5805         </td>
+<td> 315             </td>
+<td> 1017         </td>
+<td> 256         </td>
+<td> 124      </td>
+</tr>
+<tr>
+<td> 3   </td>
+<td> <a href="http://mina-deploy.github.io/mina/">Mina</a>       </td>
+<td> Ruby       </td>
+<td> <a href="https://github.com/mina-deploy/mina">Link</a>        </td>
+<td> 2694         </td>
+<td> 92              </td>
+<td> 267          </td>
+<td> 30          </td>
+<td> 10       </td>
+</tr>
+<tr>
+<td> 4   </td>
+<td> <a href="http://rocketeer.autopergamene.eu/">Rocketter</a>  </td>
+<td> PHP        </td>
+<td> <a href="https://github.com/rocketeers/rocketeer">Link</a>        </td>
+<td> 1721         </td>
+<td> 81              </td>
+<td> 142          </td>
+<td> 73          </td>
+<td> 5        </td>
+</tr>
+<tr>
+<td> 5   </td>
+<td> <a href="http://deployer.org/">Deployer</a>   </td>
+<td> PHP        </td>
+<td> <a href="https://github.com/deployphp/deployer">Link</a>        </td>
+<td> 1322         </td>
+<td> 84              </td>
+<td> 192          </td>
+<td> 17          </td>
+<td> 5        </td>
+</tr>
+</tbody>
+</table>
+
+
+<ul>
+<li>data is from 29-Aug-2015</li>
+</ul>
+
+
+<h2>So which one should I choose?</h2>
+
+<p>I cannot give you a clear cut winner from the above table, it will depend solely on your needs.
+Still as per your needs I can describe briefly the two tools I have used do. I have used <a href="http://capistranorb.com/">Capistrano</a> and <a href="http://www.fabfile.org/">Fabric</a>. Let&rsquo;s look at how
+they differ.</p>
+
+<h3>Capistrano</h3>
+
+<p>Capistrano written in ruby has been around as an automated deployment tools for years not, its quite stable and has support for lots of languages and frameworks from symfony to NodeJs etc. You can get more
+information about it from this <a href="https://changelog.com/110/">podcast</a> and the official <a href="https://github.com/capistrano/capistrano/blob/master/README.md">docs</a>.</p>
+
+<p>The good thing about Capistrano is it already has a defined <a href="http://capistranorb.com/documentation/getting-started/flow/">flow</a> on how to deploy applications.
+If you can understand the flow <a href="https://raw.githubusercontent.com/mpasternacki/capistrano-documentation-support-files/master/default-execution-path/Capistrano%20Execution%20Path.jpg">visually</a> and know how to make/edit a recipe and
+structure your tasks you are done. Another good thing about Capistrano as it keeps versions of releases
+and does a symlink switch when the view version is ready. Same thing for rollback, it is fast because
+basically it is just a symlink switch to the immediate old successful deployed version of the code.</p>
+
+<h3>Fabric</h3>
+
+<p>Python fabric is also an old player in the automated deployment domain, check its <a href="http://docs.fabfile.org/en/1.10/">docs</a> too. You can also get deployment
+scripts for some applications but the thing here is it is more like a remote command runner. You
+get a clean slate to structure your deployment process as you want then you can write your
+deployment commands and run then in the sequence you want. It give you the freedom to write the way
+you want and choose the sequence of tasks you want for your deployment procedure.</p>
+
+<h3>Other tools</h3>
+
+<p>Generally other tools are based on Capistrano style deployment, some say they are faster than Capistrano
+because they batch the ssh commands and run them once etc but the basic idea does not really change. I
+cannot peronally endorse any other tool as I have used them by my own.</p>
+
+<h2>What next</h2>
+
+<p>If you are already doing automated deployment you can look at making it even easier, like deploying
+from a Chat interface like Hipchat or Slack. It is termed as <a href="http://blog.flowdock.com/2014/11/11/chatops-devops-with-hubot/">ChatOps</a> where one can instruct a
+bot to deploy an application. If you don&rsquo;t want to go the chat path, you can even build a web interface
+to trigger deployments like <a href="https://developer.zendesk.com/blog/introducing-samson-a-web-interface-for-deployments">Samson</a> by Zendesk.</p>
+
+<p>If you have your tests running you can even explore continuous delivery.</p>
+
+<p>Further more the whole deployment process can be revamped with introduction of containers and
+<a href="https://www.docker.com/">Docker</a>. If docker is setup right, you may not even need deployment tools but
+it will surely take lots of resources to get the docker setup running and functioning correctly for
+production usage.</p>
+
+<h2>Conclusion</h2>
+
+<p>The decision to choose the right deployment tool that fits your language/framework, application and team
+needs will be yours. Try choosing a tool that will do the job well and can be used for a long time without
+big problems.</p>
+
+<blockquote><p>So the main catch here is, if you want to deploy a big application, want stability and structure go
+for the safer option like Capistrano. If you are just starting with automated deployment for a smaller
+application and want to automated deploy with your own custom flow use Fabric for its flexibility.</p></blockquote>
+
+<p>Choose the right tool and get started with automated deployment. Happy Automated Deploying. Bye Bye FTP and ssh into a server then <code>git pull origin master</code>.</p>
+]]></content>
+  </entry>
+  
+</feed>

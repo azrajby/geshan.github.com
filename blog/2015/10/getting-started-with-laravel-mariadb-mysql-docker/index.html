@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Getting Started With Laravel, MariaDB (MySQL) and Docker, Docker Compose - Geshan&#8217;s Blog</title>
+  <meta name="author" content="Geshan Manandhar">
+
+  
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://geshan.com.np/blog/2015/10/getting-started-with-laravel-mariadb-mysql-docker">
+  <link href="/favicon.png" type="image/png" rel="icon">
+  <link href="/atom.xml" rel="alternate" title="Geshan's Blog" type="application/atom+xml">
+
+  <!-- http://opengraphprotocol.org/ -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://geshan.com.np/blog/2015/10/getting-started-with-laravel-mariadb-mysql-docker">
+  <meta property="og:title" content="Getting Started With Laravel, MariaDB (MySQL) and Docker, Docker &hellip; - Geshan's Blog">
+  
+
+  <link href="/assets/bootstrap/dist/css/bootstrap.united.min.css" rel="stylesheet" type="text/css">
+
+<meta property="og:image:width" content="450"/>
+<meta property="og:image:height" content="298"/>
+<meta name="p:domain_verify" content="e654c68562abebfa25c291f59d7d00e8"/>
+
+
+  
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+
+  
+   <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-56310304-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+
+
+</head>
+
+  <body   >
+    <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+    <div id="wrap">
+      <header role="banner">
+        <nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Geshan&#8217;s Blog</a>
+        </div>
+
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="active">
+                    <a rel="index" href="/">Blog</a>
+                </li>
+                <li >
+                    <a href="/blog/archives">Archives</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a class="subscribe-rss" href="/atom.xml" title="subscribe via RSS">
+                        <span class="visible-xs">RSS</span>
+                        <img class="hidden-xs" src="/images/rss.png" alt="RSS">
+                    </a>
+                </li>
+                
+            </ul>
+            
+                <form class="search navbar-form navbar-right" action="https://www.google.com/search" method="GET">
+                    <input type="hidden" name="sitesearch" value="geshan.com.np" />
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="q" placeholder="Search">
+                    </div>
+                </form>
+            
+        </div>
+    </div>
+</nav>
+
+
+      </header>
+      <div id="main" class="container">
+        <div id="content">
+          <div class="row">
+  <div class="page-content col-md-8" itemscope itemtype="http://schema.org/Blog">
+    <meta itemprop="name" content="Geshan's Blog" />
+    <meta itemprop="description" content="A blog about technology, open source, web development etc." />
+    <meta itemprop="url" content="http://geshan.com.np" />
+    <article class="hentry" role="article" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+      
+  <header class="page-header">
+    
+      <p class="meta text-muted text-uppercase">
+        
+
+
+
+
+
+
+
+
+
+
+
+
+<span class="glyphicon glyphicon-calendar"></span> <time datetime="2015-10-24T18:49:48+11:00"  data-updated="true" itemprop="datePublished dateCreated"><time class='entry-date' datetime='2015-10-24T18:49:48+11:00'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>24</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>6:49 pm</span></time></time>
+        
+           | <a href="#disqus_thread" itemprop="discussionUrl"
+             data-disqus-identifier="http://geshan.com.np">Comments</a>
+        
+      </p>
+    
+    
+    <h1 class="entry-title" itemprop="name headline">
+        Getting Started With Laravel, MariaDB (MySQL) and Docker, Docker Compose
+        
+    </h1>
+    
+  </header>
+
+
+<div class="entry-content clearfix" itemprop="articleBody description"><p>&ldquo;How do I get new team members contributing code to the project in a matter of minutes/hours not days?&rdquo; is a common question heard in development teams. There are some ways to do, in my opinion <a href="http://docker.com">docker</a> is one of the best.</p>
+
+<p>Docker enables using same software stack in development, staging and production. You don&rsquo;t need to worry about the version of PHP, MYSQL or any other dependency with Docker. This post will be about Laravel and MariaDB (MySQL) with Docker for local development. It will also feature use of docker-compose. We will use PHP 5.6 and MariaDB 10.1 with Laravel 5.1.</p>
+
+<p><img class="center" src="/images/laravel-mysql-docker/laravel-mysql-docker.png" title="Getting started with Laravel, MariaDB (MySQL) and docker, docker compose" alt="Getting started with Laravel, MariaDB (MySQL) and docker, docker compose"></p>
+
+<!-- more -->
+
+
+<h2>Prerequisites</h2>
+
+<ul>
+<li>You are aware about docker and is basic usage. If you are new to docker check an <a href="http://bit.ly/1LsQ4X6">introduction screen-cast</a>) or read this <a href="http://bit.ly/1FVjL0k">Docker for PHP Developers</a> post</li>
+<li>You know about docker volumes and linking containers with docker-compose.</li>
+<li>You are running Laravel 5.x on your local machine with some PHP and MySQL setup. The setup can be local LEMP stack or XAMPP or something similar.</li>
+<li>You have docker and <a href="https://docs.docker.com/compose/install/">docker compose</a> installed on your machine</li>
+<li>You have stopped your Apache/Nginx service and MYSQL service. It will free port 80 and 3306. If
+you are using vagrant and homestead then you can run Laravel without starting it.</li>
+</ul>
+
+
+<h2>Software Versions used</h2>
+
+<p>I am running this example on Ubuntu 14.04.2 LTS.</p>
+
+<ul>
+<li>Docker : 1.7.1 (<a href="https://docs.docker.com/installation/">Installation Instructions</a>)</li>
+<li>Docker compose : 1.3.1 (<a href="https://docs.docker.com/compose/install/">Installation Instructions</a>)</li>
+</ul>
+
+
+<h2>Why use docker?</h2>
+
+<p>The reasons to use docker are simiar to <a href="http://geshan.com.np/blog/2014/07/getting-started-with-php-lemp-on-vagrant/">vagrant</a>. There are some more compelling reasons to use docker and docker compose, some of them are:</p>
+
+<h3>Quick setup of development environment</h3>
+
+<p>The developer/software engineer does not need to know which version of PHP or MySQL is in use. All s/he needs to do is <code>docker-compose up</code> and wait for the images to download (around 230 MB). After that add a entry to the /etc/hostsfile like <code>echo 127.0.0.1 project-name.dev &gt;&gt; /etc/hosts</code>. Then the project runs at <code>http://project-name.dev</code> on the browser.</p>
+
+<h3>No need to install software on local machine</h3>
+
+<p>With docker containers applications are self sufficient. There is no need to upgrade to the latest version of PHP or MySQL. The right version is already packaged inside the dockerfile and also in the container. There is no problem of one developer running PHP 5.5 and another one running PHP 5.6. All developers run the same container. You can install PHP to run composer and other scripts.</p>
+
+<h3>Same software stack in all environments</h3>
+
+<p>Same docker container can be deployed to staging or production environments. The same software stack with correct software versions is used across environments. For example the problem of one developer using MySQL 5.6 and staging running MySQL 5.5 ends.</p>
+
+<p>A <a href="https://github.com/jwilder/nginx-proxy">NGINX proxy</a> can be used to make the virtual hosts dynamic. This post is about keeping things simple.</p>
+
+<h2>Steps to running Laravel 5.x with MariaDB (MySQL) with docker</h2>
+
+<p>For this example I will use docker images with <a href="https://hub.docker.com/_/alpine/">Alpine Linux</a> base images. Alpine image is just 5 MB which makes it the best candidate for docker base images. We will use PHP version 5.6 and MariaDB version 10.1. MariaDB is a drop in replacement of MySQL and for Alpine only MariaDb is available. The example git repo for this blog post is available on <a href="https://github.com/geshan/laravel-mysql-docker">github</a>.</p>
+
+<h3>Install Laravel 5.1 on local machine</h3>
+
+<p>Run the following command:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>composer create-project laravel/laravel --prefer-dist laravel-mysql-docker</span></code></pre></td></tr></table></div></figure>
+
+
+<p>I installed it on <code>~/Projects/misc/laravel-mysql-docker</code></p>
+
+<h3>Add larael-docker.dev to /etc/hosts</h3>
+
+<p>While it is downloading Laravel add <code>127.0.0.1 larave-docker.dev</code> to your <code>/etc/hosts</code> file. It can be
+done quickly with the command below:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo echo '120.0.0.1 laravel-docker.dev' &gt;&gt; /etc/hosts</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Setup docker images with docker-compose</h3>
+
+<p>We will use <a href="https://github.com/dydx/alpine-nginx-php-mariadb">dydx/alpine-nginx-php-mariadb</a> and modify it to suit our needs. It is a docker replacement for homestead. Both docker images are based on Alpine Linux which makes it small. Create the following <code>docker-compose.yml</code> file on root of the project:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>front:
+</span><span class='line'>  image: dydx/alpine-nginx-phpfpm
+</span><span class='line'>  ports:
+</span><span class='line'>    - "80:80"
+</span><span class='line'>  volumes:
+</span><span class='line'>    - .:/var/www
+</span><span class='line'>    - docker/nginx/sites-enabled:/etc/nginx/sites-enabled
+</span><span class='line'>  links:
+</span><span class='line'>    - mysql:mysql
+</span><span class='line'>
+</span><span class='line'>mysql:
+</span><span class='line'>  image: dydx/alpine-mariadb
+</span><span class='line'>  ports:
+</span><span class='line'>    - "3306:3306"
+</span><span class='line'>  volumes:
+</span><span class='line'>    - docker/db/data:/var/lib/mysql</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>We are using dydx/alpine-nginx-phpfpm image named as front, it has PHP Nginx 1.8 and PHP-FPM.</li>
+<li>It uses supervisor to keep nginx and PHP-FPM running.</li>
+<li>We copy the all the files in current folder inside docker at <code>/var/www</code> to execute it.</li>
+<li>Other volumes are there to override the sites-enabled with virtual host and supervisor config to fix an error.</li>
+<li>The second definition is MySQL for which the data is saved in ./docker/db/data folder.</li>
+<li>The front container links the MySQL (MariaDB) container with the name <code>mysql</code></li>
+</ul>
+
+
+<h3>Create needed folders</h3>
+
+<p>In project root create the following folders:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>./docker
+</span><span class='line'>./docker/db
+</span><span class='line'>./docker/nginx
+</span><span class='line'>./docker/nginx/sites-enabled</span></code></pre></td></tr></table></div></figure>
+
+
+<p>All MYSQL/MariaDB data that would generally be stored in <code>/var/lib/mysql</code> will be linked as volume from <code>./docker/db</code>.
+This is done as docker containers don&rsquo;t have data persistence. This will keep the MySQL data persisted on the host machine which will be reused when the MySQL/MariaDB container is restarted. The folder structure should
+be like below:</p>
+
+<p><img class="center" src="/images/laravel-mysql-docker/folder-structure.png" title="Laravel, MariaDB (MySQL) and docker, docker compose folder structure" alt="Laravel, MariaDB (MySQL) and docker, docker compose folder structure"></p>
+
+<h3>Create default sites-enabled</h3>
+
+<p>Create a file named <code>default</code> on <code>./docker/nginx/sites-enabled</code> like below:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>server {
+</span><span class='line'>  server_name laravel-docker.dev;
+</span><span class='line'>  root        /var/www/public;
+</span><span class='line'>  index       index.php;
+</span><span class='line'>
+</span><span class='line'>  client_max_body_size 100M;
+</span><span class='line'>  fastcgi_read_timeout 1800;
+</span><span class='line'>
+</span><span class='line'>  location / {
+</span><span class='line'>    try_files $uri $uri/ /index.php$query_string;
+</span><span class='line'>  }
+</span><span class='line'>
+</span><span class='line'>  location ~* \.(js|css|png|jpg|jpeg|gif|ico)$ {
+</span><span class='line'>    expires       max;
+</span><span class='line'>    log_not_found off;
+</span><span class='line'>    access_log    off;
+</span><span class='line'>  }
+</span><span class='line'>
+</span><span class='line'>  location ~ \.php$ {
+</span><span class='line'>    try_files     $uri =404;
+</span><span class='line'>    include       fastcgi_params;
+</span><span class='line'>    fastcgi_index index.php;
+</span><span class='line'>    fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+</span><span class='line'>    fastcgi_pass  127.0.0.1:9000;
+</span><span class='line'>  }
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Run Docker compose up</h3>
+
+<p>Now give you are in the project root, you can run <code>docker-compose up</code> to build and run the containers.
+Wait for the containers to download. You can do more customization if you create your own image and do a
+docker-compose build to build the images.</p>
+
+<p>After you run docker-compose up you will see output like below:</p>
+
+<p><img class="center" src="/images/laravel-mysql-docker/docker-compose-up.png" title="Laravel, MariaDB (MySQL) and docker, docker compose up output" alt="Laravel, MariaDB (MySQL) and docker, docker compose up output"></p>
+
+<h3>Fix permissions</h3>
+
+<p>The containers are up still as the cache and logs are not writable it will hit a 500 Internal server
+error. To fix this use the following command to relax the file permissions inside the container in a
+new console tab.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>docker exec -it laravelmysqldocker_front_1 chmod 0777 /var/www/storage -R</span></code></pre></td></tr></table></div></figure>
+
+
+<p>or it can be done locally too with the following command:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>chmod 0777 /var/www/storage -R</span></code></pre></td></tr></table></div></figure>
+
+
+<p>If you want to run your artisan commands you can run them inside the front container. Hit the command below:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>docker exec -it laravelmysqldocker_front_1 /bin/sh</span></code></pre></td></tr></table></div></figure>
+
+
+<p>You will get the shell of the front container then do <code>cd /var/www</code> and <code>php artisan</code> all your artisan commands are there.</p>
+
+<h3>Access <a href="http://http://laravel-docker.dev">http://http://laravel-docker.dev</a></h3>
+
+<p>You should be able to load Laravel in the browser now navigating to <code>http://laravel-docker.dev</code>. Here you can see the Laravel 5 default page loading.</p>
+
+<h2>MySQL Settings</h2>
+
+<p>You can check if MySQL/MariaDB is running by logging into MySQL locally with:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>mysql -uhomestead -psecret homestead</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This will connect to you local port 3306 and you can see that mysql is working. You can even use tools like
+MySQL workbench to verify that MySQL is working fine.</p>
+
+<p>From the container when you connect to MySQL the <code>DB_HOST</code> is not localhost anymore it should be <code>mysql</code> (as set in docker-compose.yml file) and you are all set to use MySQL. As an example have a look at the db part of .env file I used:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>DB_HOST=mysql
+</span><span class='line'>DB_DATABASE=homestead
+</span><span class='line'>DB_USERNAME=homestead
+</span><span class='line'>DB_PASSWORD=secret</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The easiest way to verify if Laravel is talking to MySQL/MariaDb correctly is just run the following command:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>docker exec -it laravelmysqldocker_front_1 /bin/sh
+</span><span class='line'>
+</span><span class='line'>## you will be inside the front container now
+</span><span class='line'>
+</span><span class='line'>cd /var/www/
+</span><span class='line'>
+</span><span class='line'>php artisan migrate</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Then you will see some messages like below:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Migration table created successfully.
+</span><span class='line'>Migrated: 2014_10_12_000000_create_users_table
+</span><span class='line'>Migrated: 2014_10_12_100000_create_password_resets_table</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Now run the following queries on MySQL/MariaDb via the cli client or some other client like MySQL Workbench.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>use homestead;
+</span><span class='line'>describe users;</span></code></pre></td></tr></table></div></figure>
+
+
+<p>You will get an output like below:</p>
+
+<p><img class="center" src="/images/laravel-mysql-docker/users-table.png" title="Laravel, MariaDB (MySQL) and docker, docker compose users table" alt="Laravel, MariaDB (MySQL) and docker, docker compose users table"></p>
+
+<h3>Stop docker containers</h3>
+
+<p>You have seen that docker is running from the containers. To stop your containers you should run:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>docker-compose stop</span></code></pre></td></tr></table></div></figure>
+
+
+<p>on the project root and it will stop the containers like below:</p>
+
+<p><img class="center" src="/images/laravel-mysql-docker/docker-compose-stop.png" title="Laravel, MariaDB (MySQL) and docker, docker compose stop output" alt="Laravel, MariaDB (MySQL) and docker, docker compose stop output"></p>
+
+<h2>Next Steps</h2>
+
+<p>You can carry on using the docker containers to replace your local Apache/Ngnix and MySQL. You can develop your Laravel applicaiton with ease using docker and docker compose.</p>
+
+<h2>Conclusion</h2>
+
+<blockquote><p>You can use this analogy that containers are cattle and virtual machines (VMs) are pets.</p></blockquote>
+
+<p>Creating, deleting and reconstructing the containers should be easy, fast and seamless than VMs.
+If you want to speed up your development flow and help other team members contribute faster to the project
+opt for docker and docker-comopse. Happy Dockerizing and coding Laravel + PHP!</p>
+</div>
+
+
+      <footer>
+        <p class="meta text-muted">
+          
+  
+
+<span class="glyphicon glyphicon-user"></span> <span class="byline author vcard" itemprop="author" itemscope itemtype="http://schema.org/Person">Posted by <span class="fn" itemprop="name">Geshan Manandhar</span></span>
+
+          
+
+
+
+
+
+
+
+
+
+
+
+
+<span class="glyphicon glyphicon-calendar"></span> <time datetime="2015-10-24T18:49:48+11:00"  data-updated="true" itemprop="datePublished dateCreated"><time class='entry-date' datetime='2015-10-24T18:49:48+11:00'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>24</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>6:49 pm</span></time></time>
+          
+
+<span class="glyphicon glyphicon-tags"></span>&nbsp;
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/docker/'>docker</a>, <a class='category' href='/blog/categories/laravel/'>laravel</a>, <a class='category' href='/blog/categories/misc/'>misc</a>, <a class='category' href='/blog/categories/php/'>php</a>, <a class='category' href='/blog/categories/technology/'>technology</a>
+  
+</span>
+
+
+        </p>
+        
+          <div class='shareaholic-canvas' data-app='share_buttons' data-app-id='11665322'></div>
+
+        
+        
+          <ul class="meta text-muted pager">
+            
+            <li class="previous"><a href="/blog/2015/10/3-podcasts-every-software-engineer-slash-developer-should-subscribe-to/" title="Previous Post: 3 Podcasts every software engineer/developer should subscribe to">&laquo; 3 Podcasts every software engineer/developer should subscribe to</a></li>
+            
+            
+            <li class="next"><a href="/blog/2015/11/3-weeklies-every-software-engineer-slash-developer-should-subscribe-to/" title="Next Post: 3 weeklies every software engineer/developer should subscribe to">3 weeklies every software engineer/developer should subscribe to &raquo;</a></li>
+            
+          </ul>
+        
+      </footer>
+    </article>
+    
+      <section>
+        <h1>Comments</h1>
+        <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+      </section>
+    
+  </div>
+
+  
+  <aside class="sidebar col-md-4">
+    
+      <section class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Recent Posts</h3>
+  </div>
+  
+  <div id="recent_posts" class="list-group">
+    
+    <a class="list-group-item " href="/blog/2018/09/7-practical-steps-to-land-your-first-tech-job/">5 Practical Steps to Land Your First Tech Job</a>
+    
+    <a class="list-group-item " href="/blog/2018/05/how-to-do-a-zero-downtime-database-db-migration-schema-change-with-a-practical-example/">How to Do a Zero Downtime Database (DB) Migration (Schema Change) With a Practical Example</a>
+    
+    <a class="list-group-item " href="/blog/2017/08/convert-your-tech-hiring-funnel-into-an-hour-glass/">Convert Your Tech Hiring Funnel Into an Hour Glass, Retain Your Tech Talent</a>
+    
+    <a class="list-group-item " href="/blog/2017/08/adopt-a-painless-continuous-delivery-culture/">Adopt a Painless Continuous Delivery Culture, Add More Business Value [Slides]</a>
+    
+    <a class="list-group-item " href="/blog/2017/06/software-companies-tech-competency-matrix/">Software Companies Tech Competency Matrix</a>
+    
+  </div>
+</section>
+<section class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">Categories</h3>
+    </div>
+    <div class="list-group">
+        
+        
+        <a class="list-group-item " href="/blog/categories/misc/">
+            <span class="badge">188</span>
+            misc
+        </a>
+        
+        
+        <a class="list-group-item " href="/blog/categories/mobiles/">
+            <span class="badge">8</span>
+            mobiles
+        </a>
+        
+        
+        <a class="list-group-item " href="/blog/categories/technology/">
+            <span class="badge">130</span>
+            technology
+        </a>
+        
+        
+        <a class="list-group-item " href="/blog/categories/foss/">
+            <span class="badge">15</span>
+            foss
+        </a>
+        
+        
+        <a class="list-group-item " href="/blog/categories/drupal/">
+            <span class="badge">37</span>
+            drupal
+        </a>
+        
+        
+        <a class="list-group-item " href="/blog/categories/programming/">
+            <span class="badge">26</span>
+            programming
+        </a>
+        
+        
+        <a class="list-group-item " href="/blog/categories/tutorial/">
+            <span class="badge">20</span>
+            tutorial
+        </a>
+        
+        
+        <a class="list-group-item " href="/blog/categories/about-me/">
+            <span class="badge">2</span>
+            about me
+        </a>
+        
+        
+        <a class="list-group-item " href="/blog/categories/learn-php/">
+            <span class="badge">4</span>
+            learn php
+        </a>
+        
+        
+        <a class="list-group-item " href="/blog/categories/php/">
+            <span class="badge">21</span>
+            php
+        </a>
+        
+        
+        <a class="list-group-item " href="/blog/categories/codeigniter/">
+            <span class="badge">1</span>
+            codeigniter
+        </a>
+        
+        
+        <a class="list-group-item " href="/blog/categories/git/">
+            <span class="badge">7</span>
+            git
+        </a>
+        
+        
+        <a class="list-group-item " href="/blog/categories/apps/">
+            <span class="badge">4</span>
+            apps
+        </a>
+        
+        
+        <a class="list-group-item " href="/blog/categories/android/">
+            <span class="badge">2</span>
+            android
+        </a>
+        
+        
+        <a class="list-group-item " href="/blog/categories/infographics/">
+            <span class="badge">7</span>
+            infographics
+        </a>
+        
+        
+        <a class="list-group-item " href="/blog/categories/testing/">
+            <span class="badge">5</span>
+            testing
+        </a>
+        
+        
+        <a class="list-group-item " href="/blog/categories/javascript/">
+            <span class="badge">1</span>
+            javascript
+        </a>
+        
+        
+        <a class="list-group-item " href="/blog/categories/symfony/">
+            <span class="badge">3</span>
+            symfony
+        </a>
+        
+        
+        <a class="list-group-item " href="/blog/categories/talks/">
+            <span class="badge">11</span>
+            talks
+        </a>
+        
+        
+        <a class="list-group-item " href="/blog/categories/laravel/">
+            <span class="badge">2</span>
+            laravel
+        </a>
+        
+        
+        <a class="list-group-item " href="/blog/categories/deployment/">
+            <span class="badge">6</span>
+            deployment
+        </a>
+        
+        
+        <a class="list-group-item " href="/blog/categories/logging/">
+            <span class="badge">2</span>
+            logging
+        </a>
+        
+        
+        <a class="list-group-item " href="/blog/categories/api/">
+            <span class="badge">1</span>
+            api
+        </a>
+        
+        
+        <a class="list-group-item " href="/blog/categories/docker/">
+            <span class="badge">2</span>
+            docker
+        </a>
+        
+        
+        <a class="list-group-item " href="/blog/categories/database/">
+            <span class="badge">1</span>
+            database
+        </a>
+        
+    </div>
+</section>
+<section id="twitter-timeline" class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">
+            Latest Tweets
+            
+            <small class="pull-right">
+              <a class="btn" href="//twitter.com/geshan" title="@geshan on Twitter" target="_blank">
+                <i class="icon-external-link"></i>
+              </a>
+            </small>
+            
+        </h3>
+    </div>
+    <div class="list-group">
+          <a class="twitter-timeline" data-dnt="true" href="//twitter.com/geshan"  data-widget-id="518273942725722112"  data-link-color="#049cdb" data-tweet-limit="" data-chrome="noheader nofooter transparent noscrollbar">Tweets by @geshan</a>
+          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    </div>
+</section>
+
+
+<section class="panel panel-default clearfix">
+  <div class="panel-heading">
+      <h3 class="panel-title">GitHub Repos</h3>
+  </div>
+  <div class="list-group" id="gh_repos">
+    <p class="loading">Status updating&#8230;</p>
+  </div>
+  
+    <div class="gh-profile-link pull-right text-muted">
+      <a href="https://github.com/geshan">@geshan</a> on GitHub
+    </div>
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'geshan',
+            count: 5,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+    
+  </aside>
+  
+</div>
+
+        </div>
+      </div>
+    </div>
+    <footer role="contentinfo"><div class="container">
+    <p class="text-muted credits">
+  Copyright &copy; 2018 - Geshan Manandhar<br>
+  <small>
+      <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>,
+      <span class="credit">customized with <a href="https://github.com/kAworu/octostrap3">octostrap3</a></span>.
+  </small>
+</p>
+
+</div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+<!-- shareaholic start -->
+<script type="text/javascript">
+    //<![CDATA[
+    (function() {
+        var shr = document.createElement('script');
+        shr.setAttribute('data-cfasync', 'false');
+        shr.src = '//dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.js';
+        shr.type = 'text/javascript'; shr.async = 'true';
+        shr.onload = shr.onreadystatechange = function() {
+            var rs = this.readyState;
+            if (rs && rs != 'complete' && rs != 'loaded') return;
+            var site_id = '053dbd80f9ee1f48b1d3735743458511';
+            try { Shareaholic.init(site_id); } catch (e) {}
+        };
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(shr, s);
+    })();
+    //]]>
+</script>
+<!-- shareaholic end -->
+</footer>
+    
+
+<script type="text/javascript">
+      var disqus_shortname = 'geshanblog';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://geshan.com.np/blog/2015/10/getting-started-with-laravel-mariadb-mysql-docker/';
+        var disqus_url = 'http://geshan.com.np/blog/2015/10/getting-started-with-laravel-mariadb-mysql-docker/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+<script src="/assets/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="/javascripts/modernizr-2.0.js"></script>
+
+
+  </body>
+</html>

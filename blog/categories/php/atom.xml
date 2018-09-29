@@ -1,0 +1,630 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Php | Geshan's Blog]]></title>
+  <link href="http://geshan.com.np/blog/categories/php/atom.xml" rel="self"/>
+  <link href="http://geshan.com.np/"/>
+  <updated>2018-09-29T17:33:06+10:00</updated>
+  <id>http://geshan.com.np/</id>
+  <author>
+    <name><![CDATA[Geshan Manandhar]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Getting Started With Laravel, MariaDB (MySQL) and Docker, Docker Compose]]></title>
+    <link href="http://geshan.com.np/blog/2015/10/getting-started-with-laravel-mariadb-mysql-docker/"/>
+    <updated>2015-10-24T18:49:48+11:00</updated>
+    <id>http://geshan.com.np/blog/2015/10/getting-started-with-laravel-mariadb-mysql-docker</id>
+    <content type="html"><![CDATA[<p>&ldquo;How do I get new team members contributing code to the project in a matter of minutes/hours not days?&rdquo; is a common question heard in development teams. There are some ways to do, in my opinion <a href="http://docker.com">docker</a> is one of the best.</p>
+
+<p>Docker enables using same software stack in development, staging and production. You don&rsquo;t need to worry about the version of PHP, MYSQL or any other dependency with Docker. This post will be about Laravel and MariaDB (MySQL) with Docker for local development. It will also feature use of docker-compose. We will use PHP 5.6 and MariaDB 10.1 with Laravel 5.1.</p>
+
+<p><img class="center" src="/images/laravel-mysql-docker/laravel-mysql-docker.png" title="&lsquo;Getting started with Laravel, MariaDB (MySQL) and docker, docker compose&rsquo; &lsquo;Getting started with Laravel, MariaDB (MySQL) and docker, docker compose&rsquo;" ></p>
+
+<!-- more -->
+
+
+<h2>Prerequisites</h2>
+
+<ul>
+<li>You are aware about docker and is basic usage. If you are new to docker check an <a href="http://bit.ly/1LsQ4X6">introduction screen-cast</a>) or read this <a href="http://bit.ly/1FVjL0k">Docker for PHP Developers</a> post</li>
+<li>You know about docker volumes and linking containers with docker-compose.</li>
+<li>You are running Laravel 5.x on your local machine with some PHP and MySQL setup. The setup can be local LEMP stack or XAMPP or something similar.</li>
+<li>You have docker and <a href="https://docs.docker.com/compose/install/">docker compose</a> installed on your machine</li>
+<li>You have stopped your Apache/Nginx service and MYSQL service. It will free port 80 and 3306. If
+you are using vagrant and homestead then you can run Laravel without starting it.</li>
+</ul>
+
+
+<h2>Software Versions used</h2>
+
+<p>I am running this example on Ubuntu 14.04.2 LTS.</p>
+
+<ul>
+<li>Docker : 1.7.1 (<a href="https://docs.docker.com/installation/">Installation Instructions</a>)</li>
+<li>Docker compose : 1.3.1 (<a href="https://docs.docker.com/compose/install/">Installation Instructions</a>)</li>
+</ul>
+
+
+<h2>Why use docker?</h2>
+
+<p>The reasons to use docker are simiar to <a href="http://geshan.com.np/blog/2014/07/getting-started-with-php-lemp-on-vagrant/">vagrant</a>. There are some more compelling reasons to use docker and docker compose, some of them are:</p>
+
+<h3>Quick setup of development environment</h3>
+
+<p>The developer/software engineer does not need to know which version of PHP or MySQL is in use. All s/he needs to do is <code>docker-compose up</code> and wait for the images to download (around 230 MB). After that add a entry to the /etc/hostsfile like <code>echo 127.0.0.1 project-name.dev &gt;&gt; /etc/hosts</code>. Then the project runs at <code>http://project-name.dev</code> on the browser.</p>
+
+<h3>No need to install software on local machine</h3>
+
+<p>With docker containers applications are self sufficient. There is no need to upgrade to the latest version of PHP or MySQL. The right version is already packaged inside the dockerfile and also in the container. There is no problem of one developer running PHP 5.5 and another one running PHP 5.6. All developers run the same container. You can install PHP to run composer and other scripts.</p>
+
+<h3>Same software stack in all environments</h3>
+
+<p>Same docker container can be deployed to staging or production environments. The same software stack with correct software versions is used across environments. For example the problem of one developer using MySQL 5.6 and staging running MySQL 5.5 ends.</p>
+
+<p>A <a href="https://github.com/jwilder/nginx-proxy">NGINX proxy</a> can be used to make the virtual hosts dynamic. This post is about keeping things simple.</p>
+
+<h2>Steps to running Laravel 5.x with MariaDB (MySQL) with docker</h2>
+
+<p>For this example I will use docker images with <a href="https://hub.docker.com/_/alpine/">Alpine Linux</a> base images. Alpine image is just 5 MB which makes it the best candidate for docker base images. We will use PHP version 5.6 and MariaDB version 10.1. MariaDB is a drop in replacement of MySQL and for Alpine only MariaDb is available. The example git repo for this blog post is available on <a href="https://github.com/geshan/laravel-mysql-docker">github</a>.</p>
+
+<h3>Install Laravel 5.1 on local machine</h3>
+
+<p>Run the following command:</p>
+
+<pre><code>composer create-project laravel/laravel --prefer-dist laravel-mysql-docker
+</code></pre>
+
+<p>I installed it on <code>~/Projects/misc/laravel-mysql-docker</code></p>
+
+<h3>Add larael-docker.dev to /etc/hosts</h3>
+
+<p>While it is downloading Laravel add <code>127.0.0.1 larave-docker.dev</code> to your <code>/etc/hosts</code> file. It can be
+done quickly with the command below:</p>
+
+<pre><code>sudo echo '120.0.0.1 laravel-docker.dev' &gt;&gt; /etc/hosts
+</code></pre>
+
+<h3>Setup docker images with docker-compose</h3>
+
+<p>We will use <a href="https://github.com/dydx/alpine-nginx-php-mariadb">dydx/alpine-nginx-php-mariadb</a> and modify it to suit our needs. It is a docker replacement for homestead. Both docker images are based on Alpine Linux which makes it small. Create the following <code>docker-compose.yml</code> file on root of the project:</p>
+
+<pre><code>front:
+  image: dydx/alpine-nginx-phpfpm
+  ports:
+    - "80:80"
+  volumes:
+    - .:/var/www
+    - docker/nginx/sites-enabled:/etc/nginx/sites-enabled
+  links:
+    - mysql:mysql
+
+mysql:
+  image: dydx/alpine-mariadb
+  ports:
+    - "3306:3306"
+  volumes:
+    - docker/db/data:/var/lib/mysql
+</code></pre>
+
+<ul>
+<li>We are using dydx/alpine-nginx-phpfpm image named as front, it has PHP Nginx 1.8 and PHP-FPM.</li>
+<li>It uses supervisor to keep nginx and PHP-FPM running.</li>
+<li>We copy the all the files in current folder inside docker at <code>/var/www</code> to execute it.</li>
+<li>Other volumes are there to override the sites-enabled with virtual host and supervisor config to fix an error.</li>
+<li>The second definition is MySQL for which the data is saved in ./docker/db/data folder.</li>
+<li>The front container links the MySQL (MariaDB) container with the name <code>mysql</code></li>
+</ul>
+
+
+<h3>Create needed folders</h3>
+
+<p>In project root create the following folders:</p>
+
+<pre><code>./docker
+./docker/db
+./docker/nginx
+./docker/nginx/sites-enabled
+</code></pre>
+
+<p>All MYSQL/MariaDB data that would generally be stored in <code>/var/lib/mysql</code> will be linked as volume from <code>./docker/db</code>.
+This is done as docker containers don&rsquo;t have data persistence. This will keep the MySQL data persisted on the host machine which will be reused when the MySQL/MariaDB container is restarted. The folder structure should
+be like below:</p>
+
+<p><img class="center" src="/images/laravel-mysql-docker/folder-structure.png" title="&lsquo;Laravel, MariaDB (MySQL) and docker, docker compose folder structure&rsquo; &lsquo;Laravel, MariaDB (MySQL) and docker, docker compose folder structure&rsquo;" ></p>
+
+<h3>Create default sites-enabled</h3>
+
+<p>Create a file named <code>default</code> on <code>./docker/nginx/sites-enabled</code> like below:</p>
+
+<pre><code>server {
+  server_name laravel-docker.dev;
+  root        /var/www/public;
+  index       index.php;
+
+  client_max_body_size 100M;
+  fastcgi_read_timeout 1800;
+
+  location / {
+    try_files $uri $uri/ /index.php$query_string;
+  }
+
+  location ~* \.(js|css|png|jpg|jpeg|gif|ico)$ {
+    expires       max;
+    log_not_found off;
+    access_log    off;
+  }
+
+  location ~ \.php$ {
+    try_files     $uri =404;
+    include       fastcgi_params;
+    fastcgi_index index.php;
+    fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+    fastcgi_pass  127.0.0.1:9000;
+  }
+}
+</code></pre>
+
+<h3>Run Docker compose up</h3>
+
+<p>Now give you are in the project root, you can run <code>docker-compose up</code> to build and run the containers.
+Wait for the containers to download. You can do more customization if you create your own image and do a
+docker-compose build to build the images.</p>
+
+<p>After you run docker-compose up you will see output like below:</p>
+
+<p><img class="center" src="/images/laravel-mysql-docker/docker-compose-up.png" title="&lsquo;Laravel, MariaDB (MySQL) and docker, docker compose up output&rsquo; &lsquo;Laravel, MariaDB (MySQL) and docker, docker compose up output&rsquo;" ></p>
+
+<h3>Fix permissions</h3>
+
+<p>The containers are up still as the cache and logs are not writable it will hit a 500 Internal server
+error. To fix this use the following command to relax the file permissions inside the container in a
+new console tab.</p>
+
+<pre><code>docker exec -it laravelmysqldocker_front_1 chmod 0777 /var/www/storage -R
+</code></pre>
+
+<p>or it can be done locally too with the following command:</p>
+
+<pre><code>chmod 0777 /var/www/storage -R
+</code></pre>
+
+<p>If you want to run your artisan commands you can run them inside the front container. Hit the command below:</p>
+
+<pre><code>docker exec -it laravelmysqldocker_front_1 /bin/sh
+</code></pre>
+
+<p>You will get the shell of the front container then do <code>cd /var/www</code> and <code>php artisan</code> all your artisan commands are there.</p>
+
+<h3>Access <a href="http://http://laravel-docker.dev">http://http://laravel-docker.dev</a></h3>
+
+<p>You should be able to load Laravel in the browser now navigating to <code>http://laravel-docker.dev</code>. Here you can see the Laravel 5 default page loading.</p>
+
+<h2>MySQL Settings</h2>
+
+<p>You can check if MySQL/MariaDB is running by logging into MySQL locally with:</p>
+
+<pre><code>mysql -uhomestead -psecret homestead
+</code></pre>
+
+<p>This will connect to you local port 3306 and you can see that mysql is working. You can even use tools like
+MySQL workbench to verify that MySQL is working fine.</p>
+
+<p>From the container when you connect to MySQL the <code>DB_HOST</code> is not localhost anymore it should be <code>mysql</code> (as set in docker-compose.yml file) and you are all set to use MySQL. As an example have a look at the db part of .env file I used:</p>
+
+<pre><code>DB_HOST=mysql
+DB_DATABASE=homestead
+DB_USERNAME=homestead
+DB_PASSWORD=secret
+</code></pre>
+
+<p>The easiest way to verify if Laravel is talking to MySQL/MariaDb correctly is just run the following command:</p>
+
+<pre><code>docker exec -it laravelmysqldocker_front_1 /bin/sh
+
+## you will be inside the front container now
+
+cd /var/www/
+
+php artisan migrate
+</code></pre>
+
+<p>Then you will see some messages like below:</p>
+
+<pre><code>Migration table created successfully.
+Migrated: 2014_10_12_000000_create_users_table
+Migrated: 2014_10_12_100000_create_password_resets_table
+</code></pre>
+
+<p>Now run the following queries on MySQL/MariaDb via the cli client or some other client like MySQL Workbench.</p>
+
+<pre><code>use homestead;
+describe users;
+</code></pre>
+
+<p>You will get an output like below:</p>
+
+<p><img class="center" src="/images/laravel-mysql-docker/users-table.png" title="&lsquo;Laravel, MariaDB (MySQL) and docker, docker compose users table&rsquo; &lsquo;Laravel, MariaDB (MySQL) and docker, docker compose users table&rsquo;" ></p>
+
+<h3>Stop docker containers</h3>
+
+<p>You have seen that docker is running from the containers. To stop your containers you should run:</p>
+
+<pre><code>docker-compose stop
+</code></pre>
+
+<p>on the project root and it will stop the containers like below:</p>
+
+<p><img class="center" src="/images/laravel-mysql-docker/docker-compose-stop.png" title="&lsquo;Laravel, MariaDB (MySQL) and docker, docker compose stop output&rsquo; &lsquo;Laravel, MariaDB (MySQL) and docker, docker compose stop output&rsquo;" ></p>
+
+<h2>Next Steps</h2>
+
+<p>You can carry on using the docker containers to replace your local Apache/Ngnix and MySQL. You can develop your Laravel applicaiton with ease using docker and docker compose.</p>
+
+<h2>Conclusion</h2>
+
+<blockquote><p>You can use this analogy that containers are cattle and virtual machines (VMs) are pets.</p></blockquote>
+
+<p>Creating, deleting and reconstructing the containers should be easy, fast and seamless than VMs.
+If you want to speed up your development flow and help other team members contribute faster to the project
+opt for docker and docker-comopse. Happy Dockerizing and coding Laravel + PHP!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Getting Started With Unit Testing in Laravel]]></title>
+    <link href="http://geshan.com.np/blog/2015/07/getting-started-with-unit-testing-in-laravel/"/>
+    <updated>2015-07-25T14:57:42+10:00</updated>
+    <id>http://geshan.com.np/blog/2015/07/getting-started-with-unit-testing-in-laravel</id>
+    <content type="html"><![CDATA[<p>Automated Testing an application is kind of a puzzle given the choice of methodologies (TDD, BDD&hellip;), frameworks etc
+there is no clear direction on how to test an application. Same applies for any PHP application, where you have
+many frameworks, methods and styles to choose from. In this blog post I will shed some light on how to get started
+with &ldquo;Unit&rdquo; testing in a Laravel application. Laravel has gained lots of popularity in the past years may be due to its
+simplicity, ease of use, clear documentation and availability of packages/libraries.</p>
+
+<p><img class="center" src="/images/laravel-unit-tests/laravel-popularity.png" title="&lsquo;Laravel is very popular&rsquo; &lsquo;Laravel is very popular&rsquo;" ></p>
+
+<!-- more -->
+
+
+<h2>Introduction</h2>
+
+<p>A general issue with PHP Frameworks is that for framework code they always use unit testing and in the documentation for
+applications using the framework they document and support using functional testing. It makes sense in a way that the framework
+code is general and the application code is specific but it should also be clearly mentioned that the code can be
+tested in a unit test fashion and not only on how it is rendered in a browser. Same goes for laravel the framework
+tests are <a href="https://github.com/laravel/framework/blob/5.1/tests/View/ViewBladeCompilerTest.php">Unit</a> test and the
+documentation for application tests are for <a href="http://laravel.com/docs/5.1/testing">functional</a> test.</p>
+
+<p><img class="center" src="/images/laravel-unit-tests/laravel-testing-doc.png" title="&lsquo;Laravel application testing doc&rsquo; &lsquo;Laravel application testing doc&rsquo;" ></p>
+
+<h2>Qualities of Unit tests</h2>
+
+<p>Unit tests should test only one method or be focus on one class and not take into account the dependencies. All the
+dependencies should be mocked and only the class/method under test should be tested if it works as expected. Some
+qualities of unit tests are:</p>
+
+<ol>
+<li>It should test only one specific part of the application generally a method/class.</li>
+<li>It should be simple and verify only the specific part under test (single unit of work)</li>
+<li>It should not depend on external data</li>
+<li>It should not dependent on external resources like file system, database etc</li>
+<li>It should not depend on particular order and be isolated, so you could even run it in parallel</li>
+</ol>
+
+
+<p>The above 5 characteristics make it easy to setup and super fast when you run as there are no external dependencies
+like a database or file system.</p>
+
+<p><img class="center" src="/images/laravel-unit-tests/laravel-unit-tests.png" title="&lsquo;Laravel unit tests&rsquo; &lsquo;Laravel unit tests&rsquo;" ></p>
+
+<h2>More on Unit testing</h2>
+
+<p>Unit tests is about writing testable code, if your functions are 50 odd lines and your classes are 1000+ lines writing
+unit tests for them will be a pain. If the code is well structured and broken down into logical classes and method
+writing unit tests will be a breeze.</p>
+
+<h2>Unit testing in Laravel</h2>
+
+<p>In case of Laravel, you can follow your own structure and make the controllers very slim and use services where the
+domain/business logic can reside. For this example I will use a checkout example with following conditions:</p>
+
+<ol>
+<li>If the payment method is Cash, it will add 5.0 as Cash on Delivery Fee</li>
+<li>For all other payment methods the Cash on Delivery Fee will be 0.0</li>
+</ol>
+
+
+<h2>New Laravel Structure and steps</h2>
+
+<p>We will structure the Laravel application as:</p>
+
+<p><img class="center" src="/images/laravel-unit-tests/laravel-unit-test-structure.png" title="&lsquo;Laravel unit test application structure&rsquo; &lsquo;Laravel unit test application structure&rsquo;" ></p>
+
+<p>For the above case we will do the following to achieve unit testing with a structure having Service as below:</p>
+
+<ul>
+<li>Get a basic laravel set up with <code>composer create-project laravel/laravel --prefer-dist</code></li>
+<li>Add a <a href="https://github.com/geshan/laravel-unit-test-example/blob/master/app/Services/Checkout.php">Checkout service</a> at <code>App\Services\Checkout</code>, write relevant code to fulfill above requirements.</li>
+<li>Add the checkout service as a container service in <a href="https://github.com/geshan/laravel-unit-test-example/blob/master/app/Providers/AppServiceProvider.php#L27">App\Providers\AppServiceProvider</a> with
+<code>php
+public function register()
+{
+  $this-&gt;app-&gt;instance('Checkout', new Checkout());
+}
+</code></li>
+<li>Add a <a href="https://github.com/geshan/laravel-unit-test-example/blob/master/app/Http/Controllers/CheckoutController.php">Checkout controller</a> at <code>App\Http\Controllers</code></li>
+<li>Add a route <code>/place</code> in <a href="https://github.com/geshan/laravel-unit-test-example/blob/master/app/Http/routes.php#L19">app/Http/routes.php</a> as
+<code>php
+Route::get('/place/{paymentMethod}', [
+  'as' =&gt; 'order-place', 'uses' =&gt; 'CheckoutController@placeOrder'
+]);
+</code></li>
+<li>Change the <a href="https://github.com/geshan/laravel-unit-test-example/blob/master/composer.json#L26">composer.json</a> to have namespace in tests.</li>
+<li>Add <a href="https://github.com/geshan/laravel-unit-test-example/blob/master/tests/Services/CheckoutTest.php">test class</a> for the newly added Checkout service at <code>Test\Services\CheckoutTest</code>, write relevant test.</li>
+<li>Run the unit tests <code>./vendor/bin/phpunit</code> they are green in a matter of seconds, smile :)</li>
+</ul>
+
+
+<p>This is a very simple example without mocking and using methods like <code>$this-&gt;mockedObj-&gt;shouldReceive('mockedMethod')-&gt;once()</code>, it
+is a getting started post not a deep dive :).</p>
+
+<p>You can have a look on how I did it with the <a href="https://github.com/geshan/laravel-unit-test-example/commits/master">github commits</a>.
+You might be thinking we could do it tests first full TDD style, in my opinion having tests count how you add them is
+up to you. It&rsquo;s great to write tests first but it takes time to come to that level so rather then not having tests at
+all I would opt for having tests after code. Below is example of the test code with use of <a href="http://bit.ly/1Fe0cwx">data providers</a>:</p>
+
+<pre><code class="php">
+/**
+     * Data provider for testCalculateTotal
+     * variables are in the order of
+     * $paymentMethod, $expectedTotal
+     *
+     * @return type
+     */
+    public function paymentMethodProvider()
+    {
+        return [
+            ['Cash', 100.00],
+            ['Credit Card', 95.00]
+        ];
+    }
+
+    /**
+     * Test to check if the order total is calculated correctly
+     * for given payment method.
+     *
+     * @param string $paymentMethod
+     * @param float $expectedTotal
+     *
+     * @dataProvider paymentMethodProvider
+     */
+    public function testCalculateTotal($paymentMethod, $expectedTotal)
+    {
+        $this-&gt;assertEquals(
+            $this-&gt;checkout-&gt;calculateTotal($paymentMethod),
+            $expectedTotal,
+            sprintf('Testing total calculation for %s.', $paymentMethod)
+        );
+    }
+</code></pre>
+
+<p><strong>The full running app with tests is available as an open source repository on <a href="https://github.com/geshan/laravel-unit-test-example/">github</a>.</strong></p>
+
+<p><img class="center" src="/images/laravel-unit-tests/running-laravel-app.png" title="&lsquo;Running Laravel app with PHP server&rsquo; &lsquo;Running Laravel app with PHP server&rsquo;" ></p>
+
+<h3>Tip</h3>
+
+<blockquote>
+I found using `gulp tdd` quite interesting, specially as the tests were super fast. 
+
+All I needed to do was change the provided gulp file with `mix.phpUnit();` and run `gulp tdd` then on 
+each change my tests would automatically run and I would see the green or red desktop notification too. Quite handy.
+</blockquote>
+
+
+<p><img class="center" src="/images/laravel-unit-tests/tests-green-gulp.png" title="&lsquo;Handy gulp tdd for Laravel&rsquo; &lsquo;Handy gulp tdd for Laravel&rsquo;" ></p>
+
+<h2>Choice of Tools and services</h2>
+
+<p>For testing with Laravel I would recommend the following tools:</p>
+
+<ol>
+<li><a href="https://phpunit.de/">PHPUnit</a> Framework, even though BDD with <a href="http://www.phpspec.net">PHPSpec</a> is getting some
+traction but only a handful of frameworks or systems are using PHPSpec. PHPUnit is still very popular.</li>
+<li>For mocking use <a href="https://github.com/padraic/mockery">Mockery</a>, here as well <a href="https://github.com/phpspec/prophecy">Prophecy</a>
+looks like a better option but then you will have issues with mocking static methods of eloquent models in case of Laravel.</li>
+<li>Unit testing with PHP is a puzzle and Continuous Integration (CI) is the missing piece, there by if you are doing
+an open source project I would suggest <a href="https://travis-ci.org/">Travis CI</a> which costs nothing and for a private project
+<a href="http://shippable.com">Shippable</a> is a good CI service for free.</li>
+</ol>
+
+
+<h2>Conclusion</h2>
+
+<p>As Martin Fowler emphasizes in his <a href="http://martinfowler.com/bliki/TestPyramid.html">test pyramid</a> we should always give
+priority to more unit tests which will eventually strengthen the integration/functional tests we write for our project.
+I don&rsquo;t believe that only having unit tests will remove the need of having functional tests still good unit test which
+covers not only the code also its use cases will surely be a boon. Happy Unit testing!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[5 Things to Do for Your Open Source PHP Projects, a Checklist]]></title>
+    <link href="http://geshan.com.np/blog/2015/07/5-things-to-do-for-your-open-source-php-projects/"/>
+    <updated>2015-07-18T13:01:00+10:00</updated>
+    <id>http://geshan.com.np/blog/2015/07/5-things-to-do-for-your-open-source-php-projects</id>
+    <content type="html"><![CDATA[<p>Open source software (oss) are very popular in the software world, be it the server serving your web pages or the
+language/framework your website/webapp or even mobile app is written on, it is highly likely that its based on an
+open source software. As programmers this sprint of giving back to the community and helping others in form of
+Free and open source software is amazing. There are many open source PHP projects as well from frameworks to small
+libraries. It is a difficult yet rewarding experience to lead/support an open source project. If you are thinking
+of starting an open source project or open sourcing some part(s) of your existing system, this post has a checklist
+to assist you with it.</p>
+
+<p><img class="center" src="/images/php-oss-checklist/example-foss.png" title="&lsquo;An example open source php project&rsquo; &lsquo;Example open source project&rsquo;" ></p>
+
+<!-- more -->
+
+
+<h2>Intro</h2>
+
+<p>It is taken for granted that you do the basics correctly like having a optimally descriptive readme, a license and
+probably a contribution guide on your project&rsquo;s Github repo. It is also assumed that as its PHP you are doing the
+basis right following <a href="http://www.php-fig.org/">FIG</a>&rsquo;s PSR standards like
+<a href="https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md">PSR-2</a> coding style guide
+and <a href="https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader.md">PSR-4</a> auto-loader standard.
+For this post I will use a template/boilerplate <a href="https://github.com/geshan/dataprovider-example">dataprovider-example</a>
+as and example, the links will open for this project for services mentioned below. So after getting the basics
+right what more do you need to consider, lets have a look at the checklist:</p>
+
+<h2>1. Check and maintain Code Quality</h2>
+
+<p>Just writing code that works might not be ideal for an open source project, also because the code you write can be read by
+anyone and used by anyone checking coding standard and code quality become a must. If you want to check your
+coding standard you can do it locally with <a href="https://github.com/squizlabs/PHP_CodeSniffer">PHP Code Sniffer</a>,
+fix coding standard issues with <a href="http://cs.sensiolabs.org/">PHP CS Fixer</a>. For other local tools you can check <a href="http://phpqatools.org/">PHP QA tools</a>.
+In case you want a continuous integration service you can use <a href="https://styleci.io/">Style CI</a> which will check your coding
+standard matches PSR-2 or not on each push. It is free for open source projects.</p>
+
+<p>In case of the code quality, there are many providers to choose from and again all of them are free to use for open
+source projects. They love open source software as we do too. Below is the list of some providers I have used/tried out:</p>
+
+<ul>
+<li><a href="https://codeclimate.com/github/geshan/pdepend-analyzer">CodeClimate</a> - Very good service, ranks your code in a GPA of 4. Has good code analysis and reports.</li>
+<li><a href="https://scrutinizer-ci.com/g/geshan/dataprovider-example/">Scrutinizer CI</a> - Great code analysis, ranks your code in a scale of 10. Extensive settings and code reports.</li>
+<li><a href="https://insight.sensiolabs.com/projects/56ff09b2-7954-4cb2-a6da-6af863775107">Sensiolabs Insight</a> - Great code analysis, ranks your code with medals. Quite extensive code reports.</li>
+<li><a href="https://www.codacy.com/app/geshan/dataprovider-example/dashboard">Codacy</a> - Good code analysis, ranks your code with A, B, C, D scale. Good settings and code reports.</li>
+</ul>
+
+
+<p>As an example I am using a project with just 2 PHP files so you can see how powerful and deep the analysis for the code is
+for each of the above services. Which one to choose from the above, the choice is yours :)</p>
+
+<h2>2. Write Tests</h2>
+
+<p>Writing tests for code is also important to verify that the code does what you expect and intend it to do. As generally
+open source projects are libraries Unit tests is recommended more than functional/integration tests. You can
+see an example test <a href="https://github.com/geshan/dataprovider-example/blob/master/tests/DataProvider/Example/Test/CheckoutTest.php">here</a>.
+Below are the two main choices of framework you have for writing tests depending on the style of testing:</p>
+
+<ul>
+<li><a href="https://phpunit.de/">PHPUnit</a> - The most popular PHP test framework, you can use it for a Test Driven Development approach.</li>
+<li><a href="http://www.phpspec.net/">PHPSpec</a> - The new emerging concept which some say are better than PHPunit, follows Behavior Driven Development approach.</li>
+</ul>
+
+
+<p>Well the question is always there do you write test first or code first, IMHO whatever you do have tests that cover your
+code for the cases you know and you think are important.</p>
+
+<h2>3. Enable Continuous Integration</h2>
+
+<p>Just writing tests will not be enough if it does not run on each push to the version control system (VCS) like git. So
+if you get fast feedback on what your new code did to the existing or new tests that would be very helpful to decide if
+your code in form of a Pull Request (PR) can be merged to the main branch (generally master). It is very important for
+open source so as to maintain stability and not break the application of anyone using your open source code. Bonus
+points if you submit the code coverage report to above mentioned code analysis services. Here too
+you have mainly 2 choices both of them are free for open source projects:</p>
+
+<ul>
+<li><a href="https://travis-ci.org/geshan/dataprovider-example">Travis CI</a> - The most popular continuous integration, fast and easy to integrate with any project.</li>
+<li><a href="https://shippable.com">Shippable CI</a> - A new player based on docker. Good and easy to integrate but can&rsquo;t show test runs even for open source projects.</li>
+</ul>
+
+
+<p>There are lots of other CI services these days and most of them are free for open source projects, still I think Travis
+makes a good choice for open source projects. The decision is yours again.</p>
+
+<h2>4. Publish to Packagist with sermver</h2>
+
+<p>OK so you have setup a git repo and done all the above mentioned things. Next logical step will be to submit your open
+source PHP project to <a href="https://packagist.org/packages/data-provider/example">Packagist</a>. It is supported by <a href="https://getcomposer.org/">Composer</a>
+php package manager and has as of writing has more than <a href="https://packagist.org/statistics">64650</a> open source projects.
+You will need to <a href="https://packagist.org/packages/submit">register</a> and have a well
+formatted <a href="https://github.com/geshan/dataprovider-example/blob/master/composer.json">composer.json</a> in your git
+repository to submit your package to Packagist. After you submit your project, any one looking for something similar like
+your project and search for your package and download it using composer. For clarity in version do use Semantic
+Versioning a.k.a <a href="http://semver.org/">SemVer</a>.</p>
+
+<h2>5. Issue board with HuBoard</h2>
+
+<p>Finally your project is being downloaded and used by other people and you are getting requests in form of issues to
+make changes or add features. Other generous and talented programmers are sending PRs to your project but how do you
+show what is being done and reflect on status of the project issues visually. Here is where
+<a href="https://huboard.com/geshan/dataprovider-example/">HuBorad</a> comes to
+your rescue. You can show the status of the issues as below to make all the interested people clear of what is happening
+in the form of a Agileish Kanban board:</p>
+
+<p><img class="center" src="/images/php-oss-checklist/huBoard.png" title="&lsquo;An example of issues on HuBoard&rsquo; &lsquo;Example of issues on HuBoard&rsquo;" ></p>
+
+<h2>Conclusion</h2>
+
+<p>After checking all the items in the above checklist, be sure to be alert about issues and pull requests for the open source
+project. Successful open source project lead/members are quite alert and responsive to both issues created and pull requests
+sent to the project. You can use the data-provider example as a base template for writing your next open source project. Happy Coding.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Software Engineering Practices in Nepal Infographics Part 2 Includes Git, VCS Hosting, Code Review Culture Etc]]></title>
+    <link href="http://geshan.com.np/blog/2015/05/software-engineering-practices-in-nepal-infographics-part-2-includes-git/"/>
+    <updated>2015-05-22T12:40:58+10:00</updated>
+    <id>http://geshan.com.np/blog/2015/05/software-engineering-practices-in-nepal-infographics-part-2-includes-git</id>
+    <content type="html"><![CDATA[<p>I hope life is slowly going back to normal in Nepal though the news of aftershocks is not encouraging. My prayers are with the
+people of Nepal and I hope they get the positive energy to resume with their normal work.</p>
+
+<p>Below is the Part 2 of the Software Engineering Practices in Nepal Infographics. This time the graphical information covers
+popularity of Versioin Control System (VCS), VCS hosting, Operating System (OS), Coding Standard, Code Reviews and other
+interesting facts from the survey.</p>
+
+<p>Again special thanks to <a href="http://bit.ly/ashish-singh-blog">Ashish Singh</a> for helping
+me clean up and compile the data in a better way. And this time even <a href="http://bit.ly/ansu-blog">Ansubha Manandhar</a> rolled up
+her sleeves and helped us group and compile the data into percentages, thank you for that.</p>
+
+<p><strong>Data for this infographics is taken from this <a href="http://bit.ly/nep-dev-survey">survey</a>, I kindly request you to fill it.</strong></p>
+
+<!-- more -->
+
+
+<p><img class="center" src="/images/sw-eng-np-infographics-part02/Software_Engineering_Nepal_Mid_2015_Part02.png" title="&lsquo;Software Engineering Practices in Nepal Infographics Part 2&rsquo; &lsquo;Software Engineering Practices in Nepal Infographics Part 2&rsquo;" ></p>
+
+<p>You can view this infographics in <a href="http://bit.ly/1R8EfHQ">interactive</a> mode too.</p>
+
+<p><strong>If you enjoyed viewing the infographics, I again request to fill up the <a href="http://bit.ly/nep-dev-survey">survey</a> if you have not filled it up yet.</strong></p>
+
+<blockquote><p>Thanks to everyone filling up the survey even in such conditions in Nepal.
+I hope to get some more responses so that the next infographics in this series will have more data.
+I will make the survey open till 2015 Q3 and post the final results in Oct 2015. #prayForNepal #stayStrongNepal #rebuildNepal</p></blockquote>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Software Engineering Practices in Nepal Infographics Part 1 Includes Languages, Frameworks, IDEs Etc]]></title>
+    <link href="http://geshan.com.np/blog/2015/05/software-engineering-practices-in-nepal-infographics-part-1-includes-languages/"/>
+    <updated>2015-05-17T22:26:29+10:00</updated>
+    <id>http://geshan.com.np/blog/2015/05/software-engineering-practices-in-nepal-infographics-part-1-includes-languages</id>
+    <content type="html"><![CDATA[<p>A big earthquake hit Nepal on 25-Apr-2015 and another big one was felt on 12-May-2015. The <a href="http://seismonepal.gov.np/">aftershocks</a> till now have been around 250. I pray that all the people in Nepal have the strength and positive energy to endure this difficult time. Rather than pitying on themselves, people have already started to work and this is a positive sign. Moreover, instead of spreading false news and rumors I would suggest people to focus on positive things, stay alert and cautious.</p>
+
+<p>I had some time so I setup a survey to know the software engineering practices used in Nepal and in the past 2 weeks there are 90 responses from the survey.  Below is the first infographics in the series to showcase the software engineering practices used in Nepal ranging from Computer Languages, Project Management technique and software to Deployment practices.</p>
+
+<p><strong>Data for this infographics is taken from this <a href="http://bit.ly/nep-dev-survey">survey</a>, I kindly request you to fill it.</strong></p>
+
+<p>The Infographic below covers details of Language, Framework, IDE, Company Size, Male to Female Ratio and some other data extracted from the responses. A special thanks to <a href="http://bit.ly/ashish-singh-blog">Ashish Singh</a> for helping me clean up and compile the data in a better way.</p>
+
+<!-- more -->
+
+
+<p><img class="center" src="/images/sw-eng-np-infographics-part01/Software_Engineering_Nepal_Mid_2015_Part01.png" title="&lsquo;Software Engineering Practices in Nepal Infographics Part 1&rsquo; &lsquo;Software Engineering Practices in Nepal Infographics Part 1&rsquo;" ></p>
+
+<p>You can view this infographics in <a href="http://bit.ly/1EPE37N">interactive</a> mode too.</p>
+
+<p><strong>If you enjoyed viewing the infographics, I again request to fill up the <a href="http://bit.ly/nep-dev-survey">survey</a> if you have not filled it up yet.</strong></p>
+
+<blockquote><p>Thanks to everyone filling up the survey even in such dire conditions in Nepal. I hope to get some more responses so that the next infographics in this series will have more data. #prayForNepal #stayStrongNepal</p></blockquote>
+]]></content>
+  </entry>
+  
+</feed>

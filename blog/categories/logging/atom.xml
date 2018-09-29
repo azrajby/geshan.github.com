@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Logging | Geshan's Blog]]></title>
+  <link href="http://geshan.com.np/blog/categories/logging/atom.xml" rel="self"/>
+  <link href="http://geshan.com.np/"/>
+  <updated>2018-09-29T17:33:06+10:00</updated>
+  <id>http://geshan.com.np/</id>
+  <author>
+    <name><![CDATA[Geshan Manandhar]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[4 Pillars of a Solid Software Application and Tools to Support It]]></title>
+    <link href="http://geshan.com.np/blog/2015/10/4-pillars-of-a-solid-software-application-and-tools-to-support-it/"/>
+    <updated>2015-10-10T17:21:52+11:00</updated>
+    <id>http://geshan.com.np/blog/2015/10/4-pillars-of-a-solid-software-application-and-tools-to-support-it</id>
+    <content type="html"><![CDATA[<p>Software development is not just punching some code on the keyboard for desired output. The business side of software development always takes priority than the technicalities of it.</p>
+
+<p>I have seen some software development teams are slow because they have a lot of technical debt. Some teams are naive, the members don&rsquo;t want to explore new things . They are stuck with 5 year old technology like FTP, old legacy framework etc. In this post, I will shed some light on the four basic and important things of a solid software application. This contents of post is language and framework agnostic. It is applicable to any software project.</p>
+
+<p><img class="center" src="/images/4-pillars-software-application/4-pillars-software-application.png" title="&lsquo;4 pillars of a solid software application&rsquo; &lsquo;4 pillars of a solid software application&rsquo;" ></p>
+
+<!-- more -->
+
+
+<p><strong>Assumptions</strong></p>
+
+<p>For this post I have made the following assumptions:</p>
+
+<ul>
+<li>The software development team is using some Version Control System (VCS) like git.</li>
+<li>There is some form of project management and team structure in place.</li>
+</ul>
+
+
+<h2>Maintainable Code</h2>
+
+<p>Making software work is super important, making it just work is a problem. I have seen teams writing code for the sake of making it work. Sometimes it feels like the code is there just for compilers/interpreters not humans. Code, simple, readable and maintainable is also important. We have discussed some rules about making code maintainable do <a href="http://blog.yipl.com.np/7-golden-rules-of-simple-clean-code/">read</a> it. <a href="http://www.slideshare.net/pirhilton/how-to-name-things-the-hardest-problem-in-programming">Naming things well</a> and writing relevant code comments is also undermined.</p>
+
+<p>Having a culture of code review always helps. If someone else can check your code before its merged to the main branch, it is a good practice to follow. It opens up more ways to learn how to code in a practical way. Code reviews are better done in systems like <a href="http://github.com">Github</a>, <a href="http://bitbucket.org">Bitbucket</a> and <a href="http://gitlab.com">Gitlab</a>.</p>
+
+<h2>Automated Testing with Continuous Integration</h2>
+
+<p>Having automated tests is important. Opt for the test type that matches your team&rsquo;s current skill set. Unit testing are good to have. Writing testable code and giving team members the skill to do unit testing is an investment. Best way to approach unit testing will be grab the low hanging fruit. It will be better to start with Smoke Tests or basic functional tests. Doing a web application on each push/deployment? Check that all pages respond with a 200 HTTP response.</p>
+
+<p>Step by step add more tests and time for your team members to gain more skills. As soon as you have some form of automated tests, wire it up with a <a href="https://en.wikipedia.org/wiki/Continuous_integration">Continuous Integration (CI)</a> service. Some good options are <a href="https://travis-ci.com">Travis CI</a>, <a href="http://wercker.com">Wercker</a>, <a href="http://shippable.com">Shippable CI</a>.</p>
+
+<h2>Automated Deployment</h2>
+
+<p>Finished feature should reach production from developer&rsquo;s machine in less time. It will be possible using automated deployment using latest tools. Are you using File Transfer Protocol (FTP) in 2015? You should stop it now, the first step towards automation for a FTP user is use <a href="http://git-ftp.github.io/git-ftp/">GitFTP</a>. It is an automated way to get the changed files to server than copying it over a FTP client.</p>
+
+<p>Do one step deployment and least human work. Tools like <a href="http://capistranorb.com/">Capistrano</a>, <a href="http://www.fabfile.org/">Fabric</a>, <a href="http://rocketeer.autopergamene.eu/">Rocketeer</a> are used for automated deployment process. To sum it up, <a href="http://geshan.com.np/blog/2015/08/the-best-automated-deployment-tool-the-one-that-fits-your-needs/">the best deployment tool is&hellip; the one that fits your needs</a>.</p>
+
+<h2>Logging with Monitoring</h2>
+
+<p>Logs are the only way your software application talks back to you. Gather all your system, application logs and make it accessible via a web interface. Follow the logging <a href="https://tools.ietf.org/html/rfc5424">standard</a> and use free SAAS to render your logs in a readable way that gives you value. If dog is a man’s best friend, log is a developer’s best friend. Understand and exploit <a href="http://geshan.com.np/blog/2015/08/importance-of-logging-in-your-applications/">the importance of logging in your software application</a>.</p>
+
+<p>Just having logs is not enough, view your logs after each change. Always check your logs after each deployment to track any suspicious activity. You can use <a href="http://logentries.com">Logentries</a> or <a href="http://loggly.com">Loggly</a> for cloud logging.</p>
+
+<h2>Conclusion</h2>
+
+<p>I have not focused on the server and devOps part of the software application and deployment. These are the practices all software engineers should adhere to. These should be the goals whenever a new project starts.</p>
+
+<blockquote><p>Without 4 stable legs even a chair falls. Save your application from going down follow these 4 practices.</p></blockquote>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Importance of Logging in Your Applications, Start Logging Today]]></title>
+    <link href="http://geshan.com.np/blog/2015/08/importance-of-logging-in-your-applications/"/>
+    <updated>2015-08-08T14:04:02+10:00</updated>
+    <id>http://geshan.com.np/blog/2015/08/importance-of-logging-in-your-applications</id>
+    <content type="html"><![CDATA[<p>&ldquo;This feature we deployed last week was working fine till yesterday now I have no idea why is it not working!&rdquo; This is like a typical sentence you hear from developers when there is no logging in place. It can be to a great extent solved by having automated tests, still having logging and monitoring gives you a different viewpoint. In this post I am going to reveal the importance of having logs for your code and monitoring your code to cut down the firefighting time for bugs and errors by huge margins.</p>
+
+<p><img class="center" src="/images/logging-importance/logging-code.png" title="&lsquo;Code for logging success or failure&rsquo; &lsquo;Code for logging success or failure&rsquo;" ></p>
+
+<!-- more -->
+
+
+<h2>The Problem</h2>
+
+<p>Generally developers don&rsquo;t write any code that logs meaningful and relevant messages for the feature they are writing. Writing code to log things may even be considered not important and waste of time by developers who work in small projects. Which might be true to some point but the benefits surely outweigh the cost.</p>
+
+<p>Not writing logs anywhere is just one part of the issue, generally <a href="http://bit.ly/sw-eng-np-pt3">almost half</a> of the developers in Nepal still ssh into the server and view server level logs not application logs. Even more, the situation is bad as more than 31% developers say they don&rsquo;t care about any logs at all.</p>
+
+<h2>The Solution</h2>
+
+<p>The solution is simple, make logs and writing code to do logging first class citizen in your code base. Logs are the medium through which your app speaks to you. Logging is foundation to solving your operational problems so not having them is being in a communication void with your application.</p>
+
+<p>As an example, if you create a user, just log that the user has been created successfully and if the user could not be created because of let&rsquo;s say a database exception it is even more important to log the reason behind the unsuccessful operation.</p>
+
+<h2>Standard and tools of the trade</h2>
+
+<p>Logging is very important, there is a standard <a href="https://tools.ietf.org/html/rfc5424">RFC 5424</a> on how to log from applications. The main part here is the severity of logs as listed below:</p>
+
+<ul>
+<li><strong>0 Emergency</strong>: system is unusable</li>
+<li><strong>1 Alert</strong>: action must be taken immediately</li>
+<li><strong>2 Critical</strong>: critical conditions</li>
+<li><strong>3 Error</strong>: error</li>
+<li><strong>4 Warning</strong>: warning</li>
+<li><strong>5 Notice</strong>: normal but significant</li>
+<li><strong>6 Informational</strong>: informational</li>
+<li><strong>7 Debug</strong>: debug-level messages</li>
+</ul>
+
+
+<p>In the above example, if the user is created successfully, it can be a <code>info/informational</code> log in case the user could not be created it should be reported as an <code>error</code>. While logging, if the context can be provided it adds the right amount of detail so solve problems faster.</p>
+
+<p>As it is a standard there are will be libraries for generally any language/framework, logging is a language/framework agnostic practice that all developers can benefit from using it an any type and size of applications.</p>
+
+<p>Some logging libraries for some languages are listed as follow:</p>
+
+<ul>
+<li><a href="https://github.com/Seldaek/monolog">Monolog</a> - PHP (based on PSR-3 logging standard)</li>
+<li><a href="https://github.com/winstonjs/winston">Winston</a> - Javascript</li>
+<li><a href="https://docs.python.org/3/howto/logging.html">Python logger</a> - for python 3 it also follows the RFC 5424 standard</li>
+</ul>
+
+
+<p>The idea is that you will generally find a logger library to log messages from your application. The logging library/packages for your language/framework is just a Google search away.</p>
+
+<h2>Free SAAS to the rescue</h2>
+
+<p>Now you have already realized how important is it to log from your system, still if you just log to some text files you again run into the <code>tail -f</code> after ssh into the server issue. If you have multiple servers that run your application behind a load balancer for example if your application is served by 5 servers the <code>tail -f</code> approach is already impractical and gives 0 insight on historical log data.</p>
+
+<h3>Own Logging infrastructure for big companies</h3>
+
+<p>If you are a big company which can invest in your own resource for logging infrastructure, installing <a href="https://www.graylog.org/">Graylog2</a> or going for the <a href="https://www.elastic.co/products">ELK (Elasticsearch Logstash Kibana)</a> stack might be good options. Generally logging applications are resource heavy depending on the logs your write to and not very easy to setup.</p>
+
+<p>Both graylog and Kibana have a great web interface where you can search your log data and make more sense out of it than just the usual <code>tail -f</code> approach. Even big companies can use the SAAS mentioned below, it will depend on company policy and resources.</p>
+
+<h3>Smaller ones can SAAS free plan</h3>
+
+<p>You can use SAAS applications with free plan to rescue yourself from this situation. I would recommend the following two as they have good free tier:</p>
+
+<h4><a href="http://logentries.com">Logentries.com</a></h4>
+
+<p>Logentries gives you a central cloud logging and with it&rsquo;s free plan you can send up to 5 GB of data each month and the data is retained for 7 days. It allows multiple user access even for free plan. So even if your application is relatively big you can still send around 166 MB of log data data each day to them and view it in almost real-time with a web interface. You can also search logs, only <strong>feature that I feel is lacking is sorting of logs</strong> in the interface. It has advanced search features as well which can be useful if you have lots of logs.</p>
+
+<p><img class="center" src="/images/logging-importance/logentries.png" title="&lsquo;Logging to logentries.com&rsquo; &lsquo;Logging to logentries.com&rsquo;" ></p>
+
+<h4><a href="http://loggly.com">Loggly.com</a></h4>
+
+<p>Loggly also has similar features as logentries, with it&rsquo;s free plan you can send 200 MB per day and data is retained for 7 days. It allows only one user access for the free plan. The interface looks better better than logentries and the logs are rendered in almost real-time.</p>
+
+<p>Which one to choose it surely up to you, you can do a quick search and find other players in the cloud logging market and pick the one that fits your need.</p>
+
+<h2>Conclusion</h2>
+
+<p>Logging in any application is really very important, you can log a lot of critical things and gain unprecedented insight about how your application is working and performing. It is a language/framework agnostic practice which I recommend you to start from today if you are not already doing it.</p>
+
+<blockquote><p>If Dog is a man&rsquo;s best friend, Log is a developer&rsquo;s best friend.</p></blockquote>
+
+<p>Happy Logging.</p>
+]]></content>
+  </entry>
+  
+</feed>

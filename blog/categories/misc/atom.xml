@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Misc | Geshan's Blog]]></title>
+  <link href="http://geshan.com.np/blog/categories/misc/atom.xml" rel="self"/>
+  <link href="http://geshan.com.np/"/>
+  <updated>2018-09-29T17:33:06+10:00</updated>
+  <id>http://geshan.com.np/</id>
+  <author>
+    <name><![CDATA[Geshan Manandhar]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[5 Practical Steps to Land Your First Tech Job]]></title>
+    <link href="http://geshan.com.np/blog/2018/09/7-practical-steps-to-land-your-first-tech-job/"/>
+    <updated>2018-09-29T15:55:58+10:00</updated>
+    <id>http://geshan.com.np/blog/2018/09/7-practical-steps-to-land-your-first-tech-job</id>
+    <content type="html"><![CDATA[<p>&ldquo;If you hate your job, take a loan and you will start liking it&rdquo;. I don&rsquo;t remember where I read this but this sounds convincing. Now think of the tech job market worldwide, saying it is growing would be an understatement, it is booming. Still, why don&rsquo;t fresh graduates not get a job when the pass out of universities? Let&rsquo;s have a closer look at this issue and try to help technology students get a job as soon as their course finishes.</p>
+
+<p><img class="center" src="/images/5-steps-first-tech-job/first-tech-job-a.jpg" title="&lsquo;5 practical steps to land your first tech job&rsquo; &lsquo;5 practical steps to land your first tech job&rsquo;" ></p>
+
+<!-- more -->
+
+
+<h2>TLDR;</h2>
+
+<blockquote><p>Network in person, use recuriter&rsquo;s help, contribute to open source, list companies/roles you wan to work in and learn a new tech thing each month to land your first tech job. Bonus but important points, make a killer resume, have a great pet project deployed online to show and start early.</p></blockquote>
+
+<h2>Interesting subject</h2>
+
+<p>Around 11 years back I wrote this blog post &ldquo;<a href="https://geshan.com.np/blog/2007/11/10-web-by-things-technology-student-or/">10 things a tech student must know</a>&rdquo; then 4 years back I did a talk at the college I completed my bachelor&rsquo;s from titled &ldquo;<a href="https://geshan.com.np/blog/2014/08/things-i-wished-i-knew-while-doing-my/">Things I Wished I Knew While Doing My Tech Bachelor / Undergraduate</a>&rdquo;. Again 2 years back and in Nov of 2017 I did another talk with QnA and interaction with the title &ldquo;<a href="https://geshan.com.np/blog/2016/06/career-paths-for-to-be-tech-graduates-slides/">Career Paths for to Be Tech Graduates</a>&rdquo;  at a couple of college in Kathmandu. I also did another talk called &ldquo;<a href="https://geshan.com.np/blog/2017/02/things-i-wished-i-knew-as-a-junior-developer-slides/">Things I wished I knew as a junior developer</a>&rdquo; for a meetup in Feb 2017. This has been an interesting topic for me in the past decade.</p>
+
+<h2>Why don&rsquo;t students get a tech job after the course?</h2>
+
+<p>Let&rsquo;s face this, it is a mix of the education system and the individual student themselves. I studied my undergrad/bachelors in tech in Kathmandu, Nepal and my master in tech too in the Netherlands. Surely, very different education systems and outlook to education. One thing in common is both don&rsquo;t make the student an employment ready product. On the individual side, don&rsquo;t do a course because your friend is doing it. Simple logic, first ask your self where do you see yourself in 5 or 3 years then backtrack your way to reach there.</p>
+
+<h2>How to fix this?</h2>
+
+<p>I am no education expert or anything still I have worked like a decade in tech and in multiple countries by now. One thing is sure, skills and results are the primary and degrees are secondary. Universities/colleges should try to bridge the gap between students and real market needs. Like I don&rsquo;t know of any university that will teach students lets say <code>git</code> that you are going to use each day at work. That doesn&rsquo;t mean what is being taught is wrong :). Yes, I am ranting a bit here.</p>
+
+<p>On the student&rsquo;s side, you need to research what is relevant for the market, learn on your own and brand yourself so that you can sell your skills faster. For instance, if I interview a candidate who has a good tech blog with helpful and regular posts may be even on medium. Your chances of getting hired are up by like ~5% already. Because being able to put your ideas/learning in words is an important skill for a software engineer.</p>
+
+<p><img class="center" src="/images/5-steps-first-tech-job/first-tech-job-b.jpg" title="&lsquo;5 practical steps to land your first tech job&rsquo; &lsquo;5 practical steps to land your first tech job&rsquo;" ></p>
+
+<h2>Lets get to the steps now</h2>
+
+<p>After all my rants tirades lets focus on how you as a tech student can land a job as soon as you finish your degree. Below are the things you need to do to increase your chances to land your first tech job.</p>
+
+<h3>1. In person networking</h3>
+
+<p>Go to at least 1 <a href="meetup.com">meetup</a>/conference/training/events each month and add at least 2 new people on Linked In who can help you find a job. Not to mention message/email them after the meeting to build a relationship. Meetups are a great way to meet up people who you would normally not meet. Depending on the city you are in like if you are in Sydney you could go to a tech meetup each week. If you are in Kathmandu you could catch a meetup each month. Going to a usually free meetup is beneficial in many ways, you learn new things listening to people, you can network&hellip; Don&rsquo;t underestimate the power of meeting people in the flesh.</p>
+
+<p>So you are asking why would this person refer me? Right? The answer is simple <code>Many companies have referral bonus</code>. If they refer you and you get selected, get the job, complete your probation they get a certain sum of money. A win-win situation for all you, the referrer and the company. Email, then call and ask for a coffee meeting is recommended before asking for a job referral. Of course not to mention you should have an amazing CV.</p>
+
+<h3>2. Use recruiter help</h3>
+
+<p>In the starting, it should be you emailing and potentially calling tech recruiters. The idea is simple, it is a recruiter&rsquo;s job to find good candidates for tech roles. So be open tell them you are looking for junior or starting jobs and try to find a match. Probably the recruiter knows a couple of openings where you could actually be a good fit. Depending on the city there are internships, graduate roles which are specifically targeted at fresh grads. You might need to run away from recruiters after you have some years of experience, but that is a different story.</p>
+
+<h3>3. Contribute to open source</h3>
+
+<p>I know many companies which will look at you github profile first then go through your resume. So <code>actions speak louder than words</code>. To begin with, you don&rsquo;t need to start contributing code. You can start with helping on documentation etc. There are lots of ways to give back to open source. <a href="https://hacktoberfest.digitalocean.com/">Hacktoberfest 2018</a> is starting in 2 days make good use of it. So learning git and github becomes a prerequisite for this step. If you are a tech student in their final semester and don&rsquo;t know git = you don&rsquo;t have a very bright future in tech :).</p>
+
+<h3>4. Make a list of companies with probable roles</h3>
+
+<p>If you don&rsquo;t have a target how will you ever achieve it, if you have a target you can have plans to attain it. Make a list of companies and positions/role that you want to work in when you finish your degree. Towards the end of the course if you are not sure to pick backend or frontend or UI/UX or DevOps/SRE or data engineering or DBA or &hellip; sorry but no one can help a confused person ;). If you see yourself as a frontend engineer at say Atlassian you need to work for it. Another handy tip is to keep a spreadsheet of all the jobs you have applied for with dates to do a proper follow-up. It is not easy to get a call for an interview for less experienced candidates so check step 1 referral helps a lot here.</p>
+
+<h3>5. Learn a new tech thing each month</h3>
+
+<p>Now as you have shortlisted companies and roles you want to work for you have obviously read the job descriptions. So you now know what skills the market and/or the company you aim to join is looking for. Start learning it, dedicate some hours each week/weekend and learn it. Best way to learn is to try to build your pet project, it could be anything that excites you. Don&rsquo;t just go through a course on <code>docker</code> and say yes I know docker. Show it running on a project and then you will actually learn it. If you already know 7 out of 10 things the company will need to teach another junior software engineer, your chances of getting the job automatically becomes higher.</p>
+
+<h2>Conclusion</h2>
+
+<p>There are many other general things that you need to be good on like having a clear and impressive 1-page resume, having at least one project that is online. Like, having basic knowledge of a breadth of things and a bit of depth in the area you want to work in,  knowing your skill and going to the right area of tech also helps. You need to do the above steps like 6-9 months before your course ends else doing things in haste and the very end will not help much.</p>
+
+<p>The tech industry needs new people every year worldwide. From the positive angle, tech needs more and more new people. From the other side, your competition is not only in your city but anywhere in your world so your skills and ability to learn sets you apart. Best of luck hunting for your first tech role!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[How to Do a Zero Downtime Database (DB) Migration (Schema Change) With a Practical Example]]></title>
+    <link href="http://geshan.com.np/blog/2018/05/how-to-do-a-zero-downtime-database-db-migration-schema-change-with-a-practical-example/"/>
+    <updated>2018-05-01T04:00:41+10:00</updated>
+    <id>http://geshan.com.np/blog/2018/05/how-to-do-a-zero-downtime-database-db-migration-schema-change-with-a-practical-example</id>
+    <content type="html"><![CDATA[<p>Database migration on a production database is never simple. Depending on the volume of requests some teams schedule database migration to off hours. You can run your alter statements with zero or minimal downtime following the steps mentioned below with a practical example.</p>
+
+<p><img class="center" src="/images/db-migration/db-migration.png" title="&lsquo;How to do a zero downtime database&rsquo; &lsquo;How to do a zero downtime database&rsquo;" ></p>
+
+<!-- more -->
+
+
+<h2>Example</h2>
+
+<p>As an example for this post, let&rsquo;s assume you work for an E-commerce company which has both recurring and new customers. You have partners who publicize a discount code valid for a given date range and get a percent of the order&rsquo;s total tracked by their discount code. Below is the schema for the partner and coupon code. Below is the initial schema before any change:</p>
+
+<p><img class="center" src="/images/db-migration/schema-01.png" title="&lsquo;Initial DB schema&rsquo; &lsquo;Initial DB Schema&rsquo;" ></p>
+
+<p>Now the new requirement is to track different commission percent for the new and recurring customer. New and recurring customers are evaluated by a different system/microservice and it is also responsible for commission calculation based on order total which is out of the scope of this focused example.</p>
+
+<p>To do commission tracking by customer type we would decide to add 2 new columns commission_percent_new_customer, commission_percent_recurring_customer, the difficult question is how to roll it out without downtime.</p>
+
+<p><img class="center" src="/images/db-migration/schema-02.png" title="&lsquo;Updated schema with 2 new columns&rsquo; &lsquo;Updated schema with 2 new columns&rsquo;" ></p>
+
+<h3>Migration script (DB schema alter statement)</h3>
+
+<p>The following migration script will update the DB schema to be in the above state for MYSQL DB:</p>
+
+<pre><code>ALTER TABLE `partner_discount_code` ADD `commission_percent_new_customer` DECIMAL NULL AFTER `commission_percent`,
+ADD `commission_percent_recurring_customer` DECIMAL NULL AFTER `commission_percent_new_customer`, 
+,algorithm=inplace,lock=none;
+</code></pre>
+
+<p>Notice the <code>algorithm=inplace,lock=none</code> it is discussed below.</p>
+
+<h2>Evaluating Downtime</h2>
+
+<p>In the above example there can be 2 types of downtime as follows:</p>
+
+<ol>
+<li>Tables locked while migration runs</li>
+<li>Downtime because of newly introduced columns and code not matching to it</li>
+</ol>
+
+
+<p>For the first downtime issue depending on the database, it can be mitigated to a significant level with executing proper alter SQL statements. For example in MYSQL if <code>,algorithm=inplace, lock=none</code> is suffixed with your alter it will run with 0 to minimum table lock allowing reads and writes while the migration runs. This is especially important when altering tables with millions of rows as the alter can take minutes depending on the structure and data volume of the tables involved.</p>
+
+<p>For the second issue, if db alter and code release is deployed in a specific sequence it can be handled much better. The deployment steps are listed below:</p>
+
+<h2>Deployment Steps</h2>
+
+<ol>
+<li>Add the two new columns to the partner_discount_code, let&rsquo;s say the code is in v 1.1 now</li>
+<li>Deploy code v 1.2 which adds and edits all 3 columns - commission_percent, commission_percent_new_customer and commission_percent_recurring_customer.</li>
+<li>Test that all the things work as expected, even if you need to roll back nothing breaks and it&rsquo;s fully backward compatible</li>
+<li>When everything is fine, deploy code v 1.3 that adds or edits only on the 2 new columns</li>
+<li>Test it for a day or two, then as per need you can drop the commission_percent column on the partner_discount_code table as it&rsquo;s not used anymore</li>
+</ol>
+
+
+<h3>Final schema after dropping commission_percent column</h3>
+
+<p><img class="center" src="/images/db-migration/schema-03.png" title="&lsquo;Updated schema with 1 column less&rsquo; &lsquo;Updated schema with 1 column less&rsquo;" ></p>
+
+<h2>Things to consider</h2>
+
+<ul>
+<li>Always be careful with database migration. It&rsquo;s is surely safe to take a backup of the table you will run the alter statement on before executive it.</li>
+<li>Don&rsquo;t deploy the code first that write to new columns then run the migration, it will result in errors as the code will try to access non-existing column(s).</li>
+<li>Always think of backward compatibility usually without a revert migration. Generally, access to production database is only given to a select few.</li>
+<li>Run drop or rename columns only after you are fully satisfied that the new changes are not breaking anything.</li>
+<li>It is better to run migrations (alter SQL) manually than part of the deployment to keep things segregated and more predictable.</li>
+</ul>
+
+
+<h2>Conclusion</h2>
+
+<p>Database migration is not difficult if it is done the right way. Hope this post helps you run your DB migrations in a smoother fashion.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Convert Your Tech Hiring Funnel Into an Hour Glass, Retain Your Tech Talent]]></title>
+    <link href="http://geshan.com.np/blog/2017/08/convert-your-tech-hiring-funnel-into-an-hour-glass/"/>
+    <updated>2017-08-19T02:52:05+10:00</updated>
+    <id>http://geshan.com.np/blog/2017/08/convert-your-tech-hiring-funnel-into-an-hour-glass</id>
+    <content type="html"><![CDATA[<p>Sometimes I feel that the software company (<a href="http://younginnovations.com.np/ourstory">YIPL</a>) we started a decade back is turning into a software engineer factory. We take in fresh grads or junior software engineers, train them, mentor them. When they get the skills after 6-9 months and are ready to be productive to the company they move to a bigger better software company. This is a common story in Kathmandu Tech Scene. I am not blaming people moving jobs in tech but I think, there is a fundamental flaw in the process and system itself. In this blog post I will unveil a tech hiring funnel we follow for a few tech startups in Kathmandu. It will also contain some of my thoughts on how to retain tech talent by converting the funnel into an hour glass.</p>
+
+<p><img class="center" src="/images/tech-hiring-funnel-hour-glass/tech-hiring-funnel-hourglass.jpg" title="&lsquo;Convert your tech hiring funnel into an hour glass, retain your tech talent&rsquo; &lsquo;Convert your tech hiring funnel into an hour glass, retain your tech talent&rsquo;" ></p>
+
+<!-- more -->
+
+
+<p>I am not a hiring manager or recruiter. Below is my own experience of some years trying to source and retain tech talents mainly in Kathmandu, Nepal. I feel, these processes can be applied to any hire many tech roles anywhere in the world.</p>
+
+<h2>Tech Hiring Funnel</h2>
+
+<p>Hiring for tech roles is a difficult job. Like any other team, if one wrong person gets hired in the tech team it can spoil the team spirit of the whole team. So IMHO, it is better to not hire a person if in doubt than to take chance. Once the person is in the team, it will be a lot difficult to take any negative action than not hiring the person in the first place.</p>
+
+<p>To avoid such problems, here is a tech hiring funnel focused on   software engineers:</p>
+
+<ol>
+<li>We get the CV or head hunt to receive the CV. Some candidates are filtered out just by the CV.</li>
+<li>Then we send in a set of questions over email for software engineers, <a href="http://bit.ly/sw-eng-ques">this</a> one is focused on PHP/JS.
+
+<ol>
+<li>This helps filter out some candidates. If the answer is without depth or just googled it is easy to filter out the candidate.</li>
+</ol>
+</li>
+<li>After we are satisfied with the answers we send a coding task/challenge. <a href="http://bit.ly/sw-eng-task">This</a> one is for a PHP back-end software engineer.
+
+<ol>
+<li>Always with a deadline which includes a weekend as working candidates need time to do this.</li>
+<li>There might be things s/he is doing for the first time in the task, even experienced software engineers have something new in the above task (at least in the case of Software Engineers in Kathmandu).</li>
+<li>This helps us filter out lots of people as candidates have big words in their CV but the solution gives us a clear picture of their coding skills.</li>
+</ol>
+</li>
+<li>Depending on the task solution we generally give a score of 1-10 to be objective in the analysis.</li>
+<li>Then if the task solution is good enough, there might be a phone interview for initial screening</li>
+<li>Then there can be one technical and one management interview or both put together depending on the candidate.</li>
+<li>Even after interviews we score on 1-10 to be objective then the decision is to offer or not offer the position to the candidate.</li>
+</ol>
+
+
+<p>The above is the funnel works for majority of tech positions like software engineer (both back-end and front-end), UI/UX engineer, QA engineer, DevOps/SRE engineer etc. Questions and task will vary depending on the role of course. The steps can be changed to match your company rules and policy.</p>
+
+<p>It works well at the 10s scale but I am not sure how good will it will work at the 100s scale.</p>
+
+<h2>The hourglass transformation</h2>
+
+<p>If you spend so much time hiring a good candidate but do not have a great on-boarding procedure you are doing something wrong.  Listen to <a href="https://blog.fogcreek.com/how-to-onboard-software-engineers-interview-with-kate-heddleston/">this</a> amazing podcast/interview with Kate Heddleston to get more idea about tech role on-boarding. After a smooth on-boarding process, I think the following things matter for retaining tech talent:</p>
+
+<ol>
+<li>Motivation is always important. Bluntly put &ldquo;money talks&rdquo;. If you are not able to pay your software engineers good money (at least as per market rates) they will look for other opportunities.</li>
+<li>Software engineers and generally other tech roles crave for challenges. New things, shiny technology attracts us tech people. So keeping your software stack up to date will help retain tech talent.</li>
+<li>Team culture matters a lot. How your team accepts a new member. The culture of mentoring and growth is crucial for software teams.</li>
+<li>Visionary leadership is very important. If you are doing the same thing you were doing 5 or even 2 years back there is a problem in the team. Update and upgrade is the need in technology as it moves very fast.</li>
+<li>Create an environment to grow. If your junior software engineer can&rsquo;t grow to a software engineer in 1-2 years there is some issue to fix. Servant leadership with opportunity to grow will help retention.</li>
+</ol>
+
+
+<h2>Conclusion</h2>
+
+<p>Every team might not have all the skills it needs. Be open to communicate the skills your team lacks and move forward to build that skill. For instance if your team needs DevOps tool&rsquo;s skills hire a consultant for 3-6 months with a target of getting the most out of the consultant to team 1-3 members of the team those skills.</p>
+
+<blockquote><p>Hopefully, this will help you hire and retain your tech talent better.</p></blockquote>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Adopt a Painless Continuous Delivery Culture, Add More Business Value [Slides]]]></title>
+    <link href="http://geshan.com.np/blog/2017/08/adopt-a-painless-continuous-delivery-culture/"/>
+    <updated>2017-08-02T13:17:30+10:00</updated>
+    <id>http://geshan.com.np/blog/2017/08/adopt-a-painless-continuous-delivery-culture</id>
+    <content type="html"><![CDATA[<p>Your work responsibilities boil down to 2 things, either add value to customers or save cost for the business.
+Value to the business is always more important than the latest technical fad. If a feature is done (production
+ready) but not deployed to production it is an opportunity loss for the business.</p>
+
+<p><img class="center" src="/images/continuous-delivery/geshan-devops&ndash;days-pdx-2017.jpg" title="&lsquo;Adopt a painless continuous delivery culture, add more business value [Slides]&rsquo; &lsquo;Adopt a painless continuous delivery culture, add more business value [Slides]&rsquo;" ></p>
+
+<!-- more -->
+
+
+<p>Below are the slides of my
+talk titled &ldquo;Adopt a painless continuous delivery culture, add more business value&rdquo; given today at
+<a href="https://www.devopsdays.org/events/2017-portland/program/">DevOpsDays Portland 2017</a>:</p>
+
+<h2>The Slides</h2>
+
+<script async class="speakerdeck-embed" data-id="44a57cc9c1eb4c5a9ba087cea49dac78" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
+
+
+<p>Slides on <a href="http://bit.ly/cdbv-gm">slideshare</a></p>
+
+<h2>The Video</h2>
+
+<p>The video of the talk is below:</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2oYPAHJwr6U" frameborder="0" allowfullscreen></iframe>
+
+
+<h2>The Abstract</h2>
+
+<p>A continuous delivery of new features definitely adds value to the business, it should be effortless to the tech team too. 5 years back our sys-admin team was in Istanbul and the dev team was in Dubai. Even then changes were shipped periodically but the process was cumbersome. A stable delivery pipeline with tests, continuous integration and small atomic deployments with github flow gives us a leading-edge. The culture of logging and monitoring ingrained in our team helps us move fast. Now, we ask a chatbot to deploy our microservices several times a day to production. In this session, I will unveil details on how you can get started with a smooth continuous delivery pipeline one step at a time.</p>
+
+<h2>Conclusion</h2>
+
+<p>The first day of DevOps Days PDX 2017 was pretty impressive. Looking forward to day 2!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Software Companies Tech Competency Matrix]]></title>
+    <link href="http://geshan.com.np/blog/2017/06/software-companies-tech-competency-matrix/"/>
+    <updated>2017-06-07T22:18:57+10:00</updated>
+    <id>http://geshan.com.np/blog/2017/06/software-companies-tech-competency-matrix</id>
+    <content type="html"><![CDATA[<p>Every company is a <a href="https://www.forbes.com/sites/forbestechcouncil/2017/01/23/why-every-company-is-a-technology-company/#62d4503657ae">technology company</a>. A technology company without great software and technical team is insignificant. In this post I will unfold my understanding of what makes a tech team competent in 4 levels with 6 main criteria and 25 sub criteria.</p>
+
+<p><img class="center" src="/images/swtcm/swtcm.jpg" title="&lsquo;Software Companies Tech Competency Matrix&rsquo; &lsquo;Software Companies Tech Competency Matrix&rsquo;" ></p>
+
+<!-- more -->
+
+
+<h2>Assumptions</h2>
+
+<p>Below are some of the assumptions I have made for this opinionated matrix:</p>
+
+<ul>
+<li>It focuses on a tech/engineering team doing software development.</li>
+<li>It tilts towards software teams practicing agile methodologies.</li>
+<li>It is more targeted towards web applications/APIs developing teams.</li>
+<li>Many things can be added to the 6 main criteria and 25 sub criteria, still these 25 points I think are important.</li>
+<li>Many things are dependent on the scale your team works at, for example if you get 2 requests per minute you don&rsquo;t need a load-balancer :)</li>
+</ul>
+
+
+<h2>The matrix</h2>
+
+<p>If its difficult to read jump directly to the <a href="https://docs.google.com/spreadsheets/d/1uDx5RG8k7Oxl6REGPgZIG-qqCNfn3E8WwczPPyoWvSA/edit?usp=sharing">google sheet</a>.</p>
+
+<iframe src="https://docs.google.com/spreadsheets/d/1uDx5RG8k7Oxl6REGPgZIG-qqCNfn3E8WwczPPyoWvSA/pubhtml?gid=0&amp;single=true&amp;widget=false&amp;headers=false" width="750px" height="1000px"></iframe>
+
+
+<h2>Add more things</h2>
+
+<p>If you want to add more things check this <a href="https://docs.google.com/spreadsheets/d/1uDx5RG8k7Oxl6REGPgZIG-qqCNfn3E8WwczPPyoWvSA/edit?usp=sharing">google sheet</a> and comment below.</p>
+
+<p>Thanks the the people who helped me review this and for their valuable inputs. And thanks Sijin Joseph for the <a href="http://sijinjoseph.com/programmer-competency-matrix/">programmer competency matrix</a> from where I got the idea to
+make such kind a matrix on a team level then individual programmer.</p>
+
+<h2>Conclusion</h2>
+
+<p>As a company evaluates any programmer, you could try to rate your team or processes giving them a point as per the level in each of the 25 criteria.
+So any team could score between 25-100 (25 is level 1 on each point and 100 is level 4 in each point). It should be an interesting exercise, <a href="https://docs.google.com/spreadsheets/d/1nenLo3uV3xN0PBt-heg0HLogLgHKw32QFeF4wj6Hdqs/edit?usp=sharing">here</a> is an example.</p>
+
+<blockquote><p>Hopefully you know where your tech competency/maturity stands on a team level better now.</p></blockquote>
+]]></content>
+  </entry>
+  
+</feed>

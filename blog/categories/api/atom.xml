@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Api | Geshan's Blog]]></title>
+  <link href="http://geshan.com.np/blog/categories/api/atom.xml" rel="self"/>
+  <link href="http://geshan.com.np/"/>
+  <updated>2018-09-29T17:33:06+10:00</updated>
+  <id>http://geshan.com.np/</id>
+  <author>
+    <name><![CDATA[Geshan Manandhar]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Building Your Next Product, Get Your HTTP API Working First]]></title>
+    <link href="http://geshan.com.np/blog/2015/08/building-you-next-product/"/>
+    <updated>2015-08-22T20:00:22+10:00</updated>
+    <id>http://geshan.com.np/blog/2015/08/building-you-next-product</id>
+    <content type="html"><![CDATA[<p>We have seen many technology software products coming, some coming up as the next big thing, some
+a multi-tenant Software As A Service (SAAS). Sometimes I see lots of new, useful and innovative
+products on <a href="http://www.producthunt.com/">Product Hunt</a> and think how would they have planned such
+amazing products. If you are planning to build your software product, this post will unfold why
+you should make your web Application Programming Interface (API) working first.</p>
+
+<p><img class="center" src="/images/product-http-api/rest-json.jpg" title="&lsquo;JSON APIs&rsquo; &lsquo;JSON APIs&rsquo;" ></p>
+
+<!-- more -->
+
+
+<h2>Introduction</h2>
+
+<p>There are many startups listed on <a href="http://startupsinnepal.com/">StartUps In Nepal</a> as well, I hope
+these people have a good backend infrastructure and have given enough importance to making their technology
+strong and scalable. If anyone is trying to rewrite a product or thinking of redoing their product I would
+really suggest to go the API oriented path.</p>
+
+<p>If you are thinking of the next big product or planning a startup/product, it is a good idea to not jump start
+a <a href="https://en.wikipedia.org/wiki/Monolithic_application">monolithic application</a>. Surely if you have less time/budget
+or want to just build a prototype may be to pull up some investment it is advisable. If you are thinking of a long-term
+product to be used by lots of people start planning your APIs.</p>
+
+<h2>HTTP APIs first, language/framework second</h2>
+
+<p>Rather than just deciding about the language/framework for your application, rise above it and think about HTTP APIs
+that will be needed to complete your applcaiton or the Minimum Viable Product (MVP). How to make user of the <a href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol">HTTP</a> verbs/methods
+GET, POST, PATCH, DELETE etc and make it easier for the clients to call your backend should be planned then you can
+decide on the platform (language/framework) that can be used to realize the plans.</p>
+
+<h2>SOA, Microservices or something else</h2>
+
+<p>You can go a <a href="https://en.wikipedia.org/wiki/Service-oriented_architecture">Service Oriented Architecture(SOA)</a> path
+or even look into <a href="https://en.wikipedia.org/wiki/Microservices">Microservices</a>. It is also advised to do
+RESTish/RESTful or somehow <a href="https://en.wikipedia.org/wiki/Representational_state_transfer">REST</a> based API which
+accepts and gives out <a href="https://en.wikipedia.org/wiki/JSON">JSON</a>. If you don&rsquo;t want to make more desicions about
+the data structure and how to accept or give out data, try implementing your APIs following <a href="http://jsonapi.org/">JSON API</a> specification.</p>
+
+<h2>Strong backend and multiple clients</h2>
+
+<p>If you are able to plan all your data communcation getting and giving out data to clients in the form of resource URLs,
+then you can build a strong backend. When you have a strong and scaleable back-end it can handle multiple clients easily. If you have a performant backend then the same backend can serve a front-end Javascript framework or a mobile applicaiton as a client in a speedy and consistent way.</p>
+
+<h2>Why not build frontend parallel</h2>
+
+<p>If the HTTP backend is designed and documented well before creating it even a <a href="http://nobackend.org/">front-end first</a> approach can be done. In this case, the frontend can be developed in parallel with the backend, if there is any change it can be adjusted accordingly.</p>
+
+<p>If your budget and resources support you can have two teams backend and frontend going in parallel to build and realize your dream product. And remember a mobile application is just another frontend client to the scaleable backend your have already built.</p>
+
+<h2>Mobile first is a side effect</h2>
+
+<p>If you have a strong and well documented backend HTTP APIs it can be called easily from the your mobile applicaiton to post or receive any information. Becuase is data is stored centrally on a persistent store the backend HTTP APIs work like a communication layer between your mobile applications and the data store.</p>
+
+<h2>Speed and performance is another good side effect</h2>
+
+<p>With great brackends all your system needs to serve is JSON and accept only JSON over HTTP following the HTTP way of working. This means the backend does not need to spit out any HTML so there are no views to code or maintain. As the view and some of its logic is decoupled and placed on the the frontend apps the backend is fast and the performance can be fine tuned from the backend perspective.</p>
+
+<h2>Conclusion</h2>
+
+<p>Though it looks all shiny from outside, still it is a resource intensive task to develop HTTP API backend and have multiple frontends. Both can go in parallel but it needs well planning, documentation and even better execution. That is why it is generally not recommended for web agency kind small projects but having backend HTTP APIs is applicable to products which have long life.</p>
+
+<blockquote><p>Have fun building backend HTTP APIs for the next big thing product in your mind.
+If you build your product following API oriented architecture, mobile first, speed and performance are its great side effects.</p></blockquote>
+]]></content>
+  </entry>
+  
+</feed>

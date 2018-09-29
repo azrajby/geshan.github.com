@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Git | Geshan's Blog]]></title>
+  <link href="http://geshan.com.np/blog/categories/git/atom.xml" rel="self"/>
+  <link href="http://geshan.com.np/"/>
+  <updated>2018-09-29T17:33:06+10:00</updated>
+  <id>http://geshan.com.np/</id>
+  <author>
+    <name><![CDATA[Geshan Manandhar]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[PHP Developers Nepal Meetup #16 a Round Up and My Talk on Simpilfied Gitflow With Slides]]></title>
+    <link href="http://geshan.com.np/blog/2016/06/php-developers-nepal-meetup-number-16-a-round-up-and-my-simpilfied-gitflow-talk/"/>
+    <updated>2016-06-25T21:50:35+10:00</updated>
+    <id>http://geshan.com.np/blog/2016/06/php-developers-nepal-meetup-number-16-a-round-up-and-my-simpilfied-gitflow-talk</id>
+    <content type="html"><![CDATA[<p>I had given a talk in the PHP Developers Nepal meetup #14 in Aug 2014 about <a href="http://geshan.com.np/blog/2014/08/basic-overview-of-message-queues-rabbit/">Rabbit Mq and Symfony</a>.
+This time the <a href="http://developers-nepal.github.io/php/meetups/25-Jun-2016/">meetup</a> took place at
+Prime College today. There were 2 regular talks for this meetup and one 5 minute lightening
+talk about the community. For this 16th installment, we did an open discussion for the first time.
+The topic of open discussion was &ldquo;Does automated deployment and DevOps add value to the organization?&rdquo;.
+It was the highlight of the event.</p>
+
+<p><img class="center" src="/images/php-dev-meetup-16/php-dev-meetup-16.jpg" title="&lsquo;PHP Dev Meetup 16 Open Panel discussion on DevOps&rsquo; &lsquo;PHP Dev Meetup 16 Open Panel discussion on DevOps&rsquo;" ></p>
+
+<!-- more -->
+
+
+<h2>How did it all unfold</h2>
+
+<p>The first talk was given by Amrit GC on &ldquo;Ansible for PHP Developers&rdquo;, then I presented my talk on &ldquo;Simplified Gitflow&rdquo;.
+After those two regular talks we had a lightening talk presented by Manish Jung Thapa (MJT) on PHP Developers Nepal Community.
+Last part of the program was an open discussion on &ldquo;Does automated deployment and DevOps add value to the organization?&rdquo; which
+got a lot of questions from the audience. It was great to moderate the open discussion. Overall, it was an amazing meetup. I guess
+there were around 100 participants which makes it one of the biggest PHP Developers meetup in terms of audience size.</p>
+
+<h2>My Talk on Simplified Gitflow</h2>
+
+<p>This is not the first time I presented this talk :). I had already given this talk at <a href="http://geshan.com.np/blog/2015/09/how-to-use-simplified-gitflow-branching-model-video/">YIPL in Mar 2015</a>.
+This time I changed the slides and made it more general. I hope it was helpful to the audience.</p>
+
+<p><img class="center" src="/images/php-dev-meetup-16/simplified-gitflow-talk.jpg" title="&lsquo;PHP Dev Meetup 16 My talk on simplified gitflow&rsquo; &lsquo;PHP Dev Meetup 16 My talk on simplified gitflow&rsquo;" ></p>
+
+<h2>Slides of Simplified Gitflow</h2>
+
+<script async class="speakerdeck-embed" data-id="acdf3ecb8fd84007b33113d906e5dd3c" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
+
+
+<h2>Video of my talk on Simplified Gitflow</h2>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/jznORrhoV-M?rel=0" frameborder="0" allowfullscreen></iframe>
+
+
+<p>More vidoes of the full event in this <a href="https://www.youtube.com/playlist?list=PLhTqkNYfkucxGk2OssIseNLMF9jPXYoHC">playlist</a>.</p>
+
+<h2>Hope to see more meetups</h2>
+
+<blockquote><p>Hope there will be a Developers Nepal meetup which is language agnostic soon. Kudos.</p></blockquote>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[3 Simple Rules for Less or No Git Conflicts]]></title>
+    <link href="http://geshan.com.np/blog/2016/04/3-simple-rules-for-less-or-no-git-conflicts/"/>
+    <updated>2016-04-28T16:14:43+10:00</updated>
+    <id>http://geshan.com.np/blog/2016/04/3-simple-rules-for-less-or-no-git-conflicts</id>
+    <content type="html"><![CDATA[<p>Do you write at least 10 lines of code a day in any programming language? Do you work alone or in a team?
+If your answer is yes to both questions, you need to learn <code>git</code> even if you work alone in a project.
+<a href="https://git-scm.com/">Git</a> is the most popular versions control system and it has become a must have
+software engineer skill.</p>
+
+<p>I have seen teams fall into this trap of git conflicts when they start using git and some type of
+<a href="http://geshan.com.np/blog/2014/12/do-you-git-your-code-follow-this-simplified-gitflow-model/">gitflow</a>.
+Merging branches to the main branch becomes a pain when there are git conflicts.
+In this post I am going to reveal 3 simple rules to avoid git conflicts.</p>
+
+<p><img class="center" src="/images/3-rules-git-conflict/git-conflict.png" title="&lsquo;3 simple rules for less or no git conflicts&rsquo; &lsquo;3 simple rules for less or no git conflicts&rsquo;" ></p>
+
+<!-- more -->
+
+
+<h2>Assumption</h2>
+
+<p>You have some working knowledge of git. You follow a git branching model like gitflow or simplified gitflow.</p>
+
+<h2>Rule 1: Keep your changes small</h2>
+
+<p>This is the golden rule to avoid git conflicts in teams. Conflicts occurs when 2 team members make changes
+around the same line of code. Like John changes like 5-10 in readme.md. Jack changes like 7-15 in the same
+readme.md file on a different branch. Have a rule of thumb that each pull request can have at most 20 files
+changed with 200 line addition. If changes are less there is less chances of having things overlapped. As a
+side effect, it will make deploying and testing changes easy too.</p>
+
+<h2>Rule 2: Rebase with your main branch (generally master) when it changes</h2>
+
+<p>When your main branch changes, rebase the branch you are working on with it. Usually <code>master</code> is the
+main branch so it will be best if you rebase with master at least once a day. This saves you from bringing
+in lots of changes done by other team member late. Its the same concept as above, get small changes step by
+step many times than getting it all at once. At the end of the day always do the following, given
+you are on your working branch</p>
+
+<pre><code>git checkout master
+git fetch
+git pull --rebase origin master
+git checkout -
+git rebase master
+</code></pre>
+
+<p>You get the latest master. Then you go back to your previous branch and rebase your branch with latest master.</p>
+
+<h2>Rule 3: Review pull requests faster and merge them to main branch</h2>
+
+<p>As I have stated earlier &ldquo;An open pull request (PR) is a liability in at least 2 ways. 1 it’s a feature/fix not
+shipped to customers. 2 it will invite code conflicts soon.&rdquo; Have a rule, pull requests need action by 3 days of
+opening them. You can review code, if code is ok deploy and merge or review code, fix issues then deploy and merge.
+This will help the team ship things faster as well as not have pull requests open unattended for weeks.</p>
+
+<h3>Useful Tip</h3>
+
+<p>You followed the above rules, still landed in a git conflict situation? Use <code>git cherry-pick</code>. If you have more
+than one commit in your working branch first <a href="http://geshan.com.np/blog/2014/07/4-git-tips-beyond-basics/">squash</a>
+it to one commit. Then create a new branch out of master/your main branch and do <code>git cherry-pick &lt;sha-of-your-squashed-commit&gt;</code>.<br/>
+Given you have only 1 commit on your working branch <code>feature11</code> and you are on <code>feature11</code> right now, do the following:</p>
+
+<pre><code>git checkout master; git fetch &amp;&amp; git pull --rebase origin master
+git checkout -b feature-11-new
+git cherry-pick 249bd9b150fdb1e6fc9e58af9823f70cc52579a3
+</code></pre>
+
+<p>In the above example <code>249bd9b150fdb1e6fc9e58af9823f70cc52579a3</code> is used for demo only. You can know your SHA hash with <code>git log -1</code>
+being on branch <code>feature11</code></p>
+
+<h2>Conclusion</h2>
+
+<p>There is no silver bullet to avoid git conflicts all the time. You will face it now and then.
+If you run into git conflicts everyday the process and system needs to change.
+Be logical, if you have a PR with 50 files changed and 700 new lines you will face conflicts.</p>
+
+<blockquote><p>I hope you face less git conflicts or even completely avoid them.</p></blockquote>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[How to Use Simplified Gitflow Branching Model [Video]]]></title>
+    <link href="http://geshan.com.np/blog/2015/09/how-to-use-simplified-gitflow-branching-model-video/"/>
+    <updated>2015-09-25T23:16:23+10:00</updated>
+    <id>http://geshan.com.np/blog/2015/09/how-to-use-simplified-gitflow-branching-model-video</id>
+    <content type="html"><![CDATA[<p>Just knowing git and all team members pushing code to the main branch (master) is not a good practice.
+To leverage the most out of git, it is a good idea to do feature branching and follow a branching model.
+GitFlow is one of the options for doing a feature branching model but it is not so straight forward,
+In this blog post with a video and presentation I would elaborate on how a team can use <code>simplified gitflow</code>
+and get the most out of using git.</p>
+
+<p><img class="center" src="/images/simplified-gitflow/simple-git-flow.jpg" title="&lsquo;Simplified git-flow&rsquo; &lsquo;Simplified git-flow&rsquo;" ></p>
+
+<!-- more -->
+
+
+<h2>Slides</h2>
+
+<center><iframe src="//www.slideshare.net/slideshow/embed_code/42503092" width="510" height="420" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe></center>
+
+
+<p>You can also view the <a href="http://bit.ly/1KzaNbj">interactive slides</a>.</p>
+
+<h2>Video</h2>
+
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/nwM2U-38JP8" frameborder="0" allowfullscreen></iframe></center>
+
+
+<p>I talk about git flow for the first 15-16 minutes then I start answering questions on git and gitflow. Then
+I explain about other things in git which can be helpful. I did this presentation at <a href="http://yipl.com.np">YIPL</a>
+on 11-Mar-2015. I know its a late post its like a part 2 of <a href="http://bit.ly/s-git-flow">Do you git your code? Follow this simplified gitflow branching model to improve productivity</a>.</p>
+
+<blockquote><p>Hope you learn something new about git and simplified gitflow from this video.</p></blockquote>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Software Engineering Practices in Nepal Infographics Part 2 Includes Git, VCS Hosting, Code Review Culture Etc]]></title>
+    <link href="http://geshan.com.np/blog/2015/05/software-engineering-practices-in-nepal-infographics-part-2-includes-git/"/>
+    <updated>2015-05-22T12:40:58+10:00</updated>
+    <id>http://geshan.com.np/blog/2015/05/software-engineering-practices-in-nepal-infographics-part-2-includes-git</id>
+    <content type="html"><![CDATA[<p>I hope life is slowly going back to normal in Nepal though the news of aftershocks is not encouraging. My prayers are with the
+people of Nepal and I hope they get the positive energy to resume with their normal work.</p>
+
+<p>Below is the Part 2 of the Software Engineering Practices in Nepal Infographics. This time the graphical information covers
+popularity of Versioin Control System (VCS), VCS hosting, Operating System (OS), Coding Standard, Code Reviews and other
+interesting facts from the survey.</p>
+
+<p>Again special thanks to <a href="http://bit.ly/ashish-singh-blog">Ashish Singh</a> for helping
+me clean up and compile the data in a better way. And this time even <a href="http://bit.ly/ansu-blog">Ansubha Manandhar</a> rolled up
+her sleeves and helped us group and compile the data into percentages, thank you for that.</p>
+
+<p><strong>Data for this infographics is taken from this <a href="http://bit.ly/nep-dev-survey">survey</a>, I kindly request you to fill it.</strong></p>
+
+<!-- more -->
+
+
+<p><img class="center" src="/images/sw-eng-np-infographics-part02/Software_Engineering_Nepal_Mid_2015_Part02.png" title="&lsquo;Software Engineering Practices in Nepal Infographics Part 2&rsquo; &lsquo;Software Engineering Practices in Nepal Infographics Part 2&rsquo;" ></p>
+
+<p>You can view this infographics in <a href="http://bit.ly/1R8EfHQ">interactive</a> mode too.</p>
+
+<p><strong>If you enjoyed viewing the infographics, I again request to fill up the <a href="http://bit.ly/nep-dev-survey">survey</a> if you have not filled it up yet.</strong></p>
+
+<blockquote><p>Thanks to everyone filling up the survey even in such conditions in Nepal.
+I hope to get some more responses so that the next infographics in this series will have more data.
+I will make the survey open till 2015 Q3 and post the final results in Oct 2015. #prayForNepal #stayStrongNepal #rebuildNepal</p></blockquote>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Do You Git Your Code? Follow This Simplified Gitflow Branching Model to Improve Productivity]]></title>
+    <link href="http://geshan.com.np/blog/2014/12/do-you-git-your-code-follow-this-simplified-gitflow-model/"/>
+    <updated>2014-12-13T14:52:40+11:00</updated>
+    <id>http://geshan.com.np/blog/2014/12/do-you-git-your-code-follow-this-simplified-gitflow-model</id>
+    <content type="html"><![CDATA[<p>Git or a similar VCS is the backbone for code collaboration in a multi-developers environment. When you follow
+a proper branch naming convention, git branching and merging can also be tied to an issue flow for better
+project management.</p>
+
+<p>Source code Version Control System (VCS) and automated testing open doors to other great software quality and
+delivery practices like continuous integration and automated deployment etc. Amongst various version control
+system software <a href="http://git-scm.com">git</a> is a distributed system that is very popular and easy to use once
+you get used to it.</p>
+
+<p><img class="center" src="/images/simplified-gitflow/simple-git-flow.jpg" title="&lsquo;Simplified git-flow&rsquo; &lsquo;Simplified git-flow&rsquo;" ></p>
+
+<!-- more -->
+
+
+<p>The full <a href="hhttp://nvie.com/posts/a-successful-git-branching-model/">gitflow</a> has 3 perpetual branches develop,
+release and master. Tickets/Issues can be grouped to release from develop. This in turn creates difficulty when
+tracing the ticket that caused any problem when it occurs.</p>
+
+<p>Simplified gitflow has only one perpetual branch master which decreases the complexity, only one ticket can be
+deployed and tested in any given environment like staging or production. When only one ticket is deployed on a
+given environment, it is very easy to trace a problem if it occurs. As the full gitflow, master is the stable
+branch which can be deployed to production anytime.</p>
+
+<p>If a new feature or bug fix needs to be done, the developer will follow the given steps:</p>
+
+<ol>
+<li>Create a branch from latest <strong>master</strong> branch following a naming convention like feat-123 for feature no. 123</li>
+<li>Work on it, after completing it push the branch feat-123 to the remote git repository (could be github or any other), preferably with just one commit</li>
+<li>Open a pull request (or merge request) from the pushed branch feat-123 to <strong>master</strong></li>
+<li>After the pull request is accepted, deploy it on staging environment and test it.</li>
+<li>Test it, if everything is ok, create a tag from feat-123 like 12-12-14 (today&rsquo;s date) and deploy it to production</li>
+<li>Test it on production, if everything is fine on production after testing merge the tag to master.</li>
+</ol>
+
+
+<p>The above steps are repeated for each ticket, feature of bug fix. Generally its good to wait an hour or two to merge
+the tag to master to make sure at that all the things are running fine. Smaller deployments also help to increase
+the overall stability of the whole systems. I am following simplified git-flow for
+<a href="https://github.com/geshan/geshan.github.com/network">blogging</a> as well, for this blog source branch acts as master.</p>
+
+<p>For a detailed example with explanation and git commands read the following slides:</p>
+
+<center><iframe src="//www.slideshare.net/slideshow/embed_code/42503092" width="510" height="420" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe></center>
+
+
+<p>You can also view the <a href="http://bit.ly/1KzaNbj">interactive slides</a>.</p>
+
+<blockquote><p>I believe you have learned something new and will be willing to integrate the simplified gitflow in
+your daily work with your team decreasing complexity and increasing productivity.</p></blockquote>
+]]></content>
+  </entry>
+  
+</feed>
