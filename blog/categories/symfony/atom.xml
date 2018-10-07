@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Symfony | Geshan's Blog]]></title>
   <link href="http://geshan.com.np/blog/categories/symfony/atom.xml" rel="self"/>
   <link href="http://geshan.com.np/"/>
-  <updated>2018-10-08T08:07:29+11:00</updated>
+  <updated>2018-10-08T08:37:55+11:00</updated>
   <id>http://geshan.com.np/</id>
   <author>
     <name><![CDATA[Geshan Manandhar]]></name>
@@ -34,7 +34,7 @@ her sleeves and helped us group and compile the data into percentages, thank you
 <!-- more -->
 
 
-<p><img class="center" src="/images/sw-eng-np-infographics-part02/Software_Engineering_Nepal_Mid_2015_Part02.png" title="&lsquo;Software Engineering Practices in Nepal Infographics Part 2&rsquo; &lsquo;Software Engineering Practices in Nepal Infographics Part 2&rsquo;" ></p>
+<p>{% img center /images/sw-eng-np-infographics-part02/Software_Engineering_Nepal_Mid_2015_Part02.png &lsquo;Software Engineering Practices in Nepal Infographics Part 2&rsquo; &lsquo;Software Engineering Practices in Nepal Infographics Part 2&rsquo; %}</p>
 
 <p>You can view this infographics in <a href="http://bit.ly/1R8EfHQ">interactive</a> mode too.</p>
 
@@ -62,7 +62,7 @@ I will make the survey open till 2015 Q3 and post the final results in Oct 2015.
 <!-- more -->
 
 
-<p><img class="center" src="/images/sw-eng-np-infographics-part01/Software_Engineering_Nepal_Mid_2015_Part01.png" title="&lsquo;Software Engineering Practices in Nepal Infographics Part 1&rsquo; &lsquo;Software Engineering Practices in Nepal Infographics Part 1&rsquo;" ></p>
+<p>{% img center /images/sw-eng-np-infographics-part01/Software_Engineering_Nepal_Mid_2015_Part01.png &lsquo;Software Engineering Practices in Nepal Infographics Part 1&rsquo; &lsquo;Software Engineering Practices in Nepal Infographics Part 1&rsquo; %}</p>
 
 <p>You can view this infographics in <a href="http://bit.ly/1EPE37N">interactive</a> mode too.</p>
 

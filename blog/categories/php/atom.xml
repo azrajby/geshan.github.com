@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Php | Geshan's Blog]]></title>
   <link href="http://geshan.com.np/blog/categories/php/atom.xml" rel="self"/>
   <link href="http://geshan.com.np/"/>
-  <updated>2018-10-08T08:07:29+11:00</updated>
+  <updated>2018-10-08T08:37:55+11:00</updated>
   <id>http://geshan.com.np/</id>
   <author>
     <name><![CDATA[Geshan Manandhar]]></name>
@@ -22,7 +22,7 @@
 
 <p>Docker enables using same software stack in development, staging and production. You don&rsquo;t need to worry about the version of PHP, MYSQL or any other dependency with Docker. This post will be about Laravel and MariaDB (MySQL) with Docker for local development. It will also feature use of docker-compose. We will use PHP 5.6 and MariaDB 10.1 with Laravel 5.1.</p>
 
-<p><img class="center" src="/images/laravel-mysql-docker/laravel-mysql-docker.png" title="&lsquo;Getting started with Laravel, MariaDB (MySQL) and docker, docker compose&rsquo; &lsquo;Getting started with Laravel, MariaDB (MySQL) and docker, docker compose&rsquo;" ></p>
+<p>{% img center /images/laravel-mysql-docker/laravel-mysql-docker.png &lsquo;Getting started with Laravel, MariaDB (MySQL) and docker, docker compose&rsquo; &lsquo;Getting started with Laravel, MariaDB (MySQL) and docker, docker compose&rsquo; %}</p>
 
 <!-- more -->
 
@@ -134,7 +134,7 @@ mysql:
 This is done as docker containers don&rsquo;t have data persistence. This will keep the MySQL data persisted on the host machine which will be reused when the MySQL/MariaDB container is restarted. The folder structure should
 be like below:</p>
 
-<p><img class="center" src="/images/laravel-mysql-docker/folder-structure.png" title="&lsquo;Laravel, MariaDB (MySQL) and docker, docker compose folder structure&rsquo; &lsquo;Laravel, MariaDB (MySQL) and docker, docker compose folder structure&rsquo;" ></p>
+<p>{% img center /images/laravel-mysql-docker/folder-structure.png &lsquo;Laravel, MariaDB (MySQL) and docker, docker compose folder structure&rsquo; &lsquo;Laravel, MariaDB (MySQL) and docker, docker compose folder structure&rsquo; %}</p>
 
 <h3>Create default sites-enabled</h3>
 
@@ -176,7 +176,7 @@ docker-compose build to build the images.</p>
 
 <p>After you run docker-compose up you will see output like below:</p>
 
-<p><img class="center" src="/images/laravel-mysql-docker/docker-compose-up.png" title="&lsquo;Laravel, MariaDB (MySQL) and docker, docker compose up output&rsquo; &lsquo;Laravel, MariaDB (MySQL) and docker, docker compose up output&rsquo;" ></p>
+<p>{% img center /images/laravel-mysql-docker/docker-compose-up.png &lsquo;Laravel, MariaDB (MySQL) and docker, docker compose up output&rsquo; &lsquo;Laravel, MariaDB (MySQL) and docker, docker compose up output&rsquo; %}</p>
 
 <h3>Fix permissions</h3>
 
@@ -247,7 +247,7 @@ describe users;
 
 <p>You will get an output like below:</p>
 
-<p><img class="center" src="/images/laravel-mysql-docker/users-table.png" title="&lsquo;Laravel, MariaDB (MySQL) and docker, docker compose users table&rsquo; &lsquo;Laravel, MariaDB (MySQL) and docker, docker compose users table&rsquo;" ></p>
+<p>{% img center /images/laravel-mysql-docker/users-table.png &lsquo;Laravel, MariaDB (MySQL) and docker, docker compose users table&rsquo; &lsquo;Laravel, MariaDB (MySQL) and docker, docker compose users table&rsquo; %}</p>
 
 <h3>Stop docker containers</h3>
 
@@ -258,7 +258,7 @@ describe users;
 
 <p>on the project root and it will stop the containers like below:</p>
 
-<p><img class="center" src="/images/laravel-mysql-docker/docker-compose-stop.png" title="&lsquo;Laravel, MariaDB (MySQL) and docker, docker compose stop output&rsquo; &lsquo;Laravel, MariaDB (MySQL) and docker, docker compose stop output&rsquo;" ></p>
+<p>{% img center /images/laravel-mysql-docker/docker-compose-stop.png &lsquo;Laravel, MariaDB (MySQL) and docker, docker compose stop output&rsquo; &lsquo;Laravel, MariaDB (MySQL) and docker, docker compose stop output&rsquo; %}</p>
 
 <h2>Next Steps</h2>
 
@@ -285,7 +285,7 @@ many frameworks, methods and styles to choose from. In this blog post I will she
 with &ldquo;Unit&rdquo; testing in a Laravel application. Laravel has gained lots of popularity in the past years may be due to its
 simplicity, ease of use, clear documentation and availability of packages/libraries.</p>
 
-<p><img class="center" src="/images/laravel-unit-tests/laravel-popularity.png" title="&lsquo;Laravel is very popular&rsquo; &lsquo;Laravel is very popular&rsquo;" ></p>
+<p>{% img center /images/laravel-unit-tests/laravel-popularity.png &lsquo;Laravel is very popular&rsquo; &lsquo;Laravel is very popular&rsquo; %}</p>
 
 <!-- more -->
 
@@ -299,7 +299,7 @@ tested in a unit test fashion and not only on how it is rendered in a browser. S
 tests are <a href="https://github.com/laravel/framework/blob/5.1/tests/View/ViewBladeCompilerTest.php">Unit</a> test and the
 documentation for application tests are for <a href="http://laravel.com/docs/5.1/testing">functional</a> test.</p>
 
-<p><img class="center" src="/images/laravel-unit-tests/laravel-testing-doc.png" title="&lsquo;Laravel application testing doc&rsquo; &lsquo;Laravel application testing doc&rsquo;" ></p>
+<p>{% img center /images/laravel-unit-tests/laravel-testing-doc.png &lsquo;Laravel application testing doc&rsquo; &lsquo;Laravel application testing doc&rsquo; %}</p>
 
 <h2>Qualities of Unit tests</h2>
 
@@ -319,7 +319,7 @@ qualities of unit tests are:</p>
 <p>The above 5 characteristics make it easy to setup and super fast when you run as there are no external dependencies
 like a database or file system.</p>
 
-<p><img class="center" src="/images/laravel-unit-tests/laravel-unit-tests.png" title="&lsquo;Laravel unit tests&rsquo; &lsquo;Laravel unit tests&rsquo;" ></p>
+<p>{% img center /images/laravel-unit-tests/laravel-unit-tests.png &lsquo;Laravel unit tests&rsquo; &lsquo;Laravel unit tests&rsquo; %}</p>
 
 <h2>More on Unit testing</h2>
 
@@ -342,7 +342,7 @@ domain/business logic can reside. For this example I will use a checkout example
 
 <p>We will structure the Laravel application as:</p>
 
-<p><img class="center" src="/images/laravel-unit-tests/laravel-unit-test-structure.png" title="&lsquo;Laravel unit test application structure&rsquo; &lsquo;Laravel unit test application structure&rsquo;" ></p>
+<p>{% img center /images/laravel-unit-tests/laravel-unit-test-structure.png &lsquo;Laravel unit test application structure&rsquo; &lsquo;Laravel unit test application structure&rsquo; %}</p>
 
 <p>For the above case we will do the following to achieve unit testing with a structure having Service as below:</p>
 
@@ -414,7 +414,7 @@ all I would opt for having tests after code. Below is example of the test code w
 
 <p><strong>The full running app with tests is available as an open source repository on <a href="https://github.com/geshan/laravel-unit-test-example/">github</a>.</strong></p>
 
-<p><img class="center" src="/images/laravel-unit-tests/running-laravel-app.png" title="&lsquo;Running Laravel app with PHP server&rsquo; &lsquo;Running Laravel app with PHP server&rsquo;" ></p>
+<p>{% img center /images/laravel-unit-tests/running-laravel-app.png &lsquo;Running Laravel app with PHP server&rsquo; &lsquo;Running Laravel app with PHP server&rsquo; %}</p>
 
 <h3>Tip</h3>
 
@@ -426,7 +426,7 @@ each change my tests would automatically run and I would see the green or red de
 </blockquote>
 
 
-<p><img class="center" src="/images/laravel-unit-tests/tests-green-gulp.png" title="&lsquo;Handy gulp tdd for Laravel&rsquo; &lsquo;Handy gulp tdd for Laravel&rsquo;" ></p>
+<p>{% img center /images/laravel-unit-tests/tests-green-gulp.png &lsquo;Handy gulp tdd for Laravel&rsquo; &lsquo;Handy gulp tdd for Laravel&rsquo; %}</p>
 
 <h2>Choice of Tools and services</h2>
 
@@ -465,7 +465,7 @@ libraries. It is a difficult yet rewarding experience to lead/support an open so
 of starting an open source project or open sourcing some part(s) of your existing system, this post has a checklist
 to assist you with it.</p>
 
-<p><img class="center" src="/images/php-oss-checklist/example-foss.png" title="&lsquo;An example open source php project&rsquo; &lsquo;Example open source project&rsquo;" ></p>
+<p>{% img center /images/php-oss-checklist/example-foss.png &lsquo;An example open source php project&rsquo; &lsquo;Example open source project&rsquo; %}</p>
 
 <!-- more -->
 
@@ -558,7 +558,7 @@ show what is being done and reflect on status of the project issues visually. He
 your rescue. You can show the status of the issues as below to make all the interested people clear of what is happening
 in the form of a Agileish Kanban board:</p>
 
-<p><img class="center" src="/images/php-oss-checklist/huBoard.png" title="&lsquo;An example of issues on HuBoard&rsquo; &lsquo;Example of issues on HuBoard&rsquo;" ></p>
+<p>{% img center /images/php-oss-checklist/huBoard.png &lsquo;An example of issues on HuBoard&rsquo; &lsquo;Example of issues on HuBoard&rsquo; %}</p>
 
 <h2>Conclusion</h2>
 
@@ -589,7 +589,7 @@ her sleeves and helped us group and compile the data into percentages, thank you
 <!-- more -->
 
 
-<p><img class="center" src="/images/sw-eng-np-infographics-part02/Software_Engineering_Nepal_Mid_2015_Part02.png" title="&lsquo;Software Engineering Practices in Nepal Infographics Part 2&rsquo; &lsquo;Software Engineering Practices in Nepal Infographics Part 2&rsquo;" ></p>
+<p>{% img center /images/sw-eng-np-infographics-part02/Software_Engineering_Nepal_Mid_2015_Part02.png &lsquo;Software Engineering Practices in Nepal Infographics Part 2&rsquo; &lsquo;Software Engineering Practices in Nepal Infographics Part 2&rsquo; %}</p>
 
 <p>You can view this infographics in <a href="http://bit.ly/1R8EfHQ">interactive</a> mode too.</p>
 
@@ -617,7 +617,7 @@ I will make the survey open till 2015 Q3 and post the final results in Oct 2015.
 <!-- more -->
 
 
-<p><img class="center" src="/images/sw-eng-np-infographics-part01/Software_Engineering_Nepal_Mid_2015_Part01.png" title="&lsquo;Software Engineering Practices in Nepal Infographics Part 1&rsquo; &lsquo;Software Engineering Practices in Nepal Infographics Part 1&rsquo;" ></p>
+<p>{% img center /images/sw-eng-np-infographics-part01/Software_Engineering_Nepal_Mid_2015_Part01.png &lsquo;Software Engineering Practices in Nepal Infographics Part 1&rsquo; &lsquo;Software Engineering Practices in Nepal Infographics Part 1&rsquo; %}</p>
 
 <p>You can view this infographics in <a href="http://bit.ly/1EPE37N">interactive</a> mode too.</p>
 

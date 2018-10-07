@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Technology | Geshan's Blog]]></title>
   <link href="http://geshan.com.np/blog/categories/technology/atom.xml" rel="self"/>
   <link href="http://geshan.com.np/"/>
-  <updated>2018-10-08T08:07:29+11:00</updated>
+  <updated>2018-10-08T08:37:55+11:00</updated>
   <id>http://geshan.com.np/</id>
   <author>
     <name><![CDATA[Geshan Manandhar]]></name>
@@ -20,18 +20,18 @@
     <id>http://geshan.com.np/blog/2018/10/dont-just-learn-a-new-language-slash-framework</id>
     <content type="html"><![CDATA[<p>“For the things we have to learn before we can do them, we learn by doing them.” ― Aristotle, The Nicomachean Ethics. Imagine you already read 3 books about cycling. Then someone gave you a cycle and asked to ride it, will you be able to ride it? The simple answer is &ldquo;No&rdquo;. It is not about how much have you read about cycling or how many videos did you watch about it. It is about getting on a cycle, balancing on it, learning the feet, hands and eye co-ordination. Same goes for learning a new tech skill, a new language or framework.</p>
 
-<p><img class="center" src="/images/language-framework-learn/cycle.jpg" title="&lsquo;Dont just learn a new language framework, implement it as a running open source project&rsquo; &lsquo;Dont just learn a new language framework, implement it as a running open source project&rsquo;" ></p>
+<p>{% img center /images/language-framework-learn/cycle.jpg &lsquo;Dont just learn a new language framework, implement it as a running open source project&rsquo; &lsquo;Dont just learn a new language framework, implement it as a running open source project&rsquo; %}</p>
 
 <!-- more -->
 
 
-<p>Now if you think how will I do this new project I don&rsquo;t even know language &lsquo;X&rsquo; or framework &lsquo;Y&rsquo; stop complaining. Maybe you are a new starter in tech or coding but you need to know how to learn new things. The best way to learn something new is by doing it. This post will focus on getting some common things right. It will help you get from I want to learn &lsquo;X&rsquo; to I have a project running in &lsquo;X&rsquo;, so follow on. If you are convinced about doing a project to learn something new, open source it. Github is the de facto service to host your open source projects. Then you can leverage lots of services for free. This post will be equally useful to coding new starters as well as experienced softweare engineers.</p>
+<p>Now if you think how will I do this new project I don&rsquo;t even know language &lsquo;X&rsquo; or framework &lsquo;Y&rsquo; stop complaining. Maybe you are a new starter in tech or coding but you need to know how to learn new things. The best way to learn something new is by doing it. This post will focus on getting some common things right. It will help you get from I want to learn &lsquo;X&rsquo; to I have a project running in &lsquo;X&rsquo;, so follow on. If you are convinced about doing a project to learn something new, open source it. Github is the de facto service to host your open source projects. Then you can leverage lots of services for free. This post will be equally useful for coding new starters as well as experienced software engineers.</p>
 
 <h2>TLDR;</h2>
 
 <blockquote><p>Write a project to learn that language/framework, open source it then leverage services for free. Don&rsquo;t just watch courses, read the docs and then find solutions. Learn by doing. Use git and implement docker in your project. Code correctly add a code quality check service to be aware of the best practices, deploy your project to get a working URL for it.</p></blockquote>
 
-<p><img class="center" src="/images/language-framework-learn/lang-framework-learn.jpg" title="&lsquo;Dont just learn a new language framework, implement it as a running open source project&rsquo; &lsquo;Dont just learn a new language framework, implement it as a running open source project&rsquo;" ></p>
+<p>{% img center /images/language-framework-learn/lang-framework-learn.jpg &lsquo;Dont just learn a new language framework, implement it as a running open source project&rsquo; &lsquo;Dont just learn a new language framework, implement it as a running open source project&rsquo; %}</p>
 
 <h2>Don&rsquo;t just watch courses, read the docs and find solutions</h2>
 
@@ -54,7 +54,7 @@
 <p>Now you are writing a new project to learn your favorite &lsquo;X&rsquo; or &lsquo;Y&rsquo;. You have written some parts of it, you are collaborating with Git and have the code open source on Github. You have Docker in place and code quality checks run on each push, great! But you can&rsquo;t show it to your friend who is living in a different city/country right? Wrong!</p>
 
 <p>You can use different services to deploy your web application. With a URL you can show it to your friend, a recruiter or anyone who knows the URL. You can deploy it for free to services like <a href="https://www.heroku.com">Heroku</a> or <a href="https://zeit.co/now">Zeit Now</a>.
-If you have Dockerized your open source app I would recommend Zeit Now. With the recent <a href="https://zeit.co/github">Github integration</a> Zeit Now will give a new URL to each pull request. This makes testing a breeze. You can check an example on a demo <a href="https://github.com/geshan/currency-api/pull/9">currency converter API</a> app I wrote.</p>
+If you have Dockerized your open source app I would recommend Zeit Now. With the recent <a href="https://zeit.co/github">Github integration</a>, Zeit Now will give a new URL to each pull request. This makes testing a breeze. You can check an example on a demo <a href="https://github.com/geshan/currency-api/pull/9">currency converter API</a> app I wrote.</p>
 
 <h2>Conclusion</h2>
 
@@ -69,7 +69,7 @@ If you have Dockerized your open source app I would recommend Zeit Now. With the
     <id>http://geshan.com.np/blog/2018/09/7-practical-steps-to-land-your-first-tech-job</id>
     <content type="html"><![CDATA[<p>&ldquo;If you hate your job, take a loan and you will start liking it&rdquo;. I don&rsquo;t remember where I read this but this sounds convincing. Now think of the tech job market worldwide, saying it is growing would be an understatement, it is booming. Still, why don&rsquo;t fresh graduates not get a job when the pass out of universities? Let&rsquo;s have a closer look at this issue and try to help technology students get a job as soon as their course finishes.</p>
 
-<p><img class="center" src="/images/5-steps-first-tech-job/first-tech-job-a.jpg" title="&lsquo;5 practical steps to land your first tech job&rsquo; &lsquo;5 practical steps to land your first tech job&rsquo;" ></p>
+<p>{% img center /images/5-steps-first-tech-job/first-tech-job-a.jpg &lsquo;5 practical steps to land your first tech job&rsquo; &lsquo;5 practical steps to land your first tech job&rsquo; %}</p>
 
 <!-- more -->
 
@@ -92,7 +92,7 @@ If you have Dockerized your open source app I would recommend Zeit Now. With the
 
 <p>On the student&rsquo;s side, you need to research what is relevant for the market, learn on your own and brand yourself so that you can sell your skills faster. For instance, if I interview a candidate who has a good tech blog with helpful and regular posts may be even on medium. Your chances of getting hired are up by like ~5% already. Because being able to put your ideas/learning in words is an important skill for a software engineer.</p>
 
-<p><img class="center" src="/images/5-steps-first-tech-job/first-tech-job-b.jpg" title="&lsquo;5 practical steps to land your first tech job&rsquo; &lsquo;5 practical steps to land your first tech job&rsquo;" ></p>
+<p>{% img center /images/5-steps-first-tech-job/first-tech-job-b.jpg &lsquo;5 practical steps to land your first tech job&rsquo; &lsquo;5 practical steps to land your first tech job&rsquo; %}</p>
 
 <h2>Lets get to the steps now</h2>
 
@@ -135,7 +135,7 @@ If you have Dockerized your open source app I would recommend Zeit Now. With the
     <id>http://geshan.com.np/blog/2018/05/how-to-do-a-zero-downtime-database-db-migration-schema-change-with-a-practical-example</id>
     <content type="html"><![CDATA[<p>Database migration on a production database is never simple. Depending on the volume of requests some teams schedule database migration to off hours. You can run your alter statements with zero or minimal downtime following the steps mentioned below with a practical example.</p>
 
-<p><img class="center" src="/images/db-migration/db-migration.png" title="&lsquo;How to do a zero downtime database&rsquo; &lsquo;How to do a zero downtime database&rsquo;" ></p>
+<p>{% img center /images/db-migration/db-migration.png &lsquo;How to do a zero downtime database&rsquo; &lsquo;How to do a zero downtime database&rsquo; %}</p>
 
 <!-- more -->
 
@@ -144,13 +144,13 @@ If you have Dockerized your open source app I would recommend Zeit Now. With the
 
 <p>As an example for this post, let&rsquo;s assume you work for an E-commerce company which has both recurring and new customers. You have partners who publicize a discount code valid for a given date range and get a percent of the order&rsquo;s total tracked by their discount code. Below is the schema for the partner and coupon code. Below is the initial schema before any change:</p>
 
-<p><img class="center" src="/images/db-migration/schema-01.png" title="&lsquo;Initial DB schema&rsquo; &lsquo;Initial DB Schema&rsquo;" ></p>
+<p>{% img center /images/db-migration/schema-01.png &lsquo;Initial DB schema&rsquo; &lsquo;Initial DB Schema&rsquo; %}</p>
 
 <p>Now the new requirement is to track different commission percent for the new and recurring customer. New and recurring customers are evaluated by a different system/microservice and it is also responsible for commission calculation based on order total which is out of the scope of this focused example.</p>
 
 <p>To do commission tracking by customer type we would decide to add 2 new columns commission_percent_new_customer, commission_percent_recurring_customer, the difficult question is how to roll it out without downtime.</p>
 
-<p><img class="center" src="/images/db-migration/schema-02.png" title="&lsquo;Updated schema with 2 new columns&rsquo; &lsquo;Updated schema with 2 new columns&rsquo;" ></p>
+<p>{% img center /images/db-migration/schema-02.png &lsquo;Updated schema with 2 new columns&rsquo; &lsquo;Updated schema with 2 new columns&rsquo; %}</p>
 
 <h3>Migration script (DB schema alter statement)</h3>
 
@@ -190,7 +190,7 @@ ADD `commission_percent_recurring_customer` DECIMAL NULL AFTER `commission_perce
 
 <h3>Final schema after dropping commission_percent column</h3>
 
-<p><img class="center" src="/images/db-migration/schema-03.png" title="&lsquo;Updated schema with 1 column less&rsquo; &lsquo;Updated schema with 1 column less&rsquo;" ></p>
+<p>{% img center /images/db-migration/schema-03.png &lsquo;Updated schema with 1 column less&rsquo; &lsquo;Updated schema with 1 column less&rsquo; %}</p>
 
 <h2>Things to consider</h2>
 
@@ -216,7 +216,7 @@ ADD `commission_percent_recurring_customer` DECIMAL NULL AFTER `commission_perce
     <id>http://geshan.com.np/blog/2017/08/convert-your-tech-hiring-funnel-into-an-hour-glass</id>
     <content type="html"><![CDATA[<p>Sometimes I feel that the software company (<a href="http://younginnovations.com.np/ourstory">YIPL</a>) we started a decade back is turning into a software engineer factory. We take in fresh grads or junior software engineers, train them, mentor them. When they get the skills after 6-9 months and are ready to be productive to the company they move to a bigger better software company. This is a common story in Kathmandu Tech Scene. I am not blaming people moving jobs in tech but I think, there is a fundamental flaw in the process and system itself. In this blog post I will unveil a tech hiring funnel we follow for a few tech startups in Kathmandu. It will also contain some of my thoughts on how to retain tech talent by converting the funnel into an hour glass.</p>
 
-<p><img class="center" src="/images/tech-hiring-funnel-hour-glass/tech-hiring-funnel-hourglass.jpg" title="&lsquo;Convert your tech hiring funnel into an hour glass, retain your tech talent&rsquo; &lsquo;Convert your tech hiring funnel into an hour glass, retain your tech talent&rsquo;" ></p>
+<p>{% img center /images/tech-hiring-funnel-hour-glass/tech-hiring-funnel-hourglass.jpg &lsquo;Convert your tech hiring funnel into an hour glass, retain your tech talent&rsquo; &lsquo;Convert your tech hiring funnel into an hour glass, retain your tech talent&rsquo; %}</p>
 
 <!-- more -->
 
@@ -286,7 +286,7 @@ ADD `commission_percent_recurring_customer` DECIMAL NULL AFTER `commission_perce
 Value to the business is always more important than the latest technical fad. If a feature is done (production
 ready) but not deployed to production it is an opportunity loss for the business.</p>
 
-<p><img class="center" src="/images/continuous-delivery/geshan-devops&ndash;days-pdx-2017.jpg" title="&lsquo;Adopt a painless continuous delivery culture, add more business value [Slides]&rsquo; &lsquo;Adopt a painless continuous delivery culture, add more business value [Slides]&rsquo;" ></p>
+<p>{% img center /images/continuous-delivery/geshan-devops&ndash;days-pdx-2017.jpg &lsquo;Adopt a painless continuous delivery culture, add more business value [Slides]&rsquo; &lsquo;Adopt a painless continuous delivery culture, add more business value [Slides]&rsquo; %}</p>
 
 <!-- more -->
 
