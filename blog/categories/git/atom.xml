@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Git | Geshan's Blog]]></title>
   <link href="http://geshan.com.np/blog/categories/git/atom.xml" rel="self"/>
   <link href="http://geshan.com.np/"/>
-  <updated>2018-10-08T08:37:55+11:00</updated>
+  <updated>2018-10-10T07:37:39+11:00</updated>
   <id>http://geshan.com.np/</id>
   <author>
     <name><![CDATA[Geshan Manandhar]]></name>
@@ -12,6 +12,55 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Don't Just Learn a New Language/framework, Implement It as a Running Open Source Project]]></title>
+    <link href="http://geshan.com.np/blog/2018/10/dont-just-learn-a-new-language-slash-framework/"/>
+    <updated>2018-10-08T15:27:26+11:00</updated>
+    <id>http://geshan.com.np/blog/2018/10/dont-just-learn-a-new-language-slash-framework</id>
+    <content type="html"><![CDATA[<p>“For the things we have to learn before we can do them, we learn by doing them.” ― Aristotle, The Nicomachean Ethics. Imagine you already read 3 books about cycling. Then someone gave you a cycle and asked to ride it, will you be able to ride it? The simple answer is &ldquo;No&rdquo;. It is not about how much have you read about cycling or how many videos did you watch about it. It is about getting on a cycle, balancing on it, learning the feet, hands and eye co-ordination. Same goes for learning a new tech skill, a new language or framework.</p>
+
+<p><img class="center" src="/images/language-framework-learn/cycle.jpg" title="&lsquo;Dont just learn a new language framework, implement it as a running open source project&rsquo; &lsquo;Dont just learn a new language framework, implement it as a running open source project&rsquo;" ></p>
+
+<!-- more -->
+
+
+<p>Now if you think how will I do this new project I don&rsquo;t even know language &lsquo;X&rsquo; or framework &lsquo;Y&rsquo; stop complaining. Maybe you are a new starter in tech or coding but you need to know how to learn new things. The best way to learn something new is by doing it. This post will focus on getting some common things right. It will help you get from I want to learn &lsquo;X&rsquo; to I have a project running in &lsquo;X&rsquo;, so follow on. If you are convinced about doing a project to learn something new, open source it. Github is the de facto service to host your open source projects. Then you can leverage lots of services for free. This post will be equally useful for coding new starters as well as experienced software engineers.</p>
+
+<h2>TLDR;</h2>
+
+<blockquote><p>Write a project to learn that language/framework, open source it then leverage services for free. Don&rsquo;t just watch courses, read the docs and then find solutions. Learn by doing. Use git and implement docker in your project. Code correctly add a code quality check service to be aware of the best practices, deploy your project to get a working URL for it.</p></blockquote>
+
+<p><img class="center" src="/images/language-framework-learn/lang-framework-learn.jpg" title="&lsquo;Dont just learn a new language framework, implement it as a running open source project&rsquo; &lsquo;Dont just learn a new language framework, implement it as a running open source project&rsquo;" ></p>
+
+<h2>Don&rsquo;t just watch courses, read the docs and find solutions</h2>
+
+<p>Nowadays, there are a plethora of choices to learn new things. Still, video courses are one of the most popular media. You can learn something new on <a href="https://www.udemy.com">Udemy</a>, <a href="https://www.pluralsight.com/">Pluralsight</a> or even <a href="https://youtube.com">Youtube</a>. Until you learn by doing, watching the videos is only going to help to a certain level. It is better for you to go through the official documentation. For instance, reading the React JS docs is better than only going through a React JS course. You find out the creators&#8217; perspective. The reason behind creating another Javascript framework/library helping you find proper solutions.</p>
+
+<h2>Learn Git to collaborate</h2>
+
+<p>&ldquo;No man is an island&rdquo;, especially in tech you generally don&rsquo;t work alone. You are part of a team. So even when learning something new try to find someone who you can collaborate with. Git is immensely <a href="https://trends.google.com/trends/explore?q=git,svn,mercurial,bazaar">popular</a> compared to any of its competition. It is beneficial when there is more than 1 person writing code for a project. You should learn git by doing, check the Github <a href="https://try.github.io/">tutorial</a>. I would highly recommend the learn by doing section. After you push it to Github anyone can potentially contribute to it.</p>
+
+<h2>Implement docker, get over works on my machine syndrome</h2>
+
+<p>In 2018, if you want to make your application more accessible, use <a href="https://www.docker.com/">Docker</a>. This will also help a lot in increasing contribution for your open source project. Running your project locally with docker compose will be like executing 2 commands. Docker has many advantages. For a beginner, it is a way to make sure your app runs the same way on your machine, your friend&rsquo;s machine. It will also be the same on the server you deploy your app to. As long as it runs on Docker well, you can rest assured it will run without issues on any environment.</p>
+
+<h2>Add code quality check</h2>
+
+<p>Just making it work should not be your priority. Writing quality should also be in your priority. Add code quality checks for the open source project you created for learning. Depending on the language/framework you could choose any service. I would highly recommend <a href="https://codeclimate.com/quality/">Code Climate</a>. Code Climate supports a wide array of languages from Javascript to PHP and from Java/Kotlin to Swift for mobile developers. With the new <a href="https://codeclimate.com/browser-extension/">browser plugin</a>, you get insights about your code in a Github pull request screen. You just connect it once to your Github repo and start seeing your code quality report. You can then better your code quality too. You can have a look at this <a href="https://codeclimate.com/github/geshan/currency-api/src/exchangeRates.js/source">example</a>.</p>
+
+<h2>Deploy your project</h2>
+
+<p>Now you are writing a new project to learn your favorite &lsquo;X&rsquo; or &lsquo;Y&rsquo;. You have written some parts of it, you are collaborating with Git and have the code open source on Github. You have Docker in place and code quality checks run on each push, great! But you can&rsquo;t show it to your friend who is living in a different city/country right? Wrong!</p>
+
+<p>You can use different services to deploy your web application. With a URL you can show it to your friend, a recruiter or anyone who knows the URL. You can deploy it for free to services like <a href="https://www.heroku.com">Heroku</a> or <a href="https://zeit.co/now">Zeit Now</a>.
+If you have Dockerized your open source app I would recommend Zeit Now. With the recent <a href="https://zeit.co/github">Github integration</a>, Zeit Now will give a new URL to each pull request. This makes testing a breeze. You can check an example on a demo <a href="https://github.com/geshan/currency-api/pull/9">currency converter API</a> app I wrote.</p>
+
+<h2>Conclusion</h2>
+
+<p>To conclude, learning by doing is the best way to learn a new thing. Your aim should be to not only make it work but do it following the best practices. That is where code quality comes into play. If you can add automated tests and continuous integration it will be icing on the cake for a starter. Wish you all the best for learning by doing!</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[PHP Developers Nepal Meetup #16 a Round Up and My Talk on Simpilfied Gitflow With Slides]]></title>
@@ -25,7 +74,7 @@ talk about the community. For this 16th installment, we did an open discussion f
 The topic of open discussion was &ldquo;Does automated deployment and DevOps add value to the organization?&rdquo;.
 It was the highlight of the event.</p>
 
-<p>{% img center /images/php-dev-meetup-16/php-dev-meetup-16.jpg &lsquo;PHP Dev Meetup 16 Open Panel discussion on DevOps&rsquo; &lsquo;PHP Dev Meetup 16 Open Panel discussion on DevOps&rsquo; %}</p>
+<p><img class="center" src="/images/php-dev-meetup-16/php-dev-meetup-16.jpg" title="&lsquo;PHP Dev Meetup 16 Open Panel discussion on DevOps&rsquo; &lsquo;PHP Dev Meetup 16 Open Panel discussion on DevOps&rsquo;" ></p>
 
 <!-- more -->
 
@@ -43,7 +92,7 @@ there were around 100 participants which makes it one of the biggest PHP Develop
 <p>This is not the first time I presented this talk :). I had already given this talk at <a href="http://geshan.com.np/blog/2015/09/how-to-use-simplified-gitflow-branching-model-video/">YIPL in Mar 2015</a>.
 This time I changed the slides and made it more general. I hope it was helpful to the audience.</p>
 
-<p>{% img center /images/php-dev-meetup-16/simplified-gitflow-talk.jpg &lsquo;PHP Dev Meetup 16 My talk on simplified gitflow&rsquo; &lsquo;PHP Dev Meetup 16 My talk on simplified gitflow&rsquo; %}</p>
+<p><img class="center" src="/images/php-dev-meetup-16/simplified-gitflow-talk.jpg" title="&lsquo;PHP Dev Meetup 16 My talk on simplified gitflow&rsquo; &lsquo;PHP Dev Meetup 16 My talk on simplified gitflow&rsquo;" ></p>
 
 <h2>Slides of Simplified Gitflow</h2>
 
@@ -78,7 +127,7 @@ software engineer skill.</p>
 Merging branches to the main branch becomes a pain when there are git conflicts.
 In this post I am going to reveal 3 simple rules to avoid git conflicts.</p>
 
-<p>{% img center /images/3-rules-git-conflict/git-conflict.png &lsquo;3 simple rules for less or no git conflicts&rsquo; &lsquo;3 simple rules for less or no git conflicts&rsquo; %}</p>
+<p><img class="center" src="/images/3-rules-git-conflict/git-conflict.png" title="&lsquo;3 simple rules for less or no git conflicts&rsquo; &lsquo;3 simple rules for less or no git conflicts&rsquo;" ></p>
 
 <!-- more -->
 
@@ -155,7 +204,7 @@ GitFlow is one of the options for doing a feature branching model but it is not 
 In this blog post with a video and presentation I would elaborate on how a team can use <code>simplified gitflow</code>
 and get the most out of using git.</p>
 
-<p>{% img center /images/simplified-gitflow/simple-git-flow.jpg &lsquo;Simplified git-flow&rsquo; &lsquo;Simplified git-flow&rsquo; %}</p>
+<p><img class="center" src="/images/simplified-gitflow/simple-git-flow.jpg" title="&lsquo;Simplified git-flow&rsquo; &lsquo;Simplified git-flow&rsquo;" ></p>
 
 <!-- more -->
 
@@ -201,7 +250,7 @@ her sleeves and helped us group and compile the data into percentages, thank you
 <!-- more -->
 
 
-<p>{% img center /images/sw-eng-np-infographics-part02/Software_Engineering_Nepal_Mid_2015_Part02.png &lsquo;Software Engineering Practices in Nepal Infographics Part 2&rsquo; &lsquo;Software Engineering Practices in Nepal Infographics Part 2&rsquo; %}</p>
+<p><img class="center" src="/images/sw-eng-np-infographics-part02/Software_Engineering_Nepal_Mid_2015_Part02.png" title="&lsquo;Software Engineering Practices in Nepal Infographics Part 2&rsquo; &lsquo;Software Engineering Practices in Nepal Infographics Part 2&rsquo;" ></p>
 
 <p>You can view this infographics in <a href="http://bit.ly/1R8EfHQ">interactive</a> mode too.</p>
 
@@ -210,63 +259,6 @@ her sleeves and helped us group and compile the data into percentages, thank you
 <blockquote><p>Thanks to everyone filling up the survey even in such conditions in Nepal.
 I hope to get some more responses so that the next infographics in this series will have more data.
 I will make the survey open till 2015 Q3 and post the final results in Oct 2015. #prayForNepal #stayStrongNepal #rebuildNepal</p></blockquote>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Do You Git Your Code? Follow This Simplified Gitflow Branching Model to Improve Productivity]]></title>
-    <link href="http://geshan.com.np/blog/2014/12/do-you-git-your-code-follow-this-simplified-gitflow-model/"/>
-    <updated>2014-12-13T14:52:40+11:00</updated>
-    <id>http://geshan.com.np/blog/2014/12/do-you-git-your-code-follow-this-simplified-gitflow-model</id>
-    <content type="html"><![CDATA[<p>Git or a similar VCS is the backbone for code collaboration in a multi-developers environment. When you follow
-a proper branch naming convention, git branching and merging can also be tied to an issue flow for better
-project management.</p>
-
-<p>Source code Version Control System (VCS) and automated testing open doors to other great software quality and
-delivery practices like continuous integration and automated deployment etc. Amongst various version control
-system software <a href="http://git-scm.com">git</a> is a distributed system that is very popular and easy to use once
-you get used to it.</p>
-
-<p>{% img center /images/simplified-gitflow/simple-git-flow.jpg &lsquo;Simplified git-flow&rsquo; &lsquo;Simplified git-flow&rsquo; %}</p>
-
-<!-- more -->
-
-
-<p>The full <a href="hhttp://nvie.com/posts/a-successful-git-branching-model/">gitflow</a> has 3 perpetual branches develop,
-release and master. Tickets/Issues can be grouped to release from develop. This in turn creates difficulty when
-tracing the ticket that caused any problem when it occurs.</p>
-
-<p>Simplified gitflow has only one perpetual branch master which decreases the complexity, only one ticket can be
-deployed and tested in any given environment like staging or production. When only one ticket is deployed on a
-given environment, it is very easy to trace a problem if it occurs. As the full gitflow, master is the stable
-branch which can be deployed to production anytime.</p>
-
-<p>If a new feature or bug fix needs to be done, the developer will follow the given steps:</p>
-
-<ol>
-<li>Create a branch from latest <strong>master</strong> branch following a naming convention like feat-123 for feature no. 123</li>
-<li>Work on it, after completing it push the branch feat-123 to the remote git repository (could be github or any other), preferably with just one commit</li>
-<li>Open a pull request (or merge request) from the pushed branch feat-123 to <strong>master</strong></li>
-<li>After the pull request is accepted, deploy it on staging environment and test it.</li>
-<li>Test it, if everything is ok, create a tag from feat-123 like 12-12-14 (today&rsquo;s date) and deploy it to production</li>
-<li>Test it on production, if everything is fine on production after testing merge the tag to master.</li>
-</ol>
-
-
-<p>The above steps are repeated for each ticket, feature of bug fix. Generally its good to wait an hour or two to merge
-the tag to master to make sure at that all the things are running fine. Smaller deployments also help to increase
-the overall stability of the whole systems. I am following simplified git-flow for
-<a href="https://github.com/geshan/geshan.github.com/network">blogging</a> as well, for this blog source branch acts as master.</p>
-
-<p>For a detailed example with explanation and git commands read the following slides:</p>
-
-<center><iframe src="//www.slideshare.net/slideshow/embed_code/42503092" width="510" height="420" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe></center>
-
-
-<p>You can also view the <a href="http://bit.ly/1KzaNbj">interactive slides</a>.</p>
-
-<blockquote><p>I believe you have learned something new and will be willing to integrate the simplified gitflow in
-your daily work with your team decreasing complexity and increasing productivity.</p></blockquote>
 ]]></content>
   </entry>
   

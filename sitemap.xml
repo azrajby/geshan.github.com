@@ -3,6 +3,14 @@
   
   
   <url>
+    <loc>http://geshan.com.np/blog/2018/10/why-use-docker-3-reasons-from-a-development-perspective/</loc>
+    
+    <lastmod>2018-10-10T15:29:22+11:00</lastmod>
+    
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
     <loc>http://geshan.com.np/blog/2018/10/dont-just-learn-a-new-language-slash-framework/</loc>
     
     <lastmod>2018-10-08T15:27:26+11:00</lastmod>
@@ -1973,21 +1981,21 @@
   
   <url>
     <loc>http://geshan.com.np/blog/</loc>
-    <lastmod>2018-10-08T08:37:55+11:00</lastmod>
+    <lastmod>2018-10-10T07:37:39+11:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://geshan.com.np/</loc>
-    <lastmod>2018-10-08T08:37:55+11:00</lastmod>
+    <lastmod>2018-10-10T07:37:39+11:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <url>
     <loc>http://geshan.com.np/blog/archives/</loc>
-    <lastmod>2018-10-08T08:37:55+11:00</lastmod>
+    <lastmod>2018-10-10T07:37:39+11:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
