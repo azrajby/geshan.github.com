@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Misc | Geshan's Blog]]></title>
   <link href="http://geshan.com.np/blog/categories/misc/atom.xml" rel="self"/>
   <link href="http://geshan.com.np/"/>
-  <updated>2018-10-10T07:37:39+11:00</updated>
+  <updated>2018-10-11T22:15:59+11:00</updated>
   <id>http://geshan.com.np/</id>
   <author>
     <name><![CDATA[Geshan Manandhar]]></name>
@@ -12,6 +12,67 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Don't Code Your Microservice Like a Monolith, Keep It Maintainable Not Over-engineered]]></title>
+    <link href="http://geshan.com.np/blog/2018/10/dont-code-your-microservice-like-a-monolith/"/>
+    <updated>2018-10-12T15:54:07+11:00</updated>
+    <id>http://geshan.com.np/blog/2018/10/dont-code-your-microservice-like-a-monolith</id>
+    <content type="html"><![CDATA[<p>Will you use a gun to kill a fly? The answer is NO. The same thing goes when you want to write a microservice application that is going to be maximum of 10K lines of code. Don&rsquo;t over-engineer it. Ok, you have been writing and maintaining large code bases. Some might be 100K+ lines of code but you need to get over your habits and think differently. This post helps you unravel the mysteries of writing small and maintainable microservices. The suggestions are opinionated but it is in practice in a million dollar business.</p>
+
+<p><img class="center" src="/images/microservice-code/lego.jpg" title="&lsquo;Do not code your microservice like a monolith, keep it maintainable not over-engineered&rsquo; &lsquo;Do not code your microservice like a monolith, keep it maintainable not over-engineered&rsquo;" ></p>
+
+<!-- more -->
+
+
+<h2>TLDR;</h2>
+
+<blockquote><p>Microservices are small software systems. You can safely ditch MVC. Say no to ORM and also not take the design pattern baggage for microservices. Focus on code performance, readability, and maintainability not some old rules and patterns. Those patterns were made when people were not doing microservices.</p></blockquote>
+
+<h2>Why write microservices in the first place?</h2>
+
+<p>Microservices architecture, in my opinion, is breaking one or more monoliths into multiple smaller systems. These are more maintainable, independently developed and deployed pieces of software based on business functions. These smaller (presumably “micro”) systems should focus on only one business function and do it well. The catch here is &ldquo;micro&rdquo;, these pieces should ideally be under 10K lines of code.</p>
+
+<p>As they are independent it helps the business release features faster. The shipments team is not dependent on the checkout team. Something deployed on the shipments app is never going to break checkout. It becomes very decoupled. The blast radius of each change is controlled. That is the reason for rapid microservice adoption.</p>
+
+<p>Now let&rsquo;s look at the ways you were used to doing things and why it makes less sense in this microservices era.</p>
+
+<h2>Do you need MVC?</h2>
+
+<p>Model-View-Controller, I got introduced to it in 2007 or maybe a bit earlier. Then I used to think it was the silver bullet to all software architecture issues. I don&rsquo;t hold that opinion anymore. Yes, you used to work with Java or PHP and every other framework was MVC based. Now, you don&rsquo;t need to be strict about MVC anymore. Focus on clarity and getting things done.</p>
+
+<p>Use controllers if you want and if it still makes sense. Think like my app gets HTTP request and it has to give back HTTP response. Do think of having a backend API and frontend(s) consuming it. Check the code below, it is surely not MVC:</p>
+
+<script src="https://gist.github.com/geshan/1f76e5ebb3c15fd3c147c6c97420f923.js"></script>
+
+
+<p>You can see the full app <a href="https://github.com/geshan/currency-api">here</a>. Veify the structure it is not MVC :)</p>
+
+<p>So rather than doing an effort to get precise lines of M-V-C, write tests, implement continuous integration. Add some logs and monitoring to the app. Make the code maintainable, keep it as lean and simple as possible.</p>
+
+<h2>Don&rsquo;t take on the ORM overhead</h2>
+
+<p>Object Relation Mapping (ORM) when I first saw an ORM in action, I said to myself this is one of the best things ever known to programmers. 10+ years later I would be cautious to suggest an ORM to any software engineer. Last year I refactored a full ORM implementation to a raw SQL query way and it made that part of the application perform 20% faster. On top of it, the database transactions were evident and the code was far more readable hence maintainable.</p>
+
+<p>Data mapper or Active record both bring their own opinions, ways of doing things and extra weight. This not only causes performance issues but also code readability suffers. Think of the pre and post hooks/event listener Doctrine has, they work like magic and it is always tricky to understand magic.</p>
+
+<p><img class="center" src="/images/microservice-code/pot-on-head.jpg" title="&lsquo;Do not code your microservice like a monolith, keep it maintainable not over-engineered&rsquo; &lsquo;Do not code your microservice like a monolith, keep it maintainable not over-engineered&rsquo;" ></p>
+
+<p>Just try this, explain how an ORM related insert code works VS how a simple and straightforward INSERT SQL query works to a beginner/junior software engineer. You will already regret using that ORM. Especially in the context of microservices ORM is a clear overhead. The microservice is anticipated to be maximum of 10K lines of code and affect hardly 10 tables so just don&rsquo;t use an ORM, period.</p>
+
+<h2>Design patterns might be a baggage</h2>
+
+<p>I am not saying that you don&rsquo;t need to learn about <a href="https://en.wikipedia.org/wiki/Software_design_pattern">software design patterns</a>. You should know about SOLID, law of Demeter, factory pattern, strategy pattern, singleton, adapter pattern etc. Well, most of these make sense if you do object-oriented programming right? What if you write a microservice in Node JS that is 1k lines of code spread across ~7 files. It does one small slice of the business function. All these patterns become nice to know stuff at that point.</p>
+
+<p>Design Patterns are relevant for a code base that is already big and in the next 6-12 months is going to be bigger, your usual monolith. They can turn out to be &ldquo;extra baggage&rdquo; for a service that is 100s of lines of code now and will become 1000s of lines of code in the next 6-12 months. We never foresee it to be bigger than that because to do that other part we will have another microservice. So keep your microservice code fat free and well tested.</p>
+
+<p><img class="center" src="/images/microservice-code/baggage.jpg" title="&lsquo;Do not code your microservice like a monolith, keep it maintainable not over-engineered&rsquo; &lsquo;Do not code your microservice like a monolith, keep it maintainable not over-engineered&rsquo;" ></p>
+
+<h2>Conclusion</h2>
+
+<p>If you still want to code your microservice like the last monolith you worked on maybe you are doing something wrong. Think of it again, if you go for a day trip you don&rsquo;t pack and carry things like you are going for a 2 weeks vacation. Think of code performance and maintainability, let the data speak for you and break the rules. Happy software engineering!</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Why Use Docker? 3 Reasons From a Development Perspective]]></title>
@@ -51,7 +112,7 @@
 
 <h3>3. Test app&rsquo;s compatibility with the newer version of language/database</h3>
 
-<p>Picture this, a new version of the language you use just released. Like you were using PHP 5.6 and 7.0 has come out. You don&rsquo;t know how much work will be needed to make your application compatible with the new version of the language. Use docker here, you just need to run two different docker containers one running the current version and another running the newer version. You can even test the app side by side to measure performance.</p>
+<p>Picture this, a new version of the language you use just released. Like you were using PHP 5.6 and 7.0 has come out. You don&rsquo;t know how much work will be needed to make your application compatible with the new version of the language. Use docker here, you just need to run two different docker containers one running the current version and another running the newer version. You can even test the app side by side to measure performance. This can apply for any programming language.</p>
 
 <p>The same technique can be used to say test MYSQL version 5.7 and 8.0. You might think there are tools like NVM (Node version manager) or RVM (Ruby version manager) but things like that don&rsquo;t exist for each language. Also, you can just use docker than overloading your local machine.</p>
 
@@ -254,74 +315,6 @@ ADD `commission_percent_recurring_customer` DECIMAL NULL AFTER `commission_perce
 <h2>Conclusion</h2>
 
 <p>Database migration is not difficult if it is done the right way. Hope this post helps you run your DB migrations in a smoother fashion.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Convert Your Tech Hiring Funnel Into an Hour Glass, Retain Your Tech Talent]]></title>
-    <link href="http://geshan.com.np/blog/2017/08/convert-your-tech-hiring-funnel-into-an-hour-glass/"/>
-    <updated>2017-08-19T02:52:05+10:00</updated>
-    <id>http://geshan.com.np/blog/2017/08/convert-your-tech-hiring-funnel-into-an-hour-glass</id>
-    <content type="html"><![CDATA[<p>Sometimes I feel that the software company (<a href="http://younginnovations.com.np/ourstory">YIPL</a>) we started a decade back is turning into a software engineer factory. We take in fresh grads or junior software engineers, train them, mentor them. When they get the skills after 6-9 months and are ready to be productive to the company they move to a bigger better software company. This is a common story in Kathmandu Tech Scene. I am not blaming people moving jobs in tech but I think, there is a fundamental flaw in the process and system itself. In this blog post I will unveil a tech hiring funnel we follow for a few tech startups in Kathmandu. It will also contain some of my thoughts on how to retain tech talent by converting the funnel into an hour glass.</p>
-
-<p><img class="center" src="/images/tech-hiring-funnel-hour-glass/tech-hiring-funnel-hourglass.jpg" title="&lsquo;Convert your tech hiring funnel into an hour glass, retain your tech talent&rsquo; &lsquo;Convert your tech hiring funnel into an hour glass, retain your tech talent&rsquo;" ></p>
-
-<!-- more -->
-
-
-<p>I am not a hiring manager or recruiter. Below is my own experience of some years trying to source and retain tech talents mainly in Kathmandu, Nepal. I feel, these processes can be applied to any hire many tech roles anywhere in the world.</p>
-
-<h2>Tech Hiring Funnel</h2>
-
-<p>Hiring for tech roles is a difficult job. Like any other team, if one wrong person gets hired in the tech team it can spoil the team spirit of the whole team. So IMHO, it is better to not hire a person if in doubt than to take chance. Once the person is in the team, it will be a lot difficult to take any negative action than not hiring the person in the first place.</p>
-
-<p>To avoid such problems, here is a tech hiring funnel focused on   software engineers:</p>
-
-<ol>
-<li>We get the CV or head hunt to receive the CV. Some candidates are filtered out just by the CV.</li>
-<li>Then we send in a set of questions over email for software engineers, <a href="http://bit.ly/sw-eng-ques">this</a> one is focused on PHP/JS.
-
-<ol>
-<li>This helps filter out some candidates. If the answer is without depth or just googled it is easy to filter out the candidate.</li>
-</ol>
-</li>
-<li>After we are satisfied with the answers we send a coding task/challenge. <a href="http://bit.ly/sw-eng-task">This</a> one is for a PHP back-end software engineer.
-
-<ol>
-<li>Always with a deadline which includes a weekend as working candidates need time to do this.</li>
-<li>There might be things s/he is doing for the first time in the task, even experienced software engineers have something new in the above task (at least in the case of Software Engineers in Kathmandu).</li>
-<li>This helps us filter out lots of people as candidates have big words in their CV but the solution gives us a clear picture of their coding skills.</li>
-</ol>
-</li>
-<li>Depending on the task solution we generally give a score of 1-10 to be objective in the analysis.</li>
-<li>Then if the task solution is good enough, there might be a phone interview for initial screening</li>
-<li>Then there can be one technical and one management interview or both put together depending on the candidate.</li>
-<li>Even after interviews we score on 1-10 to be objective then the decision is to offer or not offer the position to the candidate.</li>
-</ol>
-
-
-<p>The above is the funnel works for majority of tech positions like software engineer (both back-end and front-end), UI/UX engineer, QA engineer, DevOps/SRE engineer etc. Questions and task will vary depending on the role of course. The steps can be changed to match your company rules and policy.</p>
-
-<p>It works well at the 10s scale but I am not sure how good will it will work at the 100s scale.</p>
-
-<h2>The hourglass transformation</h2>
-
-<p>If you spend so much time hiring a good candidate but do not have a great on-boarding procedure you are doing something wrong.  Listen to <a href="https://blog.fogcreek.com/how-to-onboard-software-engineers-interview-with-kate-heddleston/">this</a> amazing podcast/interview with Kate Heddleston to get more idea about tech role on-boarding. After a smooth on-boarding process, I think the following things matter for retaining tech talent:</p>
-
-<ol>
-<li>Motivation is always important. Bluntly put &ldquo;money talks&rdquo;. If you are not able to pay your software engineers good money (at least as per market rates) they will look for other opportunities.</li>
-<li>Software engineers and generally other tech roles crave for challenges. New things, shiny technology attracts us tech people. So keeping your software stack up to date will help retain tech talent.</li>
-<li>Team culture matters a lot. How your team accepts a new member. The culture of mentoring and growth is crucial for software teams.</li>
-<li>Visionary leadership is very important. If you are doing the same thing you were doing 5 or even 2 years back there is a problem in the team. Update and upgrade is the need in technology as it moves very fast.</li>
-<li>Create an environment to grow. If your junior software engineer can&rsquo;t grow to a software engineer in 1-2 years there is some issue to fix. Servant leadership with opportunity to grow will help retention.</li>
-</ol>
-
-
-<h2>Conclusion</h2>
-
-<p>Every team might not have all the skills it needs. Be open to communicate the skills your team lacks and move forward to build that skill. For instance if your team needs DevOps tool&rsquo;s skills hire a consultant for 3-6 months with a target of getting the most out of the consultant to team 1-3 members of the team those skills.</p>
-
-<blockquote><p>Hopefully, this will help you hire and retain your tech talent better.</p></blockquote>
 ]]></content>
   </entry>
   

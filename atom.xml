@@ -4,7 +4,7 @@
   <title><![CDATA[Geshan's Blog]]></title>
   <link href="http://geshan.com.np/atom.xml" rel="self"/>
   <link href="http://geshan.com.np/"/>
-  <updated>2018-10-10T07:37:39+11:00</updated>
+  <updated>2018-10-11T22:15:59+11:00</updated>
   <id>http://geshan.com.np/</id>
   <author>
     <name><![CDATA[Geshan Manandhar]]></name>
@@ -12,6 +12,67 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Don't Code Your Microservice Like a Monolith, Keep It Maintainable Not Over-engineered]]></title>
+    <link href="http://geshan.com.np/blog/2018/10/dont-code-your-microservice-like-a-monolith/"/>
+    <updated>2018-10-12T15:54:07+11:00</updated>
+    <id>http://geshan.com.np/blog/2018/10/dont-code-your-microservice-like-a-monolith</id>
+    <content type="html"><![CDATA[<p>Will you use a gun to kill a fly? The answer is NO. The same thing goes when you want to write a microservice application that is going to be maximum of 10K lines of code. Don&rsquo;t over-engineer it. Ok, you have been writing and maintaining large code bases. Some might be 100K+ lines of code but you need to get over your habits and think differently. This post helps you unravel the mysteries of writing small and maintainable microservices. The suggestions are opinionated but it is in practice in a million dollar business.</p>
+
+<p><img class="center" src="http://geshan.com.np/images/microservice-code/lego.jpg" title="Do not code your microservice like a monolith, keep it maintainable not over-engineered" alt="Do not code your microservice like a monolith, keep it maintainable not over-engineered"></p>
+
+<!-- more -->
+
+
+<h2>TLDR;</h2>
+
+<blockquote><p>Microservices are small software systems. You can safely ditch MVC. Say no to ORM and also not take the design pattern baggage for microservices. Focus on code performance, readability, and maintainability not some old rules and patterns. Those patterns were made when people were not doing microservices.</p></blockquote>
+
+<h2>Why write microservices in the first place?</h2>
+
+<p>Microservices architecture, in my opinion, is breaking one or more monoliths into multiple smaller systems. These are more maintainable, independently developed and deployed pieces of software based on business functions. These smaller (presumably “micro”) systems should focus on only one business function and do it well. The catch here is &ldquo;micro&rdquo;, these pieces should ideally be under 10K lines of code.</p>
+
+<p>As they are independent it helps the business release features faster. The shipments team is not dependent on the checkout team. Something deployed on the shipments app is never going to break checkout. It becomes very decoupled. The blast radius of each change is controlled. That is the reason for rapid microservice adoption.</p>
+
+<p>Now let&rsquo;s look at the ways you were used to doing things and why it makes less sense in this microservices era.</p>
+
+<h2>Do you need MVC?</h2>
+
+<p>Model-View-Controller, I got introduced to it in 2007 or maybe a bit earlier. Then I used to think it was the silver bullet to all software architecture issues. I don&rsquo;t hold that opinion anymore. Yes, you used to work with Java or PHP and every other framework was MVC based. Now, you don&rsquo;t need to be strict about MVC anymore. Focus on clarity and getting things done.</p>
+
+<p>Use controllers if you want and if it still makes sense. Think like my app gets HTTP request and it has to give back HTTP response. Do think of having a backend API and frontend(s) consuming it. Check the code below, it is surely not MVC:</p>
+
+<script src="https://gist.github.com/geshan/1f76e5ebb3c15fd3c147c6c97420f923.js"></script>
+
+
+<p>You can see the full app <a href="https://github.com/geshan/currency-api">here</a>. Veify the structure it is not MVC :)</p>
+
+<p>So rather than doing an effort to get precise lines of M-V-C, write tests, implement continuous integration. Add some logs and monitoring to the app. Make the code maintainable, keep it as lean and simple as possible.</p>
+
+<h2>Don&rsquo;t take on the ORM overhead</h2>
+
+<p>Object Relation Mapping (ORM) when I first saw an ORM in action, I said to myself this is one of the best things ever known to programmers. 10+ years later I would be cautious to suggest an ORM to any software engineer. Last year I refactored a full ORM implementation to a raw SQL query way and it made that part of the application perform 20% faster. On top of it, the database transactions were evident and the code was far more readable hence maintainable.</p>
+
+<p>Data mapper or Active record both bring their own opinions, ways of doing things and extra weight. This not only causes performance issues but also code readability suffers. Think of the pre and post hooks/event listener Doctrine has, they work like magic and it is always tricky to understand magic.</p>
+
+<p><img class="center" src="http://geshan.com.np/images/microservice-code/pot-on-head.jpg" title="Do not code your microservice like a monolith, keep it maintainable not over-engineered" alt="Do not code your microservice like a monolith, keep it maintainable not over-engineered"></p>
+
+<p>Just try this, explain how an ORM related insert code works VS how a simple and straightforward INSERT SQL query works to a beginner/junior software engineer. You will already regret using that ORM. Especially in the context of microservices ORM is a clear overhead. The microservice is anticipated to be maximum of 10K lines of code and affect hardly 10 tables so just don&rsquo;t use an ORM, period.</p>
+
+<h2>Design patterns might be a baggage</h2>
+
+<p>I am not saying that you don&rsquo;t need to learn about <a href="https://en.wikipedia.org/wiki/Software_design_pattern">software design patterns</a>. You should know about SOLID, law of Demeter, factory pattern, strategy pattern, singleton, adapter pattern etc. Well, most of these make sense if you do object-oriented programming right? What if you write a microservice in Node JS that is 1k lines of code spread across ~7 files. It does one small slice of the business function. All these patterns become nice to know stuff at that point.</p>
+
+<p>Design Patterns are relevant for a code base that is already big and in the next 6-12 months is going to be bigger, your usual monolith. They can turn out to be &ldquo;extra baggage&rdquo; for a service that is 100s of lines of code now and will become 1000s of lines of code in the next 6-12 months. We never foresee it to be bigger than that because to do that other part we will have another microservice. So keep your microservice code fat free and well tested.</p>
+
+<p><img class="center" src="http://geshan.com.np/images/microservice-code/baggage.jpg" title="Do not code your microservice like a monolith, keep it maintainable not over-engineered" alt="Do not code your microservice like a monolith, keep it maintainable not over-engineered"></p>
+
+<h2>Conclusion</h2>
+
+<p>If you still want to code your microservice like the last monolith you worked on maybe you are doing something wrong. Think of it again, if you go for a day trip you don&rsquo;t pack and carry things like you are going for a 2 weeks vacation. Think of code performance and maintainability, let the data speak for you and break the rules. Happy software engineering!</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Why Use Docker? 3 Reasons From a Development Perspective]]></title>
@@ -51,7 +112,7 @@
 
 <h3>3. Test app&rsquo;s compatibility with the newer version of language/database</h3>
 
-<p>Picture this, a new version of the language you use just released. Like you were using PHP 5.6 and 7.0 has come out. You don&rsquo;t know how much work will be needed to make your application compatible with the new version of the language. Use docker here, you just need to run two different docker containers one running the current version and another running the newer version. You can even test the app side by side to measure performance.</p>
+<p>Picture this, a new version of the language you use just released. Like you were using PHP 5.6 and 7.0 has come out. You don&rsquo;t know how much work will be needed to make your application compatible with the new version of the language. Use docker here, you just need to run two different docker containers one running the current version and another running the newer version. You can even test the app side by side to measure performance. This can apply for any programming language.</p>
 
 <p>The same technique can be used to say test MYSQL version 5.7 and 8.0. You might think there are tools like NVM (Node version manager) or RVM (Ruby version manager) but things like that don&rsquo;t exist for each language. Also, you can just use docker than overloading your local machine.</p>
 
@@ -1166,69 +1227,6 @@ with hubot. In this session, I will uncover some real life use cases of chat bot
 <p>(Thanks <a href="http://www.lprakash.com.np/">Prakash</a> for the photo and video)</p>
 
 <p>I hope the talk about chatOps was interesting for you. Cheers!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[There Are Only Two Types of Automated Software Tests, Fast Ones and Not Fast Ones]]></title>
-    <link href="http://geshan.com.np/blog/2016/03/there-are-only-two-types-of-automated-software-tests/"/>
-    <updated>2016-03-17T16:38:18+11:00</updated>
-    <id>http://geshan.com.np/blog/2016/03/there-are-only-two-types-of-automated-software-tests</id>
-    <content type="html"><![CDATA[<p>Tests check that the code does what it is expected to do. It also gives confidence to the software engineer that the code
-works as intended. This equates to less or no bugs in the software. You must have heard about lots of types of automated software tests.
-There is unit testing, integration testing, functional testing, acceptance testing, smoke testing etc.
-As per Guru99&rsquo;s <a href="http://www.guru99.com/types-of-software-testing.html">post</a> there are more than 100 types of
-software testing. In this post I am going to categorize automated software tests into two, the fast ones and not fast ones.</p>
-
-<p><img class="center" src="http://geshan.com.np/images/testing-types/software-testing.jpg" title="There are only two types of automated software tests, fast ones and not fast ones" alt="There are only two types of automated software tests, fast ones and not fast ones"></p>
-
-<!-- more -->
-
-
-<h3>How do you distinguish between slow and fast tests?</h3>
-
-<p>Generally, if your whole tests suite runs in seconds it is fast.
-If your whole test suite runs in minutes/hour it is slow. To make your tests small you need to make your application small.
-As faster tests running on your Continuous Integration (CI) service will give you faster feedback.
-May be it is time to go micro-services?</p>
-
-<p>Lets discuss the more about fast and not fast (slow) automated software tests.</p>
-
-<h3>The fast tests</h3>
-
-<p>Fast tests are code that test one unit of code generally a method. Unit test is a type of fast test.
-They don&rsquo;t depend on any external dependencies. External dependencies include file system, database, web server, network
-or any third party API or service. Unit tests even mock the other code elements they need like other classes and its methods.
-This makes the test focused on one unit and they run in milliseconds/seconds not minutes. A simple example is below:</p>
-
-<script src="http://gist-it.appspot.com/http://github.com/geshan/dataprovider-example/blob/master/tests/DataProvider/Example/Test/CheckoutTest.php"></script>
-
-
-<p>You can view the full code <a href="http://github.com/geshan/dataprovider-example">here</a>, yes it is a simple class with no code or external dependency.</p>
-
-<p>Some integration tests can also be fast tests. These integration tests can test many classes. They should not
-dependent on any external dependencies mentioned above to obtain speed. So these tests will still run in seconds and
-not take minutes to finish.</p>
-
-<h3>The not fast tests (slow ones)</h3>
-
-<p>Any test that takes long to run are not fast tests (slow tests). Generally, these type of tests need to load
-the whole application to test it. These types of tests depend on external dependencies. External dependencies include file
-system, database, web server, network, third party API or service.</p>
-
-<p>Acceptance tests that need to load a full web application on a browser is a type of slow tests. Even smoke tests if it needs
-to load the whole application and takes long time to execute fall in this category.</p>
-
-<script src="https://gist.github.com/geshan/4512326704954f6b8388.js"></script>
-
-
-<p>The above example is taken from <a href="https://github.com/Sylius/Sylius/blob/master/features/checkout/checkout_with_offline_payment.feature">Sylius</a>
-project, to test checkout with offline payment method on the browser.</p>
-
-<h3>Conclusion</h3>
-
-<p>Testing is super important for a robust software application. Automated testing + CI is one of the <a href="http://geshan.com.np/blog/2015/10/4-pillars-of-a-solid-software-application-and-tools-to-support-it/">four pillars</a>
-of any solid software application. Happy testing hope your tests run in seconds not minutes.</p>
 ]]></content>
   </entry>
   

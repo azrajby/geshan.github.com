@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Docker | Geshan's Blog]]></title>
   <link href="http://geshan.com.np/blog/categories/docker/atom.xml" rel="self"/>
   <link href="http://geshan.com.np/"/>
-  <updated>2018-10-10T07:37:39+11:00</updated>
+  <updated>2018-10-11T22:15:59+11:00</updated>
   <id>http://geshan.com.np/</id>
   <author>
     <name><![CDATA[Geshan Manandhar]]></name>
@@ -51,7 +51,7 @@
 
 <h3>3. Test app&rsquo;s compatibility with the newer version of language/database</h3>
 
-<p>Picture this, a new version of the language you use just released. Like you were using PHP 5.6 and 7.0 has come out. You don&rsquo;t know how much work will be needed to make your application compatible with the new version of the language. Use docker here, you just need to run two different docker containers one running the current version and another running the newer version. You can even test the app side by side to measure performance.</p>
+<p>Picture this, a new version of the language you use just released. Like you were using PHP 5.6 and 7.0 has come out. You don&rsquo;t know how much work will be needed to make your application compatible with the new version of the language. Use docker here, you just need to run two different docker containers one running the current version and another running the newer version. You can even test the app side by side to measure performance. This can apply for any programming language.</p>
 
 <p>The same technique can be used to say test MYSQL version 5.7 and 8.0. You might think there are tools like NVM (Node version manager) or RVM (Ruby version manager) but things like that don&rsquo;t exist for each language. Also, you can just use docker than overloading your local machine.</p>
 
