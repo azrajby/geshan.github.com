@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Docker | Geshan's Blog]]></title>
-  <link href="http://geshan.com.np/blog/categories/docker/atom.xml" rel="self"/>
-  <link href="http://geshan.com.np/"/>
-  <updated>2018-10-11T22:15:59+11:00</updated>
-  <id>http://geshan.com.np/</id>
+  <title><![CDATA[Category: docker | Geshan's Blog]]></title>
+  <link href="https://geshan.com.np/blog/categories/docker/atom.xml" rel="self"/>
+  <link href="https://geshan.com.np/"/>
+  <updated>2018-10-12T20:18:50+11:00</updated>
+  <id>https://geshan.com.np/</id>
   <author>
     <name><![CDATA[Geshan Manandhar]]></name>
     
@@ -14,13 +14,13 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Why Use Docker? 3 Reasons From a Development Perspective]]></title>
-    <link href="http://geshan.com.np/blog/2018/10/why-use-docker-3-reasons-from-a-development-perspective/"/>
+    <title type="html"><![CDATA[Why use docker? 3 reasons from a development perspective]]></title>
+    <link href="https://geshan.com.np/blog/2018/10/why-use-docker-3-reasons-from-a-development-perspective/"/>
     <updated>2018-10-10T15:29:22+11:00</updated>
-    <id>http://geshan.com.np/blog/2018/10/why-use-docker-3-reasons-from-a-development-perspective</id>
+    <id>https://geshan.com.np/blog/2018/10/why-use-docker-3-reasons-from-a-development-perspective</id>
     <content type="html"><![CDATA[<p>Docker has been popular in the technology space in the past 5 years is an understatement. It has <a href="https://trends.google.com/trends/explore?date=2013-09-08%202018-10-08&amp;q=%2Fm%2F0wkcjgj">exploded</a> in usage and popularity in half a decade. Containers have taken us by storm. Newer applications without containerization feel like it is missing something. Docker has stood out to be the king in the container arena. This post details the reasons to use Docker for your development environment.</p>
 
-<p><img class="center" src="/images/why-docker/whale.jpg" title="&lsquo;Why use docker? 3 reasons from a development perspective&rsquo; &lsquo;Why use docker? 3 reasons from a development perspective&rsquo;" ></p>
+<p>{% img center /images/why-docker/whale.jpg &lsquo;Why use docker? 3 reasons from a development perspective&rsquo; &lsquo;Why use docker? 3 reasons from a development perspective&rsquo; %}</p>
 
 <!-- more -->
 
@@ -35,7 +35,7 @@
 
 <p>Docker has many advantages but the most important one is the container analogy. That you don&rsquo;t only ship your code but ship the whole OS and all related layers with each deployment in a standard way. It is a complete package containing the right version of OS, the desired version of the language, any external dependencies of your application and your application code. That too in a lightweight, isolated and resource controllable way. This is where docker blows away the VMs.</p>
 
-<p><img class="center" src="/images/why-docker/ship.jpg" title="&lsquo;Why use docker? 3 reasons from a development perspective&rsquo; &lsquo;Why use docker? 3 reasons from a development perspective&rsquo;" ></p>
+<p>{% img center /images/why-docker/ship.jpg &lsquo;Why use docker? 3 reasons from a development perspective&rsquo; &lsquo;Why use docker? 3 reasons from a development perspective&rsquo; %}</p>
 
 <h2>Reasons to use Docker for the development environment</h2>
 
@@ -62,13 +62,13 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Don't Just Learn a New Language/framework, Implement It as a Running Open Source Project]]></title>
-    <link href="http://geshan.com.np/blog/2018/10/dont-just-learn-a-new-language-slash-framework/"/>
+    <title type="html"><![CDATA[Don't just learn a new language/framework, implement it as a running open source project]]></title>
+    <link href="https://geshan.com.np/blog/2018/10/dont-just-learn-a-new-language-slash-framework/"/>
     <updated>2018-10-08T15:27:26+11:00</updated>
-    <id>http://geshan.com.np/blog/2018/10/dont-just-learn-a-new-language-slash-framework</id>
+    <id>https://geshan.com.np/blog/2018/10/dont-just-learn-a-new-language-slash-framework</id>
     <content type="html"><![CDATA[<p>“For the things we have to learn before we can do them, we learn by doing them.” ― Aristotle, The Nicomachean Ethics. Imagine you already read 3 books about cycling. Then someone gave you a cycle and asked to ride it, will you be able to ride it? The simple answer is &ldquo;No&rdquo;. It is not about how much have you read about cycling or how many videos did you watch about it. It is about getting on a cycle, balancing on it, learning the feet, hands and eye co-ordination. Same goes for learning a new tech skill, a new language or framework.</p>
 
-<p><img class="center" src="/images/language-framework-learn/cycle.jpg" title="&lsquo;Dont just learn a new language framework, implement it as a running open source project&rsquo; &lsquo;Dont just learn a new language framework, implement it as a running open source project&rsquo;" ></p>
+<p>{% img center /images/language-framework-learn/cycle.jpg &lsquo;Dont just learn a new language framework, implement it as a running open source project&rsquo; &lsquo;Dont just learn a new language framework, implement it as a running open source project&rsquo; %}</p>
 
 <!-- more -->
 
@@ -79,7 +79,7 @@
 
 <blockquote><p>Write a project to learn that language/framework, open source it then leverage services for free. Don&rsquo;t just watch courses, read the docs and then find solutions. Learn by doing. Use git and implement docker in your project. Code correctly add a code quality check service to be aware of the best practices, deploy your project to get a working URL for it.</p></blockquote>
 
-<p><img class="center" src="/images/language-framework-learn/lang-framework-learn.jpg" title="&lsquo;Dont just learn a new language framework, implement it as a running open source project&rsquo; &lsquo;Dont just learn a new language framework, implement it as a running open source project&rsquo;" ></p>
+<p>{% img center /images/language-framework-learn/lang-framework-learn.jpg &lsquo;Dont just learn a new language framework, implement it as a running open source project&rsquo; &lsquo;Dont just learn a new language framework, implement it as a running open source project&rsquo; %}</p>
 
 <h2>Don&rsquo;t just watch courses, read the docs and find solutions</h2>
 
@@ -111,17 +111,17 @@ If you have Dockerized your open source app I would recommend Zeit Now. With the
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[How to Use Docker Compose With Virtual Hosts and Shared Services (Like Db) for Dev Environment]]></title>
-    <link href="http://geshan.com.np/blog/2017/05/how-to-use-docker-compose-with-virtual-hosts-and-services-like-db-for-dev-environment/"/>
+    <title type="html"><![CDATA[How to use docker compose with virtual hosts and shared services (like db) for dev environment]]></title>
+    <link href="https://geshan.com.np/blog/2017/05/how-to-use-docker-compose-with-virtual-hosts-and-services-like-db-for-dev-environment/"/>
     <updated>2017-05-25T00:53:04+10:00</updated>
-    <id>http://geshan.com.np/blog/2017/05/how-to-use-docker-compose-with-virtual-hosts-and-services-like-db-for-dev-environment</id>
+    <id>https://geshan.com.np/blog/2017/05/how-to-use-docker-compose-with-virtual-hosts-and-services-like-db-for-dev-environment</id>
     <content type="html"><![CDATA[<p>Docker as been immensely popular in the past years. If you are not using docker at least in your dev environment in 2017.
 You are surely missing out on some great advantages. Your new software engineer should start writing production-ready code
 in a matter of hours not days. All thanks to docker.  Along the same lines, this post will cover how you can set up
 docker for your dev environment with least friction and maximum productivity. It is an opinionated post. We migrated to this <code>external_links</code>
 <a href="https://docs.docker.com/compose/compose-file/#externallinks">approach</a> so that we could run multiple projects/microservices that use the same db/services shared among them.</p>
 
-<p><img class="center" src="/images/docker-compose-vhost/docker-compose-vhost.jpg" title="&lsquo;Docker compose with vhost and shared services&rsquo; &lsquo;Docker compose with vhost and shared services&rsquo;" ></p>
+<p>{% img center /images/docker-compose-vhost/docker-compose-vhost.jpg &lsquo;Docker compose with vhost and shared services&rsquo; &lsquo;Docker compose with vhost and shared services&rsquo; %}</p>
 
 <!-- more -->
 
@@ -168,7 +168,7 @@ docker for your dev environment with least friction and maximum productivity. It
 </ol>
 
 
-<p><img class="center" src="/images/docker-compose-vhost/page-visited.png" title="&lsquo;All working you should see this&rsquo; &lsquo;All working you should see this&rsquo;" ></p>
+<p>{% img center /images/docker-compose-vhost/page-visited.png &lsquo;All working you should see this&rsquo; &lsquo;All working you should see this&rsquo; %}</p>
 
 <p>Virtual host has been possible in above setup as we ran the nginx proxy and configured <code>VIRTUAL_HOST</code> and <code>VIRTUAL_PORT</code> parameters correctly
 in the docker-compose.yml of the sample counter project. Mysql was already running before the project even started to run and it was <code>external_links</code>,
@@ -193,15 +193,15 @@ as <a href="https://github.com/geshan/counter/blob/master/index.js#L4">mysql</a>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Getting Started With Laravel, MariaDB (MySQL) and Docker, Docker Compose]]></title>
-    <link href="http://geshan.com.np/blog/2015/10/getting-started-with-laravel-mariadb-mysql-docker/"/>
+    <title type="html"><![CDATA[Getting started with Laravel, MariaDB (MySQL) and docker, docker compose]]></title>
+    <link href="https://geshan.com.np/blog/2015/10/getting-started-with-laravel-mariadb-mysql-docker/"/>
     <updated>2015-10-24T18:49:48+11:00</updated>
-    <id>http://geshan.com.np/blog/2015/10/getting-started-with-laravel-mariadb-mysql-docker</id>
+    <id>https://geshan.com.np/blog/2015/10/getting-started-with-laravel-mariadb-mysql-docker</id>
     <content type="html"><![CDATA[<p>&ldquo;How do I get new team members contributing code to the project in a matter of minutes/hours not days?&rdquo; is a common question heard in development teams. There are some ways to do, in my opinion <a href="http://docker.com">docker</a> is one of the best.</p>
 
 <p>Docker enables using same software stack in development, staging and production. You don&rsquo;t need to worry about the version of PHP, MYSQL or any other dependency with Docker. This post will be about Laravel and MariaDB (MySQL) with Docker for local development. It will also feature use of docker-compose. We will use PHP 5.6 and MariaDB 10.1 with Laravel 5.1.</p>
 
-<p><img class="center" src="/images/laravel-mysql-docker/laravel-mysql-docker.png" title="&lsquo;Getting started with Laravel, MariaDB (MySQL) and docker, docker compose&rsquo; &lsquo;Getting started with Laravel, MariaDB (MySQL) and docker, docker compose&rsquo;" ></p>
+<p>{% img center /images/laravel-mysql-docker/laravel-mysql-docker.png &lsquo;Getting started with Laravel, MariaDB (MySQL) and docker, docker compose&rsquo; &lsquo;Getting started with Laravel, MariaDB (MySQL) and docker, docker compose&rsquo; %}</p>
 
 <!-- more -->
 
@@ -313,7 +313,7 @@ mysql:
 This is done as docker containers don&rsquo;t have data persistence. This will keep the MySQL data persisted on the host machine which will be reused when the MySQL/MariaDB container is restarted. The folder structure should
 be like below:</p>
 
-<p><img class="center" src="/images/laravel-mysql-docker/folder-structure.png" title="&lsquo;Laravel, MariaDB (MySQL) and docker, docker compose folder structure&rsquo; &lsquo;Laravel, MariaDB (MySQL) and docker, docker compose folder structure&rsquo;" ></p>
+<p>{% img center /images/laravel-mysql-docker/folder-structure.png &lsquo;Laravel, MariaDB (MySQL) and docker, docker compose folder structure&rsquo; &lsquo;Laravel, MariaDB (MySQL) and docker, docker compose folder structure&rsquo; %}</p>
 
 <h3>Create default sites-enabled</h3>
 
@@ -355,7 +355,7 @@ docker-compose build to build the images.</p>
 
 <p>After you run docker-compose up you will see output like below:</p>
 
-<p><img class="center" src="/images/laravel-mysql-docker/docker-compose-up.png" title="&lsquo;Laravel, MariaDB (MySQL) and docker, docker compose up output&rsquo; &lsquo;Laravel, MariaDB (MySQL) and docker, docker compose up output&rsquo;" ></p>
+<p>{% img center /images/laravel-mysql-docker/docker-compose-up.png &lsquo;Laravel, MariaDB (MySQL) and docker, docker compose up output&rsquo; &lsquo;Laravel, MariaDB (MySQL) and docker, docker compose up output&rsquo; %}</p>
 
 <h3>Fix permissions</h3>
 
@@ -426,7 +426,7 @@ describe users;
 
 <p>You will get an output like below:</p>
 
-<p><img class="center" src="/images/laravel-mysql-docker/users-table.png" title="&lsquo;Laravel, MariaDB (MySQL) and docker, docker compose users table&rsquo; &lsquo;Laravel, MariaDB (MySQL) and docker, docker compose users table&rsquo;" ></p>
+<p>{% img center /images/laravel-mysql-docker/users-table.png &lsquo;Laravel, MariaDB (MySQL) and docker, docker compose users table&rsquo; &lsquo;Laravel, MariaDB (MySQL) and docker, docker compose users table&rsquo; %}</p>
 
 <h3>Stop docker containers</h3>
 
@@ -437,7 +437,7 @@ describe users;
 
 <p>on the project root and it will stop the containers like below:</p>
 
-<p><img class="center" src="/images/laravel-mysql-docker/docker-compose-stop.png" title="&lsquo;Laravel, MariaDB (MySQL) and docker, docker compose stop output&rsquo; &lsquo;Laravel, MariaDB (MySQL) and docker, docker compose stop output&rsquo;" ></p>
+<p>{% img center /images/laravel-mysql-docker/docker-compose-stop.png &lsquo;Laravel, MariaDB (MySQL) and docker, docker compose stop output&rsquo; &lsquo;Laravel, MariaDB (MySQL) and docker, docker compose stop output&rsquo; %}</p>
 
 <h2>Next Steps</h2>
 
