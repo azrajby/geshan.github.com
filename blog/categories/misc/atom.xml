@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: misc | Geshan's Blog]]></title>
-  <link href="https://geshan.com.np/blog/categories/misc/atom.xml" rel="self"/>
-  <link href="https://geshan.com.np/"/>
-  <updated>2018-10-12T20:18:50+11:00</updated>
-  <id>https://geshan.com.np/</id>
+  <title><![CDATA[Category: Misc | Geshan's Blog]]></title>
+  <link href="http://geshan.com.np/blog/categories/misc/atom.xml" rel="self"/>
+  <link href="http://geshan.com.np/"/>
+  <updated>2018-10-12T20:38:17+11:00</updated>
+  <id>http://geshan.com.np/</id>
   <author>
     <name><![CDATA[Geshan Manandhar]]></name>
     
@@ -14,13 +14,13 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Don't code your microservice like a monolith, keep it maintainable not over-engineered]]></title>
-    <link href="https://geshan.com.np/blog/2018/10/dont-code-your-microservice-like-a-monolith/"/>
+    <title type="html"><![CDATA[Don't Code Your Microservice Like a Monolith, Keep It Maintainable Not Over-engineered]]></title>
+    <link href="http://geshan.com.np/blog/2018/10/dont-code-your-microservice-like-a-monolith/"/>
     <updated>2018-10-12T15:54:07+11:00</updated>
-    <id>https://geshan.com.np/blog/2018/10/dont-code-your-microservice-like-a-monolith</id>
+    <id>http://geshan.com.np/blog/2018/10/dont-code-your-microservice-like-a-monolith</id>
     <content type="html"><![CDATA[<p>Will you use a gun to kill a fly? The answer is NO. The same thing goes when you want to write a microservice application that is going to be maximum of 10K lines of code. Don&rsquo;t over-engineer it. Ok, you have been writing and maintaining large code bases. Some might be 100K+ lines of code but you need to get over your habits and think differently. This post helps you unravel the mysteries of writing small and maintainable microservices. The suggestions are opinionated but it is in practice in a million dollar business.</p>
 
-<p>{% img center /images/microservice-code/lego.jpg &lsquo;Do not code your microservice like a monolith, keep it maintainable not over-engineered&rsquo; &lsquo;Do not code your microservice like a monolith, keep it maintainable not over-engineered&rsquo; %}</p>
+<p><img class="center" src="/images/microservice-code/lego.jpg" title="&lsquo;Do not code your microservice like a monolith, keep it maintainable not over-engineered&rsquo; &lsquo;Do not code your microservice like a monolith, keep it maintainable not over-engineered&rsquo;" ></p>
 
 <!-- more -->
 
@@ -56,7 +56,7 @@
 
 <p>Data mapper or Active record both bring their own opinions, ways of doing things and extra weight. This not only causes performance issues but also code readability suffers. Think of the pre and post hooks/event listener Doctrine has, they work like magic and it is always tricky to understand magic.</p>
 
-<p>{% img center /images/microservice-code/pot-on-head.jpg &lsquo;Do not code your microservice like a monolith, keep it maintainable not over-engineered&rsquo; &lsquo;Do not code your microservice like a monolith, keep it maintainable not over-engineered&rsquo; %}</p>
+<p><img class="center" src="/images/microservice-code/pot-on-head.jpg" title="&lsquo;Do not code your microservice like a monolith, keep it maintainable not over-engineered&rsquo; &lsquo;Do not code your microservice like a monolith, keep it maintainable not over-engineered&rsquo;" ></p>
 
 <p>Just try this, explain how an ORM related insert code works VS how a simple and straightforward INSERT SQL query works to a beginner/junior software engineer. You will already regret using that ORM. Especially in the context of microservices ORM is a clear overhead. The microservice is anticipated to be maximum of 10K lines of code and affect hardly 10 tables so just don&rsquo;t use an ORM, period.</p>
 
@@ -66,7 +66,7 @@
 
 <p>Design Patterns are relevant for a code base that is already big and in the next 6-12 months is going to be bigger, your usual monolith. They can turn out to be &ldquo;extra baggage&rdquo; for a service that is 100s of lines of code now and will become 1000s of lines of code in the next 6-12 months. We never foresee it to be bigger than that because to do that other part we will have another microservice. So keep your microservice code fat free and well tested.</p>
 
-<p>{% img center /images/microservice-code/baggage.jpg &lsquo;Do not code your microservice like a monolith, keep it maintainable not over-engineered&rsquo; &lsquo;Do not code your microservice like a monolith, keep it maintainable not over-engineered&rsquo; %}</p>
+<p><img class="center" src="/images/microservice-code/baggage.jpg" title="&lsquo;Do not code your microservice like a monolith, keep it maintainable not over-engineered&rsquo; &lsquo;Do not code your microservice like a monolith, keep it maintainable not over-engineered&rsquo;" ></p>
 
 <h2>Conclusion</h2>
 
@@ -75,13 +75,13 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Why use docker? 3 reasons from a development perspective]]></title>
-    <link href="https://geshan.com.np/blog/2018/10/why-use-docker-3-reasons-from-a-development-perspective/"/>
+    <title type="html"><![CDATA[Why Use Docker? 3 Reasons From a Development Perspective]]></title>
+    <link href="http://geshan.com.np/blog/2018/10/why-use-docker-3-reasons-from-a-development-perspective/"/>
     <updated>2018-10-10T15:29:22+11:00</updated>
-    <id>https://geshan.com.np/blog/2018/10/why-use-docker-3-reasons-from-a-development-perspective</id>
+    <id>http://geshan.com.np/blog/2018/10/why-use-docker-3-reasons-from-a-development-perspective</id>
     <content type="html"><![CDATA[<p>Docker has been popular in the technology space in the past 5 years is an understatement. It has <a href="https://trends.google.com/trends/explore?date=2013-09-08%202018-10-08&amp;q=%2Fm%2F0wkcjgj">exploded</a> in usage and popularity in half a decade. Containers have taken us by storm. Newer applications without containerization feel like it is missing something. Docker has stood out to be the king in the container arena. This post details the reasons to use Docker for your development environment.</p>
 
-<p>{% img center /images/why-docker/whale.jpg &lsquo;Why use docker? 3 reasons from a development perspective&rsquo; &lsquo;Why use docker? 3 reasons from a development perspective&rsquo; %}</p>
+<p><img class="center" src="/images/why-docker/whale.jpg" title="&lsquo;Why use docker? 3 reasons from a development perspective&rsquo; &lsquo;Why use docker? 3 reasons from a development perspective&rsquo;" ></p>
 
 <!-- more -->
 
@@ -96,7 +96,7 @@
 
 <p>Docker has many advantages but the most important one is the container analogy. That you don&rsquo;t only ship your code but ship the whole OS and all related layers with each deployment in a standard way. It is a complete package containing the right version of OS, the desired version of the language, any external dependencies of your application and your application code. That too in a lightweight, isolated and resource controllable way. This is where docker blows away the VMs.</p>
 
-<p>{% img center /images/why-docker/ship.jpg &lsquo;Why use docker? 3 reasons from a development perspective&rsquo; &lsquo;Why use docker? 3 reasons from a development perspective&rsquo; %}</p>
+<p><img class="center" src="/images/why-docker/ship.jpg" title="&lsquo;Why use docker? 3 reasons from a development perspective&rsquo; &lsquo;Why use docker? 3 reasons from a development perspective&rsquo;" ></p>
 
 <h2>Reasons to use Docker for the development environment</h2>
 
@@ -123,13 +123,13 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Don't just learn a new language/framework, implement it as a running open source project]]></title>
-    <link href="https://geshan.com.np/blog/2018/10/dont-just-learn-a-new-language-slash-framework/"/>
+    <title type="html"><![CDATA[Don't Just Learn a New Language/framework, Implement It as a Running Open Source Project]]></title>
+    <link href="http://geshan.com.np/blog/2018/10/dont-just-learn-a-new-language-slash-framework/"/>
     <updated>2018-10-08T15:27:26+11:00</updated>
-    <id>https://geshan.com.np/blog/2018/10/dont-just-learn-a-new-language-slash-framework</id>
+    <id>http://geshan.com.np/blog/2018/10/dont-just-learn-a-new-language-slash-framework</id>
     <content type="html"><![CDATA[<p>“For the things we have to learn before we can do them, we learn by doing them.” ― Aristotle, The Nicomachean Ethics. Imagine you already read 3 books about cycling. Then someone gave you a cycle and asked to ride it, will you be able to ride it? The simple answer is &ldquo;No&rdquo;. It is not about how much have you read about cycling or how many videos did you watch about it. It is about getting on a cycle, balancing on it, learning the feet, hands and eye co-ordination. Same goes for learning a new tech skill, a new language or framework.</p>
 
-<p>{% img center /images/language-framework-learn/cycle.jpg &lsquo;Dont just learn a new language framework, implement it as a running open source project&rsquo; &lsquo;Dont just learn a new language framework, implement it as a running open source project&rsquo; %}</p>
+<p><img class="center" src="/images/language-framework-learn/cycle.jpg" title="&lsquo;Dont just learn a new language framework, implement it as a running open source project&rsquo; &lsquo;Dont just learn a new language framework, implement it as a running open source project&rsquo;" ></p>
 
 <!-- more -->
 
@@ -140,7 +140,7 @@
 
 <blockquote><p>Write a project to learn that language/framework, open source it then leverage services for free. Don&rsquo;t just watch courses, read the docs and then find solutions. Learn by doing. Use git and implement docker in your project. Code correctly add a code quality check service to be aware of the best practices, deploy your project to get a working URL for it.</p></blockquote>
 
-<p>{% img center /images/language-framework-learn/lang-framework-learn.jpg &lsquo;Dont just learn a new language framework, implement it as a running open source project&rsquo; &lsquo;Dont just learn a new language framework, implement it as a running open source project&rsquo; %}</p>
+<p><img class="center" src="/images/language-framework-learn/lang-framework-learn.jpg" title="&lsquo;Dont just learn a new language framework, implement it as a running open source project&rsquo; &lsquo;Dont just learn a new language framework, implement it as a running open source project&rsquo;" ></p>
 
 <h2>Don&rsquo;t just watch courses, read the docs and find solutions</h2>
 
@@ -172,13 +172,13 @@ If you have Dockerized your open source app I would recommend Zeit Now. With the
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[5 practical steps to land your first tech job]]></title>
-    <link href="https://geshan.com.np/blog/2018/09/7-practical-steps-to-land-your-first-tech-job/"/>
+    <title type="html"><![CDATA[5 Practical Steps to Land Your First Tech Job]]></title>
+    <link href="http://geshan.com.np/blog/2018/09/7-practical-steps-to-land-your-first-tech-job/"/>
     <updated>2018-09-29T15:55:58+10:00</updated>
-    <id>https://geshan.com.np/blog/2018/09/7-practical-steps-to-land-your-first-tech-job</id>
+    <id>http://geshan.com.np/blog/2018/09/7-practical-steps-to-land-your-first-tech-job</id>
     <content type="html"><![CDATA[<p>&ldquo;If you hate your job, take a loan and you will start liking it&rdquo;. I don&rsquo;t remember where I read this but this sounds convincing. Now think of the tech job market worldwide, saying it is growing would be an understatement, it is booming. Still, why don&rsquo;t fresh graduates not get a job when the pass out of universities? Let&rsquo;s have a closer look at this issue and try to help technology students get a job as soon as their course finishes.</p>
 
-<p>{% img center /images/5-steps-first-tech-job/first-tech-job-a.jpg &lsquo;5 practical steps to land your first tech job&rsquo; &lsquo;5 practical steps to land your first tech job&rsquo; %}</p>
+<p><img class="center" src="/images/5-steps-first-tech-job/first-tech-job-a.jpg" title="&lsquo;5 practical steps to land your first tech job&rsquo; &lsquo;5 practical steps to land your first tech job&rsquo;" ></p>
 
 <!-- more -->
 
@@ -201,7 +201,7 @@ If you have Dockerized your open source app I would recommend Zeit Now. With the
 
 <p>On the student&rsquo;s side, you need to research what is relevant for the market, learn on your own and brand yourself so that you can sell your skills faster. For instance, if I interview a candidate who has a good tech blog with helpful and regular posts may be even on medium. Your chances of getting hired are up by like ~5% already. Because being able to put your ideas/learning in words is an important skill for a software engineer.</p>
 
-<p>{% img center /images/5-steps-first-tech-job/first-tech-job-b.jpg &lsquo;5 practical steps to land your first tech job&rsquo; &lsquo;5 practical steps to land your first tech job&rsquo; %}</p>
+<p><img class="center" src="/images/5-steps-first-tech-job/first-tech-job-b.jpg" title="&lsquo;5 practical steps to land your first tech job&rsquo; &lsquo;5 practical steps to land your first tech job&rsquo;" ></p>
 
 <h2>Lets get to the steps now</h2>
 
@@ -238,13 +238,13 @@ If you have Dockerized your open source app I would recommend Zeit Now. With the
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[How to do a zero downtime database (DB) migration (schema change) with a practical example]]></title>
-    <link href="https://geshan.com.np/blog/2018/05/how-to-do-a-zero-downtime-database-db-migration-schema-change-with-a-practical-example/"/>
+    <title type="html"><![CDATA[How to Do a Zero Downtime Database (DB) Migration (Schema Change) With a Practical Example]]></title>
+    <link href="http://geshan.com.np/blog/2018/05/how-to-do-a-zero-downtime-database-db-migration-schema-change-with-a-practical-example/"/>
     <updated>2018-05-01T04:00:41+10:00</updated>
-    <id>https://geshan.com.np/blog/2018/05/how-to-do-a-zero-downtime-database-db-migration-schema-change-with-a-practical-example</id>
+    <id>http://geshan.com.np/blog/2018/05/how-to-do-a-zero-downtime-database-db-migration-schema-change-with-a-practical-example</id>
     <content type="html"><![CDATA[<p>Database migration on a production database is never simple. Depending on the volume of requests some teams schedule database migration to off hours. You can run your alter statements with zero or minimal downtime following the steps mentioned below with a practical example.</p>
 
-<p>{% img center /images/db-migration/db-migration.png &lsquo;How to do a zero downtime database&rsquo; &lsquo;How to do a zero downtime database&rsquo; %}</p>
+<p><img class="center" src="/images/db-migration/db-migration.png" title="&lsquo;How to do a zero downtime database&rsquo; &lsquo;How to do a zero downtime database&rsquo;" ></p>
 
 <!-- more -->
 
@@ -253,13 +253,13 @@ If you have Dockerized your open source app I would recommend Zeit Now. With the
 
 <p>As an example for this post, let&rsquo;s assume you work for an E-commerce company which has both recurring and new customers. You have partners who publicize a discount code valid for a given date range and get a percent of the order&rsquo;s total tracked by their discount code. Below is the schema for the partner and coupon code. Below is the initial schema before any change:</p>
 
-<p>{% img center /images/db-migration/schema-01.png &lsquo;Initial DB schema&rsquo; &lsquo;Initial DB Schema&rsquo; %}</p>
+<p><img class="center" src="/images/db-migration/schema-01.png" title="&lsquo;Initial DB schema&rsquo; &lsquo;Initial DB Schema&rsquo;" ></p>
 
 <p>Now the new requirement is to track different commission percent for the new and recurring customer. New and recurring customers are evaluated by a different system/microservice and it is also responsible for commission calculation based on order total which is out of the scope of this focused example.</p>
 
 <p>To do commission tracking by customer type we would decide to add 2 new columns commission_percent_new_customer, commission_percent_recurring_customer, the difficult question is how to roll it out without downtime.</p>
 
-<p>{% img center /images/db-migration/schema-02.png &lsquo;Updated schema with 2 new columns&rsquo; &lsquo;Updated schema with 2 new columns&rsquo; %}</p>
+<p><img class="center" src="/images/db-migration/schema-02.png" title="&lsquo;Updated schema with 2 new columns&rsquo; &lsquo;Updated schema with 2 new columns&rsquo;" ></p>
 
 <h3>Migration script (DB schema alter statement)</h3>
 
@@ -299,7 +299,7 @@ ADD `commission_percent_recurring_customer` DECIMAL NULL AFTER `commission_perce
 
 <h3>Final schema after dropping commission_percent column</h3>
 
-<p>{% img center /images/db-migration/schema-03.png &lsquo;Updated schema with 1 column less&rsquo; &lsquo;Updated schema with 1 column less&rsquo; %}</p>
+<p><img class="center" src="/images/db-migration/schema-03.png" title="&lsquo;Updated schema with 1 column less&rsquo; &lsquo;Updated schema with 1 column less&rsquo;" ></p>
 
 <h2>Things to consider</h2>
 

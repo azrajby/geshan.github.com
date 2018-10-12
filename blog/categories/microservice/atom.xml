@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: microservice | Geshan's Blog]]></title>
-  <link href="https://geshan.com.np/blog/categories/microservice/atom.xml" rel="self"/>
-  <link href="https://geshan.com.np/"/>
-  <updated>2018-10-12T20:18:50+11:00</updated>
-  <id>https://geshan.com.np/</id>
+  <title><![CDATA[Category: Microservice | Geshan's Blog]]></title>
+  <link href="http://geshan.com.np/blog/categories/microservice/atom.xml" rel="self"/>
+  <link href="http://geshan.com.np/"/>
+  <updated>2018-10-12T20:38:17+11:00</updated>
+  <id>http://geshan.com.np/</id>
   <author>
     <name><![CDATA[Geshan Manandhar]]></name>
     
@@ -14,13 +14,13 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Don't code your microservice like a monolith, keep it maintainable not over-engineered]]></title>
-    <link href="https://geshan.com.np/blog/2018/10/dont-code-your-microservice-like-a-monolith/"/>
+    <title type="html"><![CDATA[Don't Code Your Microservice Like a Monolith, Keep It Maintainable Not Over-engineered]]></title>
+    <link href="http://geshan.com.np/blog/2018/10/dont-code-your-microservice-like-a-monolith/"/>
     <updated>2018-10-12T15:54:07+11:00</updated>
-    <id>https://geshan.com.np/blog/2018/10/dont-code-your-microservice-like-a-monolith</id>
+    <id>http://geshan.com.np/blog/2018/10/dont-code-your-microservice-like-a-monolith</id>
     <content type="html"><![CDATA[<p>Will you use a gun to kill a fly? The answer is NO. The same thing goes when you want to write a microservice application that is going to be maximum of 10K lines of code. Don&rsquo;t over-engineer it. Ok, you have been writing and maintaining large code bases. Some might be 100K+ lines of code but you need to get over your habits and think differently. This post helps you unravel the mysteries of writing small and maintainable microservices. The suggestions are opinionated but it is in practice in a million dollar business.</p>
 
-<p>{% img center /images/microservice-code/lego.jpg &lsquo;Do not code your microservice like a monolith, keep it maintainable not over-engineered&rsquo; &lsquo;Do not code your microservice like a monolith, keep it maintainable not over-engineered&rsquo; %}</p>
+<p><img class="center" src="/images/microservice-code/lego.jpg" title="&lsquo;Do not code your microservice like a monolith, keep it maintainable not over-engineered&rsquo; &lsquo;Do not code your microservice like a monolith, keep it maintainable not over-engineered&rsquo;" ></p>
 
 <!-- more -->
 
@@ -56,7 +56,7 @@
 
 <p>Data mapper or Active record both bring their own opinions, ways of doing things and extra weight. This not only causes performance issues but also code readability suffers. Think of the pre and post hooks/event listener Doctrine has, they work like magic and it is always tricky to understand magic.</p>
 
-<p>{% img center /images/microservice-code/pot-on-head.jpg &lsquo;Do not code your microservice like a monolith, keep it maintainable not over-engineered&rsquo; &lsquo;Do not code your microservice like a monolith, keep it maintainable not over-engineered&rsquo; %}</p>
+<p><img class="center" src="/images/microservice-code/pot-on-head.jpg" title="&lsquo;Do not code your microservice like a monolith, keep it maintainable not over-engineered&rsquo; &lsquo;Do not code your microservice like a monolith, keep it maintainable not over-engineered&rsquo;" ></p>
 
 <p>Just try this, explain how an ORM related insert code works VS how a simple and straightforward INSERT SQL query works to a beginner/junior software engineer. You will already regret using that ORM. Especially in the context of microservices ORM is a clear overhead. The microservice is anticipated to be maximum of 10K lines of code and affect hardly 10 tables so just don&rsquo;t use an ORM, period.</p>
 
@@ -66,7 +66,7 @@
 
 <p>Design Patterns are relevant for a code base that is already big and in the next 6-12 months is going to be bigger, your usual monolith. They can turn out to be &ldquo;extra baggage&rdquo; for a service that is 100s of lines of code now and will become 1000s of lines of code in the next 6-12 months. We never foresee it to be bigger than that because to do that other part we will have another microservice. So keep your microservice code fat free and well tested.</p>
 
-<p>{% img center /images/microservice-code/baggage.jpg &lsquo;Do not code your microservice like a monolith, keep it maintainable not over-engineered&rsquo; &lsquo;Do not code your microservice like a monolith, keep it maintainable not over-engineered&rsquo; %}</p>
+<p><img class="center" src="/images/microservice-code/baggage.jpg" title="&lsquo;Do not code your microservice like a monolith, keep it maintainable not over-engineered&rsquo; &lsquo;Do not code your microservice like a monolith, keep it maintainable not over-engineered&rsquo;" ></p>
 
 <h2>Conclusion</h2>
 

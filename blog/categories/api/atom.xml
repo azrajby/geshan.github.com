@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: api | Geshan's Blog]]></title>
-  <link href="https://geshan.com.np/blog/categories/api/atom.xml" rel="self"/>
-  <link href="https://geshan.com.np/"/>
-  <updated>2018-10-12T20:18:50+11:00</updated>
-  <id>https://geshan.com.np/</id>
+  <title><![CDATA[Category: Api | Geshan's Blog]]></title>
+  <link href="http://geshan.com.np/blog/categories/api/atom.xml" rel="self"/>
+  <link href="http://geshan.com.np/"/>
+  <updated>2018-10-12T20:38:17+11:00</updated>
+  <id>http://geshan.com.np/</id>
   <author>
     <name><![CDATA[Geshan Manandhar]]></name>
     
@@ -14,17 +14,17 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Building your next product, get your HTTP API working first]]></title>
-    <link href="https://geshan.com.np/blog/2015/08/building-you-next-product/"/>
+    <title type="html"><![CDATA[Building Your Next Product, Get Your HTTP API Working First]]></title>
+    <link href="http://geshan.com.np/blog/2015/08/building-you-next-product/"/>
     <updated>2015-08-22T20:00:22+10:00</updated>
-    <id>https://geshan.com.np/blog/2015/08/building-you-next-product</id>
+    <id>http://geshan.com.np/blog/2015/08/building-you-next-product</id>
     <content type="html"><![CDATA[<p>We have seen many technology software products coming, some coming up as the next big thing, some
 a multi-tenant Software As A Service (SAAS). Sometimes I see lots of new, useful and innovative
 products on <a href="http://www.producthunt.com/">Product Hunt</a> and think how would they have planned such
 amazing products. If you are planning to build your software product, this post will unfold why
 you should make your web Application Programming Interface (API) working first.</p>
 
-<p>{% img center  /images/product-http-api/rest-json.jpg &lsquo;JSON APIs&rsquo; &lsquo;JSON APIs&rsquo; %}</p>
+<p><img class="center" src="/images/product-http-api/rest-json.jpg" title="&lsquo;JSON APIs&rsquo; &lsquo;JSON APIs&rsquo;" ></p>
 
 <!-- more -->
 

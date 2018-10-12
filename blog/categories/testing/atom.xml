@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: testing | Geshan's Blog]]></title>
-  <link href="https://geshan.com.np/blog/categories/testing/atom.xml" rel="self"/>
-  <link href="https://geshan.com.np/"/>
-  <updated>2018-10-12T20:18:50+11:00</updated>
-  <id>https://geshan.com.np/</id>
+  <title><![CDATA[Category: Testing | Geshan's Blog]]></title>
+  <link href="http://geshan.com.np/blog/categories/testing/atom.xml" rel="self"/>
+  <link href="http://geshan.com.np/"/>
+  <updated>2018-10-12T20:38:17+11:00</updated>
+  <id>http://geshan.com.np/</id>
   <author>
     <name><![CDATA[Geshan Manandhar]]></name>
     
@@ -14,17 +14,17 @@
 
   
   <entry>
-    <title type="html"><![CDATA[There are only two types of automated software tests, fast ones and not fast ones]]></title>
-    <link href="https://geshan.com.np/blog/2016/03/there-are-only-two-types-of-automated-software-tests/"/>
+    <title type="html"><![CDATA[There Are Only Two Types of Automated Software Tests, Fast Ones and Not Fast Ones]]></title>
+    <link href="http://geshan.com.np/blog/2016/03/there-are-only-two-types-of-automated-software-tests/"/>
     <updated>2016-03-17T16:38:18+11:00</updated>
-    <id>https://geshan.com.np/blog/2016/03/there-are-only-two-types-of-automated-software-tests</id>
+    <id>http://geshan.com.np/blog/2016/03/there-are-only-two-types-of-automated-software-tests</id>
     <content type="html"><![CDATA[<p>Tests check that the code does what it is expected to do. It also gives confidence to the software engineer that the code
 works as intended. This equates to less or no bugs in the software. You must have heard about lots of types of automated software tests.
 There is unit testing, integration testing, functional testing, acceptance testing, smoke testing etc.
 As per Guru99&rsquo;s <a href="http://www.guru99.com/types-of-software-testing.html">post</a> there are more than 100 types of
 software testing. In this post I am going to categorize automated software tests into two, the fast ones and not fast ones.</p>
 
-<p>{% img center /images/testing-types/software-testing.jpg &lsquo;There are only two types of automated software tests, fast ones and not fast ones&rsquo; &lsquo;There are only two types of automated software tests, fast ones and not fast ones&rsquo; %}</p>
+<p><img class="center" src="/images/testing-types/software-testing.jpg" title="&lsquo;There are only two types of automated software tests, fast ones and not fast ones&rsquo; &lsquo;There are only two types of automated software tests, fast ones and not fast ones&rsquo;" ></p>
 
 <!-- more -->
 
@@ -77,10 +77,10 @@ of any solid software application. Happy testing hope your tests run in seconds 
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[10 software engineering proverbs/quotes I wrote in the past months]]></title>
-    <link href="https://geshan.com.np/blog/2016/03/10-software-engineering-proverbs-slash-quotes-i-wrote-in-the-past-months/"/>
+    <title type="html"><![CDATA[10 Software Engineering Proverbs/quotes I Wrote in the Past Months]]></title>
+    <link href="http://geshan.com.np/blog/2016/03/10-software-engineering-proverbs-slash-quotes-i-wrote-in-the-past-months/"/>
     <updated>2016-03-14T22:30:20+11:00</updated>
-    <id>https://geshan.com.np/blog/2016/03/10-software-engineering-proverbs-slash-quotes-i-wrote-in-the-past-months</id>
+    <id>http://geshan.com.np/blog/2016/03/10-software-engineering-proverbs-slash-quotes-i-wrote-in-the-past-months</id>
     <content type="html"><![CDATA[<p>In the past months, I was tweeting some insightful and enlightening software engineering proverbs. Like the one below</p>
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">There is no pill to convert yourself as a good <a href="https://twitter.com/hashtag/programmer?src=hash">#programmer</a>, it takes lots of reading, learning and practice. So start now :) <a href="https://twitter.com/hashtag/code?src=hash">#code</a> <a href="https://twitter.com/hashtag/software?src=hash">#software</a></p>&mdash; Geshan Manandhar (@geshan) <a href="https://twitter.com/geshan/status/707796907582726145">March 10, 2016</a></blockquote>
@@ -91,7 +91,7 @@ of any solid software application. Happy testing hope your tests run in seconds 
 
 <p>I browsed through my twitter timeline and collected them in one place.</p>
 
-<p>{% img center /images/10-quotes/code-html-small.jpg &lsquo;10 software engineering proverbs-quotes I came up with in past months&rsquo; &lsquo;10 software engineering proverbs-quotes I came up with in past months&rsquo; %}</p>
+<p><img class="center" src="/images/10-quotes/code-html-small.jpg" title="&lsquo;10 software engineering proverbs-quotes I came up with in past months&rsquo; &lsquo;10 software engineering proverbs-quotes I came up with in past months&rsquo;" ></p>
 
 <h2>Here are the quotes with visuals :</h2>
 
@@ -102,61 +102,61 @@ of any solid software application. Happy testing hope your tests run in seconds 
 
 <h3>There is no pill to convert yourself as a good programmer, it takes lots of reading, learning and practice. So start now.</h3>
 
-<p>{% img center /images/10-quotes/01pills.jpg &lsquo;There is no pill to convert yourself as a good programmer, it takes lots of reading, learning and practice. So start now.&rsquo; &lsquo;There is no pill to convert yourself as a good programmer, it takes lots of reading, learning and practice. So start now.&rsquo; %}</p>
+<p><img class="center" src="/images/10-quotes/01pills.jpg" title="&lsquo;There is no pill to convert yourself as a good programmer, it takes lots of reading, learning and practice. So start now.&rsquo; &lsquo;There is no pill to convert yourself as a good programmer, it takes lots of reading, learning and practice. So start now.&rsquo;" ></p>
 
 <hr />
 
 <h3>An open pull request (PR) is a liability in at least 2 ways. 1 it&rsquo;s a feature/fix not shipped to customers. 2 it will invite code conflicts soon.</h3>
 
-<p>{% img center /images/10-quotes/02PR.jpg &lsquo;An open pull request is a liability in at least 2 ways. 1 it is a feature-fix not shipped to customers. 2 it will invite code conflicts soon.&rsquo; &lsquo;An open pull request is a liability in at least 2 ways. 1 it is a feature-fix not shipped to customers. 2 it will invite code conflicts soon.&rsquo; %}</p>
+<p><img class="center" src="/images/10-quotes/02PR.jpg" title="&lsquo;An open pull request is a liability in at least 2 ways. 1 it is a feature-fix not shipped to customers. 2 it will invite code conflicts soon.&rsquo; &lsquo;An open pull request is a liability in at least 2 ways. 1 it is a feature-fix not shipped to customers. 2 it will invite code conflicts soon.&rsquo;" ></p>
 
 <hr />
 
 <h3>Talking about automated testing and Continuous Integration(CI) is easy, balancing it with delivery and cost as a web shop manager is hard.</h3>
 
-<p>{% img center /images/10-quotes/03test-ci-balance.jpg &lsquo;Talking about automated testing and Continuous Integration(CI) is easy, balancing it with delivery and cost as a web shop manager is hard.&rsquo; &lsquo;Talking about automated testing and Continuous Integration(CI) is easy, balancing it with delivery and cost as a web shop manager is hard.&rsquo; %}</p>
+<p><img class="center" src="/images/10-quotes/03test-ci-balance.jpg" title="&lsquo;Talking about automated testing and Continuous Integration(CI) is easy, balancing it with delivery and cost as a web shop manager is hard.&rsquo; &lsquo;Talking about automated testing and Continuous Integration(CI) is easy, balancing it with delivery and cost as a web shop manager is hard.&rsquo;" ></p>
 
 <hr />
 
 <h3>Having automated tests but no Continuous Integration(CI) is like having a sword but letting it rot.</h3>
 
-<p>{% img center /images/10-quotes/04test-ci-sword.jpg &lsquo;Having automated tests but no Continuous Integration(CI) is like having a sword but letting it rot.&rsquo; &lsquo;Having automated tests but no Continuous Integration(CI) is like having a sword but letting it rot.&rsquo; %}</p>
+<p><img class="center" src="/images/10-quotes/04test-ci-sword.jpg" title="&lsquo;Having automated tests but no Continuous Integration(CI) is like having a sword but letting it rot.&rsquo; &lsquo;Having automated tests but no Continuous Integration(CI) is like having a sword but letting it rot.&rsquo;" ></p>
 
 <hr />
 
 <h3>You cannot follow everything by the book. It&rsquo;s generally an ish implementation like Agileish, Kanbanish and RESTish.</h3>
 
-<p>{% img center /images/10-quotes/05follow-book.jpg &lsquo;You cannot follow everything by the book. It is generally an ish implementation like agileish, kanbanish and RESTish.&rsquo; &lsquo;You cannot follow everything by the book. It is generally an ish implementation like agileish, kanbanish and RESTish.&rsquo; %}</p>
+<p><img class="center" src="/images/10-quotes/05follow-book.jpg" title="&lsquo;You cannot follow everything by the book. It is generally an ish implementation like agileish, kanbanish and RESTish.&rsquo; &lsquo;You cannot follow everything by the book. It is generally an ish implementation like agileish, kanbanish and RESTish.&rsquo;" ></p>
 
 <hr />
 
 <h3>If you are thinking of a software product idea, make a pain killer people can&rsquo;t live without not an optional vitamin people can and will skip.</h3>
 
-<p>{% img center /images/10-quotes/06pain-killer.jpg &lsquo;If you are thinking of a software product idea, make a pain killer people can not live without not an optional vitamin people can and will skip.&rsquo; &lsquo;If you are thinking of a software product idea, make a pain killer people can not live without not an optional vitamin people can and will skip.&rsquo; %}</p>
+<p><img class="center" src="/images/10-quotes/06pain-killer.jpg" title="&lsquo;If you are thinking of a software product idea, make a pain killer people can not live without not an optional vitamin people can and will skip.&rsquo; &lsquo;If you are thinking of a software product idea, make a pain killer people can not live without not an optional vitamin people can and will skip.&rsquo;" ></p>
 
 <hr />
 
 <h3>Software engineers have power to create great solutions but the best software to solve the least important problem is of no use.</h3>
 
-<p>{% img center /images/10-quotes/07solution-importance.jpg &lsquo;Software engineers have power to create great solutions but the best software to solve the least important problem is of no use.&rsquo; &lsquo;Software engineers have power to create great solutions but the best software to solve the least important problem is of no use.&rsquo; %}</p>
+<p><img class="center" src="/images/10-quotes/07solution-importance.jpg" title="&lsquo;Software engineers have power to create great solutions but the best software to solve the least important problem is of no use.&rsquo; &lsquo;Software engineers have power to create great solutions but the best software to solve the least important problem is of no use.&rsquo;" ></p>
 
 <hr />
 
 <h3>Programmers/developers need to become software engineers. Think of solution then technology to implement it. Think of abstractions then code.</h3>
 
-<p>{% img center /images/10-quotes/08solution-abstract.jpg &lsquo;Programmers-developers need to become software engineers. Think of solution then technology to implement it. Think of abstractions then code.&rsquo; &lsquo;Programmers-developers need to become software engineers. Think of solution then technology to implement it. Think of abstractions then code.&rsquo; %}</p>
+<p><img class="center" src="/images/10-quotes/08solution-abstract.jpg" title="&lsquo;Programmers-developers need to become software engineers. Think of solution then technology to implement it. Think of abstractions then code.&rsquo; &lsquo;Programmers-developers need to become software engineers. Think of solution then technology to implement it. Think of abstractions then code.&rsquo;" ></p>
 
 <hr />
 
 <h3>Software developers are solution providers first, engineers second. Solution should have business value than using the latest tech fad.</h3>
 
-<p>{% img center /images/10-quotes/09solution-value.jpg &lsquo;Software developers are solution providers first, engineers second. Solution should have business value than using the latest tech fad.&rsquo; &lsquo;Software developers are solution providers first, engineers second. Solution should have business value than using the latest tech fad.&rsquo; %}</p>
+<p><img class="center" src="/images/10-quotes/09solution-value.jpg" title="&lsquo;Software developers are solution providers first, engineers second. Solution should have business value than using the latest tech fad.&rsquo; &lsquo;Software developers are solution providers first, engineers second. Solution should have business value than using the latest tech fad.&rsquo;" ></p>
 
 <hr />
 
 <h3>If you don&rsquo;t sharpen your axe then it will take more time and effort to cut the tree. Same goes for software development.</h3>
 
-<p>{% img center /images/10-quotes/10axe.jpg &lsquo;If you don&rsquo;t sharpen your axe then it will take more time and effort to cut the tree. Same goes for software development.&rsquo; &lsquo;If you don&rsquo;t sharpen your axe then it will take more time and effort to cut the tree. Same goes for software development.&rsquo; %}</p>
+<p><img class="center" src="/images/10-quotes/10axe.jpg" title="&lsquo;If you don&rsquo;t sharpen your axe then it will take more time and effort to cut the tree. Same goes for software development.&rsquo; &lsquo;If you don&rsquo;t sharpen your axe then it will take more time and effort to cut the tree. Same goes for software development.&rsquo;" ></p>
 
 <hr />
 
@@ -167,15 +167,15 @@ of any solid software application. Happy testing hope your tests run in seconds 
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[4 pillars of a solid software application and tools to support it]]></title>
-    <link href="https://geshan.com.np/blog/2015/10/4-pillars-of-a-solid-software-application-and-tools-to-support-it/"/>
+    <title type="html"><![CDATA[4 Pillars of a Solid Software Application and Tools to Support It]]></title>
+    <link href="http://geshan.com.np/blog/2015/10/4-pillars-of-a-solid-software-application-and-tools-to-support-it/"/>
     <updated>2015-10-10T17:21:52+11:00</updated>
-    <id>https://geshan.com.np/blog/2015/10/4-pillars-of-a-solid-software-application-and-tools-to-support-it</id>
+    <id>http://geshan.com.np/blog/2015/10/4-pillars-of-a-solid-software-application-and-tools-to-support-it</id>
     <content type="html"><![CDATA[<p>Software development is not just punching some code on the keyboard for desired output. The business side of software development always takes priority than the technicalities of it.</p>
 
 <p>I have seen some software development teams are slow because they have a lot of technical debt. Some teams are naive, the members don&rsquo;t want to explore new things . They are stuck with 5 year old technology like FTP, old legacy framework etc. In this post, I will shed some light on the four basic and important things of a solid software application. This contents of post is language and framework agnostic. It is applicable to any software project.</p>
 
-<p>{% img center /images/4-pillars-software-application/4-pillars-software-application.png &lsquo;4 pillars of a solid software application&rsquo; &lsquo;4 pillars of a solid software application&rsquo; %}</p>
+<p><img class="center" src="/images/4-pillars-software-application/4-pillars-software-application.png" title="&lsquo;4 pillars of a solid software application&rsquo; &lsquo;4 pillars of a solid software application&rsquo;" ></p>
 
 <!-- more -->
 
@@ -223,17 +223,17 @@ of any solid software application. Happy testing hope your tests run in seconds 
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Getting started with unit testing in Laravel]]></title>
-    <link href="https://geshan.com.np/blog/2015/07/getting-started-with-unit-testing-in-laravel/"/>
+    <title type="html"><![CDATA[Getting Started With Unit Testing in Laravel]]></title>
+    <link href="http://geshan.com.np/blog/2015/07/getting-started-with-unit-testing-in-laravel/"/>
     <updated>2015-07-25T14:57:42+10:00</updated>
-    <id>https://geshan.com.np/blog/2015/07/getting-started-with-unit-testing-in-laravel</id>
+    <id>http://geshan.com.np/blog/2015/07/getting-started-with-unit-testing-in-laravel</id>
     <content type="html"><![CDATA[<p>Automated Testing an application is kind of a puzzle given the choice of methodologies (TDD, BDD&hellip;), frameworks etc
 there is no clear direction on how to test an application. Same applies for any PHP application, where you have
 many frameworks, methods and styles to choose from. In this blog post I will shed some light on how to get started
 with &ldquo;Unit&rdquo; testing in a Laravel application. Laravel has gained lots of popularity in the past years may be due to its
 simplicity, ease of use, clear documentation and availability of packages/libraries.</p>
 
-<p>{% img center /images/laravel-unit-tests/laravel-popularity.png &lsquo;Laravel is very popular&rsquo; &lsquo;Laravel is very popular&rsquo; %}</p>
+<p><img class="center" src="/images/laravel-unit-tests/laravel-popularity.png" title="&lsquo;Laravel is very popular&rsquo; &lsquo;Laravel is very popular&rsquo;" ></p>
 
 <!-- more -->
 
@@ -247,7 +247,7 @@ tested in a unit test fashion and not only on how it is rendered in a browser. S
 tests are <a href="https://github.com/laravel/framework/blob/5.1/tests/View/ViewBladeCompilerTest.php">Unit</a> test and the
 documentation for application tests are for <a href="http://laravel.com/docs/5.1/testing">functional</a> test.</p>
 
-<p>{% img center /images/laravel-unit-tests/laravel-testing-doc.png &lsquo;Laravel application testing doc&rsquo; &lsquo;Laravel application testing doc&rsquo; %}</p>
+<p><img class="center" src="/images/laravel-unit-tests/laravel-testing-doc.png" title="&lsquo;Laravel application testing doc&rsquo; &lsquo;Laravel application testing doc&rsquo;" ></p>
 
 <h2>Qualities of Unit tests</h2>
 
@@ -267,7 +267,7 @@ qualities of unit tests are:</p>
 <p>The above 5 characteristics make it easy to setup and super fast when you run as there are no external dependencies
 like a database or file system.</p>
 
-<p>{% img center /images/laravel-unit-tests/laravel-unit-tests.png &lsquo;Laravel unit tests&rsquo; &lsquo;Laravel unit tests&rsquo; %}</p>
+<p><img class="center" src="/images/laravel-unit-tests/laravel-unit-tests.png" title="&lsquo;Laravel unit tests&rsquo; &lsquo;Laravel unit tests&rsquo;" ></p>
 
 <h2>More on Unit testing</h2>
 
@@ -290,7 +290,7 @@ domain/business logic can reside. For this example I will use a checkout example
 
 <p>We will structure the Laravel application as:</p>
 
-<p>{% img center /images/laravel-unit-tests/laravel-unit-test-structure.png &lsquo;Laravel unit test application structure&rsquo; &lsquo;Laravel unit test application structure&rsquo; %}</p>
+<p><img class="center" src="/images/laravel-unit-tests/laravel-unit-test-structure.png" title="&lsquo;Laravel unit test application structure&rsquo; &lsquo;Laravel unit test application structure&rsquo;" ></p>
 
 <p>For the above case we will do the following to achieve unit testing with a structure having Service as below:</p>
 
@@ -362,7 +362,7 @@ all I would opt for having tests after code. Below is example of the test code w
 
 <p><strong>The full running app with tests is available as an open source repository on <a href="https://github.com/geshan/laravel-unit-test-example/">github</a>.</strong></p>
 
-<p>{% img center /images/laravel-unit-tests/running-laravel-app.png &lsquo;Running Laravel app with PHP server&rsquo; &lsquo;Running Laravel app with PHP server&rsquo; %}</p>
+<p><img class="center" src="/images/laravel-unit-tests/running-laravel-app.png" title="&lsquo;Running Laravel app with PHP server&rsquo; &lsquo;Running Laravel app with PHP server&rsquo;" ></p>
 
 <h3>Tip</h3>
 
@@ -374,7 +374,7 @@ each change my tests would automatically run and I would see the green or red de
 </blockquote>
 
 
-<p>{% img center /images/laravel-unit-tests/tests-green-gulp.png &lsquo;Handy gulp tdd for Laravel&rsquo; &lsquo;Handy gulp tdd for Laravel&rsquo; %}</p>
+<p><img class="center" src="/images/laravel-unit-tests/tests-green-gulp.png" title="&lsquo;Handy gulp tdd for Laravel&rsquo; &lsquo;Handy gulp tdd for Laravel&rsquo;" ></p>
 
 <h2>Choice of Tools and services</h2>
 
@@ -401,10 +401,10 @@ covers not only the code also its use cases will surely be a boon. Happy Unit te
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Using PHPUnit data provider for less code and greater coverage]]></title>
-    <link href="https://geshan.com.np/blog/2014/02/using-phpunit-data-provider-for-less/"/>
+    <title type="html"><![CDATA[Using PHPUnit Data Provider for Less Code and Greater Coverage]]></title>
+    <link href="http://geshan.com.np/blog/2014/02/using-phpunit-data-provider-for-less/"/>
     <updated>2014-02-01T18:51:00+11:00</updated>
-    <id>https://geshan.com.np/blog/2014/02/using-phpunit-data-provider-for-less</id>
+    <id>http://geshan.com.np/blog/2014/02/using-phpunit-data-provider-for-less</id>
     <content type="html"><![CDATA[<div class='post'>
 <div dir="ltr" style="text-align: left;" trbidi="on"><div class="separator" style="clear: both; text-align: center;"></div>Writing testable code is a harder target to achieve than just writing tests for the code written. You cannot write comprehensive tests that covers many function each of 200 or more lines and classes that measure 1000s of lines of code (<a href="http://en.wikipedia.org/wiki/Source_lines_of_code" target="_blank">LOC</a>). Writing testable code is always important if you want to be able to test/unit test your code and be confident that nothing will break.<br /><br />Tests also help a lot when you re-factor some code or write new features. If all the tests are passing you are quite sure that nothing is breaking. Seeing all tests come out green is a very good sight for us software engineer.<br /><br /><div class="separator" style="clear: both; text-align: center;"><a href="http://2.bp.blogspot.com/-mIzQVI5oxMU/Uuu1Bn0PmKI/AAAAAAAAndg/Wkq0HGPD1pM/s1600/all_green_tests.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://2.bp.blogspot.com/-mIzQVI5oxMU/Uuu1Bn0PmKI/AAAAAAAAndg/Wkq0HGPD1pM/s1600/all_green_tests.jpg" height="156" width="640" /></a></div><!-- more --><br /><h2 style="text-align: left;">Testing in PHP with PHPUnit</h2>Unit testing and testing as a whole is not a new thing in PHP, &nbsp;<a href="http://phpunit.de/" target="_blank">PHPUnit</a> the de facto unit testing framework in PHP started in <a href="http://gpfr.sourceforge.net/releases/phpunit-1.0.0/" target="_blank">2001</a>, The chart below shows that popularity of PHPUnit has really grown over the past years in comparison to <a href="http://www.simpletest.org/" target="_blank">Simple Test</a> another PHP testing framework.<br /><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://1.bp.blogspot.com/-iY16ziAjtiE/UuylucQEn-I/AAAAAAAAndw/cSZ9W2csjUM/s1600/phpUnit_popularity.jpg" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="http://1.bp.blogspot.com/-iY16ziAjtiE/UuylucQEn-I/AAAAAAAAndw/cSZ9W2csjUM/s1600/phpUnit_popularity.jpg" height="387" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;"><span style="font-size: small;">Source:&nbsp;</span><a href="http://www.google.com/trends/explore#q=phpunit%2C%20simpletest" style="font-size: medium;" target="_blank">Google Trends</a></td></tr></tbody></table>PHPUnit is a great unit testing framework that can automate testing and help in getting optimal output. As they state in the <a href="http://phpunit.de/manual/current/en/index.html" target="_blank">documentation</a>:<br /><blockquote>The difference between a good programmer and a bad programmer is that the good programmer uses tests to detect mistakes as soon as possible. The sooner you test for a mistake the greater your chance of finding it and the less it will cost to find and fix.</blockquote>It is true the sooner the problem is detected and fixed the better it is, same goes when some code is re-factored, a new feature is added or a bug resolved.<br /><h2 style="text-align: left;">Data Provider in PHPUnit</h2><div>There are may features of PHPUnit, which can help in writing comprehensive <a href="http://en.wikipedia.org/wiki/Unit_testing" target="_blank">unit testing</a> and moving toward the direction of <a href="http://en.wikipedia.org/wiki/Test-driven_development" target="_blank">test driven development</a> (TDD). Among them,&nbsp;<a href="http://phpunit.de/manual/current/en/writing-tests-for-phpunit.html#writing-tests-for-phpunit.data-providers" target="_blank">data providers</a> provide arbitrary arguments to a test function so that same code can be used to test multiple scenarios and possible cases. In this very simple example I will use a part of checkout. The logic is very simple:</div><div><ol style="text-align: left;"><li>If the payment method is &nbsp;&#8220;Cash&#8221;, apply a cash on delivery fee of 5.0</li><li>If the payment method is &#8220;Credit Card&#8221;, do not apply a cash on delivery fee.&nbsp;</li></ol><h3 style="text-align: left;">The part of the checkout class is given below:</h3><script src="http://gist-it.appspot.com/https://github.com/geshan/dataprovider-example/blob/master/src/DataProvider/Example/Checkout.php"></script><br />Source: <a href="https://github.com/geshan/dataprovider-example/blob/master/src/DataProvider/Example/Checkout.php" target="_blank">Github repository</a><br /><br /><h3 style="text-align: left;">The test for the above checkout class is given below:</h3><script src="http://gist-it.appspot.com/https://github.com/geshan/dataprovider-example/blob/master/tests/DataProvider/Example/Test/CheckoutTest.php"></script><br />Source: <a href="https://github.com/geshan/dataprovider-example/blob/master/tests/DataProvider/Example/Test/CheckoutTest.php" target="_blank">Github repository</a><br /><h3 style="text-align: left;">What makes using data provider in this example relevant and optimal?</h3></div><div><ul style="text-align: left;"><li>As the test needs to be run for both &#8220;Cash&#8221; and &#8220;Credit Card&#8221; the only thing it changes here is the addition of cash on delivery fee.</li><li>There is just one test with the payment method being passed as a parameter, saving us from writing X no of tests for X no. of payment methods. So less code and more coverage.</li><li>The test is clear concise and understandable.</li></ul><h3 style="text-align: left;">Things to consider in the code:</h3><div><ul style="text-align: left;"><li>The test runs the as many times as the data set provided by the provider function.</li><li>@dataProvider annotation is necessary in the test to get the data sets from the provider function.</li><li>When writing the provider function, its better to comment who is using the provided data sets and the order of variables (check the comment of &nbsp;paymentMethodProvider method).</li></ul><div>Both the above files with composer.json is available as a public <a href="https://github.com/geshan/dataprovider-example" target="_blank">git repository</a> for your reference, you can check the <a href="https://github.com/geshan/dataprovider-example/blob/master/README.md" target="_blank">read me</a> file to know how to run the tests.</div></div><h2 style="text-align: left;">Conclusion</h2></div><div>Whenever you write tests and think, &#8220;Why am I writing a new test for the similar thing. I guess there can be a way to write less test/code and cover all my test cases.&#8221; Then is time to use data providers in PHPUnit. You save on time and effort to cover the cases, a new case is just another array in the provider function, even in case of new test cases being added its a one line change given the tests pass. I hope this helps you to write less test code and achieve more coverage.</div><div><br /></div></div></div>
 
