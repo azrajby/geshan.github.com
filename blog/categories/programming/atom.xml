@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Programming | Geshan's Blog]]></title>
-  <link href="http://geshan.com.np/blog/categories/programming/atom.xml" rel="self"/>
-  <link href="http://geshan.com.np/"/>
-  <updated>2018-10-12T20:38:17+11:00</updated>
-  <id>http://geshan.com.np/</id>
+  <title><![CDATA[Category: programming | Geshan's Blog]]></title>
+  <link href="https://geshan.com.np/blog/categories/programming/atom.xml" rel="self"/>
+  <link href="https://geshan.com.np/"/>
+  <updated>2018-10-13T11:30:23+11:00</updated>
+  <id>https://geshan.com.np/</id>
   <author>
     <name><![CDATA[Geshan Manandhar]]></name>
     
@@ -14,10 +14,10 @@
 
   
   <entry>
-    <title type="html"><![CDATA[3 Podcasts Every Software Engineer/developer Should Subscribe to - Part 3]]></title>
-    <link href="http://geshan.com.np/blog/2017/01/3-podcasts-every-software-engineer-slash-developer-should-subscribe-to-part-3/"/>
+    <title type="html"><![CDATA[3 Podcasts Every Software Engineer/developer Should Subscribe To - Part 3]]></title>
+    <link href="https://geshan.com.np/blog/2017/01/3-podcasts-every-software-engineer-slash-developer-should-subscribe-to-part-3/"/>
     <updated>2017-01-04T16:47:54+11:00</updated>
-    <id>http://geshan.com.np/blog/2017/01/3-podcasts-every-software-engineer-slash-developer-should-subscribe-to-part-3</id>
+    <id>https://geshan.com.np/blog/2017/01/3-podcasts-every-software-engineer-slash-developer-should-subscribe-to-part-3</id>
     <content type="html"><![CDATA[<p>Podcasts open up a new horizon for learning, it is easier than reading and you can do it while commuting. This is a part 3 is the series (do check part <a href="http://geshan.com.np/blog/2015/10/3-podcasts-every-software-engineer-slash-developer-should-subscribe-to/">1</a> and
 <a href="http://geshan.com.np/blog/2016/05/3-podcasts-every-software-engineer-slash-developer-should-subscribe-to-part-2/">2</a>) of podcasts you must subscribe to and listen to as a software engineer. Same as the last 2 times the 3 podcasts listed below have superb content and amazing sound quality too. Below is the list:</p>
 
@@ -59,10 +59,10 @@ You even as a software engineer get to know important things about how to run a 
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[3 Podcasts Every Software Engineer/developer Should Subscribe to - Part 2]]></title>
-    <link href="http://geshan.com.np/blog/2016/05/3-podcasts-every-software-engineer-slash-developer-should-subscribe-to-part-2/"/>
+    <title type="html"><![CDATA[3 Podcasts Every Software Engineer/developer Should Subscribe To - Part 2]]></title>
+    <link href="https://geshan.com.np/blog/2016/05/3-podcasts-every-software-engineer-slash-developer-should-subscribe-to-part-2/"/>
     <updated>2016-05-03T15:29:42+10:00</updated>
-    <id>http://geshan.com.np/blog/2016/05/3-podcasts-every-software-engineer-slash-developer-should-subscribe-to-part-2</id>
+    <id>https://geshan.com.np/blog/2016/05/3-podcasts-every-software-engineer-slash-developer-should-subscribe-to-part-2</id>
     <content type="html"><![CDATA[<p>Listening to podcasts is a good way to learn new things. Like the last <a href="http://geshan.com.np/blog/2015/10/3-podcasts-every-software-engineer-slash-developer-should-subscribe-to/">time</a>, I have found some more podcasts
 with amazing content and sound quality. In this post, I will list 3 awesome podcasts.
 All software engineers/developers should subscribe to them now.</p>
@@ -108,10 +108,10 @@ management and change management is important in our work life.</p>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[There Are Only Two Types of Automated Software Tests, Fast Ones and Not Fast Ones]]></title>
-    <link href="http://geshan.com.np/blog/2016/03/there-are-only-two-types-of-automated-software-tests/"/>
+    <title type="html"><![CDATA[There are only two types of automated software tests, fast ones and not fast ones]]></title>
+    <link href="https://geshan.com.np/blog/2016/03/there-are-only-two-types-of-automated-software-tests/"/>
     <updated>2016-03-17T16:38:18+11:00</updated>
-    <id>http://geshan.com.np/blog/2016/03/there-are-only-two-types-of-automated-software-tests</id>
+    <id>https://geshan.com.np/blog/2016/03/there-are-only-two-types-of-automated-software-tests</id>
     <content type="html"><![CDATA[<p>Tests check that the code does what it is expected to do. It also gives confidence to the software engineer that the code
 works as intended. This equates to less or no bugs in the software. You must have heard about lots of types of automated software tests.
 There is unit testing, integration testing, functional testing, acceptance testing, smoke testing etc.
@@ -171,10 +171,10 @@ of any solid software application. Happy testing hope your tests run in seconds 
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[10 Software Engineering Proverbs/quotes I Wrote in the Past Months]]></title>
-    <link href="http://geshan.com.np/blog/2016/03/10-software-engineering-proverbs-slash-quotes-i-wrote-in-the-past-months/"/>
+    <title type="html"><![CDATA[10 software engineering proverbs/quotes I wrote in the past months]]></title>
+    <link href="https://geshan.com.np/blog/2016/03/10-software-engineering-proverbs-slash-quotes-i-wrote-in-the-past-months/"/>
     <updated>2016-03-14T22:30:20+11:00</updated>
-    <id>http://geshan.com.np/blog/2016/03/10-software-engineering-proverbs-slash-quotes-i-wrote-in-the-past-months</id>
+    <id>https://geshan.com.np/blog/2016/03/10-software-engineering-proverbs-slash-quotes-i-wrote-in-the-past-months</id>
     <content type="html"><![CDATA[<p>In the past months, I was tweeting some insightful and enlightening software engineering proverbs. Like the one below</p>
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">There is no pill to convert yourself as a good <a href="https://twitter.com/hashtag/programmer?src=hash">#programmer</a>, it takes lots of reading, learning and practice. So start now :) <a href="https://twitter.com/hashtag/code?src=hash">#code</a> <a href="https://twitter.com/hashtag/software?src=hash">#software</a></p>&mdash; Geshan Manandhar (@geshan) <a href="https://twitter.com/geshan/status/707796907582726145">March 10, 2016</a></blockquote>
@@ -261,10 +261,10 @@ of any solid software application. Happy testing hope your tests run in seconds 
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[3 Weeklies Every Software Engineer/developer Should Subscribe To]]></title>
-    <link href="http://geshan.com.np/blog/2015/11/3-weeklies-every-software-engineer-slash-developer-should-subscribe-to/"/>
+    <title type="html"><![CDATA[3 weeklies every software engineer/developer should subscribe to]]></title>
+    <link href="https://geshan.com.np/blog/2015/11/3-weeklies-every-software-engineer-slash-developer-should-subscribe-to/"/>
     <updated>2015-11-13T20:39:35+11:00</updated>
-    <id>http://geshan.com.np/blog/2015/11/3-weeklies-every-software-engineer-slash-developer-should-subscribe-to</id>
+    <id>https://geshan.com.np/blog/2015/11/3-weeklies-every-software-engineer-slash-developer-should-subscribe-to</id>
     <content type="html"><![CDATA[<p>Being updated is an important need for all technology professionals. These days, there are many ways to get updated and we are at times overwhelmed with the things we read. To help this situations, and get a rundown of a curated list of links to read for any topic is subscribe to a weekly.</p>
 
 <p>Weeklies are compact and organized list of links with articles, podcasts, videos etc. They are focused to a related to a topic, technology, language or framework delivered to you email inbox each week. This post curates a list of 3 weeklies for all software engineer/developers. The main 3 weeklies are language and framework agnostic. Towards the end there is mention of some language, framework and CMS specific weeklies.</p>

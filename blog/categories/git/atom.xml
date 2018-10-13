@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Git | Geshan's Blog]]></title>
-  <link href="http://geshan.com.np/blog/categories/git/atom.xml" rel="self"/>
-  <link href="http://geshan.com.np/"/>
-  <updated>2018-10-12T20:38:17+11:00</updated>
-  <id>http://geshan.com.np/</id>
+  <title><![CDATA[Category: git | Geshan's Blog]]></title>
+  <link href="https://geshan.com.np/blog/categories/git/atom.xml" rel="self"/>
+  <link href="https://geshan.com.np/"/>
+  <updated>2018-10-13T11:30:23+11:00</updated>
+  <id>https://geshan.com.np/</id>
   <author>
     <name><![CDATA[Geshan Manandhar]]></name>
     
@@ -14,10 +14,10 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Don't Just Learn a New Language/framework, Implement It as a Running Open Source Project]]></title>
-    <link href="http://geshan.com.np/blog/2018/10/dont-just-learn-a-new-language-slash-framework/"/>
+    <title type="html"><![CDATA[Don't just learn a new language/framework, implement it as a running open source project]]></title>
+    <link href="https://geshan.com.np/blog/2018/10/dont-just-learn-a-new-language-slash-framework/"/>
     <updated>2018-10-08T15:27:26+11:00</updated>
-    <id>http://geshan.com.np/blog/2018/10/dont-just-learn-a-new-language-slash-framework</id>
+    <id>https://geshan.com.np/blog/2018/10/dont-just-learn-a-new-language-slash-framework</id>
     <content type="html"><![CDATA[<p>“For the things we have to learn before we can do them, we learn by doing them.” ― Aristotle, The Nicomachean Ethics. Imagine you already read 3 books about cycling. Then someone gave you a cycle and asked to ride it, will you be able to ride it? The simple answer is &ldquo;No&rdquo;. It is not about how much have you read about cycling or how many videos did you watch about it. It is about getting on a cycle, balancing on it, learning the feet, hands and eye co-ordination. Same goes for learning a new tech skill, a new language or framework.</p>
 
 <p><img class="center" src="/images/language-framework-learn/cycle.jpg" title="&lsquo;Dont just learn a new language framework, implement it as a running open source project&rsquo; &lsquo;Dont just learn a new language framework, implement it as a running open source project&rsquo;" ></p>
@@ -63,10 +63,10 @@ If you have Dockerized your open source app I would recommend Zeit Now. With the
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[PHP Developers Nepal Meetup #16 a Round Up and My Talk on Simpilfied Gitflow With Slides]]></title>
-    <link href="http://geshan.com.np/blog/2016/06/php-developers-nepal-meetup-number-16-a-round-up-and-my-simpilfied-gitflow-talk/"/>
+    <title type="html"><![CDATA[PHP Developers Nepal Meetup #16 a round up and my talk on simpilfied gitflow with slides]]></title>
+    <link href="https://geshan.com.np/blog/2016/06/php-developers-nepal-meetup-number-16-a-round-up-and-my-simpilfied-gitflow-talk/"/>
     <updated>2016-06-25T21:50:35+10:00</updated>
-    <id>http://geshan.com.np/blog/2016/06/php-developers-nepal-meetup-number-16-a-round-up-and-my-simpilfied-gitflow-talk</id>
+    <id>https://geshan.com.np/blog/2016/06/php-developers-nepal-meetup-number-16-a-round-up-and-my-simpilfied-gitflow-talk</id>
     <content type="html"><![CDATA[<p>I had given a talk in the PHP Developers Nepal meetup #14 in Aug 2014 about <a href="http://geshan.com.np/blog/2014/08/basic-overview-of-message-queues-rabbit/">Rabbit Mq and Symfony</a>.
 This time the <a href="http://developers-nepal.github.io/php/meetups/25-Jun-2016/">meetup</a> took place at
 Prime College today. There were 2 regular talks for this meetup and one 5 minute lightening
@@ -113,10 +113,10 @@ This time I changed the slides and made it more general. I hope it was helpful t
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[3 Simple Rules for Less or No Git Conflicts]]></title>
-    <link href="http://geshan.com.np/blog/2016/04/3-simple-rules-for-less-or-no-git-conflicts/"/>
+    <title type="html"><![CDATA[3 simple rules for less or no git conflicts]]></title>
+    <link href="https://geshan.com.np/blog/2016/04/3-simple-rules-for-less-or-no-git-conflicts/"/>
     <updated>2016-04-28T16:14:43+10:00</updated>
-    <id>http://geshan.com.np/blog/2016/04/3-simple-rules-for-less-or-no-git-conflicts</id>
+    <id>https://geshan.com.np/blog/2016/04/3-simple-rules-for-less-or-no-git-conflicts</id>
     <content type="html"><![CDATA[<p>Do you write at least 10 lines of code a day in any programming language? Do you work alone or in a team?
 If your answer is yes to both questions, you need to learn <code>git</code> even if you work alone in a project.
 <a href="https://git-scm.com/">Git</a> is the most popular versions control system and it has become a must have
@@ -194,10 +194,10 @@ Be logical, if you have a PR with 50 files changed and 700 new lines you will fa
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[How to Use Simplified Gitflow Branching Model [Video]]]></title>
-    <link href="http://geshan.com.np/blog/2015/09/how-to-use-simplified-gitflow-branching-model-video/"/>
+    <title type="html"><![CDATA[How to use simplified gitflow branching model [Video]]]></title>
+    <link href="https://geshan.com.np/blog/2015/09/how-to-use-simplified-gitflow-branching-model-video/"/>
     <updated>2015-09-25T23:16:23+10:00</updated>
-    <id>http://geshan.com.np/blog/2015/09/how-to-use-simplified-gitflow-branching-model-video</id>
+    <id>https://geshan.com.np/blog/2015/09/how-to-use-simplified-gitflow-branching-model-video</id>
     <content type="html"><![CDATA[<p>Just knowing git and all team members pushing code to the main branch (master) is not a good practice.
 To leverage the most out of git, it is a good idea to do feature branching and follow a branching model.
 GitFlow is one of the options for doing a feature branching model but it is not so straight forward,
@@ -230,10 +230,10 @@ on 11-Mar-2015. I know its a late post its like a part 2 of <a href="http://bit.
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Software Engineering Practices in Nepal Infographics Part 2 Includes Git, VCS Hosting, Code Review Culture Etc]]></title>
-    <link href="http://geshan.com.np/blog/2015/05/software-engineering-practices-in-nepal-infographics-part-2-includes-git/"/>
+    <title type="html"><![CDATA[Software Engineering Practices in Nepal Infographics Part 2 includes Git, VCS Hosting, Code Review Culture etc]]></title>
+    <link href="https://geshan.com.np/blog/2015/05/software-engineering-practices-in-nepal-infographics-part-2-includes-git/"/>
     <updated>2015-05-22T12:40:58+10:00</updated>
-    <id>http://geshan.com.np/blog/2015/05/software-engineering-practices-in-nepal-infographics-part-2-includes-git</id>
+    <id>https://geshan.com.np/blog/2015/05/software-engineering-practices-in-nepal-infographics-part-2-includes-git</id>
     <content type="html"><![CDATA[<p>I hope life is slowly going back to normal in Nepal though the news of aftershocks is not encouraging. My prayers are with the
 people of Nepal and I hope they get the positive energy to resume with their normal work.</p>
 
