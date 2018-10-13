@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: laravel | Geshan's Blog]]></title>
-  <link href="https://geshan.com.np/blog/categories/laravel/atom.xml" rel="self"/>
-  <link href="https://geshan.com.np/"/>
-  <updated>2018-10-13T11:30:23+11:00</updated>
-  <id>https://geshan.com.np/</id>
+  <title><![CDATA[Category: Laravel | Geshan's Blog]]></title>
+  <link href="http://geshan.com.np/blog/categories/laravel/atom.xml" rel="self"/>
+  <link href="http://geshan.com.np/"/>
+  <updated>2018-10-13T12:05:26+11:00</updated>
+  <id>http://geshan.com.np/</id>
   <author>
     <name><![CDATA[Geshan Manandhar]]></name>
     
@@ -14,10 +14,10 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Getting started with Laravel, MariaDB (MySQL) and docker, docker compose]]></title>
-    <link href="https://geshan.com.np/blog/2015/10/getting-started-with-laravel-mariadb-mysql-docker/"/>
+    <title type="html"><![CDATA[Getting Started With Laravel, MariaDB (MySQL) and Docker, Docker Compose]]></title>
+    <link href="http://geshan.com.np/blog/2015/10/getting-started-with-laravel-mariadb-mysql-docker/"/>
     <updated>2015-10-24T18:49:48+11:00</updated>
-    <id>https://geshan.com.np/blog/2015/10/getting-started-with-laravel-mariadb-mysql-docker</id>
+    <id>http://geshan.com.np/blog/2015/10/getting-started-with-laravel-mariadb-mysql-docker</id>
     <content type="html"><![CDATA[<p>&ldquo;How do I get new team members contributing code to the project in a matter of minutes/hours not days?&rdquo; is a common question heard in development teams. There are some ways to do, in my opinion <a href="http://docker.com">docker</a> is one of the best.</p>
 
 <p>Docker enables using same software stack in development, staging and production. You don&rsquo;t need to worry about the version of PHP, MYSQL or any other dependency with Docker. This post will be about Laravel and MariaDB (MySQL) with Docker for local development. It will also feature use of docker-compose. We will use PHP 5.6 and MariaDB 10.1 with Laravel 5.1.</p>
@@ -275,10 +275,10 @@ opt for docker and docker-comopse. Happy Dockerizing and coding Laravel + PHP!</
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Getting started with unit testing in Laravel]]></title>
-    <link href="https://geshan.com.np/blog/2015/07/getting-started-with-unit-testing-in-laravel/"/>
+    <title type="html"><![CDATA[Getting Started With Unit Testing in Laravel]]></title>
+    <link href="http://geshan.com.np/blog/2015/07/getting-started-with-unit-testing-in-laravel/"/>
     <updated>2015-07-25T14:57:42+10:00</updated>
-    <id>https://geshan.com.np/blog/2015/07/getting-started-with-unit-testing-in-laravel</id>
+    <id>http://geshan.com.np/blog/2015/07/getting-started-with-unit-testing-in-laravel</id>
     <content type="html"><![CDATA[<p>Automated Testing an application is kind of a puzzle given the choice of methodologies (TDD, BDD&hellip;), frameworks etc
 there is no clear direction on how to test an application. Same applies for any PHP application, where you have
 many frameworks, methods and styles to choose from. In this blog post I will shed some light on how to get started
