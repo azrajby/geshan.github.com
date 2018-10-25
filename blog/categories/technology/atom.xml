@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Technology | Geshan's Blog]]></title>
   <link href="http://geshan.com.np/blog/categories/technology/atom.xml" rel="self"/>
   <link href="http://geshan.com.np/"/>
-  <updated>2018-10-13T12:05:26+11:00</updated>
+  <updated>2018-10-26T08:40:28+11:00</updated>
   <id>http://geshan.com.np/</id>
   <author>
     <name><![CDATA[Geshan Manandhar]]></name>
@@ -14,13 +14,59 @@
 
   
   <entry>
+    <title type="html"><![CDATA[Deployment Is Not Release, Let's Use Feature Flags]]></title>
+    <link href="http://geshan.com.np/blog/2018/10/deployment-is-not-release/"/>
+    <updated>2018-10-26T08:13:05+11:00</updated>
+    <id>http://geshan.com.np/blog/2018/10/deployment-is-not-release</id>
+    <content type="html"><![CDATA[<p>Breaking down a big feature to epics and stories is always tricky. Then you have sub-stories making the process complicated. If you could deploy the finished task that delivers value to the business it would help. Enter feature flags, using this you can deploy your code to production behind a gate. Code and feature are on production but not fully released to everyone. This post is going to help you adjust your mental model for getting more benefits with feature flags.</p>
+
+<p>{% img center /images/deployment-not-release/flags.jpg &lsquo;Deployment is not Release, lets use feature flags&rsquo; &lsquo;Deployment is not Release, lets use feature flags&rsquo; %}
+[Image Source <a href="https://unsplash.com/photos/jCBzW_Q_UGI">Unspalsh</a>]</p>
+
+<!-- more -->
+
+
+<h2>Why use feature flags?</h2>
+
+<p>Have you ever faced a situation that you need to deploy an epic but it is not possible as it is 80% completed? It is an epic that has to be &ldquo;released&rdquo; all or nothing. That is where the power of feature flag comes into play. You can deploy (not release to everyone) each new value addition to production. The trick here is to put it behind a simple logic like if email ends in @yourcompany.com. You can check a minimal code [example](<a href="https://geshan.com.np/blog/2016/09/how-to-do-a-minimum-viable-feature-switch/.">https://geshan.com.np/blog/2016/09/how-to-do-a-minimum-viable-feature-switch/.</a></p>
+
+<blockquote><p>You have to separate the technical deployment process from the business process of releasing a new feature.</p></blockquote>
+
+<h2>How to use feature flags?</h2>
+
+<p>Feature switch, feature toggle are some of the other names of feature flags. It can be effortless like if the logged in user&rsquo;s email is in our white-list we show this form. It can even be a feature that shows up when you add a specific cookie with a defined value in the browser. It can be highly orchestrated too with the use of a SAAS for feature flags. <a href="https://launchdarkly.com/">Launch Darkly</a> is a feature flag as a service company. You can use it if you have the time and resource to invest in it.</p>
+
+<p>Any path you take simple or complex the result is you have control over who can access a new feature. The feature is not released to everyone. The difference is how to activate/deactivate a feature flag. It can be as easy as clicking a checkbox or doing another deployment to open up a feature to everyone.</p>
+
+<blockquote><p>My suggestion is to start small, do an if condition in code and start experimenting. If it works well try other ways like a white-list or even a special cookie from the browser.</p></blockquote>
+
+<h2>Advantages of feature flags</h2>
+
+<p>There are many advantages of using feature flags in production. Lets list down a few highlights:</p>
+
+<ol>
+<li>Ability to test a feature on production in private with a select group of users.</li>
+<li>Ability to easily add or remove users who can use that feature.</li>
+<li>The confidence of releasing near bug-free features. Software engineers and QA can test on production even multiple times. Release the feature after bug fixes only when they are confident.</li>
+<li>There will be lesser code conflicts. When the task is complete, code changes are merged to the main branch before/after deployment. This also saves some valuable development time.</li>
+<li>The benefit of experimenting some things to a white-list of people in production. This can even lead to good feedback and positive changes.</li>
+</ol>
+
+
+<h2>Conclusion</h2>
+
+<p>You can deploy even small tasks to production with a proper use of feature flags. Think about adding value to the customer and deploying often. Test on production and when you are confident release it to everyone. Always remember Deployment != Release. Happy Feature flagging!</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Don't Code Your Microservice Like a Monolith, Keep It Maintainable Not Over-engineered]]></title>
     <link href="http://geshan.com.np/blog/2018/10/dont-code-your-microservice-like-a-monolith/"/>
     <updated>2018-10-12T15:54:07+11:00</updated>
     <id>http://geshan.com.np/blog/2018/10/dont-code-your-microservice-like-a-monolith</id>
     <content type="html"><![CDATA[<p>Will you use a gun to kill a fly? The answer is NO. The same thing goes when you want to write a microservice application that is going to be maximum of 10K lines of code. Don&rsquo;t over-engineer it. Ok, you have been writing and maintaining large code bases. Some might be 100K+ lines of code but you need to get over your habits and think differently. This post helps you unravel the mysteries of writing small and maintainable microservices. The suggestions are opinionated but it is in practice in a million dollar business.</p>
 
-<p><img class="center" src="/images/microservice-code/lego.jpg" title="&lsquo;Do not code your microservice like a monolith, keep it maintainable not over-engineered&rsquo; &lsquo;Do not code your microservice like a monolith, keep it maintainable not over-engineered&rsquo;" ></p>
+<p>{% img center /images/microservice-code/lego.jpg &lsquo;Do not code your microservice like a monolith, keep it maintainable not over-engineered&rsquo; &lsquo;Do not code your microservice like a monolith, keep it maintainable not over-engineered&rsquo; %}</p>
 
 <!-- more -->
 
@@ -56,7 +102,7 @@
 
 <p>Data mapper or Active record both bring their own opinions, ways of doing things and extra weight. This not only causes performance issues but also code readability suffers. Think of the pre and post hooks/event listener Doctrine has, they work like magic and it is always tricky to understand magic.</p>
 
-<p><img class="center" src="/images/microservice-code/pot-on-head.jpg" title="&lsquo;Do not code your microservice like a monolith, keep it maintainable not over-engineered&rsquo; &lsquo;Do not code your microservice like a monolith, keep it maintainable not over-engineered&rsquo;" ></p>
+<p>{% img center /images/microservice-code/pot-on-head.jpg &lsquo;Do not code your microservice like a monolith, keep it maintainable not over-engineered&rsquo; &lsquo;Do not code your microservice like a monolith, keep it maintainable not over-engineered&rsquo; %}</p>
 
 <p>Just try this, explain how an ORM related insert code works VS how a simple and straightforward INSERT SQL query works to a beginner/junior software engineer. You will already regret using that ORM. Especially in the context of microservices ORM is a clear overhead. The microservice is anticipated to be maximum of 10K lines of code and affect hardly 10 tables so just don&rsquo;t use an ORM, period.</p>
 
@@ -66,7 +112,7 @@
 
 <p>Design Patterns are relevant for a code base that is already big and in the next 6-12 months is going to be bigger, your usual monolith. They can turn out to be &ldquo;extra baggage&rdquo; for a service that is 100s of lines of code now and will become 1000s of lines of code in the next 6-12 months. We never foresee it to be bigger than that because to do that other part we will have another microservice. So keep your microservice code fat free and well tested.</p>
 
-<p><img class="center" src="/images/microservice-code/baggage.jpg" title="&lsquo;Do not code your microservice like a monolith, keep it maintainable not over-engineered&rsquo; &lsquo;Do not code your microservice like a monolith, keep it maintainable not over-engineered&rsquo;" ></p>
+<p>{% img center /images/microservice-code/baggage.jpg &lsquo;Do not code your microservice like a monolith, keep it maintainable not over-engineered&rsquo; &lsquo;Do not code your microservice like a monolith, keep it maintainable not over-engineered&rsquo; %}</p>
 
 <h2>Conclusion</h2>
 
@@ -81,7 +127,7 @@
     <id>http://geshan.com.np/blog/2018/10/why-use-docker-3-reasons-from-a-development-perspective</id>
     <content type="html"><![CDATA[<p>Docker has been popular in the technology space in the past 5 years is an understatement. It has <a href="https://trends.google.com/trends/explore?date=2013-09-08%202018-10-08&amp;q=%2Fm%2F0wkcjgj">exploded</a> in usage and popularity in half a decade. Containers have taken us by storm. Newer applications without containerization feel like it is missing something. Docker has stood out to be the king in the container arena. This post details the reasons to use Docker for your development environment.</p>
 
-<p><img class="center" src="/images/why-docker/whale.jpg" title="&lsquo;Why use docker? 3 reasons from a development perspective&rsquo; &lsquo;Why use docker? 3 reasons from a development perspective&rsquo;" ></p>
+<p>{% img center /images/why-docker/whale.jpg &lsquo;Why use docker? 3 reasons from a development perspective&rsquo; &lsquo;Why use docker? 3 reasons from a development perspective&rsquo; %}</p>
 
 <!-- more -->
 
@@ -96,7 +142,7 @@
 
 <p>Docker has many advantages but the most important one is the container analogy. That you don&rsquo;t only ship your code but ship the whole OS and all related layers with each deployment in a standard way. It is a complete package containing the right version of OS, the desired version of the language, any external dependencies of your application and your application code. That too in a lightweight, isolated and resource controllable way. This is where docker blows away the VMs.</p>
 
-<p><img class="center" src="/images/why-docker/ship.jpg" title="&lsquo;Why use docker? 3 reasons from a development perspective&rsquo; &lsquo;Why use docker? 3 reasons from a development perspective&rsquo;" ></p>
+<p>{% img center /images/why-docker/ship.jpg &lsquo;Why use docker? 3 reasons from a development perspective&rsquo; &lsquo;Why use docker? 3 reasons from a development perspective&rsquo; %}</p>
 
 <h2>Reasons to use Docker for the development environment</h2>
 
@@ -129,7 +175,7 @@
     <id>http://geshan.com.np/blog/2018/10/dont-just-learn-a-new-language-slash-framework</id>
     <content type="html"><![CDATA[<p>“For the things we have to learn before we can do them, we learn by doing them.” ― Aristotle, The Nicomachean Ethics. Imagine you already read 3 books about cycling. Then someone gave you a cycle and asked to ride it, will you be able to ride it? The simple answer is &ldquo;No&rdquo;. It is not about how much have you read about cycling or how many videos did you watch about it. It is about getting on a cycle, balancing on it, learning the feet, hands and eye co-ordination. Same goes for learning a new tech skill, a new language or framework.</p>
 
-<p><img class="center" src="/images/language-framework-learn/cycle.jpg" title="&lsquo;Dont just learn a new language framework, implement it as a running open source project&rsquo; &lsquo;Dont just learn a new language framework, implement it as a running open source project&rsquo;" ></p>
+<p>{% img center /images/language-framework-learn/cycle.jpg &lsquo;Dont just learn a new language framework, implement it as a running open source project&rsquo; &lsquo;Dont just learn a new language framework, implement it as a running open source project&rsquo; %}</p>
 
 <!-- more -->
 
@@ -140,7 +186,7 @@
 
 <blockquote><p>Write a project to learn that language/framework, open source it then leverage services for free. Don&rsquo;t just watch courses, read the docs and then find solutions. Learn by doing. Use git and implement docker in your project. Code correctly add a code quality check service to be aware of the best practices, deploy your project to get a working URL for it.</p></blockquote>
 
-<p><img class="center" src="/images/language-framework-learn/lang-framework-learn.jpg" title="&lsquo;Dont just learn a new language framework, implement it as a running open source project&rsquo; &lsquo;Dont just learn a new language framework, implement it as a running open source project&rsquo;" ></p>
+<p>{% img center /images/language-framework-learn/lang-framework-learn.jpg &lsquo;Dont just learn a new language framework, implement it as a running open source project&rsquo; &lsquo;Dont just learn a new language framework, implement it as a running open source project&rsquo; %}</p>
 
 <h2>Don&rsquo;t just watch courses, read the docs and find solutions</h2>
 
@@ -178,7 +224,7 @@ If you have Dockerized your open source app I would recommend Zeit Now. With the
     <id>http://geshan.com.np/blog/2018/09/7-practical-steps-to-land-your-first-tech-job</id>
     <content type="html"><![CDATA[<p>&ldquo;If you hate your job, take a loan and you will start liking it&rdquo;. I don&rsquo;t remember where I read this but this sounds convincing. Now think of the tech job market worldwide, saying it is growing would be an understatement, it is booming. Still, why don&rsquo;t fresh graduates not get a job when the pass out of universities? Let&rsquo;s have a closer look at this issue and try to help technology students get a job as soon as their course finishes.</p>
 
-<p><img class="center" src="/images/5-steps-first-tech-job/first-tech-job-a.jpg" title="&lsquo;5 practical steps to land your first tech job&rsquo; &lsquo;5 practical steps to land your first tech job&rsquo;" ></p>
+<p>{% img center /images/5-steps-first-tech-job/first-tech-job-a.jpg &lsquo;5 practical steps to land your first tech job&rsquo; &lsquo;5 practical steps to land your first tech job&rsquo; %}</p>
 
 <!-- more -->
 
@@ -201,7 +247,7 @@ If you have Dockerized your open source app I would recommend Zeit Now. With the
 
 <p>On the student&rsquo;s side, you need to research what is relevant for the market, learn on your own and brand yourself so that you can sell your skills faster. For instance, if I interview a candidate who has a good tech blog with helpful and regular posts may be even on medium. Your chances of getting hired are up by like ~5% already. Because being able to put your ideas/learning in words is an important skill for a software engineer.</p>
 
-<p><img class="center" src="/images/5-steps-first-tech-job/first-tech-job-b.jpg" title="&lsquo;5 practical steps to land your first tech job&rsquo; &lsquo;5 practical steps to land your first tech job&rsquo;" ></p>
+<p>{% img center /images/5-steps-first-tech-job/first-tech-job-b.jpg &lsquo;5 practical steps to land your first tech job&rsquo; &lsquo;5 practical steps to land your first tech job&rsquo; %}</p>
 
 <h2>Lets get to the steps now</h2>
 
@@ -234,87 +280,6 @@ If you have Dockerized your open source app I would recommend Zeit Now. With the
 <p>There are many other general things that you need to be good on like having a clear and impressive 1-page resume, having at least one project that is online. Like, having basic knowledge of a breadth of things and a bit of depth in the area you want to work in,  knowing your skill and going to the right area of tech also helps. You need to do the above steps like 6-9 months before your course ends else doing things in haste and the very end will not help much.</p>
 
 <p>The tech industry needs new people every year worldwide. From the positive angle, tech needs more and more new people. From the other side, your competition is not only in your city but anywhere in your world so your skills and ability to learn sets you apart. Best of luck hunting for your first tech role!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[How to Do a Zero Downtime Database (DB) Migration (Schema Change) With a Practical Example]]></title>
-    <link href="http://geshan.com.np/blog/2018/05/how-to-do-a-zero-downtime-database-db-migration-schema-change-with-a-practical-example/"/>
-    <updated>2018-05-01T04:00:41+10:00</updated>
-    <id>http://geshan.com.np/blog/2018/05/how-to-do-a-zero-downtime-database-db-migration-schema-change-with-a-practical-example</id>
-    <content type="html"><![CDATA[<p>Database migration on a production database is never simple. Depending on the volume of requests some teams schedule database migration to off hours. You can run your alter statements with zero or minimal downtime following the steps mentioned below with a practical example.</p>
-
-<p><img class="center" src="/images/db-migration/db-migration.png" title="&lsquo;How to do a zero downtime database&rsquo; &lsquo;How to do a zero downtime database&rsquo;" ></p>
-
-<!-- more -->
-
-
-<h2>Example</h2>
-
-<p>As an example for this post, let&rsquo;s assume you work for an E-commerce company which has both recurring and new customers. You have partners who publicize a discount code valid for a given date range and get a percent of the order&rsquo;s total tracked by their discount code. Below is the schema for the partner and coupon code. Below is the initial schema before any change:</p>
-
-<p><img class="center" src="/images/db-migration/schema-01.png" title="&lsquo;Initial DB schema&rsquo; &lsquo;Initial DB Schema&rsquo;" ></p>
-
-<p>Now the new requirement is to track different commission percent for the new and recurring customer. New and recurring customers are evaluated by a different system/microservice and it is also responsible for commission calculation based on order total which is out of the scope of this focused example.</p>
-
-<p>To do commission tracking by customer type we would decide to add 2 new columns commission_percent_new_customer, commission_percent_recurring_customer, the difficult question is how to roll it out without downtime.</p>
-
-<p><img class="center" src="/images/db-migration/schema-02.png" title="&lsquo;Updated schema with 2 new columns&rsquo; &lsquo;Updated schema with 2 new columns&rsquo;" ></p>
-
-<h3>Migration script (DB schema alter statement)</h3>
-
-<p>The following migration script will update the DB schema to be in the above state for MYSQL DB:</p>
-
-<pre><code>ALTER TABLE `partner_discount_code` ADD `commission_percent_new_customer` DECIMAL NULL AFTER `commission_percent`,
-ADD `commission_percent_recurring_customer` DECIMAL NULL AFTER `commission_percent_new_customer`, 
-,algorithm=inplace,lock=none;
-</code></pre>
-
-<p>Notice the <code>algorithm=inplace,lock=none</code> it is discussed below.</p>
-
-<h2>Evaluating Downtime</h2>
-
-<p>In the above example there can be 2 types of downtime as follows:</p>
-
-<ol>
-<li>Tables locked while migration runs</li>
-<li>Downtime because of newly introduced columns and code not matching to it</li>
-</ol>
-
-
-<p>For the first downtime issue depending on the database, it can be mitigated to a significant level with executing proper alter SQL statements. For example in MYSQL if <code>,algorithm=inplace, lock=none</code> is suffixed with your alter it will run with 0 to minimum table lock allowing reads and writes while the migration runs. This is especially important when altering tables with millions of rows as the alter can take minutes depending on the structure and data volume of the tables involved.</p>
-
-<p>For the second issue, if db alter and code release is deployed in a specific sequence it can be handled much better. The deployment steps are listed below:</p>
-
-<h2>Deployment Steps</h2>
-
-<ol>
-<li>Add the two new columns to the partner_discount_code, let&rsquo;s say the code is in v 1.1 now</li>
-<li>Deploy code v 1.2 which adds and edits all 3 columns - commission_percent, commission_percent_new_customer and commission_percent_recurring_customer.</li>
-<li>Test that all the things work as expected, even if you need to roll back nothing breaks and it&rsquo;s fully backward compatible</li>
-<li>When everything is fine, deploy code v 1.3 that adds or edits only on the 2 new columns</li>
-<li>Test it for a day or two, then as per need you can drop the commission_percent column on the partner_discount_code table as it&rsquo;s not used anymore</li>
-</ol>
-
-
-<h3>Final schema after dropping commission_percent column</h3>
-
-<p><img class="center" src="/images/db-migration/schema-03.png" title="&lsquo;Updated schema with 1 column less&rsquo; &lsquo;Updated schema with 1 column less&rsquo;" ></p>
-
-<h2>Things to consider</h2>
-
-<ul>
-<li>Always be careful with database migration. It&rsquo;s is surely safe to take a backup of the table you will run the alter statement on before executive it.</li>
-<li>Don&rsquo;t deploy the code first that write to new columns then run the migration, it will result in errors as the code will try to access non-existing column(s).</li>
-<li>Always think of backward compatibility usually without a revert migration. Generally, access to production database is only given to a select few.</li>
-<li>Run drop or rename columns only after you are fully satisfied that the new changes are not breaking anything.</li>
-<li>It is better to run migrations (alter SQL) manually than part of the deployment to keep things segregated and more predictable.</li>
-</ul>
-
-
-<h2>Conclusion</h2>
-
-<p>Database migration is not difficult if it is done the right way. Hope this post helps you run your DB migrations in a smoother fashion.</p>
 ]]></content>
   </entry>
   

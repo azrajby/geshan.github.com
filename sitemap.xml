@@ -3,6 +3,14 @@
   
   
   <url>
+    <loc>http://geshan.com.np/blog/2018/10/deployment-is-not-release/</loc>
+    
+    <lastmod>2018-10-26T08:13:05+11:00</lastmod>
+    
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
     <loc>http://geshan.com.np/blog/2018/10/dont-code-your-microservice-like-a-monolith/</loc>
     
     <lastmod>2018-10-12T15:54:07+11:00</lastmod>
@@ -1989,21 +1997,21 @@
   
   <url>
     <loc>http://geshan.com.np/blog/</loc>
-    <lastmod>2018-10-13T12:05:26+11:00</lastmod>
+    <lastmod>2018-10-26T08:40:28+11:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://geshan.com.np/</loc>
-    <lastmod>2018-10-13T12:05:26+11:00</lastmod>
+    <lastmod>2018-10-26T08:40:28+11:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <url>
     <loc>http://geshan.com.np/blog/archives/</loc>
-    <lastmod>2018-10-13T12:05:26+11:00</lastmod>
+    <lastmod>2018-10-26T08:40:28+11:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>

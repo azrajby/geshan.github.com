@@ -4,7 +4,7 @@
   <title><![CDATA[Geshan's Blog]]></title>
   <link href="http://geshan.com.np/atom.xml" rel="self"/>
   <link href="http://geshan.com.np/"/>
-  <updated>2018-10-13T12:05:26+11:00</updated>
+  <updated>2018-10-26T08:39:32+11:00</updated>
   <id>http://geshan.com.np/</id>
   <author>
     <name><![CDATA[Geshan Manandhar]]></name>
@@ -12,6 +12,52 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Deployment Is Not Release, Let's Use Feature Flags]]></title>
+    <link href="http://geshan.com.np/blog/2018/10/deployment-is-not-release/"/>
+    <updated>2018-10-26T08:13:05+11:00</updated>
+    <id>http://geshan.com.np/blog/2018/10/deployment-is-not-release</id>
+    <content type="html"><![CDATA[<p>Breaking down a big feature to epics and stories is always tricky. Then you have sub-stories making the process complicated. If you could deploy the finished task that delivers value to the business it would help. Enter feature flags, using this you can deploy your code to production behind a gate. Code and feature are on production but not fully released to everyone. This post is going to help you adjust your mental model for getting more benefits with feature flags.</p>
+
+<p><img class="center" src="http://geshan.com.np/images/deployment-not-release/flags.jpg" title="Deployment is not Release, lets use feature flags" alt="Deployment is not Release, lets use feature flags">
+[Image Source <a href="https://unsplash.com/photos/jCBzW_Q_UGI">Unspalsh</a>]</p>
+
+<!-- more -->
+
+
+<h2>Why use feature flags?</h2>
+
+<p>Have you ever faced a situation that you need to deploy an epic but it is not possible as it is 80% completed? It is an epic that has to be &ldquo;released&rdquo; all or nothing. That is where the power of feature flag comes into play. You can deploy (not release to everyone) each new value addition to production. The trick here is to put it behind a simple logic like if email ends in @yourcompany.com. You can check a minimal code [example](<a href="https://geshan.com.np/blog/2016/09/how-to-do-a-minimum-viable-feature-switch/.">https://geshan.com.np/blog/2016/09/how-to-do-a-minimum-viable-feature-switch/.</a></p>
+
+<blockquote><p>You have to separate the technical deployment process from the business process of releasing a new feature.</p></blockquote>
+
+<h2>How to use feature flags?</h2>
+
+<p>Feature switch, feature toggle are some of the other names of feature flags. It can be effortless like if the logged in user&rsquo;s email is in our white-list we show this form. It can even be a feature that shows up when you add a specific cookie with a defined value in the browser. It can be highly orchestrated too with the use of a SAAS for feature flags. <a href="https://launchdarkly.com/">Launch Darkly</a> is a feature flag as a service company. You can use it if you have the time and resource to invest in it.</p>
+
+<p>Any path you take simple or complex the result is you have control over who can access a new feature. The feature is not released to everyone. The difference is how to activate/deactivate a feature flag. It can be as easy as clicking a checkbox or doing another deployment to open up a feature to everyone.</p>
+
+<blockquote><p>My suggestion is to start small, do an if condition in code and start experimenting. If it works well try other ways like a white-list or even a special cookie from the browser.</p></blockquote>
+
+<h2>Advantages of feature flags</h2>
+
+<p>There are many advantages of using feature flags in production. Lets list down a few highlights:</p>
+
+<ol>
+<li>Ability to test a feature on production in private with a select group of users.</li>
+<li>Ability to easily add or remove users who can use that feature.</li>
+<li>The confidence of releasing near bug-free features. Software engineers and QA can test on production even multiple times. Release the feature after bug fixes only when they are confident.</li>
+<li>There will be lesser code conflicts. When the task is complete, code changes are merged to the main branch before/after deployment. This also saves some valuable development time.</li>
+<li>The benefit of experimenting some things to a white-list of people in production. This can even lead to good feedback and positive changes.</li>
+</ol>
+
+
+<h2>Conclusion</h2>
+
+<p>You can deploy even small tasks to production with a proper use of feature flags. Think about adding value to the customer and deploying often. Test on production and when you are confident release it to everyone. Always remember Deployment != Release. Happy Feature flagging!</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Don't Code Your Microservice Like a Monolith, Keep It Maintainable Not Over-engineered]]></title>
@@ -1152,81 +1198,6 @@ If you run into git conflicts everyday the process and system needs to change.
 Be logical, if you have a PR with 50 files changed and 700 new lines you will face conflicts.</p>
 
 <blockquote><p>I hope you face less git conflicts or even completely avoid them.</p></blockquote>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Embrace chatOps, Stop Installing Deployment Software [Slides and Video]]]></title>
-    <link href="http://geshan.com.np/blog/2016/04/embrace-chatops-stop-installing-deployment-software/"/>
-    <updated>2016-04-03T20:03:09+10:00</updated>
-    <id>http://geshan.com.np/blog/2016/04/embrace-chatops-stop-installing-deployment-software</id>
-    <content type="html"><![CDATA[<p>On 1-Apr-2016 For <a href="http://dubai2016.codemotionworld.com/">CodeMotion Dubai 2016</a> conference I talked about chatOps at Namshi.
-The main topics of the talk were:</p>
-
-<ol>
-<li>What is chatOps?</li>
-<li>Why do chatOps?</li>
-<li>How we do chatOps at Namshi</li>
-<li>How you can start chatOps in minutes</li>
-</ol>
-
-
-<p><img class="center" src="http://geshan.com.np/images/chatops/chatops-hubot.jpg" title="Embrace chatOps, stop installing deployment software [Slides and Video]" alt="Embrace chatOps, stop installing deployment software [Slides and Video]">
-(Illustration by Anjan Shrestha - AnjHero.me)</p>
-
-<p>This post has the slides and the video of the whole talk.</p>
-
-<!-- more -->
-
-
-<p>I liked the overall experience of being a conference  speaker :).
-I think the audience also had something new to fiddle around with by the end of the talk.</p>
-
-<p><img class="center" src="http://geshan.com.np/images/chatops/speaker.jpg" title="Speaker at Codemotion Dubai 2016" alt="Speaker at Codemotion Dubai 2016"></p>
-
-<p>The speaker lineup for day 1 was very good:</p>
-
-<p><img class="center" src="http://geshan.com.np/images/chatops/codemodubai-speakers-day-1.jpg" title="Codemotion Dubai 2016 Speaker lineup" alt="Codemotion Dubai 2016 Speaker lineup"></p>
-
-<p>For all the other news and views check the <a href="https://twitter.com/hashtag/codemodubai?src=hash">#codemodubai</a> hash tag on twitter
-and on <a href="https://www.facebook.com/codemotiondubai/">facebook</a>.</p>
-
-<h3>Talk Abstract</h3>
-
-<p>Are you still deploying with capistrano? It is high time to put the chat bots to work. Using chatops to deploy your
-software gives visibility to all team members. It also gives a consistent interface to deploy. Software Engineers do not
-need to install any extra software to deploy. Ops is happy because software engineers do not need SSH access to servers
-anymore. Namshi is a Rocket Internet e-commerce venture in Dubai. At Namshi, we deploy all our apps with chatbots built
-with hubot. In this session, I will uncover some real life use cases of chat bots at Namshi.</p>
-
-<h3>Some lessons learnt</h3>
-
-<p>Just a summary:</p>
-
-<ol>
-<li>Don&rsquo;t be the last speaker of the day, people are already tired and ready to head home :)</li>
-<li>Have a useful links slide that you can show towards the end while answering questions.</li>
-<li>Content is king. Image intensive or text intensive slides matter less than the real content you want to deliver.</li>
-</ol>
-
-
-<p><img class="center" src="http://geshan.com.np/images/chatops/chatops-talk.jpg" title="Embrace chatOps, stop installing deployment software [Slides and Video]" alt="Embrace chatOps, stop installing deployment software [Slides and Video]"></p>
-
-<h3>Slides</h3>
-
-<script async class="speakerdeck-embed" data-id="75a57171f12c40e3939b9504c6748f74" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
-
-
-<h3>Video</h3>
-
-<center>
-<iframe width="640" height="480" src="https://www.youtube-nocookie.com/embed/GVa1I2QiZs4?rel=0" frameborder="0" allowfullscreen></iframe>
-</center>
-
-
-<p>(Thanks <a href="http://www.lprakash.com.np/">Prakash</a> for the photo and video)</p>
-
-<p>I hope the talk about chatOps was interesting for you. Cheers!</p>
 ]]></content>
   </entry>
   

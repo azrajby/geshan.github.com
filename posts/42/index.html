@@ -126,6 +126,47 @@
 
 
 
+<span class="glyphicon glyphicon-calendar"></span> <time datetime="2008-01-22T01:47:00+11:00"  data-updated="true" itemprop="datePublished dateCreated"><time class='entry-date' datetime='2008-01-22T01:47:00+11:00'><span class='date'><span class='date-month'>Jan</span> <span class='date-day'>22</span><span class='date-suffix'>nd</span>, <span class='date-year'>2008</span></span> <span class='time'>1:47 am</span></time></time>
+        
+           | <a href="/blog/2008/01/getting-multiple-values-from-single/#disqus_thread" itemprop="discussionUrl"
+             data-disqus-identifier="http://geshan.com.np/blog/2008/01/getting-multiple-values-from-single/">Comments</a>
+        
+      </p>
+    
+    
+      <h1 class="entry-title" itemprop="name headline"><a href="/blog/2008/01/getting-multiple-values-from-single/" itemprop="url">Getting Multiple Values From a Single Selection of a Form.</a></h1>
+    
+  </header>
+
+
+  <div class="entry-content clearfix" itemprop="articleBody description"><div class='post'>
+<div dir="ltr" style="text-align: left;" trbidi="on">Have you ever tried to get multiple values from a single <select> </select> - selection/list box. It allows multiple selection with a simple attribute of multiple=&#8221;multiple&#8221; but it does not work. The trick to make it work is use an array. How See below:<br /><br /><br />&lt;html&gt;<br />&lt;head&gt;<br />&lt;title&gt;The Form Page&lt;/title&gt;<br />&lt;/head&gt;<br />&lt;body&gt;<br />&lt;p&gt;&lt;strong&gt;Form Page&lt;/strong&gt;&lt;/p&gt;<br />&lt;form name=&#8221;per_info&#8221; <span style="color: #cc0000;">method=&#8221;post&#8221; action=&#8221;insert.php&#8221;</span>&gt;<br />&lt;table width=&#8221;64%&#8221; border=&#8221;1&#8221; cellspacing=&#8221;0&#8221; cellpadding=&#8221;0&#8221;&gt;<br /><br />&lt;tr&gt;<br />&lt;td width=&#8221;32%&#8221;&gt;Full Name: &lt;/td&gt;<br />&lt;td width=&#8221;33%&#8221;&gt;&lt;input type=&#8221;text&#8221; name=&#8221;fullname&#8221; /&gt;&lt;/td&gt;<br />&lt;/tr&gt;<br />&lt;tr&gt;<br />&lt;td&gt;E-Mail Address: &lt;/td&gt;<br />&lt;td&gt;&lt;input type=&#8221;text&#8221; name=&#8221;email_add&#8221; /&gt;&lt;/td&gt;<br />&lt;/tr&gt;<br /><br />&lt;tr&gt;<br />&lt;td&gt;Interests:&lt;/td&gt;<br />&lt;td&gt;&lt;select <span style="color: #006600;">name=&#8221;interests[]&#8221;</span> size=&#8221;3&#8221; multiple=&#8221;multiple&#8221;&gt;<br />&lt;option value=&#8221;Computers&#8221;&gt;Computers&lt;/option&gt;<br />&lt;option value=&#8221;Technology&#8221;&gt;Technology&lt;/option&gt;<br />&lt;option value=&#8221;Coding&#8221;&gt;Coding&lt;/option&gt;<br />&lt;option value=&#8221;Photography&#8221;&gt;Photography&lt;/option&gt;<br />&lt;option value=&#8221;Designing&#8221;&gt;Designing&lt;/option&gt;<br />&lt;option value=&#8221;Gardening&#8221;&gt;Gardening&lt;/option&gt;<br />&lt;option value=&#8221;DJing&#8221;&gt;DJing&lt;/option&gt;<br />&lt;option value=&#8221;Other&#8221;&gt;Other&lt;/option&gt;<br />&lt;/select&gt;&lt;/td&gt;<br /><br />&lt;td width=&#8221;35%&#8221;&gt; &lt;strong&gt;*Use Ctrl Key to select Multiple Options&lt;/strong&gt;&lt;/td&gt;<br /><br />&lt;/tr&gt;<br />&lt;tr&gt;<br />&lt;td&gt;&amp;nbsp;&lt;/td&gt;<br /><br />&lt;td&gt;&lt;input type=&#8221;submit&#8221; name=&#8221;Submit&#8221; value=&#8221;Submit&#8221; /&gt; &lt;input type=&#8221;reset&#8221; name=&#8221;Submit2&#8221; value=&#8221;Reset&#8221; /&gt;&lt;/td&gt;<br />&lt;/tr&gt;<br />&lt;/table&gt;<br />&lt;/form&gt;<br /><br />&lt;p&gt;&amp;nbsp;&lt;/p&gt;<br />&lt;/body&gt;<br />&lt;/html&gt;<br /><br /><span style="color: #006600; font-weight: bold;">Notice that interests[ ] the name of the select is an array.<br /><br /><span style="font-weight: bold;"><span style="color: black;">Output:</span></span></span><a href="http://3.bp.blogspot.com/_L4bRnZ5TPr8/R5SyloaKKLI/AAAAAAAAANI/PLhRYMunvsM/s1600-h/php_array_1.jpg" onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}"><img alt="" border="0" src="http://3.bp.blogspot.com/_L4bRnZ5TPr8/R5SyloaKKLI/AAAAAAAAANI/PLhRYMunvsM/s320/php_array_1.jpg" id="BLOGGER_PHOTO_ID_5157943832818100402" style="cursor: pointer; display: block; margin: 0px auto 10px; text-align: center;" /></a>Now it throws multiple selections from the same selection called interest to insert.php (refer above). So here we have a value like computerscoding&#8230;. as selected. The next way to separate the values is by using <a href="http://www.php.net/manual/en/function.implode.php" target="_blank">implode</a> with a separator where I&#8217;ve used comma (,). Check the code below of insert.php<br /><br /><br /><br />&lt;?php<br />//code to connect to database with mysql_connect(required_parameters); or file include<br />$fn=$_POST[&#8216;fullname&#8217;];<br />$eadd=$_POST[&#8216;email_add&#8217;];<br /><br />$interests_sent=$_POST[&#8216;interests&#8217;]; //sent from the form at form.php above page<br /><span style="color: #006600;">$interests_to_db=implode(&#8220;, &#8220;,$interests_sent);<span style="color: red;"> </span></span><span style="color: red;">//add , after each separate value</span><br /><br />//your insert into statement<br />?&gt;<br /><br />&lt;head&gt;<br /><br />&lt;title&gt;Insert Page &lt;/title&gt;<br /><br />&lt;/head&gt;<br /><br />&lt;body&gt;<br /><br />&lt;? echo $interests_to_db; ?&gt;<br /><br />&lt;/body&gt;<br />&lt;/html&gt;<br /><span style="font-weight: bold;">Output:</span><br /><a href="http://2.bp.blogspot.com/_L4bRnZ5TPr8/R5S1DYaKKMI/AAAAAAAAANQ/nxlhQYFOLr4/s1600-h/php_array_2.jpg" onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}"><img alt="" border="0" src="http://2.bp.blogspot.com/_L4bRnZ5TPr8/R5S1DYaKKMI/AAAAAAAAANQ/nxlhQYFOLr4/s320/php_array_2.jpg" id="BLOGGER_PHOTO_ID_5157946542942464194" style="cursor: pointer; display: block; margin: 0px auto 10px; text-align: center;" /></a><br />And you are done. A full example with a form and full insert code with a table in a database is available <a href="http://www.mediafire.com/?1zghhqjtmwj" target="_blank">here</a>. Its a 3 kb example so do download it and execute it after unzipping. This is how you get multiple values form a single select with PHP. Hope this example solved a problem of yours.<br /><br />Geshan Manandhar</div></div>
+</div>
+  
+  
+
+
+        </article>
+      
+      
+        <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+          
+  <header class="page-header">
+    
+      <p class="meta text-muted text-uppercase">
+        
+
+
+
+
+
+
+
+
+
+
+
+
 <span class="glyphicon glyphicon-calendar"></span> <time datetime="2008-01-20T22:17:00+11:00"  data-updated="true" itemprop="datePublished dateCreated"><time class='entry-date' datetime='2008-01-20T22:17:00+11:00'><span class='date'><span class='date-month'>Jan</span> <span class='date-day'>20</span><span class='date-suffix'>th</span>, <span class='date-year'>2008</span></span> <span class='time'>10:17 pm</span></time></time>
         
            | <a href="/blog/2008/01/ccplus-opening-up-new-horizons/#disqus_thread" itemprop="discussionUrl"
@@ -271,47 +312,6 @@ I don&#8217;t have much to write but hope these pictures reveal a thousand words
 
         </article>
       
-      
-        <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-          
-  <header class="page-header">
-    
-      <p class="meta text-muted text-uppercase">
-        
-
-
-
-
-
-
-
-
-
-
-
-
-<span class="glyphicon glyphicon-calendar"></span> <time datetime="2007-12-26T04:31:00+11:00"  data-updated="true" itemprop="datePublished dateCreated"><time class='entry-date' datetime='2007-12-26T04:31:00+11:00'><span class='date'><span class='date-month'>Dec</span> <span class='date-day'>26</span><span class='date-suffix'>th</span>, <span class='date-year'>2007</span></span> <span class='time'>4:31 am</span></time></time>
-        
-           | <a href="/blog/2007/12/10-cool-ringtones-part-2/#disqus_thread" itemprop="discussionUrl"
-             data-disqus-identifier="http://geshan.com.np/blog/2007/12/10-cool-ringtones-part-2/">Comments</a>
-        
-      </p>
-    
-    
-      <h1 class="entry-title" itemprop="name headline"><a href="/blog/2007/12/10-cool-ringtones-part-2/" itemprop="url">10 Cool MP3 Ringtones Part 2</a></h1>
-    
-  </header>
-
-
-  <div class="entry-content clearfix" itemprop="articleBody description"><div class='post'>
-<div dir="ltr" style="text-align: left;" trbidi="on">After a good response to the the first lot of 10 Ringtones here is the 2nd lot. Again the balance is maintained and this time also there are short, easy to download and less space consuming files to be downloaded. Ring them out.<br /><br /><a href="http://1.bp.blogspot.com/_L4bRnZ5TPr8/R3FBJ4aKKBI/AAAAAAAAAL4/wqUy-XKNtFY/s1600-h/ringtones_GM_part2.jpg" onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}"><img alt="" border="0" src="http://1.bp.blogspot.com/_L4bRnZ5TPr8/R3FBJ4aKKBI/AAAAAAAAAL4/wqUy-XKNtFY/s400/ringtones_GM_part2.jpg" id="BLOGGER_PHOTO_ID_5147967487077918738" style="cursor: pointer; display: block; margin: 0px auto 10px; text-align: center;" /></a><br /><span style="color: #660000; font-weight: bold;">Jhalak Dikhlaja - Aksar : <a href="http://www.mediafire.com/?en3zmxzvidm">http://www.mediafire.com/?en3zmxzvidm</a></span>  <span style="color: #660000; font-weight: bold;"><br /><br />Jhoom Barabar Jhoom Title : <a href="http://www.mediafire.com/?e1a9wzd0txx">http://www.mediafire.com/?e1a9wzd0txx</a></span> <br /><br /><span style="color: #660000; font-weight: bold;">Money Maker - Luda Cris : <a href="http://www.mediafire.com/?fsyzivyngn1">http://www.mediafire.com/?fsyzivyngn1</a></span>  <span style="color: #660000; font-weight: bold;"><br /><br />Saathiya - Title :<a href="http://www.mediafire.com/?6jj4wbnglss"> http://www.mediafire.com/?6jj4wbnglss</a></span><a href="http://www.mediafire.com/?6jj4wbnglss"> </a> <span style="color: #660000; font-weight: bold;"><br /><br />Saawariya - Title : <a href="http://www.mediafire.com/?6ywvjwvhxzj">http://www.mediafire.com/?6ywvjwvhxzj</a></span>  <span style="color: #660000; font-weight: bold;"><br /><br />Tenu Leke Remix - Saalame Ishq : <a href="http://www.mediafire.com/?atwzdifdht3">http://www.mediafire.com/?atwzdifdht3</a></span>  <span style="color: #660000; font-weight: bold;"><br /><br />Tera Mera Rishta - Aawarapan : <a href="http://www.mediafire.com/?6d90uvplddt">http://www.mediafire.com/?6d90uvplddt</a></span>  <span style="color: #660000; font-weight: bold;"><br /><br />Tere Bin - Atif : <a href="http://www.mediafire.com/?fmonjdnsson">http://www.mediafire.com/?fmonjdnsson</a></span><a href="http://www.mediafire.com/?fmonjdnsson"> </a> <span style="color: #660000; font-weight: bold;"><br /><br />Woh Lamhen Hip HOp Mix - Jal : <a href="http://www.mediafire.com/?8mcmn5t3zzk">http://www.mediafire.com/?8mcmn5t3zzk</a></span><a href="http://www.mediafire.com/?8mcmn5t3zzk"> </a><span style="color: #660000; font-weight: bold;">Yaadein - Roxen : <a href="http://www.mediafire.com/?6qjcwojdxd2">http://www.mediafire.com/?6qjcwojdxd2</a><br /><br />And<br /><span style="color: #006600;">All 10 Part2 in Zip file : <a href="http://www.mediafire.com/?aizwj1jxytc">http://www.mediafire.com/?aizwj1jxytc</a></span></span><br /><br /><br />Reply in this blog/comment if you want new tones. The next lot is also going to be great.<br /><br />Geshan Manandhar</div></div>
-</div>
-  
-  
-
-
-        </article>
-      
     </div>
 
     <ul class="pager">
@@ -335,6 +335,8 @@ I don&#8217;t have much to write but hope these pictures reveal a thousand words
   
   <div id="recent_posts" class="list-group">
     
+    <a class="list-group-item " href="/blog/2018/10/deployment-is-not-release/">Deployment Is Not Release, Let&#8217;s Use Feature Flags</a>
+    
     <a class="list-group-item " href="/blog/2018/10/dont-code-your-microservice-like-a-monolith/">Don&#8217;t Code Your Microservice Like a Monolith, Keep It Maintainable Not Over-engineered</a>
     
     <a class="list-group-item " href="/blog/2018/10/why-use-docker-3-reasons-from-a-development-perspective/">Why Use Docker? 3 Reasons From a Development Perspective</a>
@@ -342,8 +344,6 @@ I don&#8217;t have much to write but hope these pictures reveal a thousand words
     <a class="list-group-item " href="/blog/2018/10/dont-just-learn-a-new-language-slash-framework/">Don&#8217;t Just Learn a New Language/framework, Implement It as a Running Open Source Project</a>
     
     <a class="list-group-item " href="/blog/2018/09/7-practical-steps-to-land-your-first-tech-job/">5 Practical Steps to Land Your First Tech Job</a>
-    
-    <a class="list-group-item " href="/blog/2018/05/how-to-do-a-zero-downtime-database-db-migration-schema-change-with-a-practical-example/">How to Do a Zero Downtime Database (DB) Migration (Schema Change) With a Practical Example</a>
     
   </div>
 </section>
@@ -355,7 +355,7 @@ I don&#8217;t have much to write but hope these pictures reveal a thousand words
         
         
         <a class="list-group-item " href="/blog/categories/misc/">
-            <span class="badge">191</span>
+            <span class="badge">192</span>
             misc
         </a>
         
@@ -367,7 +367,7 @@ I don&#8217;t have much to write but hope these pictures reveal a thousand words
         
         
         <a class="list-group-item " href="/blog/categories/technology/">
-            <span class="badge">133</span>
+            <span class="badge">134</span>
             technology
         </a>
         
@@ -465,6 +465,12 @@ I don&#8217;t have much to write but hope these pictures reveal a thousand words
         <a class="list-group-item " href="/blog/categories/talks/">
             <span class="badge">11</span>
             talks
+        </a>
+        
+        
+        <a class="list-group-item " href="/blog/categories/devops/">
+            <span class="badge">15</span>
+            devops
         </a>
         
         
