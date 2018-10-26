@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Talks | Geshan's Blog]]></title>
   <link href="http://geshan.com.np/blog/categories/talks/atom.xml" rel="self"/>
   <link href="http://geshan.com.np/"/>
-  <updated>2018-10-26T22:55:08+11:00</updated>
+  <updated>2018-10-27T08:42:03+11:00</updated>
   <id>http://geshan.com.np/</id>
   <author>
     <name><![CDATA[Geshan Manandhar]]></name>
@@ -12,6 +12,36 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Moving From a and B to 150 Microservices, the Journey, and Learnings [Slides]]]></title>
+    <link href="http://geshan.com.np/blog/2018/10/moving-from-a-and-b-to-~150-microservices/"/>
+    <updated>2018-10-27T08:08:00+11:00</updated>
+    <id>http://geshan.com.np/blog/2018/10/moving-from-a-and-b-to-~150-microservices</id>
+    <content type="html"><![CDATA[<p>I gave a talk at #devopsdaysNewy on 24-Oct-2018. It was a great conference with lots of amazing people.
+I want to thank the organizers for putting together such an amazing event. I want to extend the thanks to the sponsors who made it possible :). It was very good couple of days to meet new people and form a network. I think my talk on microservcies went pretty good too. It was my second devops days and I enjoyed it.</p>
+
+<p>{% img center /images/a-b-to-150-ms/150-ms-geshan.jpg &lsquo;Moving from A and B to 150 microservices, the journey, and learnings&rsquo; &lsquo;Moving from A and B to 150 microservices, the journey, and learnings&rsquo; %}</p>
+
+<!-- more -->
+
+
+<h2>The abstract</h2>
+
+<p>Are you frustrated working with large, legacy and potentially lethal code bases? We were frustrated too,but in 4-5 years of time, we replaced A (front-end) and B (back-office) system with ~150 microservices. From the days of no tests and clumsy deployment process, we moved to each service with unit tests, CI and deploying with a bot. With the business buying in the process, we enabled the business to reach new heights. This talk reveals that journey and the things we learned along the way.</p>
+
+<h2>The slides</h2>
+
+<script async class="speakerdeck-embed" data-id="05a92573b3fc4221b6a17478ae0db2b2" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
+
+
+<p>Slides on <a href="https://www.slideshare.net/geshan/moving-from-a-and-b-to-150-microservices-the-journey-and-learnings">slide share</a></p>
+
+<h2>Conclusion</h2>
+
+<p>I gave the same talk at Node Sydney <a href="https://www.meetup.com/node-sydney/events/cvdqzpyxmbjb/">September meetup</a> that went pretty well too. Hope to be able to give more talks in future and meet more interesting people.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Adopt a Painless Continuous Delivery Culture, Add More Business Value [Slides]]]></title>
@@ -264,56 +294,6 @@ an amazing community. Cheers!</p></blockquote>
 <p>Students get serious about internship, job and career only towards their final semesters. I think they should start planning for their internship at the mid of their bachelor study. By the &frac34; stage, they should know which career path should I take.</p>
 
 <blockquote><p>I hope the short talk and QnA session helped some of the participants to think about their career plans.</p></blockquote>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[PHP Developers Nepal Meetup #16 a Round Up and My Talk on Simpilfied Gitflow With Slides]]></title>
-    <link href="http://geshan.com.np/blog/2016/06/php-developers-nepal-meetup-number-16-a-round-up-and-my-simpilfied-gitflow-talk/"/>
-    <updated>2016-06-25T21:50:35+10:00</updated>
-    <id>http://geshan.com.np/blog/2016/06/php-developers-nepal-meetup-number-16-a-round-up-and-my-simpilfied-gitflow-talk</id>
-    <content type="html"><![CDATA[<p>I had given a talk in the PHP Developers Nepal meetup #14 in Aug 2014 about <a href="http://geshan.com.np/blog/2014/08/basic-overview-of-message-queues-rabbit/">Rabbit Mq and Symfony</a>.
-This time the <a href="http://developers-nepal.github.io/php/meetups/25-Jun-2016/">meetup</a> took place at
-Prime College today. There were 2 regular talks for this meetup and one 5 minute lightening
-talk about the community. For this 16th installment, we did an open discussion for the first time.
-The topic of open discussion was &ldquo;Does automated deployment and DevOps add value to the organization?&rdquo;.
-It was the highlight of the event.</p>
-
-<p>{% img center /images/php-dev-meetup-16/php-dev-meetup-16.jpg &lsquo;PHP Dev Meetup 16 Open Panel discussion on DevOps&rsquo; &lsquo;PHP Dev Meetup 16 Open Panel discussion on DevOps&rsquo; %}</p>
-
-<!-- more -->
-
-
-<h2>How did it all unfold</h2>
-
-<p>The first talk was given by Amrit GC on &ldquo;Ansible for PHP Developers&rdquo;, then I presented my talk on &ldquo;Simplified Gitflow&rdquo;.
-After those two regular talks we had a lightening talk presented by Manish Jung Thapa (MJT) on PHP Developers Nepal Community.
-Last part of the program was an open discussion on &ldquo;Does automated deployment and DevOps add value to the organization?&rdquo; which
-got a lot of questions from the audience. It was great to moderate the open discussion. Overall, it was an amazing meetup. I guess
-there were around 100 participants which makes it one of the biggest PHP Developers meetup in terms of audience size.</p>
-
-<h2>My Talk on Simplified Gitflow</h2>
-
-<p>This is not the first time I presented this talk :). I had already given this talk at <a href="http://geshan.com.np/blog/2015/09/how-to-use-simplified-gitflow-branching-model-video/">YIPL in Mar 2015</a>.
-This time I changed the slides and made it more general. I hope it was helpful to the audience.</p>
-
-<p>{% img center /images/php-dev-meetup-16/simplified-gitflow-talk.jpg &lsquo;PHP Dev Meetup 16 My talk on simplified gitflow&rsquo; &lsquo;PHP Dev Meetup 16 My talk on simplified gitflow&rsquo; %}</p>
-
-<h2>Slides of Simplified Gitflow</h2>
-
-<script async class="speakerdeck-embed" data-id="acdf3ecb8fd84007b33113d906e5dd3c" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
-
-
-<h2>Video of my talk on Simplified Gitflow</h2>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/jznORrhoV-M?rel=0" frameborder="0" allowfullscreen></iframe>
-
-
-<p>More vidoes of the full event in this <a href="https://www.youtube.com/playlist?list=PLhTqkNYfkucxGk2OssIseNLMF9jPXYoHC">playlist</a>.</p>
-
-<h2>Hope to see more meetups</h2>
-
-<blockquote><p>Hope there will be a Developers Nepal meetup which is language agnostic soon. Kudos.</p></blockquote>
 ]]></content>
   </entry>
   

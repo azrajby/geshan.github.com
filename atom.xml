@@ -4,7 +4,7 @@
   <title><![CDATA[Geshan's Blog]]></title>
   <link href="http://geshan.com.np/atom.xml" rel="self"/>
   <link href="http://geshan.com.np/"/>
-  <updated>2018-10-26T22:52:02+11:00</updated>
+  <updated>2018-10-27T08:41:12+11:00</updated>
   <id>http://geshan.com.np/</id>
   <author>
     <name><![CDATA[Geshan Manandhar]]></name>
@@ -12,6 +12,36 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Moving From a and B to 150 Microservices, the Journey, and Learnings [Slides]]]></title>
+    <link href="http://geshan.com.np/blog/2018/10/moving-from-a-and-b-to-~150-microservices/"/>
+    <updated>2018-10-27T08:08:00+11:00</updated>
+    <id>http://geshan.com.np/blog/2018/10/moving-from-a-and-b-to-~150-microservices</id>
+    <content type="html"><![CDATA[<p>I gave a talk at #devopsdaysNewy on 24-Oct-2018. It was a great conference with lots of amazing people.
+I want to thank the organizers for putting together such an amazing event. I want to extend the thanks to the sponsors who made it possible :). It was very good couple of days to meet new people and form a network. I think my talk on microservcies went pretty good too. It was my second devops days and I enjoyed it.</p>
+
+<p><img class="center" src="http://geshan.com.np/images/a-b-to-150-ms/150-ms-geshan.jpg" title="Moving from A and B to 150 microservices, the journey, and learnings" alt="Moving from A and B to 150 microservices, the journey, and learnings"></p>
+
+<!-- more -->
+
+
+<h2>The abstract</h2>
+
+<p>Are you frustrated working with large, legacy and potentially lethal code bases? We were frustrated too,but in 4-5 years of time, we replaced A (front-end) and B (back-office) system with ~150 microservices. From the days of no tests and clumsy deployment process, we moved to each service with unit tests, CI and deploying with a bot. With the business buying in the process, we enabled the business to reach new heights. This talk reveals that journey and the things we learned along the way.</p>
+
+<h2>The slides</h2>
+
+<script async class="speakerdeck-embed" data-id="05a92573b3fc4221b6a17478ae0db2b2" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
+
+
+<p>Slides on <a href="https://www.slideshare.net/geshan/moving-from-a-and-b-to-150-microservices-the-journey-and-learnings">slide share</a></p>
+
+<h2>Conclusion</h2>
+
+<p>I gave the same talk at Node Sydney <a href="https://www.meetup.com/node-sydney/events/cvdqzpyxmbjb/">September meetup</a> that went pretty well too. Hope to be able to give more talks in future and meet more interesting people.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Deployment Is Not Release, Let's Use Feature Flags]]></title>
@@ -1109,95 +1139,6 @@ management and change management is important in our work life.</p>
 <p><img class="center" src="http://geshan.com.np/images/3-podcasts-part-2/scrum-master-toolbox-podcast.jpg" title="Scurm Master Toolbox podcast" alt="Scurm Master Toolbox podcast"></p>
 
 <blockquote><p>For this time it was all podcasts with one on one interviews. Hope you like them and it helps you expand your tech horizon.</p></blockquote>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[3 Simple Rules for Less or No Git Conflicts]]></title>
-    <link href="http://geshan.com.np/blog/2016/04/3-simple-rules-for-less-or-no-git-conflicts/"/>
-    <updated>2016-04-28T16:14:43+10:00</updated>
-    <id>http://geshan.com.np/blog/2016/04/3-simple-rules-for-less-or-no-git-conflicts</id>
-    <content type="html"><![CDATA[<p>Do you write at least 10 lines of code a day in any programming language? Do you work alone or in a team?
-If your answer is yes to both questions, you need to learn <code>git</code> even if you work alone in a project.
-<a href="https://git-scm.com/">Git</a> is the most popular versions control system and it has become a must have
-software engineer skill.</p>
-
-<p>I have seen teams fall into this trap of git conflicts when they start using git and some type of
-<a href="http://geshan.com.np/blog/2014/12/do-you-git-your-code-follow-this-simplified-gitflow-model/">gitflow</a>.
-Merging branches to the main branch becomes a pain when there are git conflicts.
-In this post I am going to reveal 3 simple rules to avoid git conflicts.</p>
-
-<p><img class="center" src="http://geshan.com.np/images/3-rules-git-conflict/git-conflict.png" title="3 simple rules for less or no git conflicts" alt="3 simple rules for less or no git conflicts"></p>
-
-<!-- more -->
-
-
-<h2>Assumption</h2>
-
-<p>You have some working knowledge of git. You follow a git branching model like gitflow or simplified gitflow.</p>
-
-<h2>Rule 1: Keep your changes small</h2>
-
-<p>This is the golden rule to avoid git conflicts in teams. Conflicts occurs when 2 team members make changes
-around the same line of code. Like John changes like 5-10 in readme.md. Jack changes like 7-15 in the same
-readme.md file on a different branch. Have a rule of thumb that each pull request can have at most 20 files
-changed with 200 line addition. If changes are less there is less chances of having things overlapped. As a
-side effect, it will make deploying and testing changes easy too.</p>
-
-<h2>Rule 2: Rebase with your main branch (generally master) when it changes</h2>
-
-<p>When your main branch changes, rebase the branch you are working on with it. Usually <code>master</code> is the
-main branch so it will be best if you rebase with master at least once a day. This saves you from bringing
-in lots of changes done by other team member late. Its the same concept as above, get small changes step by
-step many times than getting it all at once. At the end of the day always do the following, given
-you are on your working branch</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>git checkout master
-</span><span class='line'>git fetch
-</span><span class='line'>git pull --rebase origin master
-</span><span class='line'>git checkout -
-</span><span class='line'>git rebase master</span></code></pre></td></tr></table></div></figure>
-
-
-<p>You get the latest master. Then you go back to your previous branch and rebase your branch with latest master.</p>
-
-<h2>Rule 3: Review pull requests faster and merge them to main branch</h2>
-
-<p>As I have stated earlier &ldquo;An open pull request (PR) is a liability in at least 2 ways. 1 it’s a feature/fix not
-shipped to customers. 2 it will invite code conflicts soon.&rdquo; Have a rule, pull requests need action by 3 days of
-opening them. You can review code, if code is ok deploy and merge or review code, fix issues then deploy and merge.
-This will help the team ship things faster as well as not have pull requests open unattended for weeks.</p>
-
-<h3>Useful Tip</h3>
-
-<p>You followed the above rules, still landed in a git conflict situation? Use <code>git cherry-pick</code>. If you have more
-than one commit in your working branch first <a href="http://geshan.com.np/blog/2014/07/4-git-tips-beyond-basics/">squash</a>
-it to one commit. Then create a new branch out of master/your main branch and do <code>git cherry-pick &lt;sha-of-your-squashed-commit&gt;</code>.<br/>
-Given you have only 1 commit on your working branch <code>feature11</code> and you are on <code>feature11</code> right now, do the following:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>git checkout master; git fetch && git pull --rebase origin master
-</span><span class='line'>git checkout -b feature-11-new
-</span><span class='line'>git cherry-pick 249bd9b150fdb1e6fc9e58af9823f70cc52579a3</span></code></pre></td></tr></table></div></figure>
-
-
-<p>In the above example <code>249bd9b150fdb1e6fc9e58af9823f70cc52579a3</code> is used for demo only. You can know your SHA hash with <code>git log -1</code>
-being on branch <code>feature11</code></p>
-
-<h2>Conclusion</h2>
-
-<p>There is no silver bullet to avoid git conflicts all the time. You will face it now and then.
-If you run into git conflicts everyday the process and system needs to change.
-Be logical, if you have a PR with 50 files changed and 700 new lines you will face conflicts.</p>
-
-<blockquote><p>I hope you face less git conflicts or even completely avoid them.</p></blockquote>
 ]]></content>
   </entry>
   
