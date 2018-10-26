@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Technology | Geshan's Blog]]></title>
   <link href="http://geshan.com.np/blog/categories/technology/atom.xml" rel="self"/>
   <link href="http://geshan.com.np/"/>
-  <updated>2018-10-27T08:42:03+11:00</updated>
+  <updated>2018-10-27T08:58:31+11:00</updated>
   <id>http://geshan.com.np/</id>
   <author>
     <name><![CDATA[Geshan Manandhar]]></name>
@@ -19,9 +19,9 @@
     <updated>2018-10-27T08:08:00+11:00</updated>
     <id>http://geshan.com.np/blog/2018/10/moving-from-a-and-b-to-~150-microservices</id>
     <content type="html"><![CDATA[<p>I gave a talk at #devopsdaysNewy on 24-Oct-2018. It was a great conference with lots of amazing people.
-I want to thank the organizers for putting together such an amazing event. I want to extend the thanks to the sponsors who made it possible :). It was very good couple of days to meet new people and form a network. I think my talk on microservcies went pretty good too. It was my second devops days and I enjoyed it.</p>
+I want to thank the organizers for putting together such an amazing event. I want to extend the thanks to the sponsors who made it possible :). It was very good couple of days to meet new people and form a network. I think my talk on microservices went pretty good too. It was my second devops days and I enjoyed it.</p>
 
-<p>{% img center /images/a-b-to-150-ms/150-ms-geshan.jpg &lsquo;Moving from A and B to 150 microservices, the journey, and learnings&rsquo; &lsquo;Moving from A and B to 150 microservices, the journey, and learnings&rsquo; %}</p>
+<p><img class="center" src="/images/a-b-to-150-ms/150-ms-geshan.jpg" title="&lsquo;Moving from A and B to 150 microservices, the journey, and learnings&rsquo; &lsquo;Moving from A and B to 150 microservices, the journey, and learnings&rsquo;" ></p>
 
 <!-- more -->
 
@@ -50,7 +50,7 @@ I want to thank the organizers for putting together such an amazing event. I wan
     <id>http://geshan.com.np/blog/2018/10/deployment-is-not-release</id>
     <content type="html"><![CDATA[<p>Breaking down a big feature to epics and stories is always tricky. Then you have sub-stories making the process complicated. If you could deploy the finished task that delivers value to the business it would help. Enter feature flags, using this you can deploy your code to production behind a gate. Code and feature are on production but not fully released to everyone. This post is going to help you adjust your mental model for getting more benefits with feature flags.</p>
 
-<p>{% img center /images/deployment-not-release/flags.jpg &lsquo;Deployment is not Release, lets use feature flags&rsquo; &lsquo;Deployment is not Release, lets use feature flags&rsquo; %}
+<p><img class="center" src="/images/deployment-not-release/flags.jpg" title="&lsquo;Deployment is not Release, lets use feature flags&rsquo; &lsquo;Deployment is not Release, lets use feature flags&rsquo;" >
 [Image Source <a href="https://unsplash.com/photos/jCBzW_Q_UGI">Unspalsh</a>]</p>
 
 <!-- more -->
@@ -96,7 +96,7 @@ I want to thank the organizers for putting together such an amazing event. I wan
     <id>http://geshan.com.np/blog/2018/10/dont-code-your-microservice-like-a-monolith</id>
     <content type="html"><![CDATA[<p>Will you use a gun to kill a fly? The answer is NO. The same thing goes when you want to write a microservice application that is going to be maximum of 10K lines of code. Don&rsquo;t over-engineer it. Ok, you have been writing and maintaining large code bases. Some might be 100K+ lines of code but you need to get over your habits and think differently. This post helps you unravel the mysteries of writing small and maintainable microservices. The suggestions are opinionated but it is in practice in a million dollar business.</p>
 
-<p>{% img center /images/microservice-code/lego.jpg &lsquo;Do not code your microservice like a monolith, keep it maintainable not over-engineered&rsquo; &lsquo;Do not code your microservice like a monolith, keep it maintainable not over-engineered&rsquo; %}</p>
+<p><img class="center" src="/images/microservice-code/lego.jpg" title="&lsquo;Do not code your microservice like a monolith, keep it maintainable not over-engineered&rsquo; &lsquo;Do not code your microservice like a monolith, keep it maintainable not over-engineered&rsquo;" ></p>
 
 <!-- more -->
 
@@ -132,7 +132,7 @@ I want to thank the organizers for putting together such an amazing event. I wan
 
 <p>Data mapper or Active record both bring their own opinions, ways of doing things and extra weight. This not only causes performance issues but also code readability suffers. Think of the pre and post hooks/event listener Doctrine has, they work like magic and it is always tricky to understand magic.</p>
 
-<p>{% img center /images/microservice-code/pot-on-head.jpg &lsquo;Do not code your microservice like a monolith, keep it maintainable not over-engineered&rsquo; &lsquo;Do not code your microservice like a monolith, keep it maintainable not over-engineered&rsquo; %}</p>
+<p><img class="center" src="/images/microservice-code/pot-on-head.jpg" title="&lsquo;Do not code your microservice like a monolith, keep it maintainable not over-engineered&rsquo; &lsquo;Do not code your microservice like a monolith, keep it maintainable not over-engineered&rsquo;" ></p>
 
 <p>Just try this, explain how an ORM related insert code works VS how a simple and straightforward INSERT SQL query works to a beginner/junior software engineer. You will already regret using that ORM. Especially in the context of microservices ORM is a clear overhead. The microservice is anticipated to be maximum of 10K lines of code and affect hardly 10 tables so just don&rsquo;t use an ORM, period.</p>
 
@@ -142,7 +142,7 @@ I want to thank the organizers for putting together such an amazing event. I wan
 
 <p>Design Patterns are relevant for a code base that is already big and in the next 6-12 months is going to be bigger, your usual monolith. They can turn out to be &ldquo;extra baggage&rdquo; for a service that is 100s of lines of code now and will become 1000s of lines of code in the next 6-12 months. We never foresee it to be bigger than that because to do that other part we will have another microservice. So keep your microservice code fat free and well tested.</p>
 
-<p>{% img center /images/microservice-code/baggage.jpg &lsquo;Do not code your microservice like a monolith, keep it maintainable not over-engineered&rsquo; &lsquo;Do not code your microservice like a monolith, keep it maintainable not over-engineered&rsquo; %}</p>
+<p><img class="center" src="/images/microservice-code/baggage.jpg" title="&lsquo;Do not code your microservice like a monolith, keep it maintainable not over-engineered&rsquo; &lsquo;Do not code your microservice like a monolith, keep it maintainable not over-engineered&rsquo;" ></p>
 
 <h2>Conclusion</h2>
 
@@ -157,7 +157,7 @@ I want to thank the organizers for putting together such an amazing event. I wan
     <id>http://geshan.com.np/blog/2018/10/why-use-docker-3-reasons-from-a-development-perspective</id>
     <content type="html"><![CDATA[<p>Docker has been popular in the technology space in the past 5 years is an understatement. It has <a href="https://trends.google.com/trends/explore?date=2013-09-08%202018-10-08&amp;q=%2Fm%2F0wkcjgj">exploded</a> in usage and popularity in half a decade. Containers have taken us by storm. Newer applications without containerization feel like it is missing something. Docker has stood out to be the king in the container arena. This post details the reasons to use Docker for your development environment.</p>
 
-<p>{% img center /images/why-docker/whale.jpg &lsquo;Why use docker? 3 reasons from a development perspective&rsquo; &lsquo;Why use docker? 3 reasons from a development perspective&rsquo; %}</p>
+<p><img class="center" src="/images/why-docker/whale.jpg" title="&lsquo;Why use docker? 3 reasons from a development perspective&rsquo; &lsquo;Why use docker? 3 reasons from a development perspective&rsquo;" ></p>
 
 <!-- more -->
 
@@ -172,7 +172,7 @@ I want to thank the organizers for putting together such an amazing event. I wan
 
 <p>Docker has many advantages but the most important one is the container analogy. That you don&rsquo;t only ship your code but ship the whole OS and all related layers with each deployment in a standard way. It is a complete package containing the right version of OS, the desired version of the language, any external dependencies of your application and your application code. That too in a lightweight, isolated and resource controllable way. This is where docker blows away the VMs.</p>
 
-<p>{% img center /images/why-docker/ship.jpg &lsquo;Why use docker? 3 reasons from a development perspective&rsquo; &lsquo;Why use docker? 3 reasons from a development perspective&rsquo; %}</p>
+<p><img class="center" src="/images/why-docker/ship.jpg" title="&lsquo;Why use docker? 3 reasons from a development perspective&rsquo; &lsquo;Why use docker? 3 reasons from a development perspective&rsquo;" ></p>
 
 <h2>Reasons to use Docker for the development environment</h2>
 
@@ -205,7 +205,7 @@ I want to thank the organizers for putting together such an amazing event. I wan
     <id>http://geshan.com.np/blog/2018/10/dont-just-learn-a-new-language-slash-framework</id>
     <content type="html"><![CDATA[<p>“For the things we have to learn before we can do them, we learn by doing them.” ― Aristotle, The Nicomachean Ethics. Imagine you already read 3 books about cycling. Then someone gave you a cycle and asked to ride it, will you be able to ride it? The simple answer is &ldquo;No&rdquo;. It is not about how much have you read about cycling or how many videos did you watch about it. It is about getting on a cycle, balancing on it, learning the feet, hands and eye co-ordination. Same goes for learning a new tech skill, a new language or framework.</p>
 
-<p>{% img center /images/language-framework-learn/cycle.jpg &lsquo;Dont just learn a new language framework, implement it as a running open source project&rsquo; &lsquo;Dont just learn a new language framework, implement it as a running open source project&rsquo; %}</p>
+<p><img class="center" src="/images/language-framework-learn/cycle.jpg" title="&lsquo;Dont just learn a new language framework, implement it as a running open source project&rsquo; &lsquo;Dont just learn a new language framework, implement it as a running open source project&rsquo;" ></p>
 
 <!-- more -->
 
@@ -216,7 +216,7 @@ I want to thank the organizers for putting together such an amazing event. I wan
 
 <blockquote><p>Write a project to learn that language/framework, open source it then leverage services for free. Don&rsquo;t just watch courses, read the docs and then find solutions. Learn by doing. Use git and implement docker in your project. Code correctly add a code quality check service to be aware of the best practices, deploy your project to get a working URL for it.</p></blockquote>
 
-<p>{% img center /images/language-framework-learn/lang-framework-learn.jpg &lsquo;Dont just learn a new language framework, implement it as a running open source project&rsquo; &lsquo;Dont just learn a new language framework, implement it as a running open source project&rsquo; %}</p>
+<p><img class="center" src="/images/language-framework-learn/lang-framework-learn.jpg" title="&lsquo;Dont just learn a new language framework, implement it as a running open source project&rsquo; &lsquo;Dont just learn a new language framework, implement it as a running open source project&rsquo;" ></p>
 
 <h2>Don&rsquo;t just watch courses, read the docs and find solutions</h2>
 
