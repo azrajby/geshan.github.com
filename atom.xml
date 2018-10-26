@@ -4,7 +4,7 @@
   <title><![CDATA[Geshan's Blog]]></title>
   <link href="http://geshan.com.np/atom.xml" rel="self"/>
   <link href="http://geshan.com.np/"/>
-  <updated>2018-10-26T08:39:32+11:00</updated>
+  <updated>2018-10-26T22:52:02+11:00</updated>
   <id>http://geshan.com.np/</id>
   <author>
     <name><![CDATA[Geshan Manandhar]]></name>
@@ -28,7 +28,7 @@
 
 <h2>Why use feature flags?</h2>
 
-<p>Have you ever faced a situation that you need to deploy an epic but it is not possible as it is 80% completed? It is an epic that has to be &ldquo;released&rdquo; all or nothing. That is where the power of feature flag comes into play. You can deploy (not release to everyone) each new value addition to production. The trick here is to put it behind a simple logic like if email ends in @yourcompany.com. You can check a minimal code [example](<a href="https://geshan.com.np/blog/2016/09/how-to-do-a-minimum-viable-feature-switch/.">https://geshan.com.np/blog/2016/09/how-to-do-a-minimum-viable-feature-switch/.</a></p>
+<p>Have you ever faced a situation that you need to deploy an epic but it is not possible as it is 80% completed? It is an epic that has to be &ldquo;released&rdquo; all or nothing. That is where the power of feature flag comes into play. You can deploy (not release to everyone) each new value addition to production. The trick here is to put it behind a simple logic like if email ends in @yourcompany.com. You can check a minimal code <a href="https://geshan.com.np/blog/2016/09/how-to-do-a-minimum-viable-feature-switch/">example</a>.</p>
 
 <blockquote><p>You have to separate the technical deployment process from the business process of releasing a new feature.</p></blockquote>
 
