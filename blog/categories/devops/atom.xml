@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Devops | Geshan's Blog]]></title>
   <link href="http://geshan.com.np/blog/categories/devops/atom.xml" rel="self"/>
   <link href="http://geshan.com.np/"/>
-  <updated>2018-10-27T08:58:31+11:00</updated>
+  <updated>2018-11-20T22:26:22+11:00</updated>
   <id>http://geshan.com.np/</id>
   <author>
     <name><![CDATA[Geshan Manandhar]]></name>
@@ -14,6 +14,96 @@
 
   
   <entry>
+    <title type="html"><![CDATA[5 Signs That Reveal Your Software Development Process Is Agile Only on Paper and Solutions for Them]]></title>
+    <link href="http://geshan.com.np/blog/2018/11/5-signs-that-reveal-your-software-development-process-is-agile-only-on-paper-and-solutions-for-them/"/>
+    <updated>2018-11-20T20:00:22+11:00</updated>
+    <id>http://geshan.com.np/blog/2018/11/5-signs-that-reveal-your-software-development-process-is-agile-only-on-paper-and-solutions-for-them</id>
+    <content type="html"><![CDATA[<p>Agility comes with practice not putting big words on paper. Using Jira does not make your software development process agile. Saying we do &ldquo;scrum&rdquo; is not being agile. Being agile is having an agile mindset and putting it into practice everyday. It is about thinking about the value you deliver to the customer and how to do it better.  This post will also unveil these 5 signs and how to solve these issues. The signs and solutions will concern multiple roles like Product Manager, Software engineer etc.</p>
+
+<p>{% img center /images/5-signs-agile-on-paper/board.jpg &lsquo;5 signs that reveal your company is agile only on paper and solutions for them&rsquo; &lsquo;5 signs that reveal your company is agile only on paper and solutions for them&rsquo; %}</p>
+
+<!-- more -->
+
+
+<h2>TLDR;</h2>
+
+<blockquote><p>If you are writing documents > 5 pages you can improve. There should be a clear definition of Ready for development and Done. Story/Issue should be based on value delivered to the customer not only the technical aspect. Releasing a new version of software once a month and saying we are agile should be a crime. Not caring about the team is not doing agile right.</p></blockquote>
+
+<p>Below are the signs that explain why the paper boat agility will not work and how to fix them:</p>
+
+<h2>Documents that are longer than 5 pages</h2>
+
+<p>There will be big features (epics) and they have to be explained. This does not give you a license to write 50 pager documents. If a document is longer than 5 pages many team members will not read it, accept this fact.</p>
+
+<blockquote><p>One beautiful Monday morning you get a memo of 30 pages text about the new feature business wants us to develop. Will you read it thoroughly? The answer is No.</p></blockquote>
+
+<p>You might skim through it to sustain in the meeting and that&rsquo;s about it. Documents become obsolete fast. When requirements change no one bothers to update documentation.</p>
+
+<h3>Solution</h3>
+
+<p> Write documents that are less than or equal to 5 pages. Make it concise and precise. Start creating visual aids for the process to explain it. Create mock-ups, use tools like <a href="https://balsamiq.com/">Balsamiq</a>. Express the requirements in a way that is understood by everyone with less or no reading involved. Then as per need create a UI design and discuss. After that implement it in code.</p>
+
+<h2>Unclear definition of Ready for development and Done</h2>
+
+<p>Definition of ready for development and Done are crucial for team success. Not having these or having unclear ones will hamper the team performance.</p>
+
+<blockquote><p>A software engineer should be clear about when the story is ready to be picked up for development. Same goes for Done.</p></blockquote>
+
+<p>Is it ready for development when the story is created but the description does not exist? Is it done as soon as I deploy it to production and move my task to &ldquo;Done&rdquo; column? If there are confusions like these it is a bad smell that needs to be addressed.</p>
+
+<h3>Solution</h3>
+
+<p>Have a clear point by point &ldquo;Definition of Ready&rdquo; and &ldquo;Definition of Done&rdquo;. This will help to measure and improve team performance. It will also assist in everyone involved to understand the meaning of these things the same way.</p>
+
+<h2>Stories based on the technical aspect not value to a customer</h2>
+
+<p>Agile software development is always about delivering value to the customer. The value in the form of working software not a pile of documents. If there a story like &ldquo;As a customer service manager I need to know who created a refund so that I can track and audit refunds in future&rdquo;. This task might entail adding a &ldquo;created_by&rdquo; field in the refunds table for instance. But this should not result in having a &ldquo;story&rdquo; that says &ldquo;Add created_by field in the refunds table&rdquo;. Of course, it can be a task/subtask as part of the main story. The main story delivers value but this database task is something that aids the process.</p>
+
+<p>{% img center /images/5-signs-agile-on-paper/story.jpg &lsquo;5 signs that reveal your company is agile only on paper and solutions for them&rsquo; &lsquo;5 signs that reveal your company is agile only on paper and solutions for them&rsquo; %}</p>
+
+<h3>Solution</h3>
+
+<p>Have clear definitions and boundaries of Epic, Story, and task.  Each story should deliver some value to the customer (as above picture).  If you are following Scrum you will have story points too for things like team velocity. Technical tasks are required. Still, only the right sum of technical tasks deliver value to the customer.</p>
+
+<blockquote><p>The main thing here is &ldquo;always focus on the value being delivered to the customer&rdquo;.</p></blockquote>
+
+<h2>Releasing a new version of software once a month</h2>
+
+<p>The first thing to consider here is:</p>
+
+<blockquote><p>Deployment is a technical task and releasing a new software version is a business activity.</p></blockquote>
+
+<p><a href="https://geshan.com.np/blog/2018/10/deployment-is-not-release/">Deployment is not release</a>. If you are not able to make that distinction there is something that needs to be fixed. On top of it, if you hardly release one new version each month, you are doing agile wrong.  <a href="https://en.wikipedia.org/wiki/Release_early,_release_often">Release early release often</a> is an excellent philosophy to get feedback early. With early feedback, you can make a new set of changes in the next release to make the software better. This might not apply for mobile applications with long vendor approval process. For web applications deploying and releasing multiple times a day should be a norm.</p>
+
+<h3>Solution</h3>
+
+<p>Build a culture and technical process to be able to deploy and/or release to production multiple times a day.</p>
+
+<blockquote><p>Enforce good code quality and excellent software engineering practices. Follow tried and tested best practices like code reviews, automated testing, CI/CD, <a href="https://geshan.com.np/blog/2015/08/importance-of-logging-in-your-applications/">logging</a>, monitoring, and <a href="https://geshan.com.np/blog/2015/08/the-best-automated-deployment-tool-the-one-that-fits-your-needs/">automated deployment</a>.</p></blockquote>
+
+<p>Call it DevOps, SRE or Platforms engineering whatever you want but do it and deploy without fear whenever you want.</p>
+
+<h2>Not being careful about team motivation</h2>
+
+<p>Software development is a team sport. If one player is hurt the team covers for that player. If one team member lacks some skills team covers and helps teach that skill to the team member. Self organizing team that reflects on how to make the process better is at the heart of agile.</p>
+
+<blockquote><p>Team motivation and happy team members are essential to high productivity.</p></blockquote>
+
+<p>If you are being treated like story executors with no voice and no room for improvement, it is a big bad sign.</p>
+
+<h3>Solution</h3>
+
+<p>Build a culture of continuous improvement. Reflect on things that have been done and how the process can be enhanced. For instance, if doing 60% new features and 40% bugs did not work well, find a better ratio. Do team activities and things that uplift the team spirit.</p>
+
+<h2>Conclusion</h2>
+
+<p>Being agile on paper and being agile in practice are two different things. Don&rsquo;t let your agile software process be like waterfall with the so-labeled agile skin. Be agile and fix these signs to have high team output with fantastic performance.</p>
+
+<blockquote><p>Agile should be implemented to solve people and communication problems which results in stabilizing the technical issues.</p></blockquote>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Moving From a and B to 150 Microservices, the Journey, and Learnings [Slides]]]></title>
     <link href="http://geshan.com.np/blog/2018/10/moving-from-a-and-b-to-~150-microservices/"/>
     <updated>2018-10-27T08:08:00+11:00</updated>
@@ -21,7 +111,7 @@
     <content type="html"><![CDATA[<p>I gave a talk at #devopsdaysNewy on 24-Oct-2018. It was a great conference with lots of amazing people.
 I want to thank the organizers for putting together such an amazing event. I want to extend the thanks to the sponsors who made it possible :). It was very good couple of days to meet new people and form a network. I think my talk on microservices went pretty good too. It was my second devops days and I enjoyed it.</p>
 
-<p><img class="center" src="/images/a-b-to-150-ms/150-ms-geshan.jpg" title="&lsquo;Moving from A and B to 150 microservices, the journey, and learnings&rsquo; &lsquo;Moving from A and B to 150 microservices, the journey, and learnings&rsquo;" ></p>
+<p>{% img center /images/a-b-to-150-ms/150-ms-geshan.jpg &lsquo;Moving from A and B to 150 microservices, the journey, and learnings&rsquo; &lsquo;Moving from A and B to 150 microservices, the journey, and learnings&rsquo; %}</p>
 
 <!-- more -->
 
@@ -50,7 +140,7 @@ I want to thank the organizers for putting together such an amazing event. I wan
     <id>http://geshan.com.np/blog/2018/10/deployment-is-not-release</id>
     <content type="html"><![CDATA[<p>Breaking down a big feature to epics and stories is always tricky. Then you have sub-stories making the process complicated. If you could deploy the finished task that delivers value to the business it would help. Enter feature flags, using this you can deploy your code to production behind a gate. Code and feature are on production but not fully released to everyone. This post is going to help you adjust your mental model for getting more benefits with feature flags.</p>
 
-<p><img class="center" src="/images/deployment-not-release/flags.jpg" title="&lsquo;Deployment is not Release, lets use feature flags&rsquo; &lsquo;Deployment is not Release, lets use feature flags&rsquo;" >
+<p>{% img center /images/deployment-not-release/flags.jpg &lsquo;Deployment is not Release, lets use feature flags&rsquo; &lsquo;Deployment is not Release, lets use feature flags&rsquo; %}
 [Image Source <a href="https://unsplash.com/photos/jCBzW_Q_UGI">Unspalsh</a>]</p>
 
 <!-- more -->
@@ -96,7 +186,7 @@ I want to thank the organizers for putting together such an amazing event. I wan
     <id>http://geshan.com.np/blog/2018/10/dont-code-your-microservice-like-a-monolith</id>
     <content type="html"><![CDATA[<p>Will you use a gun to kill a fly? The answer is NO. The same thing goes when you want to write a microservice application that is going to be maximum of 10K lines of code. Don&rsquo;t over-engineer it. Ok, you have been writing and maintaining large code bases. Some might be 100K+ lines of code but you need to get over your habits and think differently. This post helps you unravel the mysteries of writing small and maintainable microservices. The suggestions are opinionated but it is in practice in a million dollar business.</p>
 
-<p><img class="center" src="/images/microservice-code/lego.jpg" title="&lsquo;Do not code your microservice like a monolith, keep it maintainable not over-engineered&rsquo; &lsquo;Do not code your microservice like a monolith, keep it maintainable not over-engineered&rsquo;" ></p>
+<p>{% img center /images/microservice-code/lego.jpg &lsquo;Do not code your microservice like a monolith, keep it maintainable not over-engineered&rsquo; &lsquo;Do not code your microservice like a monolith, keep it maintainable not over-engineered&rsquo; %}</p>
 
 <!-- more -->
 
@@ -132,7 +222,7 @@ I want to thank the organizers for putting together such an amazing event. I wan
 
 <p>Data mapper or Active record both bring their own opinions, ways of doing things and extra weight. This not only causes performance issues but also code readability suffers. Think of the pre and post hooks/event listener Doctrine has, they work like magic and it is always tricky to understand magic.</p>
 
-<p><img class="center" src="/images/microservice-code/pot-on-head.jpg" title="&lsquo;Do not code your microservice like a monolith, keep it maintainable not over-engineered&rsquo; &lsquo;Do not code your microservice like a monolith, keep it maintainable not over-engineered&rsquo;" ></p>
+<p>{% img center /images/microservice-code/pot-on-head.jpg &lsquo;Do not code your microservice like a monolith, keep it maintainable not over-engineered&rsquo; &lsquo;Do not code your microservice like a monolith, keep it maintainable not over-engineered&rsquo; %}</p>
 
 <p>Just try this, explain how an ORM related insert code works VS how a simple and straightforward INSERT SQL query works to a beginner/junior software engineer. You will already regret using that ORM. Especially in the context of microservices ORM is a clear overhead. The microservice is anticipated to be maximum of 10K lines of code and affect hardly 10 tables so just don&rsquo;t use an ORM, period.</p>
 
@@ -142,7 +232,7 @@ I want to thank the organizers for putting together such an amazing event. I wan
 
 <p>Design Patterns are relevant for a code base that is already big and in the next 6-12 months is going to be bigger, your usual monolith. They can turn out to be &ldquo;extra baggage&rdquo; for a service that is 100s of lines of code now and will become 1000s of lines of code in the next 6-12 months. We never foresee it to be bigger than that because to do that other part we will have another microservice. So keep your microservice code fat free and well tested.</p>
 
-<p><img class="center" src="/images/microservice-code/baggage.jpg" title="&lsquo;Do not code your microservice like a monolith, keep it maintainable not over-engineered&rsquo; &lsquo;Do not code your microservice like a monolith, keep it maintainable not over-engineered&rsquo;" ></p>
+<p>{% img center /images/microservice-code/baggage.jpg &lsquo;Do not code your microservice like a monolith, keep it maintainable not over-engineered&rsquo; &lsquo;Do not code your microservice like a monolith, keep it maintainable not over-engineered&rsquo; %}</p>
 
 <h2>Conclusion</h2>
 
@@ -157,7 +247,7 @@ I want to thank the organizers for putting together such an amazing event. I wan
     <id>http://geshan.com.np/blog/2018/10/why-use-docker-3-reasons-from-a-development-perspective</id>
     <content type="html"><![CDATA[<p>Docker has been popular in the technology space in the past 5 years is an understatement. It has <a href="https://trends.google.com/trends/explore?date=2013-09-08%202018-10-08&amp;q=%2Fm%2F0wkcjgj">exploded</a> in usage and popularity in half a decade. Containers have taken us by storm. Newer applications without containerization feel like it is missing something. Docker has stood out to be the king in the container arena. This post details the reasons to use Docker for your development environment.</p>
 
-<p><img class="center" src="/images/why-docker/whale.jpg" title="&lsquo;Why use docker? 3 reasons from a development perspective&rsquo; &lsquo;Why use docker? 3 reasons from a development perspective&rsquo;" ></p>
+<p>{% img center /images/why-docker/whale.jpg &lsquo;Why use docker? 3 reasons from a development perspective&rsquo; &lsquo;Why use docker? 3 reasons from a development perspective&rsquo; %}</p>
 
 <!-- more -->
 
@@ -172,7 +262,7 @@ I want to thank the organizers for putting together such an amazing event. I wan
 
 <p>Docker has many advantages but the most important one is the container analogy. That you don&rsquo;t only ship your code but ship the whole OS and all related layers with each deployment in a standard way. It is a complete package containing the right version of OS, the desired version of the language, any external dependencies of your application and your application code. That too in a lightweight, isolated and resource controllable way. This is where docker blows away the VMs.</p>
 
-<p><img class="center" src="/images/why-docker/ship.jpg" title="&lsquo;Why use docker? 3 reasons from a development perspective&rsquo; &lsquo;Why use docker? 3 reasons from a development perspective&rsquo;" ></p>
+<p>{% img center /images/why-docker/ship.jpg &lsquo;Why use docker? 3 reasons from a development perspective&rsquo; &lsquo;Why use docker? 3 reasons from a development perspective&rsquo; %}</p>
 
 <h2>Reasons to use Docker for the development environment</h2>
 
@@ -195,87 +285,6 @@ I want to thank the organizers for putting together such an amazing event. I wan
 <h2>Conclusion</h2>
 
 <p>Docker is a boon to both software engineers and DevOps engineers. It makes releasing software much easier as the whole stack is shipped not only the code. Still, to move your production to Docker many things need to be considered. Things like container builder (for instance <a href="https://cloud.google.com/cloud-build/docs/">Google cloud build</a>), container orchestration (like <a href="https://kubernetes.io/">Kubernetes</a>). So before jumping to the container on staging/production be convinced of its benefits on the local development environment. I hope you exploit Docker to extract the most benefit out of it.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[How to Do a Zero Downtime Database (DB) Migration (Schema Change) With a Practical Example]]></title>
-    <link href="http://geshan.com.np/blog/2018/05/how-to-do-a-zero-downtime-database-db-migration-schema-change-with-a-practical-example/"/>
-    <updated>2018-05-01T04:00:41+10:00</updated>
-    <id>http://geshan.com.np/blog/2018/05/how-to-do-a-zero-downtime-database-db-migration-schema-change-with-a-practical-example</id>
-    <content type="html"><![CDATA[<p>Database migration on a production database is never simple. Depending on the volume of requests some teams schedule database migration to off hours. You can run your alter statements with zero or minimal downtime following the steps mentioned below with a practical example.</p>
-
-<p><img class="center" src="/images/db-migration/db-migration.png" title="&lsquo;How to do a zero downtime database&rsquo; &lsquo;How to do a zero downtime database&rsquo;" ></p>
-
-<!-- more -->
-
-
-<h2>Example</h2>
-
-<p>As an example for this post, let&rsquo;s assume you work for an E-commerce company which has both recurring and new customers. You have partners who publicize a discount code valid for a given date range and get a percent of the order&rsquo;s total tracked by their discount code. Below is the schema for the partner and coupon code. Below is the initial schema before any change:</p>
-
-<p><img class="center" src="/images/db-migration/schema-01.png" title="&lsquo;Initial DB schema&rsquo; &lsquo;Initial DB Schema&rsquo;" ></p>
-
-<p>Now the new requirement is to track different commission percent for the new and recurring customer. New and recurring customers are evaluated by a different system/microservice and it is also responsible for commission calculation based on order total which is out of the scope of this focused example.</p>
-
-<p>To do commission tracking by customer type we would decide to add 2 new columns commission_percent_new_customer, commission_percent_recurring_customer, the difficult question is how to roll it out without downtime.</p>
-
-<p><img class="center" src="/images/db-migration/schema-02.png" title="&lsquo;Updated schema with 2 new columns&rsquo; &lsquo;Updated schema with 2 new columns&rsquo;" ></p>
-
-<h3>Migration script (DB schema alter statement)</h3>
-
-<p>The following migration script will update the DB schema to be in the above state for MYSQL DB:</p>
-
-<pre><code>ALTER TABLE `partner_discount_code` ADD `commission_percent_new_customer` DECIMAL NULL AFTER `commission_percent`,
-ADD `commission_percent_recurring_customer` DECIMAL NULL AFTER `commission_percent_new_customer`, 
-,algorithm=inplace,lock=none;
-</code></pre>
-
-<p>Notice the <code>algorithm=inplace,lock=none</code> it is discussed below.</p>
-
-<h2>Evaluating Downtime</h2>
-
-<p>In the above example there can be 2 types of downtime as follows:</p>
-
-<ol>
-<li>Tables locked while migration runs</li>
-<li>Downtime because of newly introduced columns and code not matching to it</li>
-</ol>
-
-
-<p>For the first downtime issue depending on the database, it can be mitigated to a significant level with executing proper alter SQL statements. For example in MYSQL if <code>,algorithm=inplace, lock=none</code> is suffixed with your alter it will run with 0 to minimum table lock allowing reads and writes while the migration runs. This is especially important when altering tables with millions of rows as the alter can take minutes depending on the structure and data volume of the tables involved.</p>
-
-<p>For the second issue, if db alter and code release is deployed in a specific sequence it can be handled much better. The deployment steps are listed below:</p>
-
-<h2>Deployment Steps</h2>
-
-<ol>
-<li>Add the two new columns to the partner_discount_code, let&rsquo;s say the code is in v 1.1 now</li>
-<li>Deploy code v 1.2 which adds and edits all 3 columns - commission_percent, commission_percent_new_customer and commission_percent_recurring_customer.</li>
-<li>Test that all the things work as expected, even if you need to roll back nothing breaks and it&rsquo;s fully backward compatible</li>
-<li>When everything is fine, deploy code v 1.3 that adds or edits only on the 2 new columns</li>
-<li>Test it for a day or two, then as per need you can drop the commission_percent column on the partner_discount_code table as it&rsquo;s not used anymore</li>
-</ol>
-
-
-<h3>Final schema after dropping commission_percent column</h3>
-
-<p><img class="center" src="/images/db-migration/schema-03.png" title="&lsquo;Updated schema with 1 column less&rsquo; &lsquo;Updated schema with 1 column less&rsquo;" ></p>
-
-<h2>Things to consider</h2>
-
-<ul>
-<li>Always be careful with database migration. It&rsquo;s is surely safe to take a backup of the table you will run the alter statement on before executive it.</li>
-<li>Don&rsquo;t deploy the code first that write to new columns then run the migration, it will result in errors as the code will try to access non-existing column(s).</li>
-<li>Always think of backward compatibility usually without a revert migration. Generally, access to production database is only given to a select few.</li>
-<li>Run drop or rename columns only after you are fully satisfied that the new changes are not breaking anything.</li>
-<li>It is better to run migrations (alter SQL) manually than part of the deployment to keep things segregated and more predictable.</li>
-</ul>
-
-
-<h2>Conclusion</h2>
-
-<p>Database migration is not difficult if it is done the right way. Hope this post helps you run your DB migrations in a smoother fashion.</p>
 ]]></content>
   </entry>
   

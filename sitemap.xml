@@ -3,6 +3,14 @@
   
   
   <url>
+    <loc>http://geshan.com.np/blog/2018/11/5-signs-that-reveal-your-software-development-process-is-agile-only-on-paper-and-solutions-for-them/</loc>
+    
+    <lastmod>2018-11-20T20:00:22+11:00</lastmod>
+    
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
     <loc>http://geshan.com.np/blog/2018/10/moving-from-a-and-b-to-~150-microservices/</loc>
     
     <lastmod>2018-10-27T08:08:00+11:00</lastmod>
@@ -2005,21 +2013,21 @@
   
   <url>
     <loc>http://geshan.com.np/blog/</loc>
-    <lastmod>2018-10-27T08:58:31+11:00</lastmod>
+    <lastmod>2018-11-20T22:26:22+11:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://geshan.com.np/</loc>
-    <lastmod>2018-10-27T08:58:31+11:00</lastmod>
+    <lastmod>2018-11-20T22:26:22+11:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <url>
     <loc>http://geshan.com.np/blog/archives/</loc>
-    <lastmod>2018-10-27T08:58:31+11:00</lastmod>
+    <lastmod>2018-11-20T22:26:22+11:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>

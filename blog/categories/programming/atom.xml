@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Programming | Geshan's Blog]]></title>
   <link href="http://geshan.com.np/blog/categories/programming/atom.xml" rel="self"/>
   <link href="http://geshan.com.np/"/>
-  <updated>2018-10-27T08:58:31+11:00</updated>
+  <updated>2018-11-20T22:26:22+11:00</updated>
   <id>http://geshan.com.np/</id>
   <author>
     <name><![CDATA[Geshan Manandhar]]></name>
@@ -21,7 +21,7 @@
     <content type="html"><![CDATA[<p>Podcasts open up a new horizon for learning, it is easier than reading and you can do it while commuting. This is a part 3 is the series (do check part <a href="http://geshan.com.np/blog/2015/10/3-podcasts-every-software-engineer-slash-developer-should-subscribe-to/">1</a> and
 <a href="http://geshan.com.np/blog/2016/05/3-podcasts-every-software-engineer-slash-developer-should-subscribe-to-part-2/">2</a>) of podcasts you must subscribe to and listen to as a software engineer. Same as the last 2 times the 3 podcasts listed below have superb content and amazing sound quality too. Below is the list:</p>
 
-<p><img class="center" src="/images/3-podcasts-part-3/3-podcasts-sw-eng-part-03.jpg" title="&lsquo;3 podcasts every software engineer should subscribe to - part 3&rsquo; &lsquo;3 podcasts every software engineer should subscribe to - part 3&rsquo;" ></p>
+<p>{% img center /images/3-podcasts-part-3/3-podcasts-sw-eng-part-03.jpg &lsquo;3 podcasts every software engineer should subscribe to - part 3&rsquo; &lsquo;3 podcasts every software engineer should subscribe to - part 3&rsquo; %}</p>
 
 <!-- more -->
 
@@ -33,7 +33,7 @@ Paul is the co-founder of Circle CI and Edith is the co-founder of LaunchDarkly.
 They put forward their ideas about continuous delivery and software engineering topics.
 Sometimes they even bring in guests which is like a cherry on the cake. The last episode #28 on <a href="http://www.heavybit.com/library/podcasts/to-be-continuous/ep-28-goal-setting/">Goal setting</a> was amazing.</p>
 
-<p><img class="center" src="/images/3-podcasts-part-3/to-be-continuous.jpg" title="&lsquo;To Be Continuous Podcast&rsquo; &lsquo;To Be Continuous Podcast&rsquo;" ></p>
+<p>{% img center /images/3-podcasts-part-3/to-be-continuous.jpg &lsquo;To Be Continuous Podcast&rsquo; &lsquo;To Be Continuous Podcast&rsquo; %}</p>
 
 <h2><a href="http://www.gistia.com/techpeople/">Tech People by Gistia Labs</a></h2>
 
@@ -41,7 +41,7 @@ Sometimes they even bring in guests which is like a cherry on the cake. The last
 tech industry to discuss topics from Angular in the enterprise to UX for Lean startup.
 The interviews are a bit long, still they are insightful and relay important information.</p>
 
-<p><img class="center" src="/images/3-podcasts-part-3/tech-people.jpg" title="&lsquo;Tech People Podcast&rsquo; &lsquo;Tech People Podcast&rsquo;" ></p>
+<p>{% img center /images/3-podcasts-part-3/tech-people.jpg &lsquo;Tech People Podcast&rsquo; &lsquo;Tech People Podcast&rsquo; %}</p>
 
 <h2><a href="https://mixergy.com/interviews/">Mixergy by Andrew</a></h2>
 
@@ -52,7 +52,7 @@ If you ever want to learn how to interview people this is one podcast you can&rs
 He generally interviews tech entrepreneurs. The interviews usually last like an hour.
 You even as a software engineer get to know important things about how to run a business.</p>
 
-<p><img class="center" src="/images/3-podcasts-part-3/mixergy.jpg" title="&lsquo;Mixergy Podcast&rsquo; &lsquo;Mixergy Podcast&rsquo;" ></p>
+<p>{% img center /images/3-podcasts-part-3/mixergy.jpg &lsquo;Mixergy Podcast&rsquo; &lsquo;Mixergy Podcast&rsquo; %}</p>
 
 <blockquote><p>I hope you had a great start to the new year and continue your learning listening to amazing podcasts. Cheers!</p></blockquote>
 ]]></content>
@@ -67,7 +67,7 @@ You even as a software engineer get to know important things about how to run a 
 with amazing content and sound quality. In this post, I will list 3 awesome podcasts.
 All software engineers/developers should subscribe to them now.</p>
 
-<p><img class="center" src="/images/3-podcasts-part-2/3-podcasts-sw-eng-part-02.jpg" title="&lsquo;3 podcasts every software engineer should subscribe to - part 2&rsquo; &lsquo;3 podcasts every software engineer should subscribe to - part 2&rsquo;" >
+<p>{% img center /images/3-podcasts-part-2/3-podcasts-sw-eng-part-02.jpg &lsquo;3 podcasts every software engineer should subscribe to - part 2&rsquo; &lsquo;3 podcasts every software engineer should subscribe to - part 2&rsquo; %}
 (Background image shot by me)</p>
 
 <!-- more -->
@@ -81,7 +81,7 @@ he interviews are in-depth, long and enjoyable. Jeff is sharp, there is never a
 dull moment in the one to one interviews he conducts. He covers a wide range of subjects from docker/kubernates
 to logging and git.</p>
 
-<p><img class="center" src="/images/3-podcasts-part-2/software-engineering-daily-podcast.jpg" title="&lsquo;Software Engineering Daily podcast&rsquo; &lsquo;Software Engineering Daily podcast&rsquo;" ></p>
+<p>{% img center /images/3-podcasts-part-2/software-engineering-daily-podcast.jpg &lsquo;Software Engineering Daily podcast&rsquo; &lsquo;Software Engineering Daily podcast&rsquo; %}</p>
 
 <h2><a href="https://scaleyourcode.com/interviews">Scale your code</a></h2>
 
@@ -92,7 +92,7 @@ how the big players deal with scaling and performance problems.</p>
 <blockquote><p>Scale Your Code&rsquo;s mission is to organize the world&rsquo;s programming knowledge from top sources and make it universally
 accessible to improve software security, speed, and reliability.</p></blockquote>
 
-<p><img class="center" src="/images/3-podcasts-part-2/scale-your-code-podcast.jpg" title="&lsquo;Scale your code podcast&rsquo; &lsquo;Scale your code podcast&rsquo;" ></p>
+<p>{% img center /images/3-podcasts-part-2/scale-your-code-podcast.jpg &lsquo;Scale your code podcast&rsquo; &lsquo;Scale your code podcast&rsquo; %}</p>
 
 <h2><a href="http://www.scrum-master-toolbox.com/category/podcast/">Scurm Master Toolbox</a></h2>
 
@@ -101,7 +101,7 @@ He conducts the interviews with ease and a purpose to get the best out of his gu
 this will help you in your career. Software engineers are solution providers. Understanding team dynamics, product
 management and change management is important in our work life.</p>
 
-<p><img class="center" src="/images/3-podcasts-part-2/scrum-master-toolbox-podcast.jpg" title="&lsquo;Scurm Master Toolbox podcast&rsquo; &lsquo;Scurm Master Toolbox podcast&rsquo;" ></p>
+<p>{% img center /images/3-podcasts-part-2/scrum-master-toolbox-podcast.jpg &lsquo;Scurm Master Toolbox podcast&rsquo; &lsquo;Scurm Master Toolbox podcast&rsquo; %}</p>
 
 <blockquote><p>For this time it was all podcasts with one on one interviews. Hope you like them and it helps you expand your tech horizon.</p></blockquote>
 ]]></content>
@@ -118,7 +118,7 @@ There is unit testing, integration testing, functional testing, acceptance testi
 As per Guru99&rsquo;s <a href="http://www.guru99.com/types-of-software-testing.html">post</a> there are more than 100 types of
 software testing. In this post I am going to categorize automated software tests into two, the fast ones and not fast ones.</p>
 
-<p><img class="center" src="/images/testing-types/software-testing.jpg" title="&lsquo;There are only two types of automated software tests, fast ones and not fast ones&rsquo; &lsquo;There are only two types of automated software tests, fast ones and not fast ones&rsquo;" ></p>
+<p>{% img center /images/testing-types/software-testing.jpg &lsquo;There are only two types of automated software tests, fast ones and not fast ones&rsquo; &lsquo;There are only two types of automated software tests, fast ones and not fast ones&rsquo; %}</p>
 
 <!-- more -->
 
@@ -185,7 +185,7 @@ of any solid software application. Happy testing hope your tests run in seconds 
 
 <p>I browsed through my twitter timeline and collected them in one place.</p>
 
-<p><img class="center" src="/images/10-quotes/code-html-small.jpg" title="&lsquo;10 software engineering proverbs-quotes I came up with in past months&rsquo; &lsquo;10 software engineering proverbs-quotes I came up with in past months&rsquo;" ></p>
+<p>{% img center /images/10-quotes/code-html-small.jpg &lsquo;10 software engineering proverbs-quotes I came up with in past months&rsquo; &lsquo;10 software engineering proverbs-quotes I came up with in past months&rsquo; %}</p>
 
 <h2>Here are the quotes with visuals :</h2>
 
@@ -196,61 +196,61 @@ of any solid software application. Happy testing hope your tests run in seconds 
 
 <h3>There is no pill to convert yourself as a good programmer, it takes lots of reading, learning and practice. So start now.</h3>
 
-<p><img class="center" src="/images/10-quotes/01pills.jpg" title="&lsquo;There is no pill to convert yourself as a good programmer, it takes lots of reading, learning and practice. So start now.&rsquo; &lsquo;There is no pill to convert yourself as a good programmer, it takes lots of reading, learning and practice. So start now.&rsquo;" ></p>
+<p>{% img center /images/10-quotes/01pills.jpg &lsquo;There is no pill to convert yourself as a good programmer, it takes lots of reading, learning and practice. So start now.&rsquo; &lsquo;There is no pill to convert yourself as a good programmer, it takes lots of reading, learning and practice. So start now.&rsquo; %}</p>
 
 <hr />
 
 <h3>An open pull request (PR) is a liability in at least 2 ways. 1 it&rsquo;s a feature/fix not shipped to customers. 2 it will invite code conflicts soon.</h3>
 
-<p><img class="center" src="/images/10-quotes/02PR.jpg" title="&lsquo;An open pull request is a liability in at least 2 ways. 1 it is a feature-fix not shipped to customers. 2 it will invite code conflicts soon.&rsquo; &lsquo;An open pull request is a liability in at least 2 ways. 1 it is a feature-fix not shipped to customers. 2 it will invite code conflicts soon.&rsquo;" ></p>
+<p>{% img center /images/10-quotes/02PR.jpg &lsquo;An open pull request is a liability in at least 2 ways. 1 it is a feature-fix not shipped to customers. 2 it will invite code conflicts soon.&rsquo; &lsquo;An open pull request is a liability in at least 2 ways. 1 it is a feature-fix not shipped to customers. 2 it will invite code conflicts soon.&rsquo; %}</p>
 
 <hr />
 
 <h3>Talking about automated testing and Continuous Integration(CI) is easy, balancing it with delivery and cost as a web shop manager is hard.</h3>
 
-<p><img class="center" src="/images/10-quotes/03test-ci-balance.jpg" title="&lsquo;Talking about automated testing and Continuous Integration(CI) is easy, balancing it with delivery and cost as a web shop manager is hard.&rsquo; &lsquo;Talking about automated testing and Continuous Integration(CI) is easy, balancing it with delivery and cost as a web shop manager is hard.&rsquo;" ></p>
+<p>{% img center /images/10-quotes/03test-ci-balance.jpg &lsquo;Talking about automated testing and Continuous Integration(CI) is easy, balancing it with delivery and cost as a web shop manager is hard.&rsquo; &lsquo;Talking about automated testing and Continuous Integration(CI) is easy, balancing it with delivery and cost as a web shop manager is hard.&rsquo; %}</p>
 
 <hr />
 
 <h3>Having automated tests but no Continuous Integration(CI) is like having a sword but letting it rot.</h3>
 
-<p><img class="center" src="/images/10-quotes/04test-ci-sword.jpg" title="&lsquo;Having automated tests but no Continuous Integration(CI) is like having a sword but letting it rot.&rsquo; &lsquo;Having automated tests but no Continuous Integration(CI) is like having a sword but letting it rot.&rsquo;" ></p>
+<p>{% img center /images/10-quotes/04test-ci-sword.jpg &lsquo;Having automated tests but no Continuous Integration(CI) is like having a sword but letting it rot.&rsquo; &lsquo;Having automated tests but no Continuous Integration(CI) is like having a sword but letting it rot.&rsquo; %}</p>
 
 <hr />
 
 <h3>You cannot follow everything by the book. It&rsquo;s generally an ish implementation like Agileish, Kanbanish and RESTish.</h3>
 
-<p><img class="center" src="/images/10-quotes/05follow-book.jpg" title="&lsquo;You cannot follow everything by the book. It is generally an ish implementation like agileish, kanbanish and RESTish.&rsquo; &lsquo;You cannot follow everything by the book. It is generally an ish implementation like agileish, kanbanish and RESTish.&rsquo;" ></p>
+<p>{% img center /images/10-quotes/05follow-book.jpg &lsquo;You cannot follow everything by the book. It is generally an ish implementation like agileish, kanbanish and RESTish.&rsquo; &lsquo;You cannot follow everything by the book. It is generally an ish implementation like agileish, kanbanish and RESTish.&rsquo; %}</p>
 
 <hr />
 
 <h3>If you are thinking of a software product idea, make a pain killer people can&rsquo;t live without not an optional vitamin people can and will skip.</h3>
 
-<p><img class="center" src="/images/10-quotes/06pain-killer.jpg" title="&lsquo;If you are thinking of a software product idea, make a pain killer people can not live without not an optional vitamin people can and will skip.&rsquo; &lsquo;If you are thinking of a software product idea, make a pain killer people can not live without not an optional vitamin people can and will skip.&rsquo;" ></p>
+<p>{% img center /images/10-quotes/06pain-killer.jpg &lsquo;If you are thinking of a software product idea, make a pain killer people can not live without not an optional vitamin people can and will skip.&rsquo; &lsquo;If you are thinking of a software product idea, make a pain killer people can not live without not an optional vitamin people can and will skip.&rsquo; %}</p>
 
 <hr />
 
 <h3>Software engineers have power to create great solutions but the best software to solve the least important problem is of no use.</h3>
 
-<p><img class="center" src="/images/10-quotes/07solution-importance.jpg" title="&lsquo;Software engineers have power to create great solutions but the best software to solve the least important problem is of no use.&rsquo; &lsquo;Software engineers have power to create great solutions but the best software to solve the least important problem is of no use.&rsquo;" ></p>
+<p>{% img center /images/10-quotes/07solution-importance.jpg &lsquo;Software engineers have power to create great solutions but the best software to solve the least important problem is of no use.&rsquo; &lsquo;Software engineers have power to create great solutions but the best software to solve the least important problem is of no use.&rsquo; %}</p>
 
 <hr />
 
 <h3>Programmers/developers need to become software engineers. Think of solution then technology to implement it. Think of abstractions then code.</h3>
 
-<p><img class="center" src="/images/10-quotes/08solution-abstract.jpg" title="&lsquo;Programmers-developers need to become software engineers. Think of solution then technology to implement it. Think of abstractions then code.&rsquo; &lsquo;Programmers-developers need to become software engineers. Think of solution then technology to implement it. Think of abstractions then code.&rsquo;" ></p>
+<p>{% img center /images/10-quotes/08solution-abstract.jpg &lsquo;Programmers-developers need to become software engineers. Think of solution then technology to implement it. Think of abstractions then code.&rsquo; &lsquo;Programmers-developers need to become software engineers. Think of solution then technology to implement it. Think of abstractions then code.&rsquo; %}</p>
 
 <hr />
 
 <h3>Software developers are solution providers first, engineers second. Solution should have business value than using the latest tech fad.</h3>
 
-<p><img class="center" src="/images/10-quotes/09solution-value.jpg" title="&lsquo;Software developers are solution providers first, engineers second. Solution should have business value than using the latest tech fad.&rsquo; &lsquo;Software developers are solution providers first, engineers second. Solution should have business value than using the latest tech fad.&rsquo;" ></p>
+<p>{% img center /images/10-quotes/09solution-value.jpg &lsquo;Software developers are solution providers first, engineers second. Solution should have business value than using the latest tech fad.&rsquo; &lsquo;Software developers are solution providers first, engineers second. Solution should have business value than using the latest tech fad.&rsquo; %}</p>
 
 <hr />
 
 <h3>If you don&rsquo;t sharpen your axe then it will take more time and effort to cut the tree. Same goes for software development.</h3>
 
-<p><img class="center" src="/images/10-quotes/10axe.jpg" title="&lsquo;If you don&rsquo;t sharpen your axe then it will take more time and effort to cut the tree. Same goes for software development.&rsquo; &lsquo;If you don&rsquo;t sharpen your axe then it will take more time and effort to cut the tree. Same goes for software development.&rsquo;" ></p>
+<p>{% img center /images/10-quotes/10axe.jpg &lsquo;If you don&rsquo;t sharpen your axe then it will take more time and effort to cut the tree. Same goes for software development.&rsquo; &lsquo;If you don&rsquo;t sharpen your axe then it will take more time and effort to cut the tree. Same goes for software development.&rsquo; %}</p>
 
 <hr />
 
@@ -269,7 +269,7 @@ of any solid software application. Happy testing hope your tests run in seconds 
 
 <p>Weeklies are compact and organized list of links with articles, podcasts, videos etc. They are focused to a related to a topic, technology, language or framework delivered to you email inbox each week. This post curates a list of 3 weeklies for all software engineer/developers. The main 3 weeklies are language and framework agnostic. Towards the end there is mention of some language, framework and CMS specific weeklies.</p>
 
-<p><img class="center" src="/images/3-weeklies/3-weeklies-sw-eng.jpg" title="&lsquo;3 weeklies every software engineer should subscribe to&rsquo; &lsquo;3 weeklies every software engineer should subscribe to&rsquo;" >
+<p>{% img center /images/3-weeklies/3-weeklies-sw-eng.jpg &lsquo;3 weeklies every software engineer should subscribe to&rsquo; &lsquo;3 weeklies every software engineer should subscribe to&rsquo; %}
 (Background image shot by me.)</p>
 
 <!-- more -->
