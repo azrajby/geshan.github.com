@@ -4,7 +4,7 @@
   <title><![CDATA[Geshan's Blog]]></title>
   <link href="http://geshan.com.np/atom.xml" rel="self"/>
   <link href="http://geshan.com.np/"/>
-  <updated>2018-11-20T22:25:08+11:00</updated>
+  <updated>2018-12-01T10:57:00+11:00</updated>
   <id>http://geshan.com.np/</id>
   <author>
     <name><![CDATA[Geshan Manandhar]]></name>
@@ -14,9 +14,51 @@
 
   
   <entry>
+    <title type="html"><![CDATA[4 Ways Docker Changed the Way Software Engineers Work in Past Half Decade]]></title>
+    <link href="http://geshan.com.np/blog/2018/12/4-ways-docker-changed-the-way-software-engineers-work-in-past-half-decade/"/>
+    <updated>2018-12-01T09:14:51+11:00</updated>
+    <id>http://geshan.com.np/blog/2018/12/4-ways-docker-changed-the-way-software-engineers-work-in-past-half-decade</id>
+    <content type="html"><![CDATA[<p>10 years back it was Git that transformed the way software engineers worked. Half a decade back it was <a href="https://www.docker.com/">Docker</a> that brought the container to the masses. Before Docker, container was like a sacred secret in companies like Google and Heroku. Docker is a software and a company too. It tried to build a broader ecosystem but <a href="https://kubernetes.io/">Kubernetes</a> stole the thunder along the way keeping <a href="https://docs.docker.com/engine/swarm/">swarm</a> at bay. This post is not about how some Docker tools are not popular. It is about how Docker has changed the way we work in the past 5 years.</p>
+
+<p><img class="center" src="http://geshan.com.np/images/4-ways-docker/docker-whale.jpg" title="4 ways Docker changed the way software engineers work in past half decade" alt="4 ways Docker changed the way software engineers work in past half decade"></p>
+
+<!-- more -->
+
+
+<h2>TLDR;</h2>
+
+<p>With Docker, you ship the whole stack not only your code. Allocate minimum required resources to containers then scale them horizontally. With containers security generally already comes baked In. With Docker and Kubernetes you can get zero downtime and faster deployments leading to business profit.</p>
+
+<h2>Changed the ways</h2>
+
+<p>If you want to go to the technical details of what is a container and why to use docker Google it :). Docker has also partially deprecated many of the configuration management tools. This post is about how Docker has changed the way we work after its release in March 2013. Below are some reasons that helped advance our way of working:</p>
+
+<h3>Ship the whole stack, not just code</h3>
+
+<p>With containers and Docker in specific, you always ship the whole stack in each version. The whole image gets rebuilt every time. It includes the precise OS+version, specific version of the language. It also has the dependencies like the framework and other libraries (versions depend on how you handle it). It also includes the code you have written and this results in a significant advantage. The advantage is, if it built correctly on your machine, it will potentially build on the server too. As soon as it runs it is the exact same environment on dev, staging, testing and even on production. It happens because you didn&rsquo;t shop only the code, you shipped your code + vendor code + specific language version + precise OS version too.</p>
+
+<h3>Allocate only needed resources to the application and scale horizontally</h3>
+
+<p>With each Docker container, you can be specific about how much resources you want to allocate to that particular container. Using software like Kubernetes it becomes so much easier to scale your application. Under high load, the no. of containers can expand and with less load, it can shrink too. So with this mechanism, each container (or pod for Kubernetes) can be allocated the minimum resources and scaled horizontally as per need. For example, a simple Node JS app container/pod can run with like 128 MB memory and 0.25 CPU. As and when load increases run 5 pods in place of 2. This requires the application to be built with horizontal scalability in mind. That basically means storing no data on the file system. Treating containers like cattle, not pet helps scale horizontally. It also makes high availability of application an achievable task.</p>
+
+<h3>Security is baked in</h3>
+
+<p>Using a container, not virtual machine the attack surface is already decreased. Following container security best practices you can already improve your security measures. Of course, if you have holes in the application like SQL injection that is a different story. Still, with smaller and security-focused images like Alpine, it will be easier to get the basics right. Security is always about keeping the attack surface small. With containers and Docker closing more doors become easier. The container should have access to only what it needs. As the file system is temporary for containers it can be a security boon as well as a security auditing issue.</p>
+
+<h3>Deploy faster with zero downtime</h3>
+
+<p>Deploying Docker containers is always about shipping the whole stack. So the chances of one file not syncing or one server not getting the latest changes are not there. As a successful build of the image is always required to deploy it any problems will be found in the build process. With software like Kubernetes and Helm, orchestrating and deploying containers become straightforward. With High Availability (HA) in place using proper load balancing, deployments can be zero downtime. Easier and faster deployment equates to the ability to deploy smaller changes. Smaller changes done well can lead to a better response to market needs quickly. To sum up, use the right tools to deploy your containers in a way to use it for business advantage.</p>
+
+<h2>Conclusion</h2>
+
+<p>The past 5 years have seen rapid adoption of Docker. With tools like Kubernetes deploying and scaling applications has been much effortless than some years ago. Don&rsquo;t worship your virtual machines, use the resources it provides efficiently. Get on the Docker and containers train and reap its benefits.</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[5 Signs That Reveal Your Software Development Process Is Agile Only on Paper and Solutions for Them]]></title>
     <link href="http://geshan.com.np/blog/2018/11/5-signs-that-reveal-your-software-development-process-is-agile-only-on-paper-and-solutions-for-them/"/>
-    <updated>2018-11-20T19:00:22+11:00</updated>
+    <updated>2018-11-20T20:00:22+11:00</updated>
     <id>http://geshan.com.np/blog/2018/11/5-signs-that-reveal-your-software-development-process-is-agile-only-on-paper-and-solutions-for-them</id>
     <content type="html"><![CDATA[<p>Agility comes with practice not putting big words on paper. Using Jira does not make your software development process agile. Saying we do &ldquo;scrum&rdquo; is not being agile. Being agile is having an agile mindset and putting it into practice everyday. It is about thinking about the value you deliver to the customer and how to do it better.  This post will also unveil these 5 signs and how to solve these issues. The signs and solutions will concern multiple roles like Product Manager, Software engineer etc.</p>
 
@@ -1130,56 +1172,6 @@ an amazing community. Cheers!</p></blockquote>
 <p>Students get serious about internship, job and career only towards their final semesters. I think they should start planning for their internship at the mid of their bachelor study. By the &frac34; stage, they should know which career path should I take.</p>
 
 <blockquote><p>I hope the short talk and QnA session helped some of the participants to think about their career plans.</p></blockquote>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[PHP Developers Nepal Meetup #16 a Round Up and My Talk on Simpilfied Gitflow With Slides]]></title>
-    <link href="http://geshan.com.np/blog/2016/06/php-developers-nepal-meetup-number-16-a-round-up-and-my-simpilfied-gitflow-talk/"/>
-    <updated>2016-06-25T21:50:35+10:00</updated>
-    <id>http://geshan.com.np/blog/2016/06/php-developers-nepal-meetup-number-16-a-round-up-and-my-simpilfied-gitflow-talk</id>
-    <content type="html"><![CDATA[<p>I had given a talk in the PHP Developers Nepal meetup #14 in Aug 2014 about <a href="http://geshan.com.np/blog/2014/08/basic-overview-of-message-queues-rabbit/">Rabbit Mq and Symfony</a>.
-This time the <a href="http://developers-nepal.github.io/php/meetups/25-Jun-2016/">meetup</a> took place at
-Prime College today. There were 2 regular talks for this meetup and one 5 minute lightening
-talk about the community. For this 16th installment, we did an open discussion for the first time.
-The topic of open discussion was &ldquo;Does automated deployment and DevOps add value to the organization?&rdquo;.
-It was the highlight of the event.</p>
-
-<p><img class="center" src="http://geshan.com.np/images/php-dev-meetup-16/php-dev-meetup-16.jpg" title="PHP Dev Meetup 16 Open Panel discussion on DevOps" alt="PHP Dev Meetup 16 Open Panel discussion on DevOps"></p>
-
-<!-- more -->
-
-
-<h2>How did it all unfold</h2>
-
-<p>The first talk was given by Amrit GC on &ldquo;Ansible for PHP Developers&rdquo;, then I presented my talk on &ldquo;Simplified Gitflow&rdquo;.
-After those two regular talks we had a lightening talk presented by Manish Jung Thapa (MJT) on PHP Developers Nepal Community.
-Last part of the program was an open discussion on &ldquo;Does automated deployment and DevOps add value to the organization?&rdquo; which
-got a lot of questions from the audience. It was great to moderate the open discussion. Overall, it was an amazing meetup. I guess
-there were around 100 participants which makes it one of the biggest PHP Developers meetup in terms of audience size.</p>
-
-<h2>My Talk on Simplified Gitflow</h2>
-
-<p>This is not the first time I presented this talk :). I had already given this talk at <a href="http://geshan.com.np/blog/2015/09/how-to-use-simplified-gitflow-branching-model-video/">YIPL in Mar 2015</a>.
-This time I changed the slides and made it more general. I hope it was helpful to the audience.</p>
-
-<p><img class="center" src="http://geshan.com.np/images/php-dev-meetup-16/simplified-gitflow-talk.jpg" title="PHP Dev Meetup 16 My talk on simplified gitflow" alt="PHP Dev Meetup 16 My talk on simplified gitflow"></p>
-
-<h2>Slides of Simplified Gitflow</h2>
-
-<script async class="speakerdeck-embed" data-id="acdf3ecb8fd84007b33113d906e5dd3c" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
-
-
-<h2>Video of my talk on Simplified Gitflow</h2>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/jznORrhoV-M?rel=0" frameborder="0" allowfullscreen></iframe>
-
-
-<p>More vidoes of the full event in this <a href="https://www.youtube.com/playlist?list=PLhTqkNYfkucxGk2OssIseNLMF9jPXYoHC">playlist</a>.</p>
-
-<h2>Hope to see more meetups</h2>
-
-<blockquote><p>Hope there will be a Developers Nepal meetup which is language agnostic soon. Kudos.</p></blockquote>
 ]]></content>
   </entry>
   

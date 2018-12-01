@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Devops | Geshan's Blog]]></title>
   <link href="http://geshan.com.np/blog/categories/devops/atom.xml" rel="self"/>
   <link href="http://geshan.com.np/"/>
-  <updated>2018-11-20T22:26:22+11:00</updated>
+  <updated>2018-12-01T11:00:17+11:00</updated>
   <id>http://geshan.com.np/</id>
   <author>
     <name><![CDATA[Geshan Manandhar]]></name>
@@ -12,6 +12,48 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[4 Ways Docker Changed the Way Software Engineers Work in Past Half Decade]]></title>
+    <link href="http://geshan.com.np/blog/2018/12/4-ways-docker-changed-the-way-software-engineers-work-in-past-half-decade/"/>
+    <updated>2018-12-01T09:14:51+11:00</updated>
+    <id>http://geshan.com.np/blog/2018/12/4-ways-docker-changed-the-way-software-engineers-work-in-past-half-decade</id>
+    <content type="html"><![CDATA[<p>10 years back it was Git that transformed the way software engineers worked. Half a decade back it was <a href="https://www.docker.com/">Docker</a> that brought the container to the masses. Before Docker, container was like a sacred secret in companies like Google and Heroku. Docker is a software and a company too. It tried to build a broader ecosystem but <a href="https://kubernetes.io/">Kubernetes</a> stole the thunder along the way keeping <a href="https://docs.docker.com/engine/swarm/">swarm</a> at bay. This post is not about how some Docker tools are not popular. It is about how Docker has changed the way we work in the past 5 years.</p>
+
+<p>{% img center /images/4-ways-docker/docker-whale.jpg &lsquo;4 ways Docker changed the way software engineers work in past half decade&rsquo; &lsquo;4 ways Docker changed the way software engineers work in past half decade&rsquo; %}</p>
+
+<!-- more -->
+
+
+<h2>TLDR;</h2>
+
+<p>With Docker, you ship the whole stack not only your code. Allocate minimum required resources to containers then scale them horizontally. With containers security generally already comes baked In. With Docker and Kubernetes you can get zero downtime and faster deployments leading to business profit.</p>
+
+<h2>Changed the ways</h2>
+
+<p>If you want to go to the technical details of what is a container and why to use docker Google it :). Docker has also partially deprecated many of the configuration management tools. This post is about how Docker has changed the way we work after its release in March 2013. Below are some reasons that helped advance our way of working:</p>
+
+<h3>Ship the whole stack, not just code</h3>
+
+<p>With containers and Docker in specific, you always ship the whole stack in each version. The whole image gets rebuilt every time. It includes the precise OS+version, specific version of the language. It also has the dependencies like the framework and other libraries (versions depend on how you handle it). It also includes the code you have written and this results in a significant advantage. The advantage is, if it built correctly on your machine, it will potentially build on the server too. As soon as it runs it is the exact same environment on dev, staging, testing and even on production. It happens because you didn&rsquo;t shop only the code, you shipped your code + vendor code + specific language version + precise OS version too.</p>
+
+<h3>Allocate only needed resources to the application and scale horizontally</h3>
+
+<p>With each Docker container, you can be specific about how much resources you want to allocate to that particular container. Using software like Kubernetes it becomes so much easier to scale your application. Under high load, the no. of containers can expand and with less load, it can shrink too. So with this mechanism, each container (or pod for Kubernetes) can be allocated the minimum resources and scaled horizontally as per need. For example, a simple Node JS app container/pod can run with like 128 MB memory and 0.25 CPU. As and when load increases run 5 pods in place of 2. This requires the application to be built with horizontal scalability in mind. That basically means storing no data on the file system. Treating containers like cattle, not pet helps scale horizontally. It also makes high availability of application an achievable task.</p>
+
+<h3>Security is baked in</h3>
+
+<p>Using a container, not virtual machine the attack surface is already decreased. Following container security best practices you can already improve your security measures. Of course, if you have holes in the application like SQL injection that is a different story. Still, with smaller and security-focused images like Alpine, it will be easier to get the basics right. Security is always about keeping the attack surface small. With containers and Docker closing more doors become easier. The container should have access to only what it needs. As the file system is temporary for containers it can be a security boon as well as a security auditing issue.</p>
+
+<h3>Deploy faster with zero downtime</h3>
+
+<p>Deploying Docker containers is always about shipping the whole stack. So the chances of one file not syncing or one server not getting the latest changes are not there. As a successful build of the image is always required to deploy it any problems will be found in the build process. With software like Kubernetes and Helm, orchestrating and deploying containers become straightforward. With High Availability (HA) in place using proper load balancing, deployments can be zero downtime. Easier and faster deployment equates to the ability to deploy smaller changes. Smaller changes done well can lead to a better response to market needs quickly. To sum up, use the right tools to deploy your containers in a way to use it for business advantage.</p>
+
+<h2>Conclusion</h2>
+
+<p>The past 5 years have seen rapid adoption of Docker. With tools like Kubernetes deploying and scaling applications has been much effortless than some years ago. Don&rsquo;t worship your virtual machines, use the resources it provides efficiently. Get on the Docker and containers train and reap its benefits.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[5 Signs That Reveal Your Software Development Process Is Agile Only on Paper and Solutions for Them]]></title>
@@ -237,54 +279,6 @@ I want to thank the organizers for putting together such an amazing event. I wan
 <h2>Conclusion</h2>
 
 <p>If you still want to code your microservice like the last monolith you worked on maybe you are doing something wrong. Think of it again, if you go for a day trip you don&rsquo;t pack and carry things like you are going for a 2 weeks vacation. Think of code performance and maintainability, let the data speak for you and break the rules. Happy software engineering!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Why Use Docker? 3 Reasons From a Development Perspective]]></title>
-    <link href="http://geshan.com.np/blog/2018/10/why-use-docker-3-reasons-from-a-development-perspective/"/>
-    <updated>2018-10-10T15:29:22+11:00</updated>
-    <id>http://geshan.com.np/blog/2018/10/why-use-docker-3-reasons-from-a-development-perspective</id>
-    <content type="html"><![CDATA[<p>Docker has been popular in the technology space in the past 5 years is an understatement. It has <a href="https://trends.google.com/trends/explore?date=2013-09-08%202018-10-08&amp;q=%2Fm%2F0wkcjgj">exploded</a> in usage and popularity in half a decade. Containers have taken us by storm. Newer applications without containerization feel like it is missing something. Docker has stood out to be the king in the container arena. This post details the reasons to use Docker for your development environment.</p>
-
-<p>{% img center /images/why-docker/whale.jpg &lsquo;Why use docker? 3 reasons from a development perspective&rsquo; &lsquo;Why use docker? 3 reasons from a development perspective&rsquo; %}</p>
-
-<!-- more -->
-
-
-<h2>TLDR;</h2>
-
-<blockquote><p>Docker is super useful for development environment because if it runs on your machine, it runs anywhere. It runs on your friend&rsquo;s machine, on staging and also on production. When a new team member starts, s/he runs 3 commands and the app(s) are running. The new team member can be productive from day 1. Finally, a new version of PHP or MYSQL is coming. You can test your app easily with Docker and make it run in the old version with no issues.</p></blockquote>
-
-<h2>Docker Docker Docker</h2>
-
-<p>You can <a href="https://runnable.com/docker/why-use-docker">read</a> all you want about Virtual Machines (VMs) vs Containers. And there is a list of reasons to use Docker in the <a href="https://www.airpair.com/docker/posts/8-proven-real-world-ways-to-use-docker">real-world</a>. This piece discusses why to use Docker for development. If you want to go hands read about using <a href="https://geshan.com.np/blog/2017/05/how-to-use-docker-compose-with-virtual-hosts-and-services-like-db-for-dev-environment/">docker and docker compose</a> for your development environment.</p>
-
-<p>Docker has many advantages but the most important one is the container analogy. That you don&rsquo;t only ship your code but ship the whole OS and all related layers with each deployment in a standard way. It is a complete package containing the right version of OS, the desired version of the language, any external dependencies of your application and your application code. That too in a lightweight, isolated and resource controllable way. This is where docker blows away the VMs.</p>
-
-<p>{% img center /images/why-docker/ship.jpg &lsquo;Why use docker? 3 reasons from a development perspective&rsquo; &lsquo;Why use docker? 3 reasons from a development perspective&rsquo; %}</p>
-
-<h2>Reasons to use Docker for the development environment</h2>
-
-<p>If you have read this far, now let&rsquo;s dive into the reasons you would want to use Docker for your development environment:</p>
-
-<h3>1. Runs on my machine = runs anywhere</h3>
-
-<p>If you have correctly dockerized your app and it runs without problems on your machine, 99% of the times it will run smoothly anywhere. By anywhere it means on your friend&rsquo;s machine, on the staging environment and production too. Given all of them have docker installed and configured correctly your app will run. Using docker also makes the application code cloud provider agnostic. Your application can potentially run on AWS or GCP or Azure without issues.</p>
-
-<h3>2. New team member can be productive from day 1</h3>
-
-<p>Think of this, a new team member joins then s/he spends more than a day to set up the machine with the right OS. Setup the language(s) used in the company add database(s) on top of it. 2-3 days is wasted on just getting the environment setup correctly. Enter docker + docker-compose, the new joiner sets up the OS. Installs docker then runs 3-5 commands, grabs some coffee and magic: your apps(s) are running. The new joiner can contribute with the working code on day 1. Think of all the cost a company can save with this approach. A streamlined docker implementation makes it a reality.</p>
-
-<h3>3. Test app&rsquo;s compatibility with the newer version of language/database</h3>
-
-<p>Picture this, a new version of the language you use just released. Like you were using PHP 5.6 and 7.0 has come out. You don&rsquo;t know how much work will be needed to make your application compatible with the new version of the language. Use docker here, you just need to run two different docker containers one running the current version and another running the newer version. You can even test the app side by side to measure performance. This can apply for any programming language.</p>
-
-<p>The same technique can be used to say test MYSQL version 5.7 and 8.0. You might think there are tools like NVM (Node version manager) or RVM (Ruby version manager) but things like that don&rsquo;t exist for each language. Also, you can just use docker than overloading your local machine.</p>
-
-<h2>Conclusion</h2>
-
-<p>Docker is a boon to both software engineers and DevOps engineers. It makes releasing software much easier as the whole stack is shipped not only the code. Still, to move your production to Docker many things need to be considered. Things like container builder (for instance <a href="https://cloud.google.com/cloud-build/docs/">Google cloud build</a>), container orchestration (like <a href="https://kubernetes.io/">Kubernetes</a>). So before jumping to the container on staging/production be convinced of its benefits on the local development environment. I hope you exploit Docker to extract the most benefit out of it.</p>
 ]]></content>
   </entry>
   

@@ -126,6 +126,47 @@
 
 
 
+<span class="glyphicon glyphicon-calendar"></span> <time datetime="2008-11-21T01:06:00+11:00"  data-updated="true" itemprop="datePublished dateCreated"><time class='entry-date' datetime='2008-11-21T01:06:00+11:00'><span class='date'><span class='date-month'>Nov</span> <span class='date-day'>21</span><span class='date-suffix'>st</span>, <span class='date-year'>2008</span></span> <span class='time'>1:06 am</span></time></time>
+        
+           | <a href="/blog/2008/11/solving-drupal-contact-problems-with/#disqus_thread" itemprop="discussionUrl"
+             data-disqus-identifier="http://geshan.com.np/blog/2008/11/solving-drupal-contact-problems-with/">Comments</a>
+        
+      </p>
+    
+    
+      <h1 class="entry-title" itemprop="name headline"><a href="/blog/2008/11/solving-drupal-contact-problems-with/" itemprop="url">Solving Drupal Site Contact Problems With Contact Forms</a></h1>
+    
+  </header>
+
+
+  <div class="entry-content clearfix" itemprop="articleBody description"><div class='post'>
+Time and again I&#8217;ve faced a problem of creating multiple contact forms but with use of the contact module there is only once contact form accessible at site-URL/contact. But now the problem can be solved with use of Contact Forms module, you can download the module <a href="http://drupal.org/project/contact_forms" target="_blank" title="Contact Forms at Drupal.org">here</a>.<br /><a onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}" href="http://4.bp.blogspot.com/_L4bRnZ5TPr8/SSVwMzIlbII/AAAAAAAAAug/CjZhocfA_QI/s1600-h/dcf1.jpg"><img style="margin: 0px auto 10px; display: block; text-align: center; cursor: pointer; width: 400px; height: 286px;" src="http://4.bp.blogspot.com/_L4bRnZ5TPr8/SSVwMzIlbII/AAAAAAAAAug/CjZhocfA_QI/s400/dcf1.jpg" alt="" id="BLOGGER_PHOTO_ID_5270742304093990018" border="0" /></a><br />With Contact Forms module installed you can create multiple categories of contact forms and on top of it you can also send the subject for the contact e-mail as a URL parameter which opens up new possibilities in contact. I&#8217;ll show one usage I did using this module with a contact for booking.<br /><br /><h3>Simple Usage</h3>Assuming that you are familiar with Drupal module installation and simple usage I&#8217;m writing the things below. Follow theses steps to use contact forms for separate things like contact us, contact advertising for now:<br /><ol><li>Download the module <a href="http://drupal.org/project/contact_forms" target="_blank" title="Contact Forms module at Drupal.org">here</a>, and install it to your Drupal site.</li><li>Activate the module from Modules page from Admin settings. (You will need admin rights to do this)<br /></li><li>Then go to Administer>>Contact Form to get a page like below and click &#8220;Add Category&#8221;:<br /><a onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}" href="http://4.bp.blogspot.com/_L4bRnZ5TPr8/SSVyNiZqkqI/AAAAAAAAAuo/mEZ73lIzq34/s1600-h/contact_from1.jpg"><img style="margin: 0px auto 10px; display: block; text-align: center; cursor: pointer; width: 320px; height: 161px;" src="http://4.bp.blogspot.com/_L4bRnZ5TPr8/SSVyNiZqkqI/AAAAAAAAAuo/mEZ73lIzq34/s320/contact_from1.jpg" alt="" id="BLOGGER_PHOTO_ID_5270744515805352610" border="0" /></a><br /></li><li>Fill details and click submit:<br /><a onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}" href="http://2.bp.blogspot.com/_L4bRnZ5TPr8/SSVzGMEeelI/AAAAAAAAAuw/OF7lWx0uEgQ/s1600-h/contact_from2.jpg"><img style="margin: 0px auto 10px; display: block; text-align: center; cursor: pointer; width: 239px; height: 320px;" src="http://2.bp.blogspot.com/_L4bRnZ5TPr8/SSVzGMEeelI/AAAAAAAAAuw/OF7lWx0uEgQ/s320/contact_from2.jpg" alt="" id="BLOGGER_PHOTO_ID_5270745489063443026" border="0" /></a><br /></li><li>Then you can access the contact form at site-url/contact/us.</li><li>Try contact/us/For advertising and see a result like below:<br /><a onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}" href="http://4.bp.blogspot.com/_L4bRnZ5TPr8/SSVz-jLK3TI/AAAAAAAAAu4/8SpILkgMBWo/s1600-h/contact_from3.jpg"><img style="margin: 0px auto 10px; display: block; text-align: center; cursor: pointer; width: 320px; height: 244px;" src="http://4.bp.blogspot.com/_L4bRnZ5TPr8/SSVz-jLK3TI/AAAAAAAAAu4/8SpILkgMBWo/s320/contact_from3.jpg" alt="" id="BLOGGER_PHOTO_ID_5270746457338207538" border="0" /></a><br /></li><li>Make other categories as per need and use them accordingly. Like you can make different contact forms for marketing, contact, webmaster etc.</li></ol><h3>Creative Use: with theme tweak</h3>Now lets use a contact form called booking for booking trips/hotels or anything. Main thing is the node title should be passed via the URL and some text +  Node title should appear in the subject. For ex: subject should be like Booking For: ABC hotel where ABC hotel is the node title.<br /><br />Steps to follow to do this:<br /><ol><li>Make a different contact category/form called booking accessible at site-URL/contact/booking and make sure anonymous users have access to this module check Adminstrator>>User>>Access control<br /></li><li>Tweak your node-type.tpl.php file, like if its a trip page then make trip.tpl.php and edit it as below:<br />Change:<br /><a onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}" href="http://1.bp.blogspot.com/_L4bRnZ5TPr8/SSV6GHv5EWI/AAAAAAAAAvQ/_xmX9fcSZAw/s1600-h/content.jpg"><img style="margin: 0px auto 10px; display: block; text-align: center; cursor: pointer; width: 400px; height: 70px;" src="http://1.bp.blogspot.com/_L4bRnZ5TPr8/SSV6GHv5EWI/AAAAAAAAAvQ/_xmX9fcSZAw/s400/content.jpg" alt="" id="BLOGGER_PHOTO_ID_5270753184484757858" border="0" /></a><br />To:<br /><a onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}" href="http://1.bp.blogspot.com/_L4bRnZ5TPr8/SSV6Zt7bmhI/AAAAAAAAAvY/HXo2n6ltOdU/s1600-h/content2.jpg"><img style="margin: 0px auto 10px; display: block; text-align: center; cursor: pointer; width: 400px; height: 59px;" src="http://1.bp.blogspot.com/_L4bRnZ5TPr8/SSV6Zt7bmhI/AAAAAAAAAvY/HXo2n6ltOdU/s400/content2.jpg" alt="" id="BLOGGER_PHOTO_ID_5270753521151220242" border="0" /></a>Get the code <a href="http://geshanmanandhar.com/contact_form_tpl.txt" target="_blank" title="Contact Forms Magic">here</a>.<br /><br /></li><li>Then check out your node page like if its your booking page check that out, to see something like:<br /><a onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}" href="http://2.bp.blogspot.com/_L4bRnZ5TPr8/SSV4uBqadYI/AAAAAAAAAvA/Jpc7c0DozJ8/s1600-h/contact_from4.jpg"><img style="margin: 0px auto 10px; display: block; text-align: center; cursor: pointer; width: 391px; height: 112px;" src="http://2.bp.blogspot.com/_L4bRnZ5TPr8/SSV4uBqadYI/AAAAAAAAAvA/Jpc7c0DozJ8/s400/contact_from4.jpg" alt="" id="BLOGGER_PHOTO_ID_5270751671022679426" border="0" /></a><br /></li><li>On link click you might see something like:<br /><a onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}" href="http://3.bp.blogspot.com/_L4bRnZ5TPr8/SSV450LUuxI/AAAAAAAAAvI/1gbGBTUc4_8/s1600-h/contact_from5.jpg"><img style="margin: 0px auto 10px; display: block; text-align: center; cursor: pointer; width: 400px; height: 247px;" src="http://3.bp.blogspot.com/_L4bRnZ5TPr8/SSV450LUuxI/AAAAAAAAAvI/1gbGBTUc4_8/s400/contact_from5.jpg" alt="" id="BLOGGER_PHOTO_ID_5270751873561049874" border="0" /></a><br /></li><li>You have done it congrats.<br /></li></ol>Have fun using this methods to organize your contact forms in Drupal site in a better manner. Hope you benefit from it.<br /><br /><blockquote>Drupal will change the world :-), keep Drupalling..</blockquote></div>
+</div>
+  
+  
+
+
+        </article>
+      
+      
+        <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+          
+  <header class="page-header">
+    
+      <p class="meta text-muted text-uppercase">
+        
+
+
+
+
+
+
+
+
+
+
+
+
 <span class="glyphicon glyphicon-calendar"></span> <time datetime="2008-11-21T00:21:00+11:00"  data-updated="true" itemprop="datePublished dateCreated"><time class='entry-date' datetime='2008-11-21T00:21:00+11:00'><span class='date'><span class='date-month'>Nov</span> <span class='date-day'>21</span><span class='date-suffix'>st</span>, <span class='date-year'>2008</span></span> <span class='time'>12:21 am</span></time></time>
         
            | <a href="/blog/2008/11/find-cheap-web-host-at/#disqus_thread" itemprop="discussionUrl"
@@ -271,47 +312,6 @@ With the use of Digital cameras we have become more photo friendly and less came
 
         </article>
       
-      
-        <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-          
-  <header class="page-header">
-    
-      <p class="meta text-muted text-uppercase">
-        
-
-
-
-
-
-
-
-
-
-
-
-
-<span class="glyphicon glyphicon-calendar"></span> <time datetime="2008-11-06T01:45:00+11:00"  data-updated="true" itemprop="datePublished dateCreated"><time class='entry-date' datetime='2008-11-06T01:45:00+11:00'><span class='date'><span class='date-month'>Nov</span> <span class='date-day'>6</span><span class='date-suffix'>th</span>, <span class='date-year'>2008</span></span> <span class='time'>1:45 am</span></time></time>
-        
-           | <a href="/blog/2008/11/find-your-web-host-at-webhostingpalcom/#disqus_thread" itemprop="discussionUrl"
-             data-disqus-identifier="http://geshan.com.np/blog/2008/11/find-your-web-host-at-webhostingpalcom/">Comments</a>
-        
-      </p>
-    
-    
-      <h1 class="entry-title" itemprop="name headline"><a href="/blog/2008/11/find-your-web-host-at-webhostingpalcom/" itemprop="url">Find Your Web Host at Webhostingpal.com</a></h1>
-    
-  </header>
-
-
-  <div class="entry-content clearfix" itemprop="articleBody description"><div class='post'>
-Searching for some web host reviews I ran into <a href="http://www.webhostingpal.com/">Web Hosting Pal</a>. It is guide to finding web hosts that fits your budget which can even be less than $5 a month which offers PHP &amp; MySQL, Unix, Windows and FrontPage.<br /><a onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}" href="http://3.bp.blogspot.com/_L4bRnZ5TPr8/SRGyYafWs3I/AAAAAAAAAtI/0ASvxvqkFNY/s1600-h/web_hosting_pal.jpg"><img style="margin: 0px auto 10px; display: block; text-align: center; cursor: pointer; width: 400px; height: 400px;" src="http://3.bp.blogspot.com/_L4bRnZ5TPr8/SRGyYafWs3I/AAAAAAAAAtI/0ASvxvqkFNY/s400/web_hosting_pal.jpg" alt="" id="BLOGGER_PHOTO_ID_5265185571870258034" border="0" /></a>The website lists the top 10 web hosts in the homepage which is very helpful and appropriate listing of the price per month, web space and bandwidth provided. These are the three main things we look in a web host on the first go.<br /><br />You can also browser through the hosts listed for your e-commerce web application with CPanel and PayPal option if you want to sell products or services from your website. The data provided in Webhostingpal.com includes all the features the web host provides.<br /><br />The beginner&#8217;s guide page has described the currency, cost in cycles, plan features, e-mail features and others in the right way and explanation is also easy to understand.<br /><br />The top 10 page has the top 10 hosts listed. And the review of the hosts is either an internal link or links to an external review. The review of a host has sections like overview, features, customer support, highlight, disadvantage and our advice. In the left side the tabular presentation of needed services and their description make it easier to select the host. This gives a good idea on how the host will function and will it meet the client&#8217;s need or not.<br /><br />The reviews provided are realistic and reader friendly. I have used Bluehost and I know why it deserves the top spot. I&#8217;ve seen Bluehost at top at other review sites too. In the reviews the highlight segment and customer support are good to have a read.<br /><br />The website has a minimal design with use of colors only no images except logo. On the contrary it still is able to present the information needed in a readable fashion. But still the website can better in the design and can still provide more extensive reviews with user comments.<br /><br /><blockquote>All in all it is a good site to look at if you are looking for a web host. It may not have the widest range of hosts listed but it has not missed out the good ones. Before buying your web space have a look at <a href="http://www.webhostingpal.com/">Web Hosting Pal</a>.</blockquote></div>
-</div>
-  
-  
-
-
-        </article>
-      
     </div>
 
     <ul class="pager">
@@ -335,6 +335,8 @@ Searching for some web host reviews I ran into <a href="http://www.webhostingpal
   
   <div id="recent_posts" class="list-group">
     
+    <a class="list-group-item " href="/blog/2018/12/4-ways-docker-changed-the-way-software-engineers-work-in-past-half-decade/">4 Ways Docker Changed the Way Software Engineers Work in Past Half Decade</a>
+    
     <a class="list-group-item " href="/blog/2018/11/5-signs-that-reveal-your-software-development-process-is-agile-only-on-paper-and-solutions-for-them/">5 Signs That Reveal Your Software Development Process Is Agile Only on Paper and Solutions for Them</a>
     
     <a class="list-group-item " href="/blog/2018/10/moving-from-a-and-b-to-~150-microservices/">Moving From a and B to 150 Microservices, the Journey, and Learnings [Slides]</a>
@@ -342,8 +344,6 @@ Searching for some web host reviews I ran into <a href="http://www.webhostingpal
     <a class="list-group-item " href="/blog/2018/10/deployment-is-not-release/">Deployment Is Not Release, Let&#8217;s Use Feature Flags</a>
     
     <a class="list-group-item " href="/blog/2018/10/dont-code-your-microservice-like-a-monolith/">Don&#8217;t Code Your Microservice Like a Monolith, Keep It Maintainable Not Over-engineered</a>
-    
-    <a class="list-group-item " href="/blog/2018/10/why-use-docker-3-reasons-from-a-development-perspective/">Why Use Docker? 3 Reasons From a Development Perspective</a>
     
   </div>
 </section>
@@ -355,7 +355,7 @@ Searching for some web host reviews I ran into <a href="http://www.webhostingpal
         
         
         <a class="list-group-item " href="/blog/categories/misc/">
-            <span class="badge">194</span>
+            <span class="badge">195</span>
             misc
         </a>
         
@@ -367,7 +367,7 @@ Searching for some web host reviews I ran into <a href="http://www.webhostingpal
         
         
         <a class="list-group-item " href="/blog/categories/technology/">
-            <span class="badge">136</span>
+            <span class="badge">137</span>
             technology
         </a>
         
@@ -469,7 +469,7 @@ Searching for some web host reviews I ran into <a href="http://www.webhostingpal
         
         
         <a class="list-group-item " href="/blog/categories/devops/">
-            <span class="badge">17</span>
+            <span class="badge">18</span>
             devops
         </a>
         
@@ -499,7 +499,7 @@ Searching for some web host reviews I ran into <a href="http://www.webhostingpal
         
         
         <a class="list-group-item " href="/blog/categories/docker/">
-            <span class="badge">4</span>
+            <span class="badge">5</span>
             docker
         </a>
         

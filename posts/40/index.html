@@ -126,6 +126,47 @@
 
 
 
+<span class="glyphicon glyphicon-calendar"></span> <time datetime="2008-04-03T14:18:00+11:00"  data-updated="true" itemprop="datePublished dateCreated"><time class='entry-date' datetime='2008-04-03T14:18:00+11:00'><span class='date'><span class='date-month'>Apr</span> <span class='date-day'>3</span><span class='date-suffix'>rd</span>, <span class='date-year'>2008</span></span> <span class='time'>2:18 pm</span></time></time>
+        
+           | <a href="/blog/2008/04/giving-out-custom-rss-from-your-drupal/#disqus_thread" itemprop="discussionUrl"
+             data-disqus-identifier="http://geshan.com.np/blog/2008/04/giving-out-custom-rss-from-your-drupal/">Comments</a>
+        
+      </p>
+    
+    
+      <h1 class="entry-title" itemprop="name headline"><a href="/blog/2008/04/giving-out-custom-rss-from-your-drupal/" itemprop="url">Giving Out Custom RSS From Your Drupal Site</a></h1>
+    
+  </header>
+
+
+  <div class="entry-content clearfix" itemprop="articleBody description"><div class='post'>
+Recently I ran into a problem where by I had to give out RSS of the Forum only from a DRUPAL 5 site, as the website was forum centered but it had blogs also. So when I first used the default rss.xml like (<span style="font-weight: bold;">http://somesite.com/rss.xml</span>) it gave out all the update not only the updated of the Forum that I wanted. I even tried another RSS source<span style="font-weight: bold;"> http://somesite.com/forum/rss.xml</span> but it also had the same output. So problem is: giving out RSS of Forum only, how to do that?<br /><br />Then I was suggested to use the views module, I said to myself views how will it do that? But I was not using the &#8220;Arguments&#8221; part of views there was the trick. Read the steps below if you want to do it yourself as well:<br /><ol><li>Assumed you have views installed, login as the adminstrator (user1) or user with access to edit views.</li><br /><li>Goto Administer>>(under Site Buliding) Views>>Add</li><br /><li>In the new view configuration do something like below:<br /> </li><ol><br />   <li>Type the name of the view, I gave forum_rss, and specify access if you want to or give a description.</li><a onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}" href="http://4.bp.blogspot.com/_L4bRnZ5TPr8/R_RNdxGmKSI/AAAAAAAAAUY/URBvv3nJf5I/s1600-h/01View_name.jpg"><img style="margin: 0px auto 10px; display: block; text-align: center; cursor: pointer;" src="http://4.bp.blogspot.com/_L4bRnZ5TPr8/R_RNdxGmKSI/AAAAAAAAAUY/URBvv3nJf5I/s320/01View_name.jpg" alt="" id="BLOGGER_PHOTO_ID_5184854244802832674" border="0" /></a>   <li>In the page section choose something like below, give url it&#8217;ll be yoursite.com/forum_rss.</li><a onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}" href="http://2.bp.blogspot.com/_L4bRnZ5TPr8/R_RN3RGmKTI/AAAAAAAAAUg/_mQerKG59HU/s1600-h/02_Page_view.jpg"><img style="margin: 0px auto 10px; display: block; text-align: center; cursor: pointer;" src="http://2.bp.blogspot.com/_L4bRnZ5TPr8/R_RN3RGmKTI/AAAAAAAAAUg/_mQerKG59HU/s320/02_Page_view.jpg" alt="" id="BLOGGER_PHOTO_ID_5184854682889496882" border="0" /></a>   <li>Skip the header, footer, empty text, menu and block sections.<br /><a onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}" href="http://1.bp.blogspot.com/_L4bRnZ5TPr8/R_ROoBGmKUI/AAAAAAAAAUo/IOXvxtXUsAI/s1600-h/03Skip_sections.jpg"><img style="margin: 0px auto 10px; display: block; text-align: center; cursor: pointer;" src="http://1.bp.blogspot.com/_L4bRnZ5TPr8/R_ROoBGmKUI/AAAAAAAAAUo/IOXvxtXUsAI/s320/03Skip_sections.jpg" alt="" id="BLOGGER_PHOTO_ID_5184855520408119618" border="0" /></a><br />   </li><li>In the fields section add &#8220;Node Title&#8221; and &#8220;Node Body&#8221; if you want to add more its fully your choice, see below:<br /><a onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}" href="http://4.bp.blogspot.com/_L4bRnZ5TPr8/R_RPBxGmKVI/AAAAAAAAAUw/FFEoeyRKIXA/s1600-h/04Fields_view.jpg"><img style="margin: 0px auto 10px; display: block; text-align: center; cursor: pointer;" src="http://4.bp.blogspot.com/_L4bRnZ5TPr8/R_RPBxGmKVI/AAAAAAAAAUw/FFEoeyRKIXA/s320/04Fields_view.jpg" alt="" id="BLOGGER_PHOTO_ID_5184855962789751122" border="0" /></a><br />   </li><li>The main step to get the RSS feed is here in the &#8220;Arguments&#8221; section, choose &#8220;RSS: RSS feed selector and click &#8220;Add Argument&#8221;, then specify &#8220;Display all Values&#8221; and your feed&#8217;s title as below.<br /><a onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}" href="http://3.bp.blogspot.com/_L4bRnZ5TPr8/R_RPYhGmKWI/AAAAAAAAAU4/qXkK6hZCeWc/s1600-h/05_Arguments.jpg"><img style="margin: 0px auto 10px; display: block; text-align: center; cursor: pointer;" src="http://3.bp.blogspot.com/_L4bRnZ5TPr8/R_RPYhGmKWI/AAAAAAAAAU4/qXkK6hZCeWc/s320/05_Arguments.jpg" alt="" id="BLOGGER_PHOTO_ID_5184856353631775074" border="0" /></a><br />   </li><li>Use following filter in the filters section, I&#8217;ve used content type &#8220;Forum&#8221; and other needed filters.<br /><a onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}" href="http://2.bp.blogspot.com/_L4bRnZ5TPr8/R_RP7RGmKXI/AAAAAAAAAVA/yUvzClWw6_g/s1600-h/06_Arguments.jpg"><img style="margin: 0px auto 10px; display: block; text-align: center; cursor: pointer;" src="http://2.bp.blogspot.com/_L4bRnZ5TPr8/R_RP7RGmKXI/AAAAAAAAAVA/yUvzClWw6_g/s320/06_Arguments.jpg" alt="" id="BLOGGER_PHOTO_ID_5184856950632229234" border="0" /></a><br />   </li><li>Select a sort criteria like below (new items first) then click save.<br /><a onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}" href="http://3.bp.blogspot.com/_L4bRnZ5TPr8/R_RQNhGmKYI/AAAAAAAAAVI/qJcVyVtzZrI/s1600-h/07_Sort_criterai.jpg"><img style="margin: 0px auto 10px; display: block; text-align: center; cursor: pointer;" src="http://3.bp.blogspot.com/_L4bRnZ5TPr8/R_RQNhGmKYI/AAAAAAAAAVI/qJcVyVtzZrI/s320/07_Sort_criterai.jpg" alt="" id="BLOGGER_PHOTO_ID_5184857264164841858" border="0" /></a><br />   </li><li>Go to the new view page create and get your RSS feed&#8217;s URL.<br /><a onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}" href="http://4.bp.blogspot.com/_L4bRnZ5TPr8/R_RQhxGmKZI/AAAAAAAAAVQ/WGQXX-N4V0E/s1600-h/08Get_RSS.jpg"><img style="margin: 0px auto 10px; display: block; text-align: center; cursor: pointer;" src="http://4.bp.blogspot.com/_L4bRnZ5TPr8/R_RQhxGmKZI/AAAAAAAAAVQ/WGQXX-N4V0E/s320/08Get_RSS.jpg" alt="" id="BLOGGER_PHOTO_ID_5184857612057192850" border="0" /></a><br /></li></ol><li>The main trick lies in &#8220;Arguments&#8221; segment, when you add an argument choose &#8220;RSS: RSS Feed Selector&#8221; and display all values in default when it is added. </li><br /><li>Then see the view you have a RSS feed icon at the bottom of the page or<br />you can get your custom RSS feed at http://somesite.com/page_view_url/feed.</li></ol><br />What can it be used for only some possibilities:<br /><ol><li>Giving out RSS of selective content type like blogs, forum or even you own CCK made content type.</li><br /><li>Giving out custom RSS of some vocabulary (tag) or any view customizable content like RSS of content tagged with Drupal.</li><br /></ol><br />There can be numerous possibilities with RSS of views. I got my problem solved hope you also benefit from it.<br /><br />Geshan Manandhar</div>
+</div>
+  
+  
+
+
+        </article>
+      
+      
+        <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+          
+  <header class="page-header">
+    
+      <p class="meta text-muted text-uppercase">
+        
+
+
+
+
+
+
+
+
+
+
+
+
 <span class="glyphicon glyphicon-calendar"></span> <time datetime="2008-04-03T02:02:00+11:00"  data-updated="true" itemprop="datePublished dateCreated"><time class='entry-date' datetime='2008-04-03T02:02:00+11:00'><span class='date'><span class='date-month'>Apr</span> <span class='date-day'>3</span><span class='date-suffix'>rd</span>, <span class='date-year'>2008</span></span> <span class='time'>2:02 am</span></time></time>
         
            | <a href="/blog/2008/04/showing-last-5-posts-in-your-blogger/#disqus_thread" itemprop="discussionUrl"
@@ -271,47 +312,6 @@
 
         </article>
       
-      
-        <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-          
-  <header class="page-header">
-    
-      <p class="meta text-muted text-uppercase">
-        
-
-
-
-
-
-
-
-
-
-
-
-
-<span class="glyphicon glyphicon-calendar"></span> <time datetime="2008-03-27T17:43:00+11:00"  data-updated="true" itemprop="datePublished dateCreated"><time class='entry-date' datetime='2008-03-27T17:43:00+11:00'><span class='date'><span class='date-month'>Mar</span> <span class='date-day'>27</span><span class='date-suffix'>th</span>, <span class='date-year'>2008</span></span> <span class='time'>5:43 pm</span></time></time>
-        
-           | <a href="/blog/2008/03/free-jimmy-neutron-blogger-template/#disqus_thread" itemprop="discussionUrl"
-             data-disqus-identifier="http://geshan.com.np/blog/2008/03/free-jimmy-neutron-blogger-template/">Comments</a>
-        
-      </p>
-    
-    
-      <h1 class="entry-title" itemprop="name headline"><a href="/blog/2008/03/free-jimmy-neutron-blogger-template/" itemprop="url">Free &#8220;Jimmy Neutron&#8221; Blogger Template / Theme / Skin</a></h1>
-    
-  </header>
-
-
-  <div class="entry-content clearfix" itemprop="articleBody description"><div class='post'>
-<div dir="ltr" style="text-align: left;" trbidi="on"><a href="http://2.bp.blogspot.com/_L4bRnZ5TPr8/R-s8vhGmKAI/AAAAAAAAASE/PKet17avaMc/s1600-h/JN_Template_GM.jpg" onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}"><img alt="" border="0" src="http://2.bp.blogspot.com/_L4bRnZ5TPr8/R-s8vhGmKAI/AAAAAAAAASE/PKet17avaMc/s320/JN_Template_GM.jpg" id="BLOGGER_PHOTO_ID_5182302583257442306" style="cursor: pointer; float: left; margin: 0pt 10px 10px 0pt;" /></a><br /><div style="text-align: justify;">I hope you like this blogger template, well It was not fully made by me. I got a template and changed it to be a &#8220;Jimmy Neutron Blogger Template&#8221;. You can have its code <a href="http://www.mediafire.com/?nmqn1wyxy2d">here</a>. You can put this template in you blog following the steps below. Please change the CSS as necessary to fit your needs. Be very careful you may loose  your widgets and text boxes that you already have when you change to a new template/theme so its highly recommended you save your current template then only change to this new template/theme/skin. You should also consider any embedded code in your current template like Google Analytics script or any other website statistics code or things like that. I also recommend not to use pictures whose width exceed 400px it may also cause problems and when posting long URL do consider its length.</div><br /><br />Steps to perform to get this theme:<br /><ol><li>Download the zip file <a href="http://www.mediafire.com/?nmqn1wyxy2d">here</a> to your computer.</li><li>Unzip it and you&#8217;ll get a XML file.</li><li>Open the file in an editor like Notepad ++ or Wordpad and copy the contents of the XML file to your &#8220;Blogger Dashboard&gt;&gt;Layout&gt;&gt;Edit HTML&#8221; page as shown below.<br /><a href="http://3.bp.blogspot.com/_L4bRnZ5TPr8/R-tANxGmKCI/AAAAAAAAASU/_m96eXKl53M/s1600-h/blogger_template_edit.jpg" onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}"><img alt="" border="0" src="http://3.bp.blogspot.com/_L4bRnZ5TPr8/R-tANxGmKCI/AAAAAAAAASU/_m96eXKl53M/s400/blogger_template_edit.jpg" id="BLOGGER_PHOTO_ID_5182306401483368482" style="cursor: pointer; display: block; height: 319px; margin: 0px auto 10px; text-align: center; width: 364px;" /></a></li><li>Hit &#8220;Preview&#8221; and then see it and then only click &#8220;Save Template&#8221;.</li><li>You are done now you&#8217;ll get the new template.</li><li>You may have to adjust or re-create your widgets :-( {but if you go through the code and compare it with your existing template it won&#8217;t be hard to get your widgets as they are ;-), so be careful} and check any scripts you had embedded in your last template/theme/skin.</li></ol><br />Then your blog will look like the picture above.  You can try a live demo at<br /><a href="http://www.jimmyneutrontemplates.blogspot.com/" target="_blank">http://jimmyneutrontemplates.blogspot.com</a>.Enjoy. Happy templating :-).<br /><br />Geshan Manandhar.</div></div>
-</div>
-  
-  
-
-
-        </article>
-      
     </div>
 
     <ul class="pager">
@@ -335,6 +335,8 @@
   
   <div id="recent_posts" class="list-group">
     
+    <a class="list-group-item " href="/blog/2018/12/4-ways-docker-changed-the-way-software-engineers-work-in-past-half-decade/">4 Ways Docker Changed the Way Software Engineers Work in Past Half Decade</a>
+    
     <a class="list-group-item " href="/blog/2018/11/5-signs-that-reveal-your-software-development-process-is-agile-only-on-paper-and-solutions-for-them/">5 Signs That Reveal Your Software Development Process Is Agile Only on Paper and Solutions for Them</a>
     
     <a class="list-group-item " href="/blog/2018/10/moving-from-a-and-b-to-~150-microservices/">Moving From a and B to 150 Microservices, the Journey, and Learnings [Slides]</a>
@@ -342,8 +344,6 @@
     <a class="list-group-item " href="/blog/2018/10/deployment-is-not-release/">Deployment Is Not Release, Let&#8217;s Use Feature Flags</a>
     
     <a class="list-group-item " href="/blog/2018/10/dont-code-your-microservice-like-a-monolith/">Don&#8217;t Code Your Microservice Like a Monolith, Keep It Maintainable Not Over-engineered</a>
-    
-    <a class="list-group-item " href="/blog/2018/10/why-use-docker-3-reasons-from-a-development-perspective/">Why Use Docker? 3 Reasons From a Development Perspective</a>
     
   </div>
 </section>
@@ -355,7 +355,7 @@
         
         
         <a class="list-group-item " href="/blog/categories/misc/">
-            <span class="badge">194</span>
+            <span class="badge">195</span>
             misc
         </a>
         
@@ -367,7 +367,7 @@
         
         
         <a class="list-group-item " href="/blog/categories/technology/">
-            <span class="badge">136</span>
+            <span class="badge">137</span>
             technology
         </a>
         
@@ -469,7 +469,7 @@
         
         
         <a class="list-group-item " href="/blog/categories/devops/">
-            <span class="badge">17</span>
+            <span class="badge">18</span>
             devops
         </a>
         
@@ -499,7 +499,7 @@
         
         
         <a class="list-group-item " href="/blog/categories/docker/">
-            <span class="badge">4</span>
+            <span class="badge">5</span>
             docker
         </a>
         
