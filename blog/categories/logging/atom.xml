@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Logging | Geshan's Blog]]></title>
   <link href="http://geshan.com.np/blog/categories/logging/atom.xml" rel="self"/>
   <link href="http://geshan.com.np/"/>
-  <updated>2018-12-01T11:11:17+11:00</updated>
+  <updated>2018-12-05T21:41:48+11:00</updated>
   <id>http://geshan.com.np/</id>
   <author>
     <name><![CDATA[Geshan Manandhar]]></name>
@@ -22,7 +22,7 @@
 
 <p>I have seen some software development teams are slow because they have a lot of technical debt. Some teams are naive, the members don&rsquo;t want to explore new things . They are stuck with 5 year old technology like FTP, old legacy framework etc. In this post, I will shed some light on the four basic and important things of a solid software application. This contents of post is language and framework agnostic. It is applicable to any software project.</p>
 
-<p>{% img center /images/4-pillars-software-application/4-pillars-software-application.png &lsquo;4 pillars of a solid software application&rsquo; &lsquo;4 pillars of a solid software application&rsquo; %}</p>
+<p><img class="center" src="/images/4-pillars-software-application/4-pillars-software-application.png" title="&lsquo;4 pillars of a solid software application&rsquo; &lsquo;4 pillars of a solid software application&rsquo;" ></p>
 
 <!-- more -->
 
@@ -76,7 +76,7 @@
     <id>http://geshan.com.np/blog/2015/08/importance-of-logging-in-your-applications</id>
     <content type="html"><![CDATA[<p>&ldquo;This feature we deployed last week was working fine till yesterday now I have no idea why is it not working!&rdquo; This is like a typical sentence you hear from developers when there is no logging in place. It can be to a great extent solved by having automated tests, still having logging and monitoring gives you a different viewpoint. In this post I am going to reveal the importance of having logs for your code and monitoring your code to cut down the firefighting time for bugs and errors by huge margins.</p>
 
-<p>{% img center /images/logging-importance/logging-code.png &lsquo;Code for logging success or failure&rsquo; &lsquo;Code for logging success or failure&rsquo; %}</p>
+<p><img class="center" src="/images/logging-importance/logging-code.png" title="&lsquo;Code for logging success or failure&rsquo; &lsquo;Code for logging success or failure&rsquo;" ></p>
 
 <!-- more -->
 
@@ -142,7 +142,7 @@
 
 <p>Logentries gives you a central cloud logging and with it&rsquo;s free plan you can send up to 5 GB of data each month and the data is retained for 7 days. It allows multiple user access even for free plan. So even if your application is relatively big you can still send around 166 MB of log data data each day to them and view it in almost real-time with a web interface. You can also search logs, only <strong>feature that I feel is lacking is sorting of logs</strong> in the interface. It has advanced search features as well which can be useful if you have lots of logs.</p>
 
-<p>{% img center /images/logging-importance/logentries.png &lsquo;Logging to logentries.com&rsquo; &lsquo;Logging to logentries.com&rsquo; %}</p>
+<p><img class="center" src="/images/logging-importance/logentries.png" title="&lsquo;Logging to logentries.com&rsquo; &lsquo;Logging to logentries.com&rsquo;" ></p>
 
 <h4><a href="http://loggly.com">Loggly.com</a></h4>
 

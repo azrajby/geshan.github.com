@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Misc | Geshan's Blog]]></title>
   <link href="http://geshan.com.np/blog/categories/misc/atom.xml" rel="self"/>
   <link href="http://geshan.com.np/"/>
-  <updated>2018-12-01T11:11:17+11:00</updated>
+  <updated>2018-12-05T21:41:48+11:00</updated>
   <id>http://geshan.com.np/</id>
   <author>
     <name><![CDATA[Geshan Manandhar]]></name>
@@ -14,13 +14,75 @@
 
   
   <entry>
+    <title type="html"><![CDATA[5 Tech Medium Publications Software Engineers Should Strive to Write For]]></title>
+    <link href="http://geshan.com.np/blog/2018/12/5-tech-medium-publications-software-engineers-should-strive-to-write-for/"/>
+    <updated>2018-12-05T19:16:06+11:00</updated>
+    <id>http://geshan.com.np/blog/2018/12/5-tech-medium-publications-software-engineers-should-strive-to-write-for</id>
+    <content type="html"><![CDATA[<p>Starting a tech blog has changed in the last few years. 10 years back starting a blog without your website, you had 2 options Blogger or Wordpress. Both gave you a free sub-domain. Things did not change much for quite some time, but in 2012 medium came with a storm. It gained a lot of traction with its simplistic interface in 2014-2015. With the publication feature, Medium makes it very easy for a group of writers to collaborate.  These days I would suggest most people start their blog on it.</p>
+
+<p><img class="center" src="/images/5-tech-medium-publications/library.jpg" title="&lsquo;5 tech medium publication software engineers should strive to write for&rsquo; &lsquo;5 tech medium publication software engineers should strive to write for&rsquo;" ></p>
+
+<!-- more -->
+
+
+<h2>Writing is tough, learning is essential</h2>
+
+<p>Writing is never easy for most people. If you don&rsquo;t try it you never know if it is something you like or not.</p>
+
+<blockquote><p>“A writer is someone for whom writing is more difficult than it is for other people.” ― Thomas Mann</p></blockquote>
+
+<p>Writing is another form of expressing yourself. As people working in the tech domain, we need this skill of expressing ourselves well. Similarly, reading and learning about new things is also very important in our field. Learning is essential to survive in tech and move forward. Open source software there are a lot of consumers compared to producers. Likewise, there are a lot of readers for tech content but relatively much fewer writers.</p>
+
+<h2>Tech Medium publications accepting writers</h2>
+
+<p>Below are the tech publications on Medium I would suggest all software engineers to follow to sharpen their skills:</p>
+
+<h3><a href="https://medium.freecodecamp.org/">FreeCodeCamp</a> - 511K followers</h3>
+
+<p>FreeCodeCamp is the place to go for learning how to code for free. It has a very popular and frequently updated publication on Medium. The content published on FreeCodeCamp blog is excellent. There are 17 editors and more than a 1K+ writers on this publication. You will need to read this elaborate blog <a href="http://bit.ly/how-to-submit">post</a> to know how to submit your story there. Writing for them is not easy, they also do light editing of your stories. Even if your story gets accepted it could have a wait time of 1-2 weeks to be published (my first story for them is still in the pipeline).  All in all you must try to get your stories published there because of the sheer number of subscribers. It is #2 on <a href="https://toppub.xyz/">toppub.xyz</a>.</p>
+
+<h3><a href="https://hackernoon.com/">HackerNoon</a> - 403kK followers</h3>
+
+<p>HackerNoon is also another extremely popular publication. It is on Medium right now but it may not be there for long. They are going public with <a href="https://www.startengine.com/hackernoon">crowd sourcing</a>. From the content point of view, there is a sizable amount of content for software engineers. It also has lots of stories on cryptocurrencies. With 7 editors and 7K+ writers (includes me), this is a huge publication too. To write for them you need to send your draft to <a href="&#x6d;&#x61;&#105;&#x6c;&#116;&#111;&#x3a;&#83;&#x74;&#111;&#114;&#x69;&#x65;&#115;&#64;&#65;&#x4d;&#x69;&#80;&#117;&#x62;&#x6c;&#x69;&#99;&#97;&#116;&#x69;&#x6f;&#x6e;&#115;&#46;&#x63;&#x6f;&#109;&#46;">&#x53;&#116;&#x6f;&#114;&#x69;&#x65;&#115;&#64;&#65;&#77;&#x69;&#x50;&#117;&#98;&#x6c;&#105;&#x63;&#97;&#116;&#x69;&#111;&#110;&#115;&#x2e;&#99;&#111;&#x6d;&#x2e;</a> The wait time for each story is 1 week or more (I have already published 5 stories). It also has a writer&rsquo;s group on Facebook. You can include yourself as a &ldquo;Contributing Writer&rdquo; on <a href="https://www.linkedin.com/company/hackernoon/">LinkedIn</a> too.</p>
+
+<h3><a href="codeburst.io">CodeBurst.io</a> - 62K followers</h3>
+
+<p>CodeBurst is a popular medium publication with contents focused on web development. With a motto of &ldquo;Bursts of code to power through your day&rdquo;. I  see most stories geared towards Javascript. They have a page encouraging &ldquo;<a href="https://codeburst.io/how-to-write-for-codeburst-io-63fec4bf111c">Write For Us</a>&rdquo;. They mention having over 2 million page views per month. With 2 Editors and more than 900 writers, this is not a small Medium publication. I am not sure of the editorial process and wait times as I have not tried to publish any of my stories here. It could be a good starting point for new writers.</p>
+
+<h3><a href="https://itnext.io">ITNEXT.io</a> -  9.6K followers</h3>
+
+<p>ITNEXT seems to cover a wider array of topics from DevOps to Javascript. It calls itself  &ldquo;a platform for IT developers &amp; software engineers to share knowledge, connect, collaborate, learn and experience next-gen technologies&rdquo;. It has a short and to the point &ldquo;Write for ITNEXT&rdquo; <a href="https://itnext.io/write-for-itnext-4dea1fd3adf">page</a> with enough details on how to submit a story to them. With 7 editors and 840+ writers, it is undoubtedly a growing publication I reckon.  I can&rsquo;t comment on the waiting time for a story to be published on this one too.</p>
+
+<h3><a href="https://blog.bitsrc.io">Bits and Pieces</a> - 8.5K followers</h3>
+
+<p>Bits and Pieces look like a pretty active tech medium publication. It has content covering topics like NodeJs, PHP and mobile development. With a motto of &ldquo;Coding In The Age Of Code Components&rdquo;. It somewhat lives up to it. It has detailed &ldquo;Write a post&rdquo; <a href="https://blog.bitsrc.io/how-to-write-a-post-for-bits-and-pieces-13de0133151b">page</a> which includes lots of examples. With 5 editors and more than 65 writers, it is an expanding publication. I think the barrier to entry should not be that high. The waiting time for a story to be published should be less as well.</p>
+
+<h2>Popular Niche Ones</h2>
+
+<p>I would like to mention some popular niche publications. First one is <a href="https://medium.com/dailyjs">DailyJs</a> with 89K followers have a &ldquo;Submit Your Story&rdquo; <a href="https://medium.com/dailyjs/how-to-submit-your-story-to-dailyjs-30f02b2d5287">page</a>. <a href="https://uxdesign.cc/">UX Collective</a> with 228K follower is also <a href="https://uxdesign.cc/submit-your-article-to-uxdesign-cc-abea95d3a1ba">calling for stories</a>. Last but not least, <a href="https://uxplanet.org/">UX Planet</a> having 173K followers also wants you to write for <a href="https://uxplanet.org/how-to-publish-your-content-on-ux-planet-fd9dc99756db">them</a>.</p>
+
+<h2>Honorable Mention</h2>
+
+<p>Though <a href="https://dev.to/">dev.to</a> is not a Medium publication but it surely deserves a place here.</p>
+
+<blockquote><p>Currently the 11,357th website in the world, it has no editorial process.</p></blockquote>
+
+<p>This makes it one of the most accessible website to write for that without doubts has a big audience. I got <a href="https://dev.to/geshan">2250+ followers</a> on Dev.to in less than 2 months having just 20 posts.</p>
+
+<h2>Conclusion</h2>
+
+<p>If you don&rsquo;t accentuate your skills and knowledge people are not going to know about them automatically. Start a blog and write posts for such popular platforms. It will give you that needed exposure. Start blogging!</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[4 Ways Docker Changed the Way Software Engineers Work in Past Half Decade]]></title>
     <link href="http://geshan.com.np/blog/2018/12/4-ways-docker-changed-the-way-software-engineers-work-in-past-half-decade/"/>
     <updated>2018-12-01T09:14:51+11:00</updated>
     <id>http://geshan.com.np/blog/2018/12/4-ways-docker-changed-the-way-software-engineers-work-in-past-half-decade</id>
     <content type="html"><![CDATA[<p>10 years back it was Git that transformed the way software engineers worked. Half a decade back it was <a href="https://www.docker.com/">Docker</a> that brought the container to the masses. Before Docker, container was like a sacred secret in companies like Google and Heroku. Docker is a software and a company too. It tried to build a broader ecosystem but <a href="https://kubernetes.io/">Kubernetes</a> stole the thunder along the way keeping <a href="https://docs.docker.com/engine/swarm/">swarm</a> at bay. This post is not about how some Docker tools are not popular. It is about how Docker has changed the way we work in the past 5 years.</p>
 
-<p>{% img center /images/4-ways-docker/docker-whale.jpg &lsquo;4 ways Docker changed the way software engineers work in past half decade&rsquo; &lsquo;4 ways Docker changed the way software engineers work in past half decade&rsquo; %}</p>
+<p><img class="center" src="/images/4-ways-docker/docker-whale.jpg" title="&lsquo;4 ways Docker changed the way software engineers work in past half decade&rsquo; &lsquo;4 ways Docker changed the way software engineers work in past half decade&rsquo;" ></p>
 
 <!-- more -->
 
@@ -82,7 +144,7 @@
     <id>http://geshan.com.np/blog/2018/11/5-signs-that-reveal-your-software-development-process-is-agile-only-on-paper-and-solutions-for-them</id>
     <content type="html"><![CDATA[<p>Agility comes with practice not putting big words on paper. Using Jira does not make your software development process agile. Saying we do &ldquo;scrum&rdquo; is not being agile. Being agile is having an agile mindset and putting it into practice everyday. It is about thinking about the value you deliver to the customer and how to do it better.  This post will also unveil these 5 signs and how to solve these issues. The signs and solutions will concern multiple roles like Product Manager, Software engineer etc.</p>
 
-<p>{% img center /images/5-signs-agile-on-paper/board.jpg &lsquo;5 signs that reveal your company is agile only on paper and solutions for them&rsquo; &lsquo;5 signs that reveal your company is agile only on paper and solutions for them&rsquo; %}</p>
+<p><img class="center" src="/images/5-signs-agile-on-paper/board.jpg" title="&lsquo;5 signs that reveal your company is agile only on paper and solutions for them&rsquo; &lsquo;5 signs that reveal your company is agile only on paper and solutions for them&rsquo;" ></p>
 
 <!-- more -->
 
@@ -121,7 +183,7 @@
 
 <p>Agile software development is always about delivering value to the customer. The value in the form of working software not a pile of documents. If there a story like &ldquo;As a customer service manager I need to know who created a refund so that I can track and audit refunds in future&rdquo;. This task might entail adding a &ldquo;created_by&rdquo; field in the refunds table for instance. But this should not result in having a &ldquo;story&rdquo; that says &ldquo;Add created_by field in the refunds table&rdquo;. Of course, it can be a task/subtask as part of the main story. The main story delivers value but this database task is something that aids the process.</p>
 
-<p>{% img center /images/5-signs-agile-on-paper/story.jpg &lsquo;5 signs that reveal your company is agile only on paper and solutions for them&rsquo; &lsquo;5 signs that reveal your company is agile only on paper and solutions for them&rsquo; %}</p>
+<p><img class="center" src="/images/5-signs-agile-on-paper/story.jpg" title="&lsquo;5 signs that reveal your company is agile only on paper and solutions for them&rsquo; &lsquo;5 signs that reveal your company is agile only on paper and solutions for them&rsquo;" ></p>
 
 <h3>Solution</h3>
 
@@ -173,7 +235,7 @@
     <content type="html"><![CDATA[<p>I gave a talk at #devopsdaysNewy on 24-Oct-2018. It was a great conference with lots of amazing people.
 I want to thank the organizers for putting together such an amazing event. I want to extend the thanks to the sponsors who made it possible :). It was very good couple of days to meet new people and form a network. I think my talk on microservices went pretty good too. It was my second devops days and I enjoyed it.</p>
 
-<p>{% img center /images/a-b-to-150-ms/150-ms-geshan.jpg &lsquo;Moving from A and B to 150 microservices, the journey, and learnings&rsquo; &lsquo;Moving from A and B to 150 microservices, the journey, and learnings&rsquo; %}</p>
+<p><img class="center" src="/images/a-b-to-150-ms/150-ms-geshan.jpg" title="&lsquo;Moving from A and B to 150 microservices, the journey, and learnings&rsquo; &lsquo;Moving from A and B to 150 microservices, the journey, and learnings&rsquo;" ></p>
 
 <!-- more -->
 
@@ -202,7 +264,7 @@ I want to thank the organizers for putting together such an amazing event. I wan
     <id>http://geshan.com.np/blog/2018/10/deployment-is-not-release</id>
     <content type="html"><![CDATA[<p>Breaking down a big feature to epics and stories is always tricky. Then you have sub-stories making the process complicated. If you could deploy the finished task that delivers value to the business it would help. Enter feature flags, using this you can deploy your code to production behind a gate. Code and feature are on production but not fully released to everyone. This post is going to help you adjust your mental model for getting more benefits with feature flags.</p>
 
-<p>{% img center /images/deployment-not-release/flags.jpg &lsquo;Deployment is not Release, lets use feature flags&rsquo; &lsquo;Deployment is not Release, lets use feature flags&rsquo; %}
+<p><img class="center" src="/images/deployment-not-release/flags.jpg" title="&lsquo;Deployment is not Release, lets use feature flags&rsquo; &lsquo;Deployment is not Release, lets use feature flags&rsquo;" >
 [Image Source <a href="https://unsplash.com/photos/jCBzW_Q_UGI">Unspalsh</a>]</p>
 
 <!-- more -->
@@ -238,67 +300,6 @@ I want to thank the organizers for putting together such an amazing event. I wan
 <h2>Conclusion</h2>
 
 <p>You can deploy even small tasks to production with a proper use of feature flags. Think about adding value to the customer and deploying often. Test on production and when you are confident release it to everyone. Always remember Deployment != Release. Happy Feature flagging!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Don't Code Your Microservice Like a Monolith, Keep It Maintainable Not Over-engineered]]></title>
-    <link href="http://geshan.com.np/blog/2018/10/dont-code-your-microservice-like-a-monolith/"/>
-    <updated>2018-10-12T15:54:07+11:00</updated>
-    <id>http://geshan.com.np/blog/2018/10/dont-code-your-microservice-like-a-monolith</id>
-    <content type="html"><![CDATA[<p>Will you use a gun to kill a fly? The answer is NO. The same thing goes when you want to write a microservice application that is going to be maximum of 10K lines of code. Don&rsquo;t over-engineer it. Ok, you have been writing and maintaining large code bases. Some might be 100K+ lines of code but you need to get over your habits and think differently. This post helps you unravel the mysteries of writing small and maintainable microservices. The suggestions are opinionated but it is in practice in a million dollar business.</p>
-
-<p>{% img center /images/microservice-code/lego.jpg &lsquo;Do not code your microservice like a monolith, keep it maintainable not over-engineered&rsquo; &lsquo;Do not code your microservice like a monolith, keep it maintainable not over-engineered&rsquo; %}</p>
-
-<!-- more -->
-
-
-<h2>TLDR;</h2>
-
-<blockquote><p>Microservices are small software systems. You can safely ditch MVC. Say no to ORM and also not take the design pattern baggage for microservices. Focus on code performance, readability, and maintainability not some old rules and patterns. Those patterns were made when people were not doing microservices.</p></blockquote>
-
-<h2>Why write microservices in the first place?</h2>
-
-<p>Microservices architecture, in my opinion, is breaking one or more monoliths into multiple smaller systems. These are more maintainable, independently developed and deployed pieces of software based on business functions. These smaller (presumably “micro”) systems should focus on only one business function and do it well. The catch here is &ldquo;micro&rdquo;, these pieces should ideally be under 10K lines of code.</p>
-
-<p>As they are independent it helps the business release features faster. The shipments team is not dependent on the checkout team. Something deployed on the shipments app is never going to break checkout. It becomes very decoupled. The blast radius of each change is controlled. That is the reason for rapid microservice adoption.</p>
-
-<p>Now let&rsquo;s look at the ways you were used to doing things and why it makes less sense in this microservices era.</p>
-
-<h2>Do you need MVC?</h2>
-
-<p>Model-View-Controller, I got introduced to it in 2007 or maybe a bit earlier. Then I used to think it was the silver bullet to all software architecture issues. I don&rsquo;t hold that opinion anymore. Yes, you used to work with Java or PHP and every other framework was MVC based. Now, you don&rsquo;t need to be strict about MVC anymore. Focus on clarity and getting things done.</p>
-
-<p>Use controllers if you want and if it still makes sense. Think like my app gets HTTP request and it has to give back HTTP response. Do think of having a backend API and frontend(s) consuming it. Check the code below, it is surely not MVC:</p>
-
-<script src="https://gist.github.com/geshan/1f76e5ebb3c15fd3c147c6c97420f923.js"></script>
-
-
-<p>You can see the full app <a href="https://github.com/geshan/currency-api">here</a>. Veify the structure it is not MVC :)</p>
-
-<p>So rather than doing an effort to get precise lines of M-V-C, write tests, implement continuous integration. Add some logs and monitoring to the app. Make the code maintainable, keep it as lean and simple as possible.</p>
-
-<h2>Don&rsquo;t take on the ORM overhead</h2>
-
-<p>Object Relation Mapping (ORM) when I first saw an ORM in action, I said to myself this is one of the best things ever known to programmers. 10+ years later I would be cautious to suggest an ORM to any software engineer. Last year I refactored a full ORM implementation to a raw SQL query way and it made that part of the application perform 20% faster. On top of it, the database transactions were evident and the code was far more readable hence maintainable.</p>
-
-<p>Data mapper or Active record both bring their own opinions, ways of doing things and extra weight. This not only causes performance issues but also code readability suffers. Think of the pre and post hooks/event listener Doctrine has, they work like magic and it is always tricky to understand magic.</p>
-
-<p>{% img center /images/microservice-code/pot-on-head.jpg &lsquo;Do not code your microservice like a monolith, keep it maintainable not over-engineered&rsquo; &lsquo;Do not code your microservice like a monolith, keep it maintainable not over-engineered&rsquo; %}</p>
-
-<p>Just try this, explain how an ORM related insert code works VS how a simple and straightforward INSERT SQL query works to a beginner/junior software engineer. You will already regret using that ORM. Especially in the context of microservices ORM is a clear overhead. The microservice is anticipated to be maximum of 10K lines of code and affect hardly 10 tables so just don&rsquo;t use an ORM, period.</p>
-
-<h2>Design patterns might be a baggage</h2>
-
-<p>I am not saying that you don&rsquo;t need to learn about <a href="https://en.wikipedia.org/wiki/Software_design_pattern">software design patterns</a>. You should know about SOLID, law of Demeter, factory pattern, strategy pattern, singleton, adapter pattern etc. Well, most of these make sense if you do object-oriented programming right? What if you write a microservice in Node JS that is 1k lines of code spread across ~7 files. It does one small slice of the business function. All these patterns become nice to know stuff at that point.</p>
-
-<p>Design Patterns are relevant for a code base that is already big and in the next 6-12 months is going to be bigger, your usual monolith. They can turn out to be &ldquo;extra baggage&rdquo; for a service that is 100s of lines of code now and will become 1000s of lines of code in the next 6-12 months. We never foresee it to be bigger than that because to do that other part we will have another microservice. So keep your microservice code fat free and well tested.</p>
-
-<p>{% img center /images/microservice-code/baggage.jpg &lsquo;Do not code your microservice like a monolith, keep it maintainable not over-engineered&rsquo; &lsquo;Do not code your microservice like a monolith, keep it maintainable not over-engineered&rsquo; %}</p>
-
-<h2>Conclusion</h2>
-
-<p>If you still want to code your microservice like the last monolith you worked on maybe you are doing something wrong. Think of it again, if you go for a day trip you don&rsquo;t pack and carry things like you are going for a 2 weeks vacation. Think of code performance and maintainability, let the data speak for you and break the rules. Happy software engineering!</p>
 ]]></content>
   </entry>
   

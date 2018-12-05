@@ -126,6 +126,47 @@
 
 
 
+<span class="glyphicon glyphicon-calendar"></span> <time datetime="2009-02-26T02:06:00+11:00"  data-updated="true" itemprop="datePublished dateCreated"><time class='entry-date' datetime='2009-02-26T02:06:00+11:00'><span class='date'><span class='date-month'>Feb</span> <span class='date-day'>26</span><span class='date-suffix'>th</span>, <span class='date-year'>2009</span></span> <span class='time'>2:06 am</span></time></time>
+        
+           | <a href="/blog/2009/02/random-header-image-on-page-refresh/#disqus_thread" itemprop="discussionUrl"
+             data-disqus-identifier="http://geshan.com.np/blog/2009/02/random-header-image-on-page-refresh/">Comments</a>
+        
+      </p>
+    
+    
+      <h1 class="entry-title" itemprop="name headline"><a href="/blog/2009/02/random-header-image-on-page-refresh/" itemprop="url">Random Header Image on Page Refresh (Applicable to Drupal Theme)</a></h1>
+    
+  </header>
+
+
+  <div class="entry-content clearfix" itemprop="articleBody description"><div class='post'>
+<div dir="ltr" style="text-align: left;" trbidi="on">Some time back, we needed to get a random header image on every page refresh for a client. So I devised a simple way to select a header image from any 5 given images and show it on a page. How did I do it with PHP and CSS is explained below:<br /><h3>Ingredients: Template File, CSS and Images<a href="http://2.bp.blogspot.com/_L4bRnZ5TPr8/Saa2fsT73JI/AAAAAAAAA94/Gq8DRBN81LY/s1600-h/nagdaha_implementation.jpg" onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}"><img alt="" border="0" src="http://2.bp.blogspot.com/_L4bRnZ5TPr8/Saa2fsT73JI/AAAAAAAAA94/Gq8DRBN81LY/s400/nagdaha_implementation.jpg" id="BLOGGER_PHOTO_ID_5307129866489683090" style="cursor: pointer; display: block; height: 400px; margin: 0px auto 10px; text-align: center; width: 394px;" /></a></h3><br /><h4>The Template File</h4>First you need to find out the div where the random header image is going to be displayed, as its the header image then its obivious that we need to add a class to the header div. Problem is how is the single class going to have 5 different images as its background and that also changed in every page refresh.<br />For this just add a class called header-x, x is replaced with a random number between 1 and 5 by using PHP&#8217;s rand() function. This will require your template to be a PHP  file, if you are using a CMS like Drupal then in Drupal edit the header div&#8217;s code in page.tpl.php file as below:<br /><a href="http://3.bp.blogspot.com/_L4bRnZ5TPr8/SaaxxsMkbFI/AAAAAAAAA9o/lvCR2L9Mjkw/s1600-h/php_code_in_template.jpg" onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}"><img alt="" border="0" src="http://3.bp.blogspot.com/_L4bRnZ5TPr8/SaaxxsMkbFI/AAAAAAAAA9o/lvCR2L9Mjkw/s400/php_code_in_template.jpg" id="BLOGGER_PHOTO_ID_5307124678138293330" style="cursor: pointer; display: block; height: 108px; margin: 0px auto 10px; text-align: center; width: 400px;" /></a><br /><h4>The CSS Code</h4>After the template is fixed, now you have to apply a different background image to the classes 1-5. So header-1 will have header1.jpg,&#8230;. till header-5 will have header5.jpg as its background image.  The code can be seen below and downloaded <a href="http://www.geshanmanandhar.com/random_header.css" target="_blank">here</a>.<br /><a href="http://3.bp.blogspot.com/_L4bRnZ5TPr8/Saay9v_8RYI/AAAAAAAAA9w/Bp7ASplXh0o/s1600-h/css_code.jpg" onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}"><img alt="" border="0" src="http://3.bp.blogspot.com/_L4bRnZ5TPr8/Saay9v_8RYI/AAAAAAAAA9w/Bp7ASplXh0o/s400/css_code.jpg" id="BLOGGER_PHOTO_ID_5307125984829130114" style="cursor: pointer; display: block; height: 400px; margin: 0px auto 10px; text-align: center; width: 400px;" /></a><br /><br /><br /><h4>The Images</h4>Create 5 images of the same size and relevant to the website. You have your random header on page refresh working. Make sure the images are named correctly and placed relative to the CSS file for it to work.<br /><br />In case of 5 images when page refreshes the same image may appear but in case of 10 images the chances of same image repeating is slim. Back-end Caching can also affect the PHP&#8217;s random function call.<br /><h4>Live Websites</h4>Live websites to check out similar implementations: <a href="http://www.gurkhaencounters.com/" target="_blank">www.gurkhaencounters.com</a> and <a href="http://nagdaha.org.np/" target="_blank">www.nagdaha.org.np</a>.<br /><blockquote>Hope you liked this small but effective tutorial, have fun with PHP and CSS.</blockquote></div></div>
+</div>
+  
+  
+
+
+        </article>
+      
+      
+        <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+          
+  <header class="page-header">
+    
+      <p class="meta text-muted text-uppercase">
+        
+
+
+
+
+
+
+
+
+
+
+
+
 <span class="glyphicon glyphicon-calendar"></span> <time datetime="2009-02-20T20:39:00+11:00"  data-updated="true" itemprop="datePublished dateCreated"><time class='entry-date' datetime='2009-02-20T20:39:00+11:00'><span class='date'><span class='date-month'>Feb</span> <span class='date-day'>20</span><span class='date-suffix'>th</span>, <span class='date-year'>2009</span></span> <span class='time'>8:39 pm</span></time></time>
         
            | <a href="/blog/2009/02/cheap-feature-rich-webhosting-at/#disqus_thread" itemprop="discussionUrl"
@@ -271,47 +312,6 @@ Its been more than 2 years I&#8217;ve been experimenting and working with Drupal
 
         </article>
       
-      
-        <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-          
-  <header class="page-header">
-    
-      <p class="meta text-muted text-uppercase">
-        
-
-
-
-
-
-
-
-
-
-
-
-
-<span class="glyphicon glyphicon-calendar"></span> <time datetime="2009-01-12T00:13:00+11:00"  data-updated="true" itemprop="datePublished dateCreated"><time class='entry-date' datetime='2009-01-12T00:13:00+11:00'><span class='date'><span class='date-month'>Jan</span> <span class='date-day'>12</span><span class='date-suffix'>th</span>, <span class='date-year'>2009</span></span> <span class='time'>12:13 am</span></time></time>
-        
-           | <a href="/blog/2009/01/load-shedding-schedule-january-11-2009/#disqus_thread" itemprop="discussionUrl"
-             data-disqus-identifier="http://geshan.com.np/blog/2009/01/load-shedding-schedule-january-11-2009/">Comments</a>
-        
-      </p>
-    
-    
-      <h1 class="entry-title" itemprop="name headline"><a href="/blog/2009/01/load-shedding-schedule-january-11-2009/" itemprop="url">Load Shedding Schedule January 11, 2009, Now Its 16 Hours Per Day</a></h1>
-    
-  </header>
-
-
-  <div class="entry-content clearfix" itemprop="articleBody description"><div class='post'>
-God save us. Load Shedding Schedule January 11 2009. Now we are facing 16 hours per day load shedding. Thanks you to all the political leaders, parties and the current government for giving us such a wonderful gift.<br /><a onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}" href="http://3.bp.blogspot.com/_L4bRnZ5TPr8/SWnwtv21vfI/AAAAAAAAA7U/5_qM675H0Ko/s1600-h/ls_11thJan09.jpg"><img style="margin: 0px auto 10px; display: block; text-align: center; cursor: pointer; width: 400px; height: 248px;" src="http://3.bp.blogspot.com/_L4bRnZ5TPr8/SWnwtv21vfI/AAAAAAAAA7U/5_qM675H0Ko/s400/ls_11thJan09.jpg" alt="" id="BLOGGER_PHOTO_ID_5290023906054618610" border="0" /></a>This is the darkest day for Nepal. Literally the darkest now.<br /><object codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0" id="doc_205159556066804" name="doc_205159556066804" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" align="middle" height="400" width="450">  <param name="movie" value="http://d.scribd.com/ScribdViewer.swf?document_id=10060318&amp;access_key=key-19xvtm6rnhdwt4gsey37&amp;page=1&amp;version=1&amp;viewMode=list">   <param name="quality" value="high">   <param name="play" value="true">  <param name="loop" value="true">   <param name="scale" value="showall">  <param name="wmode" value="opaque">   <param name="devicefont" value="false">  <param name="bgcolor" value="#ffffff">   <param name="menu" value="true">  <param name="allowFullScreen" value="true">   <param name="allowScriptAccess" value="always">   <param name="salign" value="">            <param name="mode" value="list">       <embed src="http://d.scribd.com/ScribdViewer.swf?document_id=10060318&amp;access_key=key-19xvtm6rnhdwt4gsey37&amp;page=1&amp;version=1&amp;viewMode=list" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" play="true" loop="true" scale="showall" wmode="opaque" devicefont="false" bgcolor="#ffffff" name="doc_205159556066804_object" menu="true" allowfullscreen="true" allowscriptaccess="always" salign="" type="application/x-shockwave-flash" mode="list" align="middle" height="400" width="450"></embed> </object> <div style="margin: 6px auto 3px; font-family: Helvetica,Arial,Sans-serif; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-size-adjust: none; font-stretch: normal; display: block;"> <br /><br /><blockquote>This is the worst day :-(.</blockquote><br /></div></div>
-</div>
-  
-  
-
-
-        </article>
-      
     </div>
 
     <ul class="pager">
@@ -335,6 +335,8 @@ God save us. Load Shedding Schedule January 11 2009. Now we are facing 16 hours 
   
   <div id="recent_posts" class="list-group">
     
+    <a class="list-group-item " href="/blog/2018/12/5-tech-medium-publications-software-engineers-should-strive-to-write-for/">5 Tech Medium Publications Software Engineers Should Strive to Write For</a>
+    
     <a class="list-group-item " href="/blog/2018/12/4-ways-docker-changed-the-way-software-engineers-work-in-past-half-decade/">4 Ways Docker Changed the Way Software Engineers Work in Past Half Decade</a>
     
     <a class="list-group-item " href="/blog/2018/11/5-signs-that-reveal-your-software-development-process-is-agile-only-on-paper-and-solutions-for-them/">5 Signs That Reveal Your Software Development Process Is Agile Only on Paper and Solutions for Them</a>
@@ -342,8 +344,6 @@ God save us. Load Shedding Schedule January 11 2009. Now we are facing 16 hours 
     <a class="list-group-item " href="/blog/2018/10/moving-from-a-and-b-to-~150-microservices/">Moving From a and B to 150 Microservices, the Journey, and Learnings [Slides]</a>
     
     <a class="list-group-item " href="/blog/2018/10/deployment-is-not-release/">Deployment Is Not Release, Let&#8217;s Use Feature Flags</a>
-    
-    <a class="list-group-item " href="/blog/2018/10/dont-code-your-microservice-like-a-monolith/">Don&#8217;t Code Your Microservice Like a Monolith, Keep It Maintainable Not Over-engineered</a>
     
   </div>
 </section>
@@ -355,7 +355,7 @@ God save us. Load Shedding Schedule January 11 2009. Now we are facing 16 hours 
         
         
         <a class="list-group-item " href="/blog/categories/misc/">
-            <span class="badge">195</span>
+            <span class="badge">196</span>
             misc
         </a>
         
@@ -367,7 +367,7 @@ God save us. Load Shedding Schedule January 11 2009. Now we are facing 16 hours 
         
         
         <a class="list-group-item " href="/blog/categories/technology/">
-            <span class="badge">137</span>
+            <span class="badge">138</span>
             technology
         </a>
         

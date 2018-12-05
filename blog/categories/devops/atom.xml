@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Devops | Geshan's Blog]]></title>
   <link href="http://geshan.com.np/blog/categories/devops/atom.xml" rel="self"/>
   <link href="http://geshan.com.np/"/>
-  <updated>2018-12-01T11:11:17+11:00</updated>
+  <updated>2018-12-05T21:41:48+11:00</updated>
   <id>http://geshan.com.np/</id>
   <author>
     <name><![CDATA[Geshan Manandhar]]></name>
@@ -20,7 +20,7 @@
     <id>http://geshan.com.np/blog/2018/12/4-ways-docker-changed-the-way-software-engineers-work-in-past-half-decade</id>
     <content type="html"><![CDATA[<p>10 years back it was Git that transformed the way software engineers worked. Half a decade back it was <a href="https://www.docker.com/">Docker</a> that brought the container to the masses. Before Docker, container was like a sacred secret in companies like Google and Heroku. Docker is a software and a company too. It tried to build a broader ecosystem but <a href="https://kubernetes.io/">Kubernetes</a> stole the thunder along the way keeping <a href="https://docs.docker.com/engine/swarm/">swarm</a> at bay. This post is not about how some Docker tools are not popular. It is about how Docker has changed the way we work in the past 5 years.</p>
 
-<p>{% img center /images/4-ways-docker/docker-whale.jpg &lsquo;4 ways Docker changed the way software engineers work in past half decade&rsquo; &lsquo;4 ways Docker changed the way software engineers work in past half decade&rsquo; %}</p>
+<p><img class="center" src="/images/4-ways-docker/docker-whale.jpg" title="&lsquo;4 ways Docker changed the way software engineers work in past half decade&rsquo; &lsquo;4 ways Docker changed the way software engineers work in past half decade&rsquo;" ></p>
 
 <!-- more -->
 
@@ -82,7 +82,7 @@
     <id>http://geshan.com.np/blog/2018/11/5-signs-that-reveal-your-software-development-process-is-agile-only-on-paper-and-solutions-for-them</id>
     <content type="html"><![CDATA[<p>Agility comes with practice not putting big words on paper. Using Jira does not make your software development process agile. Saying we do &ldquo;scrum&rdquo; is not being agile. Being agile is having an agile mindset and putting it into practice everyday. It is about thinking about the value you deliver to the customer and how to do it better.  This post will also unveil these 5 signs and how to solve these issues. The signs and solutions will concern multiple roles like Product Manager, Software engineer etc.</p>
 
-<p>{% img center /images/5-signs-agile-on-paper/board.jpg &lsquo;5 signs that reveal your company is agile only on paper and solutions for them&rsquo; &lsquo;5 signs that reveal your company is agile only on paper and solutions for them&rsquo; %}</p>
+<p><img class="center" src="/images/5-signs-agile-on-paper/board.jpg" title="&lsquo;5 signs that reveal your company is agile only on paper and solutions for them&rsquo; &lsquo;5 signs that reveal your company is agile only on paper and solutions for them&rsquo;" ></p>
 
 <!-- more -->
 
@@ -121,7 +121,7 @@
 
 <p>Agile software development is always about delivering value to the customer. The value in the form of working software not a pile of documents. If there a story like &ldquo;As a customer service manager I need to know who created a refund so that I can track and audit refunds in future&rdquo;. This task might entail adding a &ldquo;created_by&rdquo; field in the refunds table for instance. But this should not result in having a &ldquo;story&rdquo; that says &ldquo;Add created_by field in the refunds table&rdquo;. Of course, it can be a task/subtask as part of the main story. The main story delivers value but this database task is something that aids the process.</p>
 
-<p>{% img center /images/5-signs-agile-on-paper/story.jpg &lsquo;5 signs that reveal your company is agile only on paper and solutions for them&rsquo; &lsquo;5 signs that reveal your company is agile only on paper and solutions for them&rsquo; %}</p>
+<p><img class="center" src="/images/5-signs-agile-on-paper/story.jpg" title="&lsquo;5 signs that reveal your company is agile only on paper and solutions for them&rsquo; &lsquo;5 signs that reveal your company is agile only on paper and solutions for them&rsquo;" ></p>
 
 <h3>Solution</h3>
 
@@ -173,7 +173,7 @@
     <content type="html"><![CDATA[<p>I gave a talk at #devopsdaysNewy on 24-Oct-2018. It was a great conference with lots of amazing people.
 I want to thank the organizers for putting together such an amazing event. I want to extend the thanks to the sponsors who made it possible :). It was very good couple of days to meet new people and form a network. I think my talk on microservices went pretty good too. It was my second devops days and I enjoyed it.</p>
 
-<p>{% img center /images/a-b-to-150-ms/150-ms-geshan.jpg &lsquo;Moving from A and B to 150 microservices, the journey, and learnings&rsquo; &lsquo;Moving from A and B to 150 microservices, the journey, and learnings&rsquo; %}</p>
+<p><img class="center" src="/images/a-b-to-150-ms/150-ms-geshan.jpg" title="&lsquo;Moving from A and B to 150 microservices, the journey, and learnings&rsquo; &lsquo;Moving from A and B to 150 microservices, the journey, and learnings&rsquo;" ></p>
 
 <!-- more -->
 
@@ -202,7 +202,7 @@ I want to thank the organizers for putting together such an amazing event. I wan
     <id>http://geshan.com.np/blog/2018/10/deployment-is-not-release</id>
     <content type="html"><![CDATA[<p>Breaking down a big feature to epics and stories is always tricky. Then you have sub-stories making the process complicated. If you could deploy the finished task that delivers value to the business it would help. Enter feature flags, using this you can deploy your code to production behind a gate. Code and feature are on production but not fully released to everyone. This post is going to help you adjust your mental model for getting more benefits with feature flags.</p>
 
-<p>{% img center /images/deployment-not-release/flags.jpg &lsquo;Deployment is not Release, lets use feature flags&rsquo; &lsquo;Deployment is not Release, lets use feature flags&rsquo; %}
+<p><img class="center" src="/images/deployment-not-release/flags.jpg" title="&lsquo;Deployment is not Release, lets use feature flags&rsquo; &lsquo;Deployment is not Release, lets use feature flags&rsquo;" >
 [Image Source <a href="https://unsplash.com/photos/jCBzW_Q_UGI">Unspalsh</a>]</p>
 
 <!-- more -->
@@ -248,7 +248,7 @@ I want to thank the organizers for putting together such an amazing event. I wan
     <id>http://geshan.com.np/blog/2018/10/dont-code-your-microservice-like-a-monolith</id>
     <content type="html"><![CDATA[<p>Will you use a gun to kill a fly? The answer is NO. The same thing goes when you want to write a microservice application that is going to be maximum of 10K lines of code. Don&rsquo;t over-engineer it. Ok, you have been writing and maintaining large code bases. Some might be 100K+ lines of code but you need to get over your habits and think differently. This post helps you unravel the mysteries of writing small and maintainable microservices. The suggestions are opinionated but it is in practice in a million dollar business.</p>
 
-<p>{% img center /images/microservice-code/lego.jpg &lsquo;Do not code your microservice like a monolith, keep it maintainable not over-engineered&rsquo; &lsquo;Do not code your microservice like a monolith, keep it maintainable not over-engineered&rsquo; %}</p>
+<p><img class="center" src="/images/microservice-code/lego.jpg" title="&lsquo;Do not code your microservice like a monolith, keep it maintainable not over-engineered&rsquo; &lsquo;Do not code your microservice like a monolith, keep it maintainable not over-engineered&rsquo;" ></p>
 
 <!-- more -->
 
@@ -284,7 +284,7 @@ I want to thank the organizers for putting together such an amazing event. I wan
 
 <p>Data mapper or Active record both bring their own opinions, ways of doing things and extra weight. This not only causes performance issues but also code readability suffers. Think of the pre and post hooks/event listener Doctrine has, they work like magic and it is always tricky to understand magic.</p>
 
-<p>{% img center /images/microservice-code/pot-on-head.jpg &lsquo;Do not code your microservice like a monolith, keep it maintainable not over-engineered&rsquo; &lsquo;Do not code your microservice like a monolith, keep it maintainable not over-engineered&rsquo; %}</p>
+<p><img class="center" src="/images/microservice-code/pot-on-head.jpg" title="&lsquo;Do not code your microservice like a monolith, keep it maintainable not over-engineered&rsquo; &lsquo;Do not code your microservice like a monolith, keep it maintainable not over-engineered&rsquo;" ></p>
 
 <p>Just try this, explain how an ORM related insert code works VS how a simple and straightforward INSERT SQL query works to a beginner/junior software engineer. You will already regret using that ORM. Especially in the context of microservices ORM is a clear overhead. The microservice is anticipated to be maximum of 10K lines of code and affect hardly 10 tables so just don&rsquo;t use an ORM, period.</p>
 
@@ -294,7 +294,7 @@ I want to thank the organizers for putting together such an amazing event. I wan
 
 <p>Design Patterns are relevant for a code base that is already big and in the next 6-12 months is going to be bigger, your usual monolith. They can turn out to be &ldquo;extra baggage&rdquo; for a service that is 100s of lines of code now and will become 1000s of lines of code in the next 6-12 months. We never foresee it to be bigger than that because to do that other part we will have another microservice. So keep your microservice code fat free and well tested.</p>
 
-<p>{% img center /images/microservice-code/baggage.jpg &lsquo;Do not code your microservice like a monolith, keep it maintainable not over-engineered&rsquo; &lsquo;Do not code your microservice like a monolith, keep it maintainable not over-engineered&rsquo; %}</p>
+<p><img class="center" src="/images/microservice-code/baggage.jpg" title="&lsquo;Do not code your microservice like a monolith, keep it maintainable not over-engineered&rsquo; &lsquo;Do not code your microservice like a monolith, keep it maintainable not over-engineered&rsquo;" ></p>
 
 <h2>Conclusion</h2>
 

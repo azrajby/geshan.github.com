@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Foss | Geshan's Blog]]></title>
   <link href="http://geshan.com.np/blog/categories/foss/atom.xml" rel="self"/>
   <link href="http://geshan.com.np/"/>
-  <updated>2018-12-01T11:11:17+11:00</updated>
+  <updated>2018-12-05T21:41:48+11:00</updated>
   <id>http://geshan.com.np/</id>
   <author>
     <name><![CDATA[Geshan Manandhar]]></name>
@@ -26,7 +26,7 @@ libraries. It is a difficult yet rewarding experience to lead/support an open so
 of starting an open source project or open sourcing some part(s) of your existing system, this post has a checklist
 to assist you with it.</p>
 
-<p>{% img center /images/php-oss-checklist/example-foss.png &lsquo;An example open source php project&rsquo; &lsquo;Example open source project&rsquo; %}</p>
+<p><img class="center" src="/images/php-oss-checklist/example-foss.png" title="&lsquo;An example open source php project&rsquo; &lsquo;Example open source project&rsquo;" ></p>
 
 <!-- more -->
 
@@ -119,7 +119,7 @@ show what is being done and reflect on status of the project issues visually. He
 your rescue. You can show the status of the issues as below to make all the interested people clear of what is happening
 in the form of a Agileish Kanban board:</p>
 
-<p>{% img center /images/php-oss-checklist/huBoard.png &lsquo;An example of issues on HuBoard&rsquo; &lsquo;Example of issues on HuBoard&rsquo; %}</p>
+<p><img class="center" src="/images/php-oss-checklist/huBoard.png" title="&lsquo;An example of issues on HuBoard&rsquo; &lsquo;Example of issues on HuBoard&rsquo;" ></p>
 
 <h2>Conclusion</h2>
 
@@ -150,7 +150,7 @@ her sleeves and helped us group and compile the data into percentages, thank you
 <!-- more -->
 
 
-<p>{% img center /images/sw-eng-np-infographics-part02/Software_Engineering_Nepal_Mid_2015_Part02.png &lsquo;Software Engineering Practices in Nepal Infographics Part 2&rsquo; &lsquo;Software Engineering Practices in Nepal Infographics Part 2&rsquo; %}</p>
+<p><img class="center" src="/images/sw-eng-np-infographics-part02/Software_Engineering_Nepal_Mid_2015_Part02.png" title="&lsquo;Software Engineering Practices in Nepal Infographics Part 2&rsquo; &lsquo;Software Engineering Practices in Nepal Infographics Part 2&rsquo;" ></p>
 
 <p>You can view this infographics in <a href="http://bit.ly/1R8EfHQ">interactive</a> mode too.</p>
 
@@ -178,7 +178,7 @@ I will make the survey open till 2015 Q3 and post the final results in Oct 2015.
 <!-- more -->
 
 
-<p>{% img center /images/sw-eng-np-infographics-part01/Software_Engineering_Nepal_Mid_2015_Part01.png &lsquo;Software Engineering Practices in Nepal Infographics Part 1&rsquo; &lsquo;Software Engineering Practices in Nepal Infographics Part 1&rsquo; %}</p>
+<p><img class="center" src="/images/sw-eng-np-infographics-part01/Software_Engineering_Nepal_Mid_2015_Part01.png" title="&lsquo;Software Engineering Practices in Nepal Infographics Part 1&rsquo; &lsquo;Software Engineering Practices in Nepal Infographics Part 1&rsquo;" ></p>
 
 <p>You can view this infographics in <a href="http://bit.ly/1EPE37N">interactive</a> mode too.</p>
 

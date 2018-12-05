@@ -4,7 +4,7 @@
   <title><![CDATA[Geshan's Blog]]></title>
   <link href="http://geshan.com.np/atom.xml" rel="self"/>
   <link href="http://geshan.com.np/"/>
-  <updated>2018-12-01T11:10:00+11:00</updated>
+  <updated>2018-12-05T21:41:48+11:00</updated>
   <id>http://geshan.com.np/</id>
   <author>
     <name><![CDATA[Geshan Manandhar]]></name>
@@ -12,6 +12,68 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[5 Tech Medium Publications Software Engineers Should Strive to Write For]]></title>
+    <link href="http://geshan.com.np/blog/2018/12/5-tech-medium-publications-software-engineers-should-strive-to-write-for/"/>
+    <updated>2018-12-05T19:16:06+11:00</updated>
+    <id>http://geshan.com.np/blog/2018/12/5-tech-medium-publications-software-engineers-should-strive-to-write-for</id>
+    <content type="html"><![CDATA[<p>Starting a tech blog has changed in the last few years. 10 years back starting a blog without your website, you had 2 options Blogger or Wordpress. Both gave you a free sub-domain. Things did not change much for quite some time, but in 2012 medium came with a storm. It gained a lot of traction with its simplistic interface in 2014-2015. With the publication feature, Medium makes it very easy for a group of writers to collaborate.  These days I would suggest most people start their blog on it.</p>
+
+<p><img class="center" src="http://geshan.com.np/images/5-tech-medium-publications/library.jpg" title="5 tech medium publication software engineers should strive to write for" alt="5 tech medium publication software engineers should strive to write for"></p>
+
+<!-- more -->
+
+
+<h2>Writing is tough, learning is essential</h2>
+
+<p>Writing is never easy for most people. If you don&rsquo;t try it you never know if it is something you like or not.</p>
+
+<blockquote><p>“A writer is someone for whom writing is more difficult than it is for other people.” ― Thomas Mann</p></blockquote>
+
+<p>Writing is another form of expressing yourself. As people working in the tech domain, we need this skill of expressing ourselves well. Similarly, reading and learning about new things is also very important in our field. Learning is essential to survive in tech and move forward. Open source software there are a lot of consumers compared to producers. Likewise, there are a lot of readers for tech content but relatively much fewer writers.</p>
+
+<h2>Tech Medium publications accepting writers</h2>
+
+<p>Below are the tech publications on Medium I would suggest all software engineers to follow to sharpen their skills:</p>
+
+<h3><a href="https://medium.freecodecamp.org/">FreeCodeCamp</a> - 511K followers</h3>
+
+<p>FreeCodeCamp is the place to go for learning how to code for free. It has a very popular and frequently updated publication on Medium. The content published on FreeCodeCamp blog is excellent. There are 17 editors and more than a 1K+ writers on this publication. You will need to read this elaborate blog <a href="http://bit.ly/how-to-submit">post</a> to know how to submit your story there. Writing for them is not easy, they also do light editing of your stories. Even if your story gets accepted it could have a wait time of 1-2 weeks to be published (my first story for them is still in the pipeline).  All in all you must try to get your stories published there because of the sheer number of subscribers. It is #2 on <a href="https://toppub.xyz/">toppub.xyz</a>.</p>
+
+<h3><a href="https://hackernoon.com/">HackerNoon</a> - 403kK followers</h3>
+
+<p>HackerNoon is also another extremely popular publication. It is on Medium right now but it may not be there for long. They are going public with <a href="https://www.startengine.com/hackernoon">crowd sourcing</a>. From the content point of view, there is a sizable amount of content for software engineers. It also has lots of stories on cryptocurrencies. With 7 editors and 7K+ writers (includes me), this is a huge publication too. To write for them you need to send your draft to <a href="&#x6d;&#x61;&#105;&#108;&#116;&#x6f;&#x3a;&#83;&#x74;&#111;&#114;&#x69;&#x65;&#115;&#x40;&#65;&#77;&#105;&#80;&#117;&#x62;&#x6c;&#x69;&#x63;&#97;&#116;&#x69;&#111;&#110;&#x73;&#46;&#99;&#x6f;&#109;&#46;">&#x53;&#x74;&#x6f;&#x72;&#105;&#101;&#115;&#x40;&#x41;&#77;&#x69;&#x50;&#117;&#x62;&#x6c;&#105;&#x63;&#97;&#x74;&#105;&#x6f;&#110;&#x73;&#x2e;&#99;&#x6f;&#x6d;&#46;</a> The wait time for each story is 1 week or more (I have already published 5 stories). It also has a writer&rsquo;s group on Facebook. You can include yourself as a &ldquo;Contributing Writer&rdquo; on <a href="https://www.linkedin.com/company/hackernoon/">LinkedIn</a> too.</p>
+
+<h3><a href="codeburst.io">CodeBurst.io</a> - 62K followers</h3>
+
+<p>CodeBurst is a popular medium publication with contents focused on web development. With a motto of &ldquo;Bursts of code to power through your day&rdquo;. I  see most stories geared towards Javascript. They have a page encouraging &ldquo;<a href="https://codeburst.io/how-to-write-for-codeburst-io-63fec4bf111c">Write For Us</a>&rdquo;. They mention having over 2 million page views per month. With 2 Editors and more than 900 writers, this is not a small Medium publication. I am not sure of the editorial process and wait times as I have not tried to publish any of my stories here. It could be a good starting point for new writers.</p>
+
+<h3><a href="https://itnext.io">ITNEXT.io</a> -  9.6K followers</h3>
+
+<p>ITNEXT seems to cover a wider array of topics from DevOps to Javascript. It calls itself  &ldquo;a platform for IT developers &amp; software engineers to share knowledge, connect, collaborate, learn and experience next-gen technologies&rdquo;. It has a short and to the point &ldquo;Write for ITNEXT&rdquo; <a href="https://itnext.io/write-for-itnext-4dea1fd3adf">page</a> with enough details on how to submit a story to them. With 7 editors and 840+ writers, it is undoubtedly a growing publication I reckon.  I can&rsquo;t comment on the waiting time for a story to be published on this one too.</p>
+
+<h3><a href="https://blog.bitsrc.io">Bits and Pieces</a> - 8.5K followers</h3>
+
+<p>Bits and Pieces look like a pretty active tech medium publication. It has content covering topics like NodeJs, PHP and mobile development. With a motto of &ldquo;Coding In The Age Of Code Components&rdquo;. It somewhat lives up to it. It has detailed &ldquo;Write a post&rdquo; <a href="https://blog.bitsrc.io/how-to-write-a-post-for-bits-and-pieces-13de0133151b">page</a> which includes lots of examples. With 5 editors and more than 65 writers, it is an expanding publication. I think the barrier to entry should not be that high. The waiting time for a story to be published should be less as well.</p>
+
+<h2>Popular Niche Ones</h2>
+
+<p>I would like to mention some popular niche publications. First one is <a href="https://medium.com/dailyjs">DailyJs</a> with 89K followers have a &ldquo;Submit Your Story&rdquo; <a href="https://medium.com/dailyjs/how-to-submit-your-story-to-dailyjs-30f02b2d5287">page</a>. <a href="https://uxdesign.cc/">UX Collective</a> with 228K follower is also <a href="https://uxdesign.cc/submit-your-article-to-uxdesign-cc-abea95d3a1ba">calling for stories</a>. Last but not least, <a href="https://uxplanet.org/">UX Planet</a> having 173K followers also wants you to write for <a href="https://uxplanet.org/how-to-publish-your-content-on-ux-planet-fd9dc99756db">them</a>.</p>
+
+<h2>Honorable Mention</h2>
+
+<p>Though <a href="https://dev.to/">dev.to</a> is not a Medium publication but it surely deserves a place here.</p>
+
+<blockquote><p>Currently the 11,357th website in the world, it has no editorial process.</p></blockquote>
+
+<p>This makes it one of the most accessible website to write for that without doubts has a big audience. I got <a href="https://dev.to/geshan">2250+ followers</a> on Dev.to in less than 2 months having just 20 posts.</p>
+
+<h2>Conclusion</h2>
+
+<p>If you don&rsquo;t accentuate your skills and knowledge people are not going to know about them automatically. Start a blog and write posts for such popular platforms. It will give you that needed exposure. Start blogging!</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[4 Ways Docker Changed the Way Software Engineers Work in Past Half Decade]]></title>
@@ -1157,41 +1219,6 @@ more ratings and comments :).</p>
 
 <blockquote><p>I am waiting for the videos like everyone else, I have some talks I missed that I want to watch. I loved being a part of such a vibrant event backed by
 an amazing community. Cheers!</p></blockquote>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Career Paths for to Be Tech Graduates [Slides]]]></title>
-    <link href="http://geshan.com.np/blog/2016/06/career-paths-for-to-be-tech-graduates-slides/"/>
-    <updated>2016-06-28T20:03:05+10:00</updated>
-    <id>http://geshan.com.np/blog/2016/06/career-paths-for-to-be-tech-graduates-slides</id>
-    <content type="html"><![CDATA[<p>After almost 2 years, I gave another talk to the students of <a href="http://prime.edu.np">Prime College</a>. Last time it was &ldquo;<a href="http://geshan.com.np/blog/2014/08/things-i-wished-i-knew-while-doing-my/">Things I wished I knew while doing my tech bachelors</a>&rdquo;. This time it was <strong>Career Paths for to be tech graduates</strong>. I prepared the slides at 9 and was already presenting the talk at 11:15.</p>
-
-<p><img class="center" src="http://geshan.com.np/images/career-paths-for-tech-grads/cptg-01.jpg" title="Career Paths for tech graduates the talk" alt="Career Paths for tech graduates the talk"></p>
-
-<!-- more -->
-
-
-<h2>Slides</h2>
-
-<script async class="speakerdeck-embed" data-id="d2961b06460a443c8e13535d8add0260" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
-
-
-<h2>Participants</h2>
-
-<p>The students were from <a href="http://www.bsccsit.com/">Bsc. CSIT</a> and <a href="https://en.wikipedia.org/wiki/Bachelor_in_Information_Management">BIM</a> of second and fourth semester. They were high on youth and not worried about their careers. As it was a short talk, I wanted the session to be interactive. I was trying to get more questions out of them. Some of them were shy to ask the questions so they came in later after the talk to have a chat with me.</p>
-
-<p><img class="center" src="http://geshan.com.np/images/career-paths-for-tech-grads/cptg-02.jpg" title="Career Paths for tech graduates the participants" alt="Career Paths for tech graduates the participants"></p>
-
-<h2>Questions</h2>
-
-<p>Questions centered towards roles and problems faced by tech companies in Nepal. I answered the queries with the things I knew and what I had experienced when I was working in Nepal. Few of them were enthusiastic about opening up their own company. I wish them best of luck.</p>
-
-<h2>Conclusion</h2>
-
-<p>Students get serious about internship, job and career only towards their final semesters. I think they should start planning for their internship at the mid of their bachelor study. By the &frac34; stage, they should know which career path should I take.</p>
-
-<blockquote><p>I hope the short talk and QnA session helped some of the participants to think about their career plans.</p></blockquote>
 ]]></content>
   </entry>
   
