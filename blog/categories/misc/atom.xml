@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Misc | Geshan's Blog]]></title>
   <link href="http://geshan.com.np/blog/categories/misc/atom.xml" rel="self"/>
   <link href="http://geshan.com.np/"/>
-  <updated>2018-12-06T07:35:30+11:00</updated>
+  <updated>2018-12-14T21:44:28+11:00</updated>
   <id>http://geshan.com.np/</id>
   <author>
     <name><![CDATA[Geshan Manandhar]]></name>
@@ -12,6 +12,148 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[You Can Do It in SQL, Stop Writing Extra Code for That]]></title>
+    <link href="http://geshan.com.np/blog/2018/12/you-can-do-it-in-sql/"/>
+    <updated>2018-12-14T19:30:54+11:00</updated>
+    <id>http://geshan.com.np/blog/2018/12/you-can-do-it-in-sql</id>
+    <content type="html"><![CDATA[<p>“SQL, Lisp, and Haskell are the only programming languages that I’ve seen where one spends more time thinking than typing.&ldquo; - Philip Greenspun</p>
+
+<p>Even with thinking more than typing SQL (Structured Query Language) we software engineers use it as a way to pull data only.</p>
+
+<blockquote><p>We usually don&rsquo;t leverage SQL&rsquo;s power of data manipulation and do the needed changes in code.</p></blockquote>
+
+<p>This is quite prevalent in software engineers who work in web applications. This post aims to enlighten you about the powers of SQL you might know but generally don&rsquo;t use.</p>
+
+<p>{% img center /images/do-it-in-sql/tea-lights.jpg &lsquo;You can do it in SQL, stop writing extra code for that&rsquo; &lsquo;You can do it in SQL, stop writing extra code for that&rsquo; %}</p>
+
+<!-- more -->
+
+
+<h2>TLDR;</h2>
+
+<blockquote><p>Use SQL to do math like sum, average etc. Utilize it for grouping one to many relational values like getting categories of product. Leverage SQL for string manipulation like using CONCAT_WS for concating first name and last name. Exploit SQL to sort by a custom priority formula. Examples below&hellip;</p></blockquote>
+
+<h2>The Example</h2>
+
+<p>It will be easier to explain the superpowers of SQL putting it in action on an example. Below is a basic schema with 2 tables in MYSQL for a refunds microservice:</p>
+
+<p>{% img center /images/do-it-in-sql/refund-schema.png &lsquo;You can do it in SQL- refund schema&rsquo; &lsquo;You can do it in SQL - refund schema example&rsquo; %}</p>
+
+<p>There are 2 refunds and 7 related payments as example <a href="http://sqlfiddle.com/#!9/b242d/5">data</a>.</p>
+
+<h3>Some assumptions</h3>
+
+<p>For the refunds microservice example schema and applications following assumptions are made:</p>
+
+<ol>
+<li>Refunds microservice and data structure store the fk_item (the id of the ordered/delivered item), but it is not a hard foreign key.</li>
+<li>Item can be refunded in either cash or credit for the amount paid for the same.</li>
+<li>Items can be refunded many times as long as remaining balance can cover requested refund amount for each cash and credit. For example, item was paid 50 in cash and 50 in credit. 2 refunds of 20 cash and 20 credit can be done. So after these transactions balance will be 10 cash and 10 credit for that item (50-20-20).</li>
+<li>Each refund can have multiple items payment. Each payment can be of type either cash or credit.</li>
+<li>All amounts are stored in cents so they are integers.</li>
+</ol>
+
+
+<p>Now let&rsquo;s use some SQL powers. You can find the example with related queries running on <a href="http://sqlfiddle.com/#!9/b242d/5">SQL Fiddle</a>.</p>
+
+<h3>Do the math in SQL</h3>
+
+<p>As software engineers, let&rsquo;s say if we need to find the total cash and credit amount refunded for an item what would we do? We would run something like:</p>
+
+<pre><code>SELECT fk_item, fk_refund, amount, is_cash 
+FROM payment WHERE fk_item=2001;
+</code></pre>
+
+<p>With current data, it will give 3 rows like below:</p>
+
+<p>{% img center /images/do-it-in-sql/01result-without-group.png &lsquo;Result without grouping and aggregate function sum&rsquo; &lsquo;Result without grouping and aggregate function sum&rsquo; %}</p>
+
+<p>With these 3 rows, we would loop over them. If it is cash accumulate it to cashBalance variable, if not sum it up to creditBalace variable. Rather than that it would be a lot easier (probably faster) to do in SQL like:</p>
+
+<pre><code>SELECT fk_item, SUM(amount) AS total_paid, 
+IF(is_cash = 1, 'cash', 'credit') as type
+FROM payment 
+WHERE fk_item = 2001 
+GROUP BY fk_item, is_cash;
+</code></pre>
+
+<p>Resulting in:</p>
+
+<p>{% img center /images/do-it-in-sql/02result-with-grouping.png &lsquo;Result with grouping and aggregate function sum&rsquo; &lsquo;Result with grouping and aggregate function sum&rsquo; %}</p>
+
+<p>The result is easy now if you need the total refund for the item just change the GROUP BY to be on fk_item and it&rsquo;s done. For 2 and 3 records it won&rsquo;t feel significant. If there were say 20 refunds for that item, the first solution with a loop is writing more code with no gain.  Like sum, other SQL functions can be used too. Simple math operations like <a href="https://www.w3schools.com/sql/func_mysql_sum.asp">sum</a>, multiply, <a href="https://www.w3schools.com/sql/func_mysql_avg.asp">average</a> etc can be easy with SQL. This means no more loops.</p>
+
+<h3>Use GROUP_CONCAT to fetch related 1:m relation values</h3>
+
+<p><a href="http://www.mysqltutorial.org/mysql-group_concat/">Group concat</a> is a powerful operation in SQL databases. It is very useful when you need to get data from one to many relationship. For instance, you want to get all tags for a blog post or you want to get all categories of a product. Concerning this refunds example, one item can be refunded multiple times. So we will get all the refunds associated with the item id. To get this we will run only 1 query and get it without any loops in the code like below:</p>
+
+<pre><code>SELECT fk_item, 
+GROUP_CONCAT(DISTINCT fk_refund) refund_ids FROM payment
+WHERE fk_item = 2001;
+</code></pre>
+
+<p>This results in:</p>
+
+<p>{% img center /images/do-it-in-sql/03result-group-concat.png &lsquo;Result with group_concat&rsquo; &lsquo;Result with group_concat&rsquo; %}</p>
+
+<p>Now we know that item 2001 has been refunded twice for 2 refunds. It will be easy to explode the refund Ids with <code>,</code> and proceed with any related operation.</p>
+
+<h3>String manipulation</h3>
+
+<p>Many <a href="https://dev.mysql.com/doc/refman/8.0/en/string-functions.html">string manipulation</a> tasks like substring, concatenation, change case, and string compare can be done in SQL. With this example, I am going to show the usage of <code>CONCAT_WS</code>. It is concat with a separator. It can also be used to select for instance first_name and last_name with space in between.</p>
+
+<blockquote><p>In case of having an optional middle name <code>COALESCE</code> can be used with <code>CONCAT_WS</code>. That is something for you to explore :).</p></blockquote>
+
+<p>In this example, I will select refund_nr with it&rsquo;s related reason:</p>
+
+<pre><code>SELECT CONCAT_WS("-", refund_nr, reason) AS refund_nr_with_reason
+FROM refund;
+</code></pre>
+
+<p>Resulting in:</p>
+
+<p>{% img center /images/do-it-in-sql/04result-concat-ws.png &lsquo;Result with concat_ws&rsquo; &lsquo;Result with concat_ws&rsquo; %}</p>
+
+<p>If this needs to be shown on the credit note document, for example, no extra code is needed to join the values again. SQL makes it one step easier again.</p>
+
+<h3>Sorting with a custom formula</h3>
+
+<p>All software engineers know you can sort based on a column. But if you are given a custom priority formula to sort, what would you do? Probably again resort back to code and loop to sort. So lets set the priority formula rules for above example:</p>
+
+<ol>
+<li>Premium customer refunds get the highest priority (we hack it with a priority of 9999999999)</li>
+<li>Other than premium customers cash refunds get a priority of amount * 25 for credit it is amount * 20.</li>
+</ol>
+
+
+<p>As per above rules it is decided that premium customers and priority above 50000 (in cents) will be processed first. Then other refunds will be processes. Let&rsquo;s get the priority refunds as below:</p>
+
+<pre><code>SELECT r.refund_nr, r.reason, p.fk_item, p.amount, p.is_cash, 
+IF(p.premium_customer = 1, 9999999999, p.amount * (IF(is_cash = 1, 25, 20))) AS priority FROM 
+refund AS r INNER JOIN payment AS p ON r.id = p.fk_refund
+HAVING priority &gt; 50000
+ORDER BY priority DESC
+</code></pre>
+
+<p>The results are below:</p>
+
+<p>{% img center /images/do-it-in-sql/05result-priority-formula.png &lsquo;Result with sorting based on custom formula&rsquo; &lsquo;Result with sorting based on custom formula&rsquo; %}</p>
+
+<p>With proper use of IF in SQL sorting by a custom priority formula is a lot easier than trying to do it with loops in code. Notice that even smaller amounts like 7.5 (750 cents) and 9.0 (900 cents) came to highest priority as these refund payment amounts were associated with premium customers.</p>
+
+<blockquote><p>Use the superpowers of SQL to make your life easier as a software engineer.</p></blockquote>
+
+<p>You can play with the example and run your own queries on <a href="http://sqlfiddle.com/#!9/b242d/5">SQL fiddle</a>.</p>
+
+<h2>Conclusion</h2>
+
+<p>There are other tricks of SQL that can help you as a software engineer. Like <code>UPDATE</code> with <code>INSERT</code> using <code>ON DUPLICATE KEY UPDATE</code>. Whenever you have an itch of doing some manipulation for data pulled in from database in code with loops, think again. The main takeaway from this story is:</p>
+
+<blockquote><p>Exploit the power of SQL to write less code because &ldquo;the best code is the code that was never written&rdquo;. If it is not written there is no need to maintain it.</p></blockquote>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[5 Tech Medium Publications Software Engineers Should Strive to Write For]]></title>
@@ -43,7 +185,7 @@
 
 <h3><a href="https://hackernoon.com/">HackerNoon</a> - 403kK followers</h3>
 
-<p>HackerNoon is also another extremely popular publication. It is on Medium right now but it may not be there for long. They are going public with <a href="https://www.startengine.com/hackernoon">crowd sourcing</a>. From the content point of view, there is a sizable amount of content for software engineers. It also has lots of stories on cryptocurrencies. With 7 editors and 7K+ writers (includes me), this is a huge publication too. To write for them you need to send your draft to <a href="&#109;&#97;&#105;&#108;&#x74;&#x6f;&#58;&#83;&#x74;&#111;&#x72;&#105;&#101;&#115;&#64;&#65;&#x4d;&#105;&#80;&#117;&#98;&#x6c;&#105;&#x63;&#97;&#116;&#x69;&#111;&#110;&#x73;&#46;&#x63;&#x6f;&#109;&#x2e;">&#x53;&#x74;&#111;&#x72;&#x69;&#101;&#115;&#x40;&#65;&#77;&#105;&#80;&#x75;&#98;&#x6c;&#105;&#99;&#97;&#116;&#x69;&#111;&#x6e;&#x73;&#46;&#x63;&#111;&#109;&#46;</a> The wait time for each story is 1 week or more (I have already published 5 stories). It also has a writer&rsquo;s group on Facebook. You can include yourself as a &ldquo;Contributing Writer&rdquo; on <a href="https://www.linkedin.com/company/hackernoon/">LinkedIn</a> too.</p>
+<p>HackerNoon is also another extremely popular publication. It is on Medium right now but it may not be there for long. They are going public with <a href="https://www.startengine.com/hackernoon">crowd sourcing</a>. From the content point of view, there is a sizable amount of content for software engineers. It also has lots of stories on cryptocurrencies. With 7 editors and 7K+ writers (includes me), this is a huge publication too. To write for them you need to send your draft to <a href="&#x6d;&#x61;&#x69;&#x6c;&#116;&#111;&#58;&#83;&#116;&#111;&#x72;&#105;&#x65;&#x73;&#x40;&#65;&#x4d;&#x69;&#80;&#x75;&#98;&#x6c;&#x69;&#x63;&#97;&#x74;&#105;&#x6f;&#110;&#x73;&#x2e;&#x63;&#111;&#x6d;&#46;">&#83;&#x74;&#111;&#114;&#105;&#101;&#115;&#64;&#x41;&#x4d;&#x69;&#80;&#117;&#98;&#108;&#x69;&#x63;&#x61;&#116;&#105;&#x6f;&#x6e;&#115;&#46;&#x63;&#x6f;&#109;&#46;</a> The wait time for each story is 1 week or more (I have already published 5 stories). It also has a writer&rsquo;s group on Facebook. You can include yourself as a &ldquo;Contributing Writer&rdquo; on <a href="https://www.linkedin.com/company/hackernoon/">LinkedIn</a> too.</p>
 
 <h3><a href="https://codeburst.io">CodeBurst.io</a> - 62K followers</h3>
 
@@ -254,52 +396,6 @@ I want to thank the organizers for putting together such an amazing event. I wan
 <h2>Conclusion</h2>
 
 <p>I gave the same talk at Node Sydney <a href="https://www.meetup.com/node-sydney/events/cvdqzpyxmbjb/">September meetup</a> that went pretty well too. Hope to be able to give more talks in future and meet more interesting people.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Deployment Is Not Release, Let's Use Feature Flags]]></title>
-    <link href="http://geshan.com.np/blog/2018/10/deployment-is-not-release/"/>
-    <updated>2018-10-26T08:13:05+11:00</updated>
-    <id>http://geshan.com.np/blog/2018/10/deployment-is-not-release</id>
-    <content type="html"><![CDATA[<p>Breaking down a big feature to epics and stories is always tricky. Then you have sub-stories making the process complicated. If you could deploy the finished task that delivers value to the business it would help. Enter feature flags, using this you can deploy your code to production behind a gate. Code and feature are on production but not fully released to everyone. This post is going to help you adjust your mental model for getting more benefits with feature flags.</p>
-
-<p>{% img center /images/deployment-not-release/flags.jpg &lsquo;Deployment is not Release, lets use feature flags&rsquo; &lsquo;Deployment is not Release, lets use feature flags&rsquo; %}
-[Image Source <a href="https://unsplash.com/photos/jCBzW_Q_UGI">Unspalsh</a>]</p>
-
-<!-- more -->
-
-
-<h2>Why use feature flags?</h2>
-
-<p>Have you ever faced a situation that you need to deploy an epic but it is not possible as it is 80% completed? It is an epic that has to be &ldquo;released&rdquo; all or nothing. That is where the power of feature flag comes into play. You can deploy (not release to everyone) each new value addition to production. The trick here is to put it behind a simple logic like if email ends in @yourcompany.com. You can check a minimal code <a href="https://geshan.com.np/blog/2016/09/how-to-do-a-minimum-viable-feature-switch/">example</a>.</p>
-
-<blockquote><p>You have to separate the technical deployment process from the business process of releasing a new feature.</p></blockquote>
-
-<h2>How to use feature flags?</h2>
-
-<p>Feature switch, feature toggle are some of the other names of feature flags. It can be effortless like if the logged in user&rsquo;s email is in our white-list we show this form. It can even be a feature that shows up when you add a specific cookie with a defined value in the browser. It can be highly orchestrated too with the use of a SAAS for feature flags. <a href="https://launchdarkly.com/">Launch Darkly</a> is a feature flag as a service company. You can use it if you have the time and resource to invest in it.</p>
-
-<p>Any path you take simple or complex the result is you have control over who can access a new feature. The feature is not released to everyone. The difference is how to activate/deactivate a feature flag. It can be as easy as clicking a checkbox or doing another deployment to open up a feature to everyone.</p>
-
-<blockquote><p>My suggestion is to start small, do an if condition in code and start experimenting. If it works well try other ways like a white-list or even a special cookie from the browser.</p></blockquote>
-
-<h2>Advantages of feature flags</h2>
-
-<p>There are many advantages of using feature flags in production. Lets list down a few highlights:</p>
-
-<ol>
-<li>Ability to test a feature on production in private with a select group of users.</li>
-<li>Ability to easily add or remove users who can use that feature.</li>
-<li>The confidence of releasing near bug-free features. Software engineers and QA can test on production even multiple times. Release the feature after bug fixes only when they are confident.</li>
-<li>There will be lesser code conflicts. When the task is complete, code changes are merged to the main branch before/after deployment. This also saves some valuable development time.</li>
-<li>The benefit of experimenting some things to a white-list of people in production. This can even lead to good feedback and positive changes.</li>
-</ol>
-
-
-<h2>Conclusion</h2>
-
-<p>You can deploy even small tasks to production with a proper use of feature flags. Think about adding value to the customer and deploying often. Test on production and when you are confident release it to everyone. Always remember Deployment != Release. Happy Feature flagging!</p>
 ]]></content>
   </entry>
   
