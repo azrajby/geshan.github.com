@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Misc | Geshan's Blog]]></title>
   <link href="http://geshan.com.np/blog/categories/misc/atom.xml" rel="self"/>
   <link href="http://geshan.com.np/"/>
-  <updated>2018-12-21T20:13:21+11:00</updated>
+  <updated>2018-12-21T21:10:17+11:00</updated>
   <id>http://geshan.com.np/</id>
   <author>
     <name><![CDATA[Geshan Manandhar]]></name>
@@ -20,7 +20,7 @@
     <id>http://geshan.com.np/blog/2018/12/the-most-important-tip-for-beginner-software-engineers-is</id>
     <content type="html"><![CDATA[<p>Most of the tutorials you have read or watched till now usually do one thing, spoon-feeding. This is &ldquo;OK&rdquo; to learn a new thing but not good when you need to <code>solve</code> a task. A task usually involves reaching a goal by overcoming a problem. This post unveils the most important &ldquo;tip&rdquo; for all beginner software engineers.</p>
 
-<p><img class="center" src="/images/tip-beginner-sw-eng/puzzle.jpg" title="&lsquo;The most important tip for beginner software engineers is&rsquo; &lsquo;The most important tip for beginner software engineers is&rsquo;" ></p>
+<p>{% img center /images/tip-beginner-sw-eng/puzzle.jpg &lsquo;The most important tip for beginner software engineers is&rsquo; &lsquo;The most important tip for beginner software engineers is&rsquo; %}</p>
 
 <!-- more -->
 
@@ -47,7 +47,7 @@
 
 <p>You have to do a task, it is to create a refund with payments. A refund always has a reason like damaged, late delivery etc and the payments for that item can be maximum of 2. One of type cash another of type credit (store credit). You are also given the database schema. This is a back-end task and you need to create a POST <code>/refunds</code> API that can create the refund and its related payments. The database structure is as below:</p>
 
-<p><img class="center" src="/images/tip-beginner-sw-eng/refund-schema-v2.png" title="&lsquo;refund schema v2&rsquo; &lsquo;refund schema example&rsquo;" ></p>
+<p>{% img center /images/tip-beginner-sw-eng/refund-schema-v2.png &lsquo;refund schema v2&rsquo; &lsquo;refund schema example&rsquo; %}</p>
 
 <p>You could discuss the API payload too with one of the team members and agreed on the below JSON payload:</p>
 
@@ -146,7 +146,7 @@
 
 <p>This is quite prevalent in software engineers who work in web applications. This post aims to enlighten you about the powers of SQL you might know but generally don&rsquo;t use.</p>
 
-<p><img class="center" src="/images/do-it-in-sql/tea-lights.jpg" title="&lsquo;You can do it in SQL, stop writing extra code for that&rsquo; &lsquo;You can do it in SQL, stop writing extra code for that&rsquo;" ></p>
+<p>{% img center /images/do-it-in-sql/tea-lights.jpg &lsquo;You can do it in SQL, stop writing extra code for that&rsquo; &lsquo;You can do it in SQL, stop writing extra code for that&rsquo; %}</p>
 
 <!-- more -->
 
@@ -159,7 +159,7 @@
 
 <p>It will be easier to explain the superpowers of SQL putting it in action on an example. Below is a basic schema with 2 tables in MYSQL for a refunds microservice:</p>
 
-<p><img class="center" src="/images/do-it-in-sql/refund-schema.png" title="&lsquo;You can do it in SQL- refund schema&rsquo; &lsquo;You can do it in SQL - refund schema example&rsquo;" ></p>
+<p>{% img center /images/do-it-in-sql/refund-schema.png &lsquo;You can do it in SQL- refund schema&rsquo; &lsquo;You can do it in SQL - refund schema example&rsquo; %}</p>
 
 <p>There are 2 refunds and 7 related payments as example <a href="http://sqlfiddle.com/#!9/b242d/5">data</a>.</p>
 
@@ -188,7 +188,7 @@ FROM payment WHERE fk_item=2001;
 
 <p>With current data, it will give 3 rows like below:</p>
 
-<p><img class="center" src="/images/do-it-in-sql/01result-without-group.png" title="&lsquo;Result without grouping and aggregate function sum&rsquo; &lsquo;Result without grouping and aggregate function sum&rsquo;" ></p>
+<p>{% img center /images/do-it-in-sql/01result-without-group.png &lsquo;Result without grouping and aggregate function sum&rsquo; &lsquo;Result without grouping and aggregate function sum&rsquo; %}</p>
 
 <p>With these 3 rows, we would loop over them. If it is cash accumulate it to cashBalance variable, if not sum it up to creditBalace variable. Rather than that it would be a lot easier (probably faster) to do in SQL like:</p>
 
@@ -201,7 +201,7 @@ GROUP BY fk_item, is_cash;
 
 <p>Resulting in:</p>
 
-<p><img class="center" src="/images/do-it-in-sql/02result-with-grouping.png" title="&lsquo;Result with grouping and aggregate function sum&rsquo; &lsquo;Result with grouping and aggregate function sum&rsquo;" ></p>
+<p>{% img center /images/do-it-in-sql/02result-with-grouping.png &lsquo;Result with grouping and aggregate function sum&rsquo; &lsquo;Result with grouping and aggregate function sum&rsquo; %}</p>
 
 <p>The result is easy now if you need the total refund for the item just change the GROUP BY to be on fk_item and it&rsquo;s done. For 2 and 3 records it won&rsquo;t feel significant. If there were say 20 refunds for that item, the first solution with a loop is writing more code with no gain.  Like sum, other SQL functions can be used too. Simple math operations like <a href="https://www.w3schools.com/sql/func_mysql_sum.asp">sum</a>, multiply, <a href="https://www.w3schools.com/sql/func_mysql_avg.asp">average</a> etc can be easy with SQL. This means no more loops.</p>
 
@@ -216,7 +216,7 @@ WHERE fk_item = 2001;
 
 <p>This results in:</p>
 
-<p><img class="center" src="/images/do-it-in-sql/03result-group-concat.png" title="&lsquo;Result with group_concat&rsquo; &lsquo;Result with group_concat&rsquo;" ></p>
+<p>{% img center /images/do-it-in-sql/03result-group-concat.png &lsquo;Result with group_concat&rsquo; &lsquo;Result with group_concat&rsquo; %}</p>
 
 <p>Now we know that item 2001 has been refunded twice for 2 refunds. It will be easy to explode the refund Ids with <code>,</code> and proceed with any related operation.</p>
 
@@ -234,7 +234,7 @@ FROM refund;
 
 <p>Resulting in:</p>
 
-<p><img class="center" src="/images/do-it-in-sql/04result-concat-ws.png" title="&lsquo;Result with concat_ws&rsquo; &lsquo;Result with concat_ws&rsquo;" ></p>
+<p>{% img center /images/do-it-in-sql/04result-concat-ws.png &lsquo;Result with concat_ws&rsquo; &lsquo;Result with concat_ws&rsquo; %}</p>
 
 <p>If this needs to be shown on the credit note document, for example, no extra code is needed to join the values again. SQL makes it one step easier again.</p>
 
@@ -259,7 +259,7 @@ ORDER BY priority DESC
 
 <p>The results are below:</p>
 
-<p><img class="center" src="/images/do-it-in-sql/05result-priority-formula.png" title="&lsquo;Result with sorting based on custom formula&rsquo; &lsquo;Result with sorting based on custom formula&rsquo;" ></p>
+<p>{% img center /images/do-it-in-sql/05result-priority-formula.png &lsquo;Result with sorting based on custom formula&rsquo; &lsquo;Result with sorting based on custom formula&rsquo; %}</p>
 
 <p>With proper use of IF in SQL sorting by a custom priority formula is a lot easier than trying to do it with loops in code. Notice that even smaller amounts like 7.5 (750 cents) and 9.0 (900 cents) came to highest priority as these refund payment amounts were associated with premium customers.</p>
 
@@ -282,7 +282,7 @@ ORDER BY priority DESC
     <id>http://geshan.com.np/blog/2018/12/5-tech-medium-publications-software-engineers-should-strive-to-write-for</id>
     <content type="html"><![CDATA[<p>Starting a tech blog has changed in the last few years. 10 years back starting a blog without your website, you had 2 options Blogger or Wordpress. Both gave you a free sub-domain. Things did not change much for quite some time, but in 2012 medium came with a storm. It gained a lot of traction with its simplistic interface in 2014-2015. With the publication feature, Medium makes it very easy for a group of writers to collaborate.  These days I would suggest most people start their blog on it.</p>
 
-<p><img class="center" src="/images/5-tech-medium-publications/library.jpg" title="&lsquo;5 tech medium publication software engineers should strive to write for&rsquo; &lsquo;5 tech medium publication software engineers should strive to write for&rsquo;" ></p>
+<p>{% img center /images/5-tech-medium-publications/library.jpg &lsquo;5 tech medium publication software engineers should strive to write for&rsquo; &lsquo;5 tech medium publication software engineers should strive to write for&rsquo; %}</p>
 
 <!-- more -->
 
@@ -305,7 +305,7 @@ ORDER BY priority DESC
 
 <h3><a href="https://hackernoon.com/">HackerNoon</a> - 403kK followers</h3>
 
-<p>HackerNoon is also another extremely popular publication. It is on Medium right now but it may not be there for long. They are going public with <a href="https://www.startengine.com/hackernoon">crowd sourcing</a>. From the content point of view, there is a sizable amount of content for software engineers. It also has lots of stories on cryptocurrencies. With 7 editors and 7K+ writers (includes me), this is a huge publication too. To write for them you need to send your draft to <a href="&#x6d;&#97;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x53;&#x74;&#x6f;&#114;&#x69;&#101;&#115;&#x40;&#x41;&#77;&#105;&#80;&#x75;&#x62;&#x6c;&#x69;&#99;&#x61;&#x74;&#105;&#x6f;&#110;&#x73;&#46;&#x63;&#x6f;&#109;&#46;">&#83;&#x74;&#111;&#x72;&#105;&#x65;&#x73;&#x40;&#x41;&#x4d;&#x69;&#80;&#117;&#x62;&#x6c;&#x69;&#99;&#97;&#116;&#x69;&#x6f;&#x6e;&#x73;&#46;&#x63;&#111;&#109;&#46;</a> The wait time for each story is 1 week or more (I have already published 5 stories). It also has a writer&rsquo;s group on Facebook. You can include yourself as a &ldquo;Contributing Writer&rdquo; on <a href="https://www.linkedin.com/company/hackernoon/">LinkedIn</a> too.</p>
+<p>HackerNoon is also another extremely popular publication. It is on Medium right now but it may not be there for long. They are going public with <a href="https://www.startengine.com/hackernoon">crowd sourcing</a>. From the content point of view, there is a sizable amount of content for software engineers. It also has lots of stories on cryptocurrencies. With 7 editors and 7K+ writers (includes me), this is a huge publication too. To write for them you need to send your draft to <a href="&#x6d;&#97;&#105;&#x6c;&#116;&#x6f;&#58;&#83;&#x74;&#111;&#114;&#105;&#101;&#x73;&#x40;&#65;&#x4d;&#105;&#80;&#x75;&#98;&#108;&#105;&#99;&#x61;&#116;&#x69;&#111;&#x6e;&#x73;&#46;&#99;&#x6f;&#109;&#x2e;">&#83;&#x74;&#111;&#114;&#x69;&#101;&#115;&#x40;&#65;&#77;&#105;&#x50;&#x75;&#98;&#x6c;&#105;&#x63;&#x61;&#116;&#x69;&#x6f;&#110;&#115;&#x2e;&#x63;&#111;&#x6d;&#x2e;</a> The wait time for each story is 1 week or more (I have already published 5 stories). It also has a writer&rsquo;s group on Facebook. You can include yourself as a &ldquo;Contributing Writer&rdquo; on <a href="https://www.linkedin.com/company/hackernoon/">LinkedIn</a> too.</p>
 
 <h3><a href="https://codeburst.io">CodeBurst.io</a> - 62K followers</h3>
 
@@ -344,7 +344,7 @@ ORDER BY priority DESC
     <id>http://geshan.com.np/blog/2018/12/4-ways-docker-changed-the-way-software-engineers-work-in-past-half-decade</id>
     <content type="html"><![CDATA[<p>10 years back it was Git that transformed the way software engineers worked. Half a decade back it was <a href="https://www.docker.com/">Docker</a> that brought the container to the masses. Before Docker, container was like a sacred secret in companies like Google and Heroku. Docker is a software and a company too. It tried to build a broader ecosystem but <a href="https://kubernetes.io/">Kubernetes</a> stole the thunder along the way keeping <a href="https://docs.docker.com/engine/swarm/">swarm</a> at bay. This post is not about how some Docker tools are not popular. It is about how Docker has changed the way we work in the past 5 years.</p>
 
-<p><img class="center" src="/images/4-ways-docker/docker-whale.jpg" title="&lsquo;4 ways Docker changed the way software engineers work in past half decade&rsquo; &lsquo;4 ways Docker changed the way software engineers work in past half decade&rsquo;" ></p>
+<p>{% img center /images/4-ways-docker/docker-whale.jpg &lsquo;4 ways Docker changed the way software engineers work in past half decade&rsquo; &lsquo;4 ways Docker changed the way software engineers work in past half decade&rsquo; %}</p>
 
 <!-- more -->
 
@@ -406,7 +406,7 @@ ORDER BY priority DESC
     <id>http://geshan.com.np/blog/2018/11/5-signs-that-reveal-your-software-development-process-is-agile-only-on-paper-and-solutions-for-them</id>
     <content type="html"><![CDATA[<p>Agility comes with practice not putting big words on paper. Using Jira does not make your software development process agile. Saying we do &ldquo;scrum&rdquo; is not being agile. Being agile is having an agile mindset and putting it into practice everyday. It is about thinking about the value you deliver to the customer and how to do it better.  This post will also unveil these 5 signs and how to solve these issues. The signs and solutions will concern multiple roles like Product Manager, Software engineer etc.</p>
 
-<p><img class="center" src="/images/5-signs-agile-on-paper/board.jpg" title="&lsquo;5 signs that reveal your company is agile only on paper and solutions for them&rsquo; &lsquo;5 signs that reveal your company is agile only on paper and solutions for them&rsquo;" ></p>
+<p>{% img center /images/5-signs-agile-on-paper/board.jpg &lsquo;5 signs that reveal your company is agile only on paper and solutions for them&rsquo; &lsquo;5 signs that reveal your company is agile only on paper and solutions for them&rsquo; %}</p>
 
 <!-- more -->
 
@@ -445,7 +445,7 @@ ORDER BY priority DESC
 
 <p>Agile software development is always about delivering value to the customer. The value in the form of working software not a pile of documents. If there a story like &ldquo;As a customer service manager I need to know who created a refund so that I can track and audit refunds in future&rdquo;. This task might entail adding a &ldquo;created_by&rdquo; field in the refunds table for instance. But this should not result in having a &ldquo;story&rdquo; that says &ldquo;Add created_by field in the refunds table&rdquo;. Of course, it can be a task/subtask as part of the main story. The main story delivers value but this database task is something that aids the process.</p>
 
-<p><img class="center" src="/images/5-signs-agile-on-paper/story.jpg" title="&lsquo;5 signs that reveal your company is agile only on paper and solutions for them&rsquo; &lsquo;5 signs that reveal your company is agile only on paper and solutions for them&rsquo;" ></p>
+<p>{% img center /images/5-signs-agile-on-paper/story.jpg &lsquo;5 signs that reveal your company is agile only on paper and solutions for them&rsquo; &lsquo;5 signs that reveal your company is agile only on paper and solutions for them&rsquo; %}</p>
 
 <h3>Solution</h3>
 
