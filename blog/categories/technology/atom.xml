@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Technology | Geshan's Blog]]></title>
   <link href="http://geshan.com.np/blog/categories/technology/atom.xml" rel="self"/>
   <link href="http://geshan.com.np/"/>
-  <updated>2018-12-14T21:44:28+11:00</updated>
+  <updated>2018-12-21T20:13:21+11:00</updated>
   <id>http://geshan.com.np/</id>
   <author>
     <name><![CDATA[Geshan Manandhar]]></name>
@@ -12,6 +12,126 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[The Most Important Tip for Beginner Software Engineers Is...]]></title>
+    <link href="http://geshan.com.np/blog/2018/12/the-most-important-tip-for-beginner-software-engineers-is/"/>
+    <updated>2018-12-21T19:47:44+11:00</updated>
+    <id>http://geshan.com.np/blog/2018/12/the-most-important-tip-for-beginner-software-engineers-is</id>
+    <content type="html"><![CDATA[<p>Most of the tutorials you have read or watched till now usually do one thing, spoon-feeding. This is &ldquo;OK&rdquo; to learn a new thing but not good when you need to <code>solve</code> a task. A task usually involves reaching a goal by overcoming a problem. This post unveils the most important &ldquo;tip&rdquo; for all beginner software engineers.</p>
+
+<p><img class="center" src="/images/tip-beginner-sw-eng/puzzle.jpg" title="&lsquo;The most important tip for beginner software engineers is&rsquo; &lsquo;The most important tip for beginner software engineers is&rsquo;" ></p>
+
+<!-- more -->
+
+
+<h2>TL;DR</h2>
+
+<blockquote><p>First, solve the problem. Then, write the code. - John Johnson</p></blockquote>
+
+<p>In other words.</p>
+
+<blockquote><p>Work the solution out on paper in steps, then start writing the code for it. Don&rsquo;t get tangled in the code and software design.</p></blockquote>
+
+<h2>So what happens</h2>
+
+<p>Many times I have heard this from beginner or even junior software engineers. I could follow the tutorial well and thought I understood the concept. But, when I tried to do a similar thing on my pet project I could not do it. It happens mainly because of 2 reasons. First, you somewhere lost your train of thought and could not establish a chain. Second, you were so tangled in the code that the main problem you were trying to solve became out of focus.</p>
+
+<p>This problem also happens for Software Engineers and even Senior Software Engineers. The good thing is with experience you know when to stop or take a break. Then, come back to the problem with a different prescriptive and find a solution faster.</p>
+
+<blockquote><p>Many of you can relate to this that you were trying so hard to fix an issue for hours. You took a break or slept over it and next session the solution was there in minutes.</p></blockquote>
+
+<p>This is not magic this is looking at the problem from another viewpoint.</p>
+
+<h2>Let&rsquo;s illustrate with an example</h2>
+
+<p>You have to do a task, it is to create a refund with payments. A refund always has a reason like damaged, late delivery etc and the payments for that item can be maximum of 2. One of type cash another of type credit (store credit). You are also given the database schema. This is a back-end task and you need to create a POST <code>/refunds</code> API that can create the refund and its related payments. The database structure is as below:</p>
+
+<p><img class="center" src="/images/tip-beginner-sw-eng/refund-schema-v2.png" title="&lsquo;refund schema v2&rsquo; &lsquo;refund schema example&rsquo;" ></p>
+
+<p>You could discuss the API payload too with one of the team members and agreed on the below JSON payload:</p>
+
+<pre><code>POST /refunds
+
+{
+ reason: "damaged",
+ premium_customer: true,
+ payments: [
+  {
+     item_id: 20,
+     amount: 5000,
+     is_cash: true    
+  },
+  {
+     item_id: 20,
+     amount: 7250,
+     is_cash: false
+  }
+ ]
+}
+
+//decide on the response format
+</code></pre>
+
+<h3>The usual scenario</h3>
+
+<p>What most beginner software engineers will do is start scanning the code base, if there is one. They will immediately start writing some code. If there is any testing culture in place maybe write some automated test code.</p>
+
+<blockquote><p>This is where most beginner and even some experienced software engineers slip. Don&rsquo;t write code when you have not solved the problem.</p></blockquote>
+
+<h3>The appropriate step</h3>
+
+<p>The most appropriate step, in my opinion, is to sit down and solve the problem on paper in steps. So you ask yourself to write <code>Refund</code> and its related <code>Payments</code> on the database what do I need to do. You come up with a plan in steps and tweak it.</p>
+
+<blockquote><p>If you have someone senior you can validate your steps and get feedback.</p></blockquote>
+
+<p>This will also decrease the code review time a lot as both of you have already agreed on the modality of the solution.</p>
+
+<h3>So how to do it</h3>
+
+<p>The task as mentioned earlier is to write a create/POST API where Refunds with payments can be created. Each refund can have max 2 payment one of type cash and another one of type credit. It can also be one refund with only one payment of either cash or credit. This is how I would have written the following steps on paper:</p>
+
+<ol>
+<li>Create a method to get the data from the controller sent by user</li>
+<li>Validate all the input for values, refund types, and reasons.</li>
+<li>If all validation passes, generate a random alphanumeric number of length 10 which is not existing in the refund table (recursive check)</li>
+<li>If validation fails to respond with a proper validation failure message, decide on reponse structure</li>
+<li>Start a database transaction
+
+<ol>
+<li>Insert the refund related values of refund_nr, reason_reason, is_premium_customer to the <code>refund</code> table</li>
+<li>On insert success, get the id of the last insert</li>
+<li>With the refund_id, insert payment related values of fk_refund, fk_item, amount, is_cash to the <code>payment</code> table</li>
+</ol>
+</li>
+<li>If all went well commit the database transaction</li>
+<li>If there was any issue rollback database transaction</li>
+<li>Respond with success or failure message depending on the databse transaction’s success with proper structure</li>
+<li>Wire up the controller and this method</li>
+</ol>
+
+
+<h3>Follow the plan in steps, now write code</h3>
+
+<p>After you have a step by step plan you can start writing code. Then,  you can go more in-depth on the method names, how to get the database connection and other details.</p>
+
+<blockquote><p>Depending on the language and framework you can also decide where should the validation code stay.</p></blockquote>
+
+<p>You could even write tests given the company and culture supports and encourages it.</p>
+
+<p>When your solution is evident in your mind and you have a step by step action plan on paper now you can write code.</p>
+
+<blockquote><p>You can even break up the parts in ways that will be easier to finish and wire up.</p></blockquote>
+
+<p>For example, the testing logic can be something that can be written separately and tested on its own. It is thinking about independent parts that can be wired up together to form the solution.</p>
+
+<h2>Conclusion</h2>
+
+<p>When you face your next task don&rsquo;t start writing code from the get-go. First, get a hold of the problem then devise a solution with steps best done away from a screen on paper. Then refine your solution and discuss with someone. When you are satisfied, translate that solution to code. This is a bit methodical but very effective.</p>
+
+<blockquote><p>Code is always a medium to the solution, not the solution itself.</p></blockquote>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[You Can Do It in SQL, Stop Writing Extra Code for That]]></title>
@@ -26,7 +146,7 @@
 
 <p>This is quite prevalent in software engineers who work in web applications. This post aims to enlighten you about the powers of SQL you might know but generally don&rsquo;t use.</p>
 
-<p>{% img center /images/do-it-in-sql/tea-lights.jpg &lsquo;You can do it in SQL, stop writing extra code for that&rsquo; &lsquo;You can do it in SQL, stop writing extra code for that&rsquo; %}</p>
+<p><img class="center" src="/images/do-it-in-sql/tea-lights.jpg" title="&lsquo;You can do it in SQL, stop writing extra code for that&rsquo; &lsquo;You can do it in SQL, stop writing extra code for that&rsquo;" ></p>
 
 <!-- more -->
 
@@ -39,7 +159,7 @@
 
 <p>It will be easier to explain the superpowers of SQL putting it in action on an example. Below is a basic schema with 2 tables in MYSQL for a refunds microservice:</p>
 
-<p>{% img center /images/do-it-in-sql/refund-schema.png &lsquo;You can do it in SQL- refund schema&rsquo; &lsquo;You can do it in SQL - refund schema example&rsquo; %}</p>
+<p><img class="center" src="/images/do-it-in-sql/refund-schema.png" title="&lsquo;You can do it in SQL- refund schema&rsquo; &lsquo;You can do it in SQL - refund schema example&rsquo;" ></p>
 
 <p>There are 2 refunds and 7 related payments as example <a href="http://sqlfiddle.com/#!9/b242d/5">data</a>.</p>
 
@@ -68,7 +188,7 @@ FROM payment WHERE fk_item=2001;
 
 <p>With current data, it will give 3 rows like below:</p>
 
-<p>{% img center /images/do-it-in-sql/01result-without-group.png &lsquo;Result without grouping and aggregate function sum&rsquo; &lsquo;Result without grouping and aggregate function sum&rsquo; %}</p>
+<p><img class="center" src="/images/do-it-in-sql/01result-without-group.png" title="&lsquo;Result without grouping and aggregate function sum&rsquo; &lsquo;Result without grouping and aggregate function sum&rsquo;" ></p>
 
 <p>With these 3 rows, we would loop over them. If it is cash accumulate it to cashBalance variable, if not sum it up to creditBalace variable. Rather than that it would be a lot easier (probably faster) to do in SQL like:</p>
 
@@ -81,7 +201,7 @@ GROUP BY fk_item, is_cash;
 
 <p>Resulting in:</p>
 
-<p>{% img center /images/do-it-in-sql/02result-with-grouping.png &lsquo;Result with grouping and aggregate function sum&rsquo; &lsquo;Result with grouping and aggregate function sum&rsquo; %}</p>
+<p><img class="center" src="/images/do-it-in-sql/02result-with-grouping.png" title="&lsquo;Result with grouping and aggregate function sum&rsquo; &lsquo;Result with grouping and aggregate function sum&rsquo;" ></p>
 
 <p>The result is easy now if you need the total refund for the item just change the GROUP BY to be on fk_item and it&rsquo;s done. For 2 and 3 records it won&rsquo;t feel significant. If there were say 20 refunds for that item, the first solution with a loop is writing more code with no gain.  Like sum, other SQL functions can be used too. Simple math operations like <a href="https://www.w3schools.com/sql/func_mysql_sum.asp">sum</a>, multiply, <a href="https://www.w3schools.com/sql/func_mysql_avg.asp">average</a> etc can be easy with SQL. This means no more loops.</p>
 
@@ -96,7 +216,7 @@ WHERE fk_item = 2001;
 
 <p>This results in:</p>
 
-<p>{% img center /images/do-it-in-sql/03result-group-concat.png &lsquo;Result with group_concat&rsquo; &lsquo;Result with group_concat&rsquo; %}</p>
+<p><img class="center" src="/images/do-it-in-sql/03result-group-concat.png" title="&lsquo;Result with group_concat&rsquo; &lsquo;Result with group_concat&rsquo;" ></p>
 
 <p>Now we know that item 2001 has been refunded twice for 2 refunds. It will be easy to explode the refund Ids with <code>,</code> and proceed with any related operation.</p>
 
@@ -114,7 +234,7 @@ FROM refund;
 
 <p>Resulting in:</p>
 
-<p>{% img center /images/do-it-in-sql/04result-concat-ws.png &lsquo;Result with concat_ws&rsquo; &lsquo;Result with concat_ws&rsquo; %}</p>
+<p><img class="center" src="/images/do-it-in-sql/04result-concat-ws.png" title="&lsquo;Result with concat_ws&rsquo; &lsquo;Result with concat_ws&rsquo;" ></p>
 
 <p>If this needs to be shown on the credit note document, for example, no extra code is needed to join the values again. SQL makes it one step easier again.</p>
 
@@ -139,7 +259,7 @@ ORDER BY priority DESC
 
 <p>The results are below:</p>
 
-<p>{% img center /images/do-it-in-sql/05result-priority-formula.png &lsquo;Result with sorting based on custom formula&rsquo; &lsquo;Result with sorting based on custom formula&rsquo; %}</p>
+<p><img class="center" src="/images/do-it-in-sql/05result-priority-formula.png" title="&lsquo;Result with sorting based on custom formula&rsquo; &lsquo;Result with sorting based on custom formula&rsquo;" ></p>
 
 <p>With proper use of IF in SQL sorting by a custom priority formula is a lot easier than trying to do it with loops in code. Notice that even smaller amounts like 7.5 (750 cents) and 9.0 (900 cents) came to highest priority as these refund payment amounts were associated with premium customers.</p>
 
@@ -162,7 +282,7 @@ ORDER BY priority DESC
     <id>http://geshan.com.np/blog/2018/12/5-tech-medium-publications-software-engineers-should-strive-to-write-for</id>
     <content type="html"><![CDATA[<p>Starting a tech blog has changed in the last few years. 10 years back starting a blog without your website, you had 2 options Blogger or Wordpress. Both gave you a free sub-domain. Things did not change much for quite some time, but in 2012 medium came with a storm. It gained a lot of traction with its simplistic interface in 2014-2015. With the publication feature, Medium makes it very easy for a group of writers to collaborate.  These days I would suggest most people start their blog on it.</p>
 
-<p>{% img center /images/5-tech-medium-publications/library.jpg &lsquo;5 tech medium publication software engineers should strive to write for&rsquo; &lsquo;5 tech medium publication software engineers should strive to write for&rsquo; %}</p>
+<p><img class="center" src="/images/5-tech-medium-publications/library.jpg" title="&lsquo;5 tech medium publication software engineers should strive to write for&rsquo; &lsquo;5 tech medium publication software engineers should strive to write for&rsquo;" ></p>
 
 <!-- more -->
 
@@ -185,7 +305,7 @@ ORDER BY priority DESC
 
 <h3><a href="https://hackernoon.com/">HackerNoon</a> - 403kK followers</h3>
 
-<p>HackerNoon is also another extremely popular publication. It is on Medium right now but it may not be there for long. They are going public with <a href="https://www.startengine.com/hackernoon">crowd sourcing</a>. From the content point of view, there is a sizable amount of content for software engineers. It also has lots of stories on cryptocurrencies. With 7 editors and 7K+ writers (includes me), this is a huge publication too. To write for them you need to send your draft to <a href="&#x6d;&#x61;&#x69;&#x6c;&#116;&#x6f;&#58;&#83;&#116;&#111;&#x72;&#x69;&#x65;&#115;&#x40;&#x41;&#x4d;&#x69;&#80;&#117;&#98;&#108;&#105;&#99;&#x61;&#x74;&#105;&#x6f;&#110;&#115;&#x2e;&#99;&#x6f;&#109;&#x2e;">&#83;&#116;&#x6f;&#114;&#105;&#x65;&#x73;&#x40;&#65;&#77;&#x69;&#x50;&#x75;&#98;&#x6c;&#x69;&#x63;&#x61;&#x74;&#x69;&#x6f;&#110;&#x73;&#46;&#x63;&#111;&#x6d;&#x2e;</a> The wait time for each story is 1 week or more (I have already published 5 stories). It also has a writer&rsquo;s group on Facebook. You can include yourself as a &ldquo;Contributing Writer&rdquo; on <a href="https://www.linkedin.com/company/hackernoon/">LinkedIn</a> too.</p>
+<p>HackerNoon is also another extremely popular publication. It is on Medium right now but it may not be there for long. They are going public with <a href="https://www.startengine.com/hackernoon">crowd sourcing</a>. From the content point of view, there is a sizable amount of content for software engineers. It also has lots of stories on cryptocurrencies. With 7 editors and 7K+ writers (includes me), this is a huge publication too. To write for them you need to send your draft to <a href="&#x6d;&#97;&#x69;&#x6c;&#116;&#x6f;&#58;&#83;&#116;&#x6f;&#114;&#x69;&#x65;&#x73;&#x40;&#x41;&#77;&#105;&#80;&#117;&#98;&#108;&#x69;&#x63;&#x61;&#116;&#x69;&#111;&#110;&#115;&#46;&#x63;&#111;&#x6d;&#46;">&#83;&#116;&#111;&#x72;&#105;&#101;&#x73;&#x40;&#x41;&#77;&#x69;&#80;&#117;&#x62;&#108;&#105;&#99;&#97;&#116;&#x69;&#x6f;&#110;&#x73;&#x2e;&#x63;&#x6f;&#x6d;&#46;</a> The wait time for each story is 1 week or more (I have already published 5 stories). It also has a writer&rsquo;s group on Facebook. You can include yourself as a &ldquo;Contributing Writer&rdquo; on <a href="https://www.linkedin.com/company/hackernoon/">LinkedIn</a> too.</p>
 
 <h3><a href="https://codeburst.io">CodeBurst.io</a> - 62K followers</h3>
 
@@ -224,7 +344,7 @@ ORDER BY priority DESC
     <id>http://geshan.com.np/blog/2018/12/4-ways-docker-changed-the-way-software-engineers-work-in-past-half-decade</id>
     <content type="html"><![CDATA[<p>10 years back it was Git that transformed the way software engineers worked. Half a decade back it was <a href="https://www.docker.com/">Docker</a> that brought the container to the masses. Before Docker, container was like a sacred secret in companies like Google and Heroku. Docker is a software and a company too. It tried to build a broader ecosystem but <a href="https://kubernetes.io/">Kubernetes</a> stole the thunder along the way keeping <a href="https://docs.docker.com/engine/swarm/">swarm</a> at bay. This post is not about how some Docker tools are not popular. It is about how Docker has changed the way we work in the past 5 years.</p>
 
-<p>{% img center /images/4-ways-docker/docker-whale.jpg &lsquo;4 ways Docker changed the way software engineers work in past half decade&rsquo; &lsquo;4 ways Docker changed the way software engineers work in past half decade&rsquo; %}</p>
+<p><img class="center" src="/images/4-ways-docker/docker-whale.jpg" title="&lsquo;4 ways Docker changed the way software engineers work in past half decade&rsquo; &lsquo;4 ways Docker changed the way software engineers work in past half decade&rsquo;" ></p>
 
 <!-- more -->
 
@@ -286,7 +406,7 @@ ORDER BY priority DESC
     <id>http://geshan.com.np/blog/2018/11/5-signs-that-reveal-your-software-development-process-is-agile-only-on-paper-and-solutions-for-them</id>
     <content type="html"><![CDATA[<p>Agility comes with practice not putting big words on paper. Using Jira does not make your software development process agile. Saying we do &ldquo;scrum&rdquo; is not being agile. Being agile is having an agile mindset and putting it into practice everyday. It is about thinking about the value you deliver to the customer and how to do it better.  This post will also unveil these 5 signs and how to solve these issues. The signs and solutions will concern multiple roles like Product Manager, Software engineer etc.</p>
 
-<p>{% img center /images/5-signs-agile-on-paper/board.jpg &lsquo;5 signs that reveal your company is agile only on paper and solutions for them&rsquo; &lsquo;5 signs that reveal your company is agile only on paper and solutions for them&rsquo; %}</p>
+<p><img class="center" src="/images/5-signs-agile-on-paper/board.jpg" title="&lsquo;5 signs that reveal your company is agile only on paper and solutions for them&rsquo; &lsquo;5 signs that reveal your company is agile only on paper and solutions for them&rsquo;" ></p>
 
 <!-- more -->
 
@@ -325,7 +445,7 @@ ORDER BY priority DESC
 
 <p>Agile software development is always about delivering value to the customer. The value in the form of working software not a pile of documents. If there a story like &ldquo;As a customer service manager I need to know who created a refund so that I can track and audit refunds in future&rdquo;. This task might entail adding a &ldquo;created_by&rdquo; field in the refunds table for instance. But this should not result in having a &ldquo;story&rdquo; that says &ldquo;Add created_by field in the refunds table&rdquo;. Of course, it can be a task/subtask as part of the main story. The main story delivers value but this database task is something that aids the process.</p>
 
-<p>{% img center /images/5-signs-agile-on-paper/story.jpg &lsquo;5 signs that reveal your company is agile only on paper and solutions for them&rsquo; &lsquo;5 signs that reveal your company is agile only on paper and solutions for them&rsquo; %}</p>
+<p><img class="center" src="/images/5-signs-agile-on-paper/story.jpg" title="&lsquo;5 signs that reveal your company is agile only on paper and solutions for them&rsquo; &lsquo;5 signs that reveal your company is agile only on paper and solutions for them&rsquo;" ></p>
 
 <h3>Solution</h3>
 
@@ -366,36 +486,6 @@ ORDER BY priority DESC
 <p>Being agile on paper and being agile in practice are two different things. Don&rsquo;t let your agile software process be like waterfall with the so-labeled agile skin. Be agile and fix these signs to have high team output with fantastic performance.</p>
 
 <blockquote><p>Agile should be implemented to solve people and communication problems which results in stabilizing the technical issues.</p></blockquote>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Moving From a and B to 150 Microservices, the Journey, and Learnings [Slides]]]></title>
-    <link href="http://geshan.com.np/blog/2018/10/moving-from-a-and-b-to-~150-microservices/"/>
-    <updated>2018-10-27T08:08:00+11:00</updated>
-    <id>http://geshan.com.np/blog/2018/10/moving-from-a-and-b-to-~150-microservices</id>
-    <content type="html"><![CDATA[<p>I gave a talk at #devopsdaysNewy on 24-Oct-2018. It was a great conference with lots of amazing people.
-I want to thank the organizers for putting together such an amazing event. I want to extend the thanks to the sponsors who made it possible :). It was very good couple of days to meet new people and form a network. I think my talk on microservices went pretty good too. It was my second devops days and I enjoyed it.</p>
-
-<p>{% img center /images/a-b-to-150-ms/150-ms-geshan.jpg &lsquo;Moving from A and B to 150 microservices, the journey, and learnings&rsquo; &lsquo;Moving from A and B to 150 microservices, the journey, and learnings&rsquo; %}</p>
-
-<!-- more -->
-
-
-<h2>The abstract</h2>
-
-<p>Are you frustrated working with large, legacy and potentially lethal code bases? We were frustrated too,but in 4-5 years of time, we replaced A (front-end) and B (back-office) system with ~150 microservices. From the days of no tests and clumsy deployment process, we moved to each service with unit tests, CI and deploying with a bot. With the business buying in the process, we enabled the business to reach new heights. This talk reveals that journey and the things we learned along the way.</p>
-
-<h2>The slides</h2>
-
-<script async class="speakerdeck-embed" data-id="05a92573b3fc4221b6a17478ae0db2b2" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
-
-
-<p>Slides on <a href="https://www.slideshare.net/geshan/moving-from-a-and-b-to-150-microservices-the-journey-and-learnings">slide share</a></p>
-
-<h2>Conclusion</h2>
-
-<p>I gave the same talk at Node Sydney <a href="https://www.meetup.com/node-sydney/events/cvdqzpyxmbjb/">September meetup</a> that went pretty well too. Hope to be able to give more talks in future and meet more interesting people.</p>
 ]]></content>
   </entry>
   

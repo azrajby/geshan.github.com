@@ -4,7 +4,7 @@
   <title><![CDATA[Geshan's Blog]]></title>
   <link href="http://geshan.com.np/atom.xml" rel="self"/>
   <link href="http://geshan.com.np/"/>
-  <updated>2018-12-14T21:43:02+11:00</updated>
+  <updated>2018-12-21T20:13:21+11:00</updated>
   <id>http://geshan.com.np/</id>
   <author>
     <name><![CDATA[Geshan Manandhar]]></name>
@@ -12,6 +12,146 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[The Most Important Tip for Beginner Software Engineers Is...]]></title>
+    <link href="http://geshan.com.np/blog/2018/12/the-most-important-tip-for-beginner-software-engineers-is/"/>
+    <updated>2018-12-21T19:47:44+11:00</updated>
+    <id>http://geshan.com.np/blog/2018/12/the-most-important-tip-for-beginner-software-engineers-is</id>
+    <content type="html"><![CDATA[<p>Most of the tutorials you have read or watched till now usually do one thing, spoon-feeding. This is &ldquo;OK&rdquo; to learn a new thing but not good when you need to <code>solve</code> a task. A task usually involves reaching a goal by overcoming a problem. This post unveils the most important &ldquo;tip&rdquo; for all beginner software engineers.</p>
+
+<p><img class="center" src="http://geshan.com.np/images/tip-beginner-sw-eng/puzzle.jpg" title="The most important tip for beginner software engineers is" alt="The most important tip for beginner software engineers is"></p>
+
+<!-- more -->
+
+
+<h2>TL;DR</h2>
+
+<blockquote><p>First, solve the problem. Then, write the code. - John Johnson</p></blockquote>
+
+<p>In other words.</p>
+
+<blockquote><p>Work the solution out on paper in steps, then start writing the code for it. Don&rsquo;t get tangled in the code and software design.</p></blockquote>
+
+<h2>So what happens</h2>
+
+<p>Many times I have heard this from beginner or even junior software engineers. I could follow the tutorial well and thought I understood the concept. But, when I tried to do a similar thing on my pet project I could not do it. It happens mainly because of 2 reasons. First, you somewhere lost your train of thought and could not establish a chain. Second, you were so tangled in the code that the main problem you were trying to solve became out of focus.</p>
+
+<p>This problem also happens for Software Engineers and even Senior Software Engineers. The good thing is with experience you know when to stop or take a break. Then, come back to the problem with a different prescriptive and find a solution faster.</p>
+
+<blockquote><p>Many of you can relate to this that you were trying so hard to fix an issue for hours. You took a break or slept over it and next session the solution was there in minutes.</p></blockquote>
+
+<p>This is not magic this is looking at the problem from another viewpoint.</p>
+
+<h2>Let&rsquo;s illustrate with an example</h2>
+
+<p>You have to do a task, it is to create a refund with payments. A refund always has a reason like damaged, late delivery etc and the payments for that item can be maximum of 2. One of type cash another of type credit (store credit). You are also given the database schema. This is a back-end task and you need to create a POST <code>/refunds</code> API that can create the refund and its related payments. The database structure is as below:</p>
+
+<p><img class="center" src="http://geshan.com.np/images/tip-beginner-sw-eng/refund-schema-v2.png" title="refund schema v2" alt="refund schema example"></p>
+
+<p>You could discuss the API payload too with one of the team members and agreed on the below JSON payload:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>POST /refunds
+</span><span class='line'>
+</span><span class='line'>{
+</span><span class='line'> reason: "damaged",
+</span><span class='line'> premium_customer: true,
+</span><span class='line'> payments: [
+</span><span class='line'>  {
+</span><span class='line'>     item_id: 20,
+</span><span class='line'>     amount: 5000,
+</span><span class='line'>     is_cash: true    
+</span><span class='line'>  },
+</span><span class='line'>  {
+</span><span class='line'>     item_id: 20,
+</span><span class='line'>     amount: 7250,
+</span><span class='line'>     is_cash: false
+</span><span class='line'>  }
+</span><span class='line'> ]
+</span><span class='line'>}
+</span><span class='line'>
+</span><span class='line'>//decide on the response format</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>The usual scenario</h3>
+
+<p>What most beginner software engineers will do is start scanning the code base, if there is one. They will immediately start writing some code. If there is any testing culture in place maybe write some automated test code.</p>
+
+<blockquote><p>This is where most beginner and even some experienced software engineers slip. Don&rsquo;t write code when you have not solved the problem.</p></blockquote>
+
+<h3>The appropriate step</h3>
+
+<p>The most appropriate step, in my opinion, is to sit down and solve the problem on paper in steps. So you ask yourself to write <code>Refund</code> and its related <code>Payments</code> on the database what do I need to do. You come up with a plan in steps and tweak it.</p>
+
+<blockquote><p>If you have someone senior you can validate your steps and get feedback.</p></blockquote>
+
+<p>This will also decrease the code review time a lot as both of you have already agreed on the modality of the solution.</p>
+
+<h3>So how to do it</h3>
+
+<p>The task as mentioned earlier is to write a create/POST API where Refunds with payments can be created. Each refund can have max 2 payment one of type cash and another one of type credit. It can also be one refund with only one payment of either cash or credit. This is how I would have written the following steps on paper:</p>
+
+<ol>
+<li>Create a method to get the data from the controller sent by user</li>
+<li>Validate all the input for values, refund types, and reasons.</li>
+<li>If all validation passes, generate a random alphanumeric number of length 10 which is not existing in the refund table (recursive check)</li>
+<li>If validation fails to respond with a proper validation failure message, decide on reponse structure</li>
+<li>Start a database transaction
+
+<ol>
+<li>Insert the refund related values of refund_nr, reason_reason, is_premium_customer to the <code>refund</code> table</li>
+<li>On insert success, get the id of the last insert</li>
+<li>With the refund_id, insert payment related values of fk_refund, fk_item, amount, is_cash to the <code>payment</code> table</li>
+</ol>
+</li>
+<li>If all went well commit the database transaction</li>
+<li>If there was any issue rollback database transaction</li>
+<li>Respond with success or failure message depending on the databse transaction’s success with proper structure</li>
+<li>Wire up the controller and this method</li>
+</ol>
+
+
+<h3>Follow the plan in steps, now write code</h3>
+
+<p>After you have a step by step plan you can start writing code. Then,  you can go more in-depth on the method names, how to get the database connection and other details.</p>
+
+<blockquote><p>Depending on the language and framework you can also decide where should the validation code stay.</p></blockquote>
+
+<p>You could even write tests given the company and culture supports and encourages it.</p>
+
+<p>When your solution is evident in your mind and you have a step by step action plan on paper now you can write code.</p>
+
+<blockquote><p>You can even break up the parts in ways that will be easier to finish and wire up.</p></blockquote>
+
+<p>For example, the testing logic can be something that can be written separately and tested on its own. It is thinking about independent parts that can be wired up together to form the solution.</p>
+
+<h2>Conclusion</h2>
+
+<p>When you face your next task don&rsquo;t start writing code from the get-go. First, get a hold of the problem then devise a solution with steps best done away from a screen on paper. Then refine your solution and discuss with someone. When you are satisfied, translate that solution to code. This is a bit methodical but very effective.</p>
+
+<blockquote><p>Code is always a medium to the solution, not the solution itself.</p></blockquote>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[You Can Do It in SQL, Stop Writing Extra Code for That]]></title>
@@ -207,7 +347,7 @@ With current data, it will give 3 rows like below:</p>
 
 <h3><a href="https://hackernoon.com/">HackerNoon</a> - 403kK followers</h3>
 
-<p>HackerNoon is also another extremely popular publication. It is on Medium right now but it may not be there for long. They are going public with <a href="https://www.startengine.com/hackernoon">crowd sourcing</a>. From the content point of view, there is a sizable amount of content for software engineers. It also has lots of stories on cryptocurrencies. With 7 editors and 7K+ writers (includes me), this is a huge publication too. To write for them you need to send your draft to <a href="&#x6d;&#97;&#105;&#108;&#x74;&#x6f;&#58;&#83;&#116;&#x6f;&#x72;&#x69;&#101;&#x73;&#64;&#x41;&#x4d;&#105;&#x50;&#x75;&#98;&#108;&#x69;&#x63;&#97;&#x74;&#x69;&#x6f;&#x6e;&#x73;&#46;&#99;&#111;&#109;&#x2e;">&#x53;&#x74;&#x6f;&#114;&#x69;&#x65;&#x73;&#x40;&#x41;&#x4d;&#x69;&#80;&#117;&#x62;&#x6c;&#x69;&#x63;&#97;&#116;&#105;&#111;&#110;&#115;&#x2e;&#x63;&#x6f;&#x6d;&#x2e;</a> The wait time for each story is 1 week or more (I have already published 5 stories). It also has a writer&rsquo;s group on Facebook. You can include yourself as a &ldquo;Contributing Writer&rdquo; on <a href="https://www.linkedin.com/company/hackernoon/">LinkedIn</a> too.</p>
+<p>HackerNoon is also another extremely popular publication. It is on Medium right now but it may not be there for long. They are going public with <a href="https://www.startengine.com/hackernoon">crowd sourcing</a>. From the content point of view, there is a sizable amount of content for software engineers. It also has lots of stories on cryptocurrencies. With 7 editors and 7K+ writers (includes me), this is a huge publication too. To write for them you need to send your draft to <a href="&#x6d;&#97;&#105;&#108;&#x74;&#111;&#58;&#x53;&#116;&#111;&#114;&#105;&#x65;&#115;&#64;&#x41;&#77;&#105;&#80;&#117;&#x62;&#108;&#105;&#x63;&#97;&#x74;&#x69;&#111;&#x6e;&#115;&#x2e;&#x63;&#111;&#x6d;&#x2e;">&#x53;&#x74;&#x6f;&#114;&#x69;&#101;&#x73;&#x40;&#x41;&#x4d;&#x69;&#80;&#x75;&#98;&#108;&#x69;&#x63;&#97;&#116;&#x69;&#x6f;&#x6e;&#115;&#x2e;&#99;&#111;&#x6d;&#x2e;</a> The wait time for each story is 1 week or more (I have already published 5 stories). It also has a writer&rsquo;s group on Facebook. You can include yourself as a &ldquo;Contributing Writer&rdquo; on <a href="https://www.linkedin.com/company/hackernoon/">LinkedIn</a> too.</p>
 
 <h3><a href="https://codeburst.io">CodeBurst.io</a> - 62K followers</h3>
 
@@ -1204,72 +1344,6 @@ You even as a software engineer get to know important things about how to run a 
 <p>Always test critical things on production in a hidden way like a new payment method. Practice feature switch and get your code passed through your work flow to production.</p>
 
 <blockquote><p>Hope you will benefit from feature switch and suggest it to solve complex problems.</p></blockquote>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Some Useful Resources and Suggestions for Tech Conference Speakers and Aspiring Speakers]]></title>
-    <link href="http://geshan.com.np/blog/2016/09/some-useful-resources-for-conference-speakers-and-wanna-be-speakers/"/>
-    <updated>2016-09-14T17:02:38+10:00</updated>
-    <id>http://geshan.com.np/blog/2016/09/some-useful-resources-for-conference-speakers-and-wanna-be-speakers</id>
-    <content type="html"><![CDATA[<p>I do not consider myself an experienced speaker. I have <a href="http://geshan.com.np/blog/categories/talks/">spoken</a> at a couple of conferences and some meetups in the past years. I have to learn lots of technical and non-technical things to become a better speaker. Still, I would like to share some resources that will help new and experienced speakers.</p>
-
-<p><img class="center" src="http://geshan.com.np/images/speaker-resources/speaker.jpg" title="Some resources for conference speakers" alt="Some resources for conference speakers"></p>
-
-<!-- more -->
-
-
-<h2>Paper submission is not a lot of work</h2>
-
-<p>Some years back, I thought that submitting a paper to a tech conference was a lot of work. General tech conferences just need you to submit a title and a 200-300 word abstract that&rsquo;s it. The organizers/paper selection committee decides to select or reject the paper on that basis. So just jot down those great abstracts and start submitting the papers.</p>
-
-<p>You will be happy to know that some conferences also cover travel and hotel costs for speakers. So, if you get selected you get a chance to visit a new city/country and speak about a topic you like too.</p>
-
-<h2>How Do I know which conferences have an open CFP</h2>
-
-<p>Now, as you are excited to submit your ideas in the form of papers let&rsquo;s see where you can submit them.</p>
-
-<p><img class="center" src="http://geshan.com.np/images/speaker-resources/cfp.jpg" title="Call for papers for a tech conference" alt="Call for papers for a tech conference"></p>
-
-<p>Below are some of the websites that inform you about Call For Papers (CFP):</p>
-
-<ol>
-<li><a href="http://papercall.io/">Papercall.io</a> - You can also submit your papers from this web application. Generally, lists only tech conferences. You can get a weekly update about events listed in PaperCall.io subscribing to <a href="http://theweeklycfp.com/">The Weekly CFP</a>.</li>
-<li><a href="http://lanyrd.com/calls/">Lanyrd.com/calls</a> - Lists call for speakers for a lot of events. Events/Conferences are both tech and non-tech.</li>
-<li><a href="http://callingallpapers.com/">CallingAllPapers.com</a> - Lists all call for papers with days left marker sorted with a deadline. It has only tech conferences listed.</li>
-<li><a href="https://thecfpreport.com/">The CFP Report</a> - Sends a weekly with all tech paper calls. You can even select the day of the week you want the email, I get it each Friday :)</li>
-</ol>
-
-
-<h2>First time speaker? Content is king</h2>
-
-<p>Generally, first-time speakers do not get a chance to speak at conferences. So I recommend you to starts speaking at local meetups. It will be great if you record your talk and publish it as a blog post. This will help you land your first conference speaking opportunity.</p>
-
-<p>Great, so your paper is selected at a tech conference after you already spoke at some meetups. Now after you sort out the administrative procedure like visa if any, you need to focus on your slides. The rule is simple, content is king. No matter you do a soft talk or a super technical talk with lots of code, you need to deliver great content.</p>
-
-<p>Having a agenda or list of things you are going to talk about is a must have. Slides with content in bullets and optimal text on each slide is always better. Images play a vital role if you want to have that punch slide or convey your message in a visual form. I use and recommend right free images that I get from <a href="https://pixabay.com">Pixabay</a> and <a href="https://unsplash.com/">Unsplash</a>.</p>
-
-<h2>Suggestions to speakers, feedback about your talk</h2>
-
-<p>Any feedback about your talk is always helpful. Four general suggestions I have for speakers are:</p>
-
-<ol>
-<li>Keep your slides free from any grammatical errors.</li>
-<li>While speaking try to avoid any <code>Ahh</code> and <code>umm..</code> etc fillers.</li>
-<li>Keep track of your speaking speed, don&rsquo;t speak too fast or too slow.</li>
-<li>Speaking is spontaneous. Still, try to memorize your starting and ending quote/sentence. You could even record your start and end sentences, listen to it and improve on it.</li>
-</ol>
-
-
-<p>The best feedback is what your audience tell you. I have got comments and suggestions on the content, the demo code as well as how I speak. It has helped me a lot. One important feedback I got was that on stage I turn myself into a rapper :) (spoke too fast). So, the next talk I gave I was conscious about my speaking pace.</p>
-
-<p>Always try to get face to face feedback one on one with people in the audience. Whenever possible have your talk listed on <a href="https://joind.in">Joind.in</a>. Have a slide towards the end to rate your talk and ask for feedback. Joind.in also has a page to list <a href="https://joind.in/event/callforpapers">call for papers</a></p>
-
-<h2>Conclusion</h2>
-
-<p>Open up, submit your idea in form of a paper to a tech conference. As long as your talk topic is in-line with the conference subjects just go for it. Don&rsquo;t expect your paper to be selected in all the conferences. Tech conferences get a huge number of submissions. Unless you have some solid speaking experience in conferences, it will be difficult. Be in the conference organizer&rsquo;s shoes too. Getting a first-time speaker who won&rsquo;t be able to deliver a great talk to a paying audience is a big risk.</p>
-
-<blockquote><p>Best of luck, hope your paper gets selected at a great tech conference.</p></blockquote>
 ]]></content>
   </entry>
   

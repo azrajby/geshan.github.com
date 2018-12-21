@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Database | Geshan's Blog]]></title>
   <link href="http://geshan.com.np/blog/categories/database/atom.xml" rel="self"/>
   <link href="http://geshan.com.np/"/>
-  <updated>2018-12-14T21:44:28+11:00</updated>
+  <updated>2018-12-21T20:13:21+11:00</updated>
   <id>http://geshan.com.np/</id>
   <author>
     <name><![CDATA[Geshan Manandhar]]></name>
@@ -20,7 +20,7 @@
     <id>http://geshan.com.np/blog/2018/05/how-to-do-a-zero-downtime-database-db-migration-schema-change-with-a-practical-example</id>
     <content type="html"><![CDATA[<p>Database migration on a production database is never simple. Depending on the volume of requests some teams schedule database migration to off hours. You can run your alter statements with zero or minimal downtime following the steps mentioned below with a practical example.</p>
 
-<p>{% img center /images/db-migration/db-migration.png &lsquo;How to do a zero downtime database&rsquo; &lsquo;How to do a zero downtime database&rsquo; %}</p>
+<p><img class="center" src="/images/db-migration/db-migration.png" title="&lsquo;How to do a zero downtime database&rsquo; &lsquo;How to do a zero downtime database&rsquo;" ></p>
 
 <!-- more -->
 
@@ -29,13 +29,13 @@
 
 <p>As an example for this post, let&rsquo;s assume you work for an E-commerce company which has both recurring and new customers. You have partners who publicize a discount code valid for a given date range and get a percent of the order&rsquo;s total tracked by their discount code. Below is the schema for the partner and coupon code. Below is the initial schema before any change:</p>
 
-<p>{% img center /images/db-migration/schema-01.png &lsquo;Initial DB schema&rsquo; &lsquo;Initial DB Schema&rsquo; %}</p>
+<p><img class="center" src="/images/db-migration/schema-01.png" title="&lsquo;Initial DB schema&rsquo; &lsquo;Initial DB Schema&rsquo;" ></p>
 
 <p>Now the new requirement is to track different commission percent for the new and recurring customer. New and recurring customers are evaluated by a different system/microservice and it is also responsible for commission calculation based on order total which is out of the scope of this focused example.</p>
 
 <p>To do commission tracking by customer type we would decide to add 2 new columns commission_percent_new_customer, commission_percent_recurring_customer, the difficult question is how to roll it out without downtime.</p>
 
-<p>{% img center /images/db-migration/schema-02.png &lsquo;Updated schema with 2 new columns&rsquo; &lsquo;Updated schema with 2 new columns&rsquo; %}</p>
+<p><img class="center" src="/images/db-migration/schema-02.png" title="&lsquo;Updated schema with 2 new columns&rsquo; &lsquo;Updated schema with 2 new columns&rsquo;" ></p>
 
 <h3>Migration script (DB schema alter statement)</h3>
 
@@ -75,7 +75,7 @@ ADD `commission_percent_recurring_customer` DECIMAL NULL AFTER `commission_perce
 
 <h3>Final schema after dropping commission_percent column</h3>
 
-<p>{% img center /images/db-migration/schema-03.png &lsquo;Updated schema with 1 column less&rsquo; &lsquo;Updated schema with 1 column less&rsquo; %}</p>
+<p><img class="center" src="/images/db-migration/schema-03.png" title="&lsquo;Updated schema with 1 column less&rsquo; &lsquo;Updated schema with 1 column less&rsquo;" ></p>
 
 <h2>Things to consider</h2>
 

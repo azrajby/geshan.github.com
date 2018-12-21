@@ -126,6 +126,47 @@
 
 
 
+<span class="glyphicon glyphicon-calendar"></span> <time datetime="2009-08-02T00:05:00+10:00"  data-updated="true" itemprop="datePublished dateCreated"><time class='entry-date' datetime='2009-08-02T00:05:00+10:00'><span class='date'><span class='date-month'>Aug</span> <span class='date-day'>2</span><span class='date-suffix'>nd</span>, <span class='date-year'>2009</span></span> <span class='time'>12:05 am</span></time></time>
+        
+           | <a href="/blog/2009/08/drupal-7-features-to-watch-out-for/#disqus_thread" itemprop="discussionUrl"
+             data-disqus-identifier="http://geshan.com.np/blog/2009/08/drupal-7-features-to-watch-out-for/">Comments</a>
+        
+      </p>
+    
+    
+      <h1 class="entry-title" itemprop="name headline"><a href="/blog/2009/08/drupal-7-features-to-watch-out-for/" itemprop="url">Drupal 7 Features to Watch Out For</a></h1>
+    
+  </header>
+
+
+  <div class="entry-content clearfix" itemprop="articleBody description"><div class='post'>
+<div dir="ltr" style="text-align: left;" trbidi="on">Drupal 7 is said to have a code freeze this September and as far as I heard Dries has no plans to release Drupal 7 until all the critical issues are resolved. Till today&#8217;s date there are 332 critical issues to be resolved.<br /><a href="http://2.bp.blogspot.com/_L4bRnZ5TPr8/SnRMs6hcL6I/AAAAAAAABDg/yBOwm4fY3BU/s1600-h/d7_issues.jpg" onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}"><img alt="" border="0" src="http://2.bp.blogspot.com/_L4bRnZ5TPr8/SnRMs6hcL6I/AAAAAAAABDg/yBOwm4fY3BU/s400/d7_issues.jpg" id="BLOGGER_PHOTO_ID_5364997390612574114" style="cursor: pointer; display: block; height: 245px; margin: 0px auto 10px; text-align: center; width: 400px;" /></a>But none the less I am waiting for the killer release. Having look at the new shiny dashboard and the drag and drop goodness and all the hustle and bustle about file API and fields in core I really want to try out D7 ASAP. Recently I found a presentation about the features I&#8217;m embedding below:<br /><div id="__ss_664935" style="text-align: left; width: 425px;"><a href="http://www.slideshare.net/beejeebus/drupal-7-upcoming-features-presentation" style="display: block; font-family: Helvetica,Arial,Sans-serif; font-size-adjust: none; font-size: 14px; font-stretch: normal; font-style: normal; font-variant: normal; font-weight: normal; line-height: normal; margin: 12px 0pt 3px; text-decoration: underline;" title="Drupal 7 - Upcoming Features">Drupal 7 - Upcoming Features</a><object height="355" style="margin: 0px;" width="425"><param name="movie" value="http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=drupal7-1224247281756730-9&amp;rel=0&amp;stripped_title=drupal-7-upcoming-features-presentation"><param name="allowFullScreen" value="true"><param name="allowScriptAccess" value="always"><embed src="http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=drupal7-1224247281756730-9&amp;rel=0&amp;stripped_title=drupal-7-upcoming-features-presentation" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" height="355" width="425"></embed></object><br /><div style="font-family: tahoma,arial; font-size: 11px; height: 26px; padding-top: 2px;">View more <a href="http://www.slideshare.net/" style="text-decoration: underline;">presentations</a> from <a href="http://www.slideshare.net/beejeebus" style="text-decoration: underline;">beejeebus</a>.</div></div><br /><br /><br />But the features in the change log are as follows:<br /><br />Drupal 7.0, xxxx-xx-xx (development version)<br />&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-<br />- <span style="font-weight: bold;">Database:</span><br /><span style="font-weight: bold;"> </span>* Fully rewritten database layer utilizing PHP 5&#8217;s PDO abstraction layer.<br />* Added query builders for INSERT, UPDATE, DELETE, MERGE, and SELECT queries.<br />* Support for master/slave replication, transactions, multi-insert queries,<br />delayed inserts, and other features.<br />* Added support for the SQLite database engine.<br /><br />- <span style="font-weight: bold;">Security:</span><br /><span style="font-weight: bold;"> </span>* Protected cron.php &#8211; cron will only run if the proper key is provided.<br />* Implemented much stronger password hashes that are also compatible with the<br />Portable PHP password hashing framework.<br />* Implemented a pluggable password hashing API supporting alternative<br />hashing and authentication schemes.<br /><br />- <span style="font-weight: bold;">Usability:</span><br /><span style="font-weight: bold;"> </span>* Improved installer requirements check.<br />* Improved support for integration of WYSIWYG editors.<br />* Implemented drag-and-drop positioning for input format listings.<br />* Implemented drag-and-drop positioning for language listing.<br />* Implemented drag-and-drop positioning for poll options.<br />* Provided descriptions and human-readable names for user permissions.<br />* Removed comment controls for users.<br />* Removed display order settings for comment module. Comment display<br />order can now be customised using the Views module.<br />* Added additional features to the default install profile, and implemented<br />a &#8220;slimmed down&#8221; install profile designed for developers.<br />* Image toolkits are now provided by modules (rather than requiring a manual<br />file copy to the includes directory).<br />* Added an edit tab to taxonomy term pages.<br />* Redesigned password strength validator.<br />* Redesigned the add content type screen.<br />* Highlight duplicate URL aliases.<br />* Renamed &#8220;input formats&#8221; to &#8220;text formats&#8221;.<br />* Added configurable ability for users to cancel their own accounts.<br /><br /><span style="font-weight: bold;">- Performance:</span><br /><span style="font-weight: bold;"> </span>* Improved performance on uncached page views by loading multiple core<br />objects in a single database query.<br />- Documentation:<br />* Hook API documentation now included in Drupal core.<br />- News aggregator:<br />* Added OPML import functionality for RSS feeds.<br />* Optionally, RSS feeds may be configured to not automatically generate feed blocks.<br />- Search:<br />* Added support for language-aware searches.<br />- Aggregator:<br />* Introduced architecture that allows pluggable parsers and processors for<br />syndicating RSS and Atom feeds.<br /><br /><span style="font-weight: bold;">- Testing:</span><br /><span style="font-weight: bold;"> </span>* Added test framework and tests.<br />- Improved time zone support:<br />* Drupal now uses PHP&#8217;s time zone database when rendering dates in local<br />time. Site-wide and user-configured time zone offsets have been converted<br />to time zone names, e.g. Africa/Abidjan.<br />* In some cases the upgrade and install scripts do not choose the preferred<br />site default time zone. The automatically-selected time zone can be<br />corrected at admin/settings/date-time.<br />* If your site is being upgraded from Drupal 6 and you do not have the<br />contributed date or event modules installed, user time zone settings will<br />fallback to the system time zone and will have to be reconfigured by each user.<br /><br /><span style="font-weight: bold;">- Removed ping module:</span><br />* Contributed modules with similar functionality are available.<br /><br /><span style="font-weight: bold;">- Refactored the &#8220;access rules&#8221; component of user module:</span><br />* The user module now provides a simple interface for blocking single<br />IP addresses. The previous functionality in the user module for restricting<br />certain e-mail addresses and usernames is now available as a contributed module.<br />Further, IP address range blocking is no longer supported and should be<br />implemented at the operating system level.<br /><br /><span style="font-weight: bold;">- Removed throttle module:</span><br /><span style="font-weight: bold;"> </span>* Alternative methods for improving performance are available in other core and<br />contributed modules.<br /><br /><span style="font-weight: bold;">- Added code registry:</span><br /><span style="font-weight: bold;"> </span>* Using the registry, modules declare their includable files via their .info file,<br />allowing Drupal to lazy-load code as needed, resulting in significant performance<br />and memory improvements.<br /><br /><span style="font-weight: bold;">- Theme system:</span><br /><span style="font-weight: bold;"> </span>* Converted the &#8216;bluemarine&#8217; theme to a tableless layout.<br /><br /><span style="font-weight: bold;">- File handling:</span><br /><span style="font-weight: bold;"> </span>* Files are now first class Drupal objects with file_load(), file_save(),<br />and file_validate() functions and corresponding hooks.<br />* The file_move(), file_copy() and file_delete() functions now operate on<br />file objects and invoke file hooks so that modules are notified and can<br />respond to changes.<br />* For the occasions when only basic file manipulation are needed&#8211;such as<br />uploading a site logo&#8211;that don&#8217;t require the overhead of databases and<br />hooks, the current unmanaged copy, move and delete operations have been<br />preserved but renamed to file_unmanaged_*().<br /><br /><span style="font-weight: bold;">- Added aliased multi-site support:</span><br /><span style="font-weight: bold;"> </span>* Added support for mapping domain names to sites directories.<br />- Added RDF support:<br />* Modules can declare RDF namespaces which are serialized in the  tag<br />for RDFa support.<br /><br />And, those are exciting new features as always a new Drupal release has lots of things to offer.<br /><a href="http://2.bp.blogspot.com/_L4bRnZ5TPr8/SnROJ4s89GI/AAAAAAAABDo/uruH_flwfkU/s1600-h/Drupal7_features.jpg" onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}"><img alt="" border="0" src="http://2.bp.blogspot.com/_L4bRnZ5TPr8/SnROJ4s89GI/AAAAAAAABDo/uruH_flwfkU/s400/Drupal7_features.jpg" id="BLOGGER_PHOTO_ID_5364998987851822178" style="cursor: pointer; display: block; height: 272px; margin: 0px auto 10px; text-align: center; width: 400px;" /></a><br /><br /><blockquote>Let&#8217;s wait for the Day Drupal 7 is finally released.</blockquote></div></div>
+</div>
+  
+  
+
+
+        </article>
+      
+      
+        <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+          
+  <header class="page-header">
+    
+      <p class="meta text-muted text-uppercase">
+        
+
+
+
+
+
+
+
+
+
+
+
+
 <span class="glyphicon glyphicon-calendar"></span> <time datetime="2009-07-12T18:25:00+10:00"  data-updated="true" itemprop="datePublished dateCreated"><time class='entry-date' datetime='2009-07-12T18:25:00+10:00'><span class='date'><span class='date-month'>Jul</span> <span class='date-day'>12</span><span class='date-suffix'>th</span>, <span class='date-year'>2009</span></span> <span class='time'>6:25 pm</span></time></time>
         
            | <a href="/blog/2009/07/drupal-meetup-kathmandu-event-to-be-in/#disqus_thread" itemprop="discussionUrl"
@@ -271,47 +312,6 @@ SEO short of Search Engine Optimization has now become the buzz word in this web
 
         </article>
       
-      
-        <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-          
-  <header class="page-header">
-    
-      <p class="meta text-muted text-uppercase">
-        
-
-
-
-
-
-
-
-
-
-
-
-
-<span class="glyphicon glyphicon-calendar"></span> <time datetime="2009-06-23T16:41:00+10:00"  data-updated="true" itemprop="datePublished dateCreated"><time class='entry-date' datetime='2009-06-23T16:41:00+10:00'><span class='date'><span class='date-month'>Jun</span> <span class='date-day'>23</span><span class='date-suffix'>rd</span>, <span class='date-year'>2009</span></span> <span class='time'>4:41 pm</span></time></time>
-        
-           | <a href="/blog/2009/06/5-great-designed-drupal-themes/#disqus_thread" itemprop="discussionUrl"
-             data-disqus-identifier="http://geshan.com.np/blog/2009/06/5-great-designed-drupal-themes/">Comments</a>
-        
-      </p>
-    
-    
-      <h1 class="entry-title" itemprop="name headline"><a href="/blog/2009/06/5-great-designed-drupal-themes/" itemprop="url">5 Great Designed Drupal Themes</a></h1>
-    
-  </header>
-
-
-  <div class="entry-content clearfix" itemprop="articleBody description"><div class='post'>
-Browsing through some Drupal themes, I found some great designed themes for Drupal 6. I will let the themes speak for themselves :). Amongst them here are my top 5 picks in alphabetical order (links open in new window/tab):<br /><br /><ol><li><span style="font-weight: bold;">Acquia Slate</span>: is by made <a href="http://acquia.com/" target="_blank">Acquia </a>with <a href="http://topnotchthemes.com/" target="_blank">TopNotchThemes</a>. It is very flexible theme with 14 block regions and lots of cool settings. Like <a href="http://drupal.org/project/acquia_marina" target="_blank">Acquia Marina</a> it is a great theme for blogs as well. Get it at: <a href="http://drupal.org/project/acquia_slate" target="_blank">http://drupal.org/project/acquia_slate<br /></a><a onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}" href="http://1.bp.blogspot.com/_L4bRnZ5TPr8/SkB7hyv78tI/AAAAAAAABBY/YCusqdjvGXY/s1600-h/acquia_slate.png"><img style="margin: 0px auto 10px; display: block; text-align: center; cursor: pointer; width: 400px; height: 339px;" src="http://1.bp.blogspot.com/_L4bRnZ5TPr8/SkB7hyv78tI/AAAAAAAABBY/YCusqdjvGXY/s400/acquia_slate.png" alt="" id="BLOGGER_PHOTO_ID_5350412177804882642" border="0" /></a><br /></li><li><span style="font-weight: bold;">Agregado</span>: is a very cool looking dark theme. It looks very clean and elegeant and will surely be a great fit for a blog. Find it at: <a href="http://drupal.org/project/agregado" target="_blank">http://drupal.org/project/agregado</a><br /><a onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}" href="http://1.bp.blogspot.com/_L4bRnZ5TPr8/SkB-c1onA9I/AAAAAAAABB4/mlE9Dq-Qslk/s1600-h/agregado.png"><img style="margin: 0px auto 10px; display: block; text-align: center; cursor: pointer; width: 400px; height: 300px;" src="http://1.bp.blogspot.com/_L4bRnZ5TPr8/SkB-c1onA9I/AAAAAAAABB4/mlE9Dq-Qslk/s400/agregado.png" alt="" id="BLOGGER_PHOTO_ID_5350415391214994386" border="0" /></a><br /></li><li><span style="font-weight: bold;">Color Paper</span>: Yet another great theme for a blog, it has different color variations as well. This theme looks good but the title area can be made better. I am using this for my blog at my Drupal site <a href="http://www.geshanmanandhar.com/blog" target="_blank">here</a>. Get  at: <a href="http://drupal.org/project/colorpaper" target="_blank">http://drupal.org/project/colorpaper</a><br /><a onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}" href="http://2.bp.blogspot.com/_L4bRnZ5TPr8/SkB8NplNtxI/AAAAAAAABBg/bMON4yQkcT0/s1600-h/color_paper.png"><img style="margin: 0px auto 10px; display: block; text-align: center; cursor: pointer; width: 400px; height: 300px;" src="http://2.bp.blogspot.com/_L4bRnZ5TPr8/SkB8NplNtxI/AAAAAAAABBg/bMON4yQkcT0/s400/color_paper.png" alt="" id="BLOGGER_PHOTO_ID_5350412931258234642" border="0" /></a><br /></li><li><span style="font-weight: bold;">Magazeen</span>: is yet another bloggish 2 column theme. The section below header is the USP of this theme. Clean, simple and elegant, this theme has a good color combination of dark header and bright body. You can make it yours at : <a href="http://drupal.org/project/magazeen" target="_blank">http://drupal.org/project/magazeen</a><br /><a onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}" href="http://4.bp.blogspot.com/_L4bRnZ5TPr8/SkB8hki7qsI/AAAAAAAABBo/1JMNqfNtgyE/s1600-h/magazeen.jpg"><img style="margin: 0px auto 10px; display: block; text-align: center; cursor: pointer; width: 400px; height: 279px;" src="http://4.bp.blogspot.com/_L4bRnZ5TPr8/SkB8hki7qsI/AAAAAAAABBo/1JMNqfNtgyE/s400/magazeen.jpg" alt="" id="BLOGGER_PHOTO_ID_5350413273503869634" border="0" /></a><br /></li><li><span style="font-weight: bold;">Waffles</span>: is a theme based on Acquia Marina, looks somewhat like it. The header is different and there is a header without the girl ;). It is a flexible design, and with 15 block regions it gives you 1-3 column layout. Get the theme at: <a href="http://drupal.org/project/waffles" target="_blank">http://drupal.org/project/waffles</a><br /><a onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}" href="http://2.bp.blogspot.com/_L4bRnZ5TPr8/SkB88B5rr8I/AAAAAAAABBw/RnNyY-davoA/s1600-h/waffles.jpg"><img style="margin: 0px auto 10px; display: block; text-align: center; cursor: pointer; width: 400px; height: 294px;" src="http://2.bp.blogspot.com/_L4bRnZ5TPr8/SkB88B5rr8I/AAAAAAAABBw/RnNyY-davoA/s400/waffles.jpg" alt="" id="BLOGGER_PHOTO_ID_5350413728060518338" border="0" /></a><br /></li></ol><br /><blockquote>I hope you like my selection of cool and refreshing new themes for Drupal 6. Only one problem, almost all themes are for blogs, when will Drupal have great free multipurpose themes?</blockquote></div>
-</div>
-  
-  
-
-
-        </article>
-      
     </div>
 
     <ul class="pager">
@@ -335,6 +335,8 @@ Browsing through some Drupal themes, I found some great designed themes for Drup
   
   <div id="recent_posts" class="list-group">
     
+    <a class="list-group-item " href="/blog/2018/12/the-most-important-tip-for-beginner-software-engineers-is/">The Most Important Tip for Beginner Software Engineers Is&#8230;</a>
+    
     <a class="list-group-item " href="/blog/2018/12/you-can-do-it-in-sql/">You Can Do It in SQL, Stop Writing Extra Code for That</a>
     
     <a class="list-group-item " href="/blog/2018/12/5-tech-medium-publications-software-engineers-should-strive-to-write-for/">5 Tech Medium Publications Software Engineers Should Strive to Write For</a>
@@ -342,8 +344,6 @@ Browsing through some Drupal themes, I found some great designed themes for Drup
     <a class="list-group-item " href="/blog/2018/12/4-ways-docker-changed-the-way-software-engineers-work-in-past-half-decade/">4 Ways Docker Changed the Way Software Engineers Work in Past Half Decade</a>
     
     <a class="list-group-item " href="/blog/2018/11/5-signs-that-reveal-your-software-development-process-is-agile-only-on-paper-and-solutions-for-them/">5 Signs That Reveal Your Software Development Process Is Agile Only on Paper and Solutions for Them</a>
-    
-    <a class="list-group-item " href="/blog/2018/10/moving-from-a-and-b-to-~150-microservices/">Moving From a and B to 150 Microservices, the Journey, and Learnings [Slides]</a>
     
   </div>
 </section>
@@ -355,7 +355,7 @@ Browsing through some Drupal themes, I found some great designed themes for Drup
         
         
         <a class="list-group-item " href="/blog/categories/misc/">
-            <span class="badge">197</span>
+            <span class="badge">198</span>
             misc
         </a>
         
@@ -367,7 +367,7 @@ Browsing through some Drupal themes, I found some great designed themes for Drup
         
         
         <a class="list-group-item " href="/blog/categories/technology/">
-            <span class="badge">139</span>
+            <span class="badge">140</span>
             technology
         </a>
         
