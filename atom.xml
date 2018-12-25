@@ -4,7 +4,7 @@
   <title><![CDATA[Geshan's Blog]]></title>
   <link href="http://geshan.com.np/atom.xml" rel="self"/>
   <link href="http://geshan.com.np/"/>
-  <updated>2018-12-21T21:08:55+11:00</updated>
+  <updated>2018-12-25T19:53:07+11:00</updated>
   <id>http://geshan.com.np/</id>
   <author>
     <name><![CDATA[Geshan Manandhar]]></name>
@@ -12,6 +12,64 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[2018 in Review: 5 Most Viewed Posts of This Year]]></title>
+    <link href="http://geshan.com.np/blog/2018/12/2018-in-review-5-most-viewed-posts-of-this-year/"/>
+    <updated>2018-12-25T18:55:50+11:00</updated>
+    <id>http://geshan.com.np/blog/2018/12/2018-in-review-5-most-viewed-posts-of-this-year</id>
+    <content type="html"><![CDATA[<p>I have never done this in the past 11 years of blogging, this time it is going to be different. I am listing the 5 most viewed posts from this blog in 2018. All posts are not from 2018 but they have been viewed more than the others. I am using my Google Analytics stats to compile this list. So, here I present the most popular blog posts of 2018 on <a href="https://geshan.com.np">Geshan.com.np</a>:</p>
+
+<p><img class="center" src="http://geshan.com.np/images/top-5-2018/everest.jpg" title="5 most viewed posts of 2018 a recap" alt="5 most viewed posts of 2018 a recap"></p>
+
+<!-- more -->
+
+
+<h2>1. <a href="https://geshan.com.np/blog/2018/12/you-can-do-it-in-sql/">You Can Do It in SQL, Stop Writing Extra Code for That</a></h2>
+
+<p>This post was published just 10 days back but I garnered a lot of views. The post highlights:</p>
+
+<blockquote><p>Use SQL to do math like sum, average etc. Utilize it for grouping one to many relational values like getting categories of product. Leverage SQL for string manipulation like using CONCAT_WS for concating first name and last name. Exploit SQL to sort by a custom priority formula.</p></blockquote>
+
+<p><img class="center" src="http://geshan.com.np/images/do-it-in-sql/tea-lights.jpg" title="You can do it in SQL, stop writing extra code for that" alt="You can do it in SQL, stop writing extra code for that"></p>
+
+<h2>2. <a href="https://geshan.com.np/blog/2018/12/4-ways-docker-changed-the-way-software-engineers-work-in-past-half-decade/">4 Ways Docker Changed the Way Software Engineers Work in Past Half Decade</a></h2>
+
+<p>Another post from this December that got pretty popular in past weeks. This post is about how docker has changed software engineering in the past 5 years. The post can be summarized as:</p>
+
+<blockquote><p>With Docker, you ship the whole stack not only your code. Allocate minimum required resources to containers then scale them horizontally. With containers security generally already comes baked In. With Docker and Kubernetes you can get zero downtime and faster deployments leading to business profit.</p></blockquote>
+
+<p><img class="center" src="http://geshan.com.np/images/4-ways-docker/docker-whale.jpg" title="4 ways Docker changed the way software engineers work in past half decade" alt="4 ways Docker changed the way software engineers work in past half decade"></p>
+
+<h2>3. <a href="https://geshan.com.np/blog/2017/05/how-to-use-docker-compose-with-virtual-hosts-and-services-like-db-for-dev-environment/">How to Use Docker Compose With Virtual Hosts and Shared Services (Like Db) for Dev Environment</a></h2>
+
+<p>This is another post about Docker, it is from May 2017. This piece was also able to gather a good amount of views. The post advocates:</p>
+
+<blockquote><p>Use docker and docker-compose with external_links to reuse services like a database across multiple projects. Using Ngnix proxy with virtual hosts can simplify multi-project setup and operation.</p></blockquote>
+
+<p><img class="center" src="http://geshan.com.np/images/docker-compose-vhost/docker-compose-vhost.jpg" title="Docker compose with vhost and shared services" alt="Docker compose with vhost and shared services"></p>
+
+<h2>4. <a href="https://geshan.com.np/blog/2016/04/3-simple-rules-for-less-or-no-git-conflicts/">3 Simple Rules for Less or No Git Conflicts</a></h2>
+
+<p>This is a post about git from 2016. It also got many hits this year probably due to some search engine traffic. Mainly the post can be summarized at</p>
+
+<blockquote><p>Keep your changes small. Rebase your working branch with main branch often. And, review pull requests faster and merge them to main branch.</p></blockquote>
+
+<p><img class="center" src="http://geshan.com.np/images/3-rules-git-conflict/git-conflict.png" title="3 simple rules for less or no git conflicts" alt="3 simple rules for less or no git conflicts"></p>
+
+<h2>5. <a href="https://geshan.com.np/blog/2018/10/dont-code-your-microservice-like-a-monolith/">Don’t Code Your Microservice Like a Monolith, Keep It Maintainable Not Over-engineered</a></h2>
+
+<p>This is a post from Oct this year about  Microservice and how to not code it like a Monolith. This post was also able to get some views from different sources. The post mainly advocates:</p>
+
+<blockquote><p>Microservices are small software systems. You can safely ditch MVC. Say no to ORM and also not take the design pattern baggage for microservices. Focus on code performance, readability, and maintainability not some old rules and patterns. Those patterns were made when people were not doing microservices.</p></blockquote>
+
+<p><img class="center" src="http://geshan.com.np/images/microservice-code/lego.jpg" title="Do not code your microservice like a monolith, keep it maintainable not over-engineered" alt="Do not code your microservice like a monolith, keep it maintainable not over-engineered"></p>
+
+<h2>Conclusion</h2>
+
+<blockquote><p>Looks like docker has been a popular topic for this year. Probably I would blog more about it next year too. I have started cross-posting my posts to <a href="https://dev.to/geshan">Dev.to</a> and medium publications like <a href="https://medium.freecodecamp.org/@geshan">FreeCodeCamp</a> and <a href="https://hackernoon.com/@geshan">HackerNoon</a>. I hope these posts help more and more people.</p></blockquote>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[The Most Important Tip for Beginner Software Engineers Is...]]></title>
@@ -115,7 +173,7 @@
 <li>Create a method to get the data from the controller sent by user</li>
 <li>Validate all the input for values, refund types, and reasons.</li>
 <li>If all validation passes, generate a random alphanumeric number of length 10 which is not existing in the refund table (recursive check)</li>
-<li>If validation fails to respond with a proper validation failure message, decide on reponse structure</li>
+<li>If validation fails to respond with a proper validation failure message, decide on response structure</li>
 <li>Start a database transaction
 
 <ol>
@@ -347,7 +405,7 @@ With current data, it will give 3 rows like below:</p>
 
 <h3><a href="https://hackernoon.com/">HackerNoon</a> - 403kK followers</h3>
 
-<p>HackerNoon is also another extremely popular publication. It is on Medium right now but it may not be there for long. They are going public with <a href="https://www.startengine.com/hackernoon">crowd sourcing</a>. From the content point of view, there is a sizable amount of content for software engineers. It also has lots of stories on cryptocurrencies. With 7 editors and 7K+ writers (includes me), this is a huge publication too. To write for them you need to send your draft to <a href="&#109;&#97;&#x69;&#108;&#x74;&#x6f;&#x3a;&#83;&#x74;&#111;&#x72;&#105;&#x65;&#115;&#64;&#x41;&#77;&#x69;&#80;&#x75;&#98;&#108;&#x69;&#99;&#97;&#116;&#x69;&#111;&#110;&#x73;&#x2e;&#99;&#x6f;&#109;&#46;">&#83;&#x74;&#x6f;&#x72;&#x69;&#x65;&#115;&#x40;&#65;&#77;&#x69;&#80;&#117;&#98;&#108;&#105;&#99;&#97;&#x74;&#x69;&#111;&#x6e;&#115;&#46;&#x63;&#x6f;&#x6d;&#x2e;</a> The wait time for each story is 1 week or more (I have already published 5 stories). It also has a writer&rsquo;s group on Facebook. You can include yourself as a &ldquo;Contributing Writer&rdquo; on <a href="https://www.linkedin.com/company/hackernoon/">LinkedIn</a> too.</p>
+<p>HackerNoon is also another extremely popular publication. It is on Medium right now but it may not be there for long. They are going public with <a href="https://www.startengine.com/hackernoon">crowd sourcing</a>. From the content point of view, there is a sizable amount of content for software engineers. It also has lots of stories on cryptocurrencies. With 7 editors and 7K+ writers (includes me), this is a huge publication too. To write for them you need to send your draft to <a href="&#109;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#58;&#83;&#x74;&#111;&#114;&#x69;&#x65;&#115;&#x40;&#x41;&#77;&#x69;&#80;&#x75;&#x62;&#108;&#105;&#x63;&#97;&#x74;&#x69;&#111;&#x6e;&#115;&#46;&#x63;&#x6f;&#x6d;&#46;">&#83;&#116;&#x6f;&#114;&#x69;&#x65;&#115;&#x40;&#65;&#x4d;&#105;&#x50;&#x75;&#x62;&#x6c;&#x69;&#99;&#x61;&#x74;&#x69;&#x6f;&#110;&#115;&#x2e;&#x63;&#111;&#x6d;&#x2e;</a> The wait time for each story is 1 week or more (I have already published 5 stories). It also has a writer&rsquo;s group on Facebook. You can include yourself as a &ldquo;Contributing Writer&rdquo; on <a href="https://www.linkedin.com/company/hackernoon/">LinkedIn</a> too.</p>
 
 <h3><a href="https://codeburst.io">CodeBurst.io</a> - 62K followers</h3>
 
@@ -1279,71 +1337,6 @@ You even as a software engineer get to know important things about how to run a 
 <p><img class="center" src="http://geshan.com.np/images/web-host-as-housing/web-host-as-housing-med.png" title="Different types of web hosting compared to types of housing" alt="Different types of web hosting compared to types of housing"></p>
 
 <blockquote><p>I hope this helps you to make the right choice about your hosting provider.</p></blockquote>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[How to Do a Minimum Viable Feature Switch, Includes a Simple Code Example]]></title>
-    <link href="http://geshan.com.np/blog/2016/09/how-to-do-a-minimum-viable-feature-switch/"/>
-    <updated>2016-09-26T15:55:05+10:00</updated>
-    <id>http://geshan.com.np/blog/2016/09/how-to-do-a-minimum-viable-feature-switch</id>
-    <content type="html"><![CDATA[<p>Feature switch is a way to switch off or on a feature on a working software during runtime. We can use configuration or condition to achieve this. Feature switch is also known as feature flag, feature toggle and conditional feature. In this post I will reveal why to do <a href="https://en.wikipedia.org/wiki/Feature_toggle">feature switch</a> and how to do it with a simple if condition.</p>
-
-<p><img class="center" src="http://geshan.com.np/images/feature-switch/feature-switch.jpg" title="Minimum viable feature switch, with code example" alt="Minimum viable feature switch, with code example"></p>
-
-<!-- more -->
-
-
-<h2>Why do a feature switch/flag?</h2>
-
-<p>My first experience with feature flag was when we had to deploy <code>PayPal</code> as a payment method. We wanted to be sure that it works without issues on production. How we did it then was to have a <a href="https://launchdarkly.com/featureflags.html">feature flag</a> with a condition that the user email ends in <code>@namshi.com</code>.</p>
-
-<p>You can do feature switch for various reasons, some of them are:</p>
-
-<ol>
-<li>A very important feature needs to go into production and you need to test it in production. It can&rsquo;t be released to everyone unless everything is fine like a new payment method.</li>
-<li>You want to deploy a big feature in steps and until the last step is done the feature is not complete.</li>
-<li>You want your changes pushed to production and merged with the main branch. But the new changes are not public yet.</li>
-<li>You don&rsquo;t want to spend hours fighting merge conflicts. You are working on it for days and your code has not been merged to the main branch.</li>
-<li>You want to schedule a feature in future, you could have a feature switch based on date or time.</li>
-</ol>
-
-
-<h2>How to do feature switch?</h2>
-
-<p>There are many ways to do a feature switch for this post as an example I will add a new payment method to a checkout. For this task, I will use a simple <code>if</code> condition. Other ways of doing feature switch can be with a <code>cookie</code> or even some <code>settings in the database</code>.</p>
-
-<h3>Checkout Scenario</h3>
-
-<p>The simple checkout already has 2 payment methods <code>Cash</code> and <code>CreditCard</code>. We will add <code>PayPal</code> to it. The current proof of concept implementation only shows the order total. For, Cash it shows 5 more than credit card as it adds <code>Cash On Delivery (COD)</code> fees.</p>
-
-<p>The code is an addition to my previous post on <a href="http://geshan.com.np/blog/2015/07/getting-started-with-unit-testing-in-laravel/">unit testing with Laravel</a>. If you have not read it, I highly recommend you to do it. This example has <a href="https://github.com/geshan/laravel-unit-test-example/pull/4/files#diff-b3678da71dcc0bd1aa883f9f930c1ca5R34">tests</a> too.</p>
-
-<h3>Checkout Example with PayPal</h3>
-
-<p>Let us take the example of a simple feature switch with adding a new payment method Paypal. It should be accessible only if your email ends in <code>@gmail.com</code>. You should use <code>yourcompany.com</code> email but for an example, I will use <code>gmail.com</code>.</p>
-
-<h3>Example Code</h3>
-
-<p>There is a simple <code>Checkout</code> service that has a <code>calculateTotal</code> method. It calculates the total depending on the payment method and now email.</p>
-
-<script src="https://gist.github.com/geshan/3da1d181ae26f18a0ec365a063aa5d99.js"></script>
-
-
-<p>The feature flag/switch code is in line 21-23. It checks if the payment method is <code>PayPal</code> and email does not end with <code>@gmail.com</code>. The
-<code>endsWith</code> method in Laravel <a href="https://laravel.com/docs/5.3/helpers#method-ends-with">helpers</a> came handy to do it. So <code>PayPal</code> is only available if your email ends in <code>@gmail.com</code>. You can check this <a href="https://github.com/geshan/laravel-unit-test-example/pull/4/files">pull request</a> for full changes and related tests.</p>
-
-<h3>Turn it off</h3>
-
-<p>So let&rsquo;s assume, that you tested <code>PayPal</code> intensively on your production environment. When you are satisfied you just remove the condition and fix the related tests and you are done. Deploy again do a final round of testing and you have <code>PayPal</code> on production, all your customers can use it after that.</p>
-
-<h2>Conclusion</h2>
-
-<p>Stop making big tasks/tickets that take weeks to complete. Apply feature switch and deploy small things. Test them on production without anyone noticing.</p>
-
-<p>Always test critical things on production in a hidden way like a new payment method. Practice feature switch and get your code passed through your work flow to production.</p>
-
-<blockquote><p>Hope you will benefit from feature switch and suggest it to solve complex problems.</p></blockquote>
 ]]></content>
   </entry>
   

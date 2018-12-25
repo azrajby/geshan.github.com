@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Misc | Geshan's Blog]]></title>
   <link href="http://geshan.com.np/blog/categories/misc/atom.xml" rel="self"/>
   <link href="http://geshan.com.np/"/>
-  <updated>2018-12-21T21:10:17+11:00</updated>
+  <updated>2018-12-25T19:54:13+11:00</updated>
   <id>http://geshan.com.np/</id>
   <author>
     <name><![CDATA[Geshan Manandhar]]></name>
@@ -12,6 +12,64 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[2018 in Review: 5 Most Viewed Posts of This Year]]></title>
+    <link href="http://geshan.com.np/blog/2018/12/2018-in-review-5-most-viewed-posts-of-this-year/"/>
+    <updated>2018-12-25T18:55:50+11:00</updated>
+    <id>http://geshan.com.np/blog/2018/12/2018-in-review-5-most-viewed-posts-of-this-year</id>
+    <content type="html"><![CDATA[<p>I have never done this in the past 11 years of blogging, this time it is going to be different. I am listing the 5 most viewed posts from this blog in 2018. All posts are not from 2018 but they have been viewed more than the others. I am using my Google Analytics stats to compile this list. So, here I present the most popular blog posts of 2018 on <a href="https://geshan.com.np">Geshan.com.np</a>:</p>
+
+<p>{% img center /images/top-5-2018/everest.jpg &lsquo;5 most viewed posts of 2018 a recap&rsquo; &lsquo;5 most viewed posts of 2018 a recap&rsquo; %}</p>
+
+<!-- more -->
+
+
+<h2>1. <a href="https://geshan.com.np/blog/2018/12/you-can-do-it-in-sql/">You Can Do It in SQL, Stop Writing Extra Code for That</a></h2>
+
+<p>This post was published just 10 days back but I garnered a lot of views. The post highlights:</p>
+
+<blockquote><p>Use SQL to do math like sum, average etc. Utilize it for grouping one to many relational values like getting categories of product. Leverage SQL for string manipulation like using CONCAT_WS for concating first name and last name. Exploit SQL to sort by a custom priority formula.</p></blockquote>
+
+<p>{% img center /images/do-it-in-sql/tea-lights.jpg &lsquo;You can do it in SQL, stop writing extra code for that&rsquo; &lsquo;You can do it in SQL, stop writing extra code for that&rsquo; %}</p>
+
+<h2>2. <a href="https://geshan.com.np/blog/2018/12/4-ways-docker-changed-the-way-software-engineers-work-in-past-half-decade/">4 Ways Docker Changed the Way Software Engineers Work in Past Half Decade</a></h2>
+
+<p>Another post from this December that got pretty popular in past weeks. This post is about how docker has changed software engineering in the past 5 years. The post can be summarized as:</p>
+
+<blockquote><p>With Docker, you ship the whole stack not only your code. Allocate minimum required resources to containers then scale them horizontally. With containers security generally already comes baked In. With Docker and Kubernetes you can get zero downtime and faster deployments leading to business profit.</p></blockquote>
+
+<p>{% img center /images/4-ways-docker/docker-whale.jpg &lsquo;4 ways Docker changed the way software engineers work in past half decade&rsquo; &lsquo;4 ways Docker changed the way software engineers work in past half decade&rsquo; %}</p>
+
+<h2>3. <a href="https://geshan.com.np/blog/2017/05/how-to-use-docker-compose-with-virtual-hosts-and-services-like-db-for-dev-environment/">How to Use Docker Compose With Virtual Hosts and Shared Services (Like Db) for Dev Environment</a></h2>
+
+<p>This is another post about Docker, it is from May 2017. This piece was also able to gather a good amount of views. The post advocates:</p>
+
+<blockquote><p>Use docker and docker-compose with external_links to reuse services like a database across multiple projects. Using Ngnix proxy with virtual hosts can simplify multi-project setup and operation.</p></blockquote>
+
+<p>{% img center /images/docker-compose-vhost/docker-compose-vhost.jpg &lsquo;Docker compose with vhost and shared services&rsquo; &lsquo;Docker compose with vhost and shared services&rsquo; %}</p>
+
+<h2>4. <a href="https://geshan.com.np/blog/2016/04/3-simple-rules-for-less-or-no-git-conflicts/">3 Simple Rules for Less or No Git Conflicts</a></h2>
+
+<p>This is a post about git from 2016. It also got many hits this year probably due to some search engine traffic. Mainly the post can be summarized at</p>
+
+<blockquote><p>Keep your changes small. Rebase your working branch with main branch often. And, review pull requests faster and merge them to main branch.</p></blockquote>
+
+<p>{% img center /images/3-rules-git-conflict/git-conflict.png &lsquo;3 simple rules for less or no git conflicts&rsquo; &lsquo;3 simple rules for less or no git conflicts&rsquo; %}</p>
+
+<h2>5. <a href="https://geshan.com.np/blog/2018/10/dont-code-your-microservice-like-a-monolith/">Don’t Code Your Microservice Like a Monolith, Keep It Maintainable Not Over-engineered</a></h2>
+
+<p>This is a post from Oct this year about  Microservice and how to not code it like a Monolith. This post was also able to get some views from different sources. The post mainly advocates:</p>
+
+<blockquote><p>Microservices are small software systems. You can safely ditch MVC. Say no to ORM and also not take the design pattern baggage for microservices. Focus on code performance, readability, and maintainability not some old rules and patterns. Those patterns were made when people were not doing microservices.</p></blockquote>
+
+<p>{% img center /images/microservice-code/lego.jpg &lsquo;Do not code your microservice like a monolith, keep it maintainable not over-engineered&rsquo; &lsquo;Do not code your microservice like a monolith, keep it maintainable not over-engineered&rsquo; %}</p>
+
+<h2>Conclusion</h2>
+
+<blockquote><p>Looks like docker has been a popular topic for this year. Probably I would blog more about it next year too. I have started cross-posting my posts to <a href="https://dev.to/geshan">Dev.to</a> and medium publications like <a href="https://medium.freecodecamp.org/@geshan">FreeCodeCamp</a> and <a href="https://hackernoon.com/@geshan">HackerNoon</a>. I hope these posts help more and more people.</p></blockquote>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[The Most Important Tip for Beginner Software Engineers Is...]]></title>
@@ -95,7 +153,7 @@
 <li>Create a method to get the data from the controller sent by user</li>
 <li>Validate all the input for values, refund types, and reasons.</li>
 <li>If all validation passes, generate a random alphanumeric number of length 10 which is not existing in the refund table (recursive check)</li>
-<li>If validation fails to respond with a proper validation failure message, decide on reponse structure</li>
+<li>If validation fails to respond with a proper validation failure message, decide on response structure</li>
 <li>Start a database transaction
 
 <ol>
@@ -305,7 +363,7 @@ ORDER BY priority DESC
 
 <h3><a href="https://hackernoon.com/">HackerNoon</a> - 403kK followers</h3>
 
-<p>HackerNoon is also another extremely popular publication. It is on Medium right now but it may not be there for long. They are going public with <a href="https://www.startengine.com/hackernoon">crowd sourcing</a>. From the content point of view, there is a sizable amount of content for software engineers. It also has lots of stories on cryptocurrencies. With 7 editors and 7K+ writers (includes me), this is a huge publication too. To write for them you need to send your draft to <a href="&#x6d;&#97;&#105;&#x6c;&#116;&#x6f;&#58;&#83;&#x74;&#111;&#114;&#105;&#101;&#x73;&#x40;&#65;&#x4d;&#105;&#80;&#x75;&#98;&#108;&#105;&#99;&#x61;&#116;&#x69;&#111;&#x6e;&#x73;&#46;&#99;&#x6f;&#109;&#x2e;">&#83;&#x74;&#111;&#114;&#x69;&#101;&#115;&#x40;&#65;&#77;&#105;&#x50;&#x75;&#98;&#x6c;&#105;&#x63;&#x61;&#116;&#x69;&#x6f;&#110;&#115;&#x2e;&#x63;&#111;&#x6d;&#x2e;</a> The wait time for each story is 1 week or more (I have already published 5 stories). It also has a writer&rsquo;s group on Facebook. You can include yourself as a &ldquo;Contributing Writer&rdquo; on <a href="https://www.linkedin.com/company/hackernoon/">LinkedIn</a> too.</p>
+<p>HackerNoon is also another extremely popular publication. It is on Medium right now but it may not be there for long. They are going public with <a href="https://www.startengine.com/hackernoon">crowd sourcing</a>. From the content point of view, there is a sizable amount of content for software engineers. It also has lots of stories on cryptocurrencies. With 7 editors and 7K+ writers (includes me), this is a huge publication too. To write for them you need to send your draft to <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#111;&#x3a;&#83;&#x74;&#111;&#x72;&#x69;&#x65;&#x73;&#64;&#65;&#x4d;&#105;&#80;&#117;&#98;&#108;&#105;&#99;&#97;&#116;&#105;&#111;&#110;&#115;&#x2e;&#x63;&#x6f;&#109;&#46;">&#x53;&#116;&#x6f;&#x72;&#x69;&#101;&#x73;&#64;&#x41;&#77;&#x69;&#x50;&#x75;&#x62;&#x6c;&#x69;&#99;&#97;&#x74;&#105;&#111;&#x6e;&#115;&#x2e;&#x63;&#111;&#109;&#46;</a> The wait time for each story is 1 week or more (I have already published 5 stories). It also has a writer&rsquo;s group on Facebook. You can include yourself as a &ldquo;Contributing Writer&rdquo; on <a href="https://www.linkedin.com/company/hackernoon/">LinkedIn</a> too.</p>
 
 <h3><a href="https://codeburst.io">CodeBurst.io</a> - 62K followers</h3>
 
@@ -396,96 +454,6 @@ ORDER BY priority DESC
 <p>The past 5 years have seen rapid adoption of Docker. With tools like Kubernetes deploying and scaling applications has been much effortless than some years ago.</p>
 
 <blockquote><p>Don&rsquo;t worship your virtual machines, use the resources it provides efficiently. Get on the Docker and containers train and reap its benefits.</p></blockquote>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[5 Signs That Reveal Your Software Development Process Is Agile Only on Paper and Solutions for Them]]></title>
-    <link href="http://geshan.com.np/blog/2018/11/5-signs-that-reveal-your-software-development-process-is-agile-only-on-paper-and-solutions-for-them/"/>
-    <updated>2018-11-20T20:00:22+11:00</updated>
-    <id>http://geshan.com.np/blog/2018/11/5-signs-that-reveal-your-software-development-process-is-agile-only-on-paper-and-solutions-for-them</id>
-    <content type="html"><![CDATA[<p>Agility comes with practice not putting big words on paper. Using Jira does not make your software development process agile. Saying we do &ldquo;scrum&rdquo; is not being agile. Being agile is having an agile mindset and putting it into practice everyday. It is about thinking about the value you deliver to the customer and how to do it better.  This post will also unveil these 5 signs and how to solve these issues. The signs and solutions will concern multiple roles like Product Manager, Software engineer etc.</p>
-
-<p>{% img center /images/5-signs-agile-on-paper/board.jpg &lsquo;5 signs that reveal your company is agile only on paper and solutions for them&rsquo; &lsquo;5 signs that reveal your company is agile only on paper and solutions for them&rsquo; %}</p>
-
-<!-- more -->
-
-
-<h2>TLDR;</h2>
-
-<blockquote><p>If you are writing documents > 5 pages you can improve. There should be a clear definition of Ready for development and Done. Story/Issue should be based on value delivered to the customer not only the technical aspect. Releasing a new version of software once a month and saying we are agile should be a crime. Not caring about the team is not doing agile right.</p></blockquote>
-
-<p>Below are the signs that explain why the paper boat agility will not work and how to fix them:</p>
-
-<h2>Documents that are longer than 5 pages</h2>
-
-<p>There will be big features (epics) and they have to be explained. This does not give you a license to write 50 pager documents. If a document is longer than 5 pages many team members will not read it, accept this fact.</p>
-
-<blockquote><p>One beautiful Monday morning you get a memo of 30 pages text about the new feature business wants us to develop. Will you read it thoroughly? The answer is No.</p></blockquote>
-
-<p>You might skim through it to sustain in the meeting and that&rsquo;s about it. Documents become obsolete fast. When requirements change no one bothers to update documentation.</p>
-
-<h3>Solution</h3>
-
-<p> Write documents that are less than or equal to 5 pages. Make it concise and precise. Start creating visual aids for the process to explain it. Create mock-ups, use tools like <a href="https://balsamiq.com/">Balsamiq</a>. Express the requirements in a way that is understood by everyone with less or no reading involved. Then as per need create a UI design and discuss. After that implement it in code.</p>
-
-<h2>Unclear definition of Ready for development and Done</h2>
-
-<p>Definition of ready for development and Done are crucial for team success. Not having these or having unclear ones will hamper the team performance.</p>
-
-<blockquote><p>A software engineer should be clear about when the story is ready to be picked up for development. Same goes for Done.</p></blockquote>
-
-<p>Is it ready for development when the story is created but the description does not exist? Is it done as soon as I deploy it to production and move my task to &ldquo;Done&rdquo; column? If there are confusions like these it is a bad smell that needs to be addressed.</p>
-
-<h3>Solution</h3>
-
-<p>Have a clear point by point &ldquo;Definition of Ready&rdquo; and &ldquo;Definition of Done&rdquo;. This will help to measure and improve team performance. It will also assist in everyone involved to understand the meaning of these things the same way.</p>
-
-<h2>Stories based on the technical aspect not value to a customer</h2>
-
-<p>Agile software development is always about delivering value to the customer. The value in the form of working software not a pile of documents. If there a story like &ldquo;As a customer service manager I need to know who created a refund so that I can track and audit refunds in future&rdquo;. This task might entail adding a &ldquo;created_by&rdquo; field in the refunds table for instance. But this should not result in having a &ldquo;story&rdquo; that says &ldquo;Add created_by field in the refunds table&rdquo;. Of course, it can be a task/subtask as part of the main story. The main story delivers value but this database task is something that aids the process.</p>
-
-<p>{% img center /images/5-signs-agile-on-paper/story.jpg &lsquo;5 signs that reveal your company is agile only on paper and solutions for them&rsquo; &lsquo;5 signs that reveal your company is agile only on paper and solutions for them&rsquo; %}</p>
-
-<h3>Solution</h3>
-
-<p>Have clear definitions and boundaries of Epic, Story, and task.  Each story should deliver some value to the customer (as above picture).  If you are following Scrum you will have story points too for things like team velocity. Technical tasks are required. Still, only the right sum of technical tasks deliver value to the customer.</p>
-
-<blockquote><p>The main thing here is &ldquo;always focus on the value being delivered to the customer&rdquo;.</p></blockquote>
-
-<h2>Releasing a new version of software once a month</h2>
-
-<p>The first thing to consider here is:</p>
-
-<blockquote><p>Deployment is a technical task and releasing a new software version is a business activity.</p></blockquote>
-
-<p><a href="https://geshan.com.np/blog/2018/10/deployment-is-not-release/">Deployment is not release</a>. If you are not able to make that distinction there is something that needs to be fixed. On top of it, if you hardly release one new version each month, you are doing agile wrong.  <a href="https://en.wikipedia.org/wiki/Release_early,_release_often">Release early release often</a> is an excellent philosophy to get feedback early. With early feedback, you can make a new set of changes in the next release to make the software better. This might not apply for mobile applications with long vendor approval process. For web applications deploying and releasing multiple times a day should be a norm.</p>
-
-<h3>Solution</h3>
-
-<p>Build a culture and technical process to be able to deploy and/or release to production multiple times a day.</p>
-
-<blockquote><p>Enforce good code quality and excellent software engineering practices. Follow tried and tested best practices like code reviews, automated testing, CI/CD, <a href="https://geshan.com.np/blog/2015/08/importance-of-logging-in-your-applications/">logging</a>, monitoring, and <a href="https://geshan.com.np/blog/2015/08/the-best-automated-deployment-tool-the-one-that-fits-your-needs/">automated deployment</a>.</p></blockquote>
-
-<p>Call it DevOps, SRE or Platforms engineering whatever you want but do it and deploy without fear whenever you want.</p>
-
-<h2>Not being careful about team motivation</h2>
-
-<p>Software development is a team sport. If one player is hurt the team covers for that player. If one team member lacks some skills team covers and helps teach that skill to the team member. Self organizing team that reflects on how to make the process better is at the heart of agile.</p>
-
-<blockquote><p>Team motivation and happy team members are essential to high productivity.</p></blockquote>
-
-<p>If you are being treated like story executors with no voice and no room for improvement, it is a big bad sign.</p>
-
-<h3>Solution</h3>
-
-<p>Build a culture of continuous improvement. Reflect on things that have been done and how the process can be enhanced. For instance, if doing 60% new features and 40% bugs did not work well, find a better ratio. Do team activities and things that uplift the team spirit.</p>
-
-<h2>Conclusion</h2>
-
-<p>Being agile on paper and being agile in practice are two different things. Don&rsquo;t let your agile software process be like waterfall with the so-labeled agile skin. Be agile and fix these signs to have high team output with fantastic performance.</p>
-
-<blockquote><p>Agile should be implemented to solve people and communication problems which results in stabilizing the technical issues.</p></blockquote>
 ]]></content>
   </entry>
   
