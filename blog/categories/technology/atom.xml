@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Technology | Geshan's Blog]]></title>
+  <title><![CDATA[Category: technology | Geshan's Blog]]></title>
   <link href="http://geshan.com.np/blog/categories/technology/atom.xml" rel="self"/>
   <link href="http://geshan.com.np/"/>
-  <updated>2018-12-25T20:57:28+11:00</updated>
+  <updated>2018-12-26T08:37:14+11:00</updated>
   <id>http://geshan.com.np/</id>
   <author>
     <name><![CDATA[Geshan Manandhar]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[2018 in Review: 5 Most Viewed Posts of This Year]]></title>
+    <title type="html"><![CDATA[2018 in review: 5 most viewed posts of this year]]></title>
     <link href="http://geshan.com.np/blog/2018/12/2018-in-review-5-most-viewed-posts-of-this-year/"/>
     <updated>2018-12-25T18:55:50+11:00</updated>
     <id>http://geshan.com.np/blog/2018/12/2018-in-review-5-most-viewed-posts-of-this-year</id>
@@ -72,7 +72,7 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[The Most Important Tip for Beginner Software Engineers Is...]]></title>
+    <title type="html"><![CDATA[The most important tip for beginner software engineers is...]]></title>
     <link href="http://geshan.com.np/blog/2018/12/the-most-important-tip-for-beginner-software-engineers-is/"/>
     <updated>2018-12-21T19:47:44+11:00</updated>
     <id>http://geshan.com.np/blog/2018/12/the-most-important-tip-for-beginner-software-engineers-is</id>
@@ -192,7 +192,7 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[You Can Do It in SQL, Stop Writing Extra Code for That]]></title>
+    <title type="html"><![CDATA[You can do it in SQL, stop writing extra code for that]]></title>
     <link href="http://geshan.com.np/blog/2018/12/you-can-do-it-in-sql/"/>
     <updated>2018-12-14T19:30:54+11:00</updated>
     <id>http://geshan.com.np/blog/2018/12/you-can-do-it-in-sql</id>
@@ -334,7 +334,7 @@ ORDER BY priority DESC
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[5 Tech Medium Publications Software Engineers Should Strive to Write For]]></title>
+    <title type="html"><![CDATA[5 tech medium publications software engineers should strive to write for]]></title>
     <link href="http://geshan.com.np/blog/2018/12/5-tech-medium-publications-software-engineers-should-strive-to-write-for/"/>
     <updated>2018-12-05T19:16:06+11:00</updated>
     <id>http://geshan.com.np/blog/2018/12/5-tech-medium-publications-software-engineers-should-strive-to-write-for</id>
@@ -363,7 +363,7 @@ ORDER BY priority DESC
 
 <h3><a href="https://hackernoon.com/">HackerNoon</a> - 403kK followers</h3>
 
-<p>HackerNoon is also another extremely popular publication. It is on Medium right now but it may not be there for long. They are going public with <a href="https://www.startengine.com/hackernoon">crowd sourcing</a>. From the content point of view, there is a sizable amount of content for software engineers. It also has lots of stories on cryptocurrencies. With 7 editors and 7K+ writers (includes me), this is a huge publication too. To write for them you need to send your draft to <a href="&#x6d;&#x61;&#105;&#x6c;&#x74;&#111;&#58;&#83;&#116;&#x6f;&#114;&#x69;&#x65;&#x73;&#x40;&#x41;&#x4d;&#x69;&#x50;&#x75;&#98;&#108;&#x69;&#x63;&#97;&#x74;&#105;&#111;&#110;&#115;&#46;&#x63;&#x6f;&#109;&#x2e;">&#83;&#x74;&#x6f;&#114;&#x69;&#101;&#x73;&#64;&#x41;&#77;&#x69;&#80;&#x75;&#x62;&#108;&#105;&#x63;&#97;&#x74;&#105;&#111;&#110;&#115;&#46;&#99;&#x6f;&#109;&#46;</a> The wait time for each story is 1 week or more (I have already published 5 stories). It also has a writer&rsquo;s group on Facebook. You can include yourself as a &ldquo;Contributing Writer&rdquo; on <a href="https://www.linkedin.com/company/hackernoon/">LinkedIn</a> too.</p>
+<p>HackerNoon is also another extremely popular publication. It is on Medium right now but it may not be there for long. They are going public with <a href="https://www.startengine.com/hackernoon">crowd sourcing</a>. From the content point of view, there is a sizable amount of content for software engineers. It also has lots of stories on cryptocurrencies. With 7 editors and 7K+ writers (includes me), this is a huge publication too. To write for them you need to send your draft to <a href="&#x6d;&#97;&#x69;&#108;&#x74;&#x6f;&#58;&#83;&#116;&#111;&#x72;&#105;&#101;&#115;&#x40;&#65;&#x4d;&#x69;&#x50;&#x75;&#x62;&#108;&#105;&#x63;&#97;&#116;&#x69;&#x6f;&#x6e;&#115;&#x2e;&#x63;&#111;&#109;&#x2e;">&#x53;&#x74;&#x6f;&#x72;&#x69;&#x65;&#115;&#x40;&#65;&#x4d;&#x69;&#80;&#117;&#98;&#x6c;&#x69;&#x63;&#97;&#x74;&#x69;&#111;&#x6e;&#115;&#x2e;&#x63;&#111;&#109;&#46;</a> The wait time for each story is 1 week or more (I have already published 5 stories). It also has a writer&rsquo;s group on Facebook. You can include yourself as a &ldquo;Contributing Writer&rdquo; on <a href="https://www.linkedin.com/company/hackernoon/">LinkedIn</a> too.</p>
 
 <h3><a href="https://codeburst.io">CodeBurst.io</a> - 62K followers</h3>
 
@@ -396,7 +396,7 @@ ORDER BY priority DESC
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[4 Ways Docker Changed the Way Software Engineers Work in Past Half Decade]]></title>
+    <title type="html"><![CDATA[4 ways Docker changed the way software engineers work in past half decade]]></title>
     <link href="http://geshan.com.np/blog/2018/12/4-ways-docker-changed-the-way-software-engineers-work-in-past-half-decade/"/>
     <updated>2018-12-01T09:14:51+11:00</updated>
     <id>http://geshan.com.np/blog/2018/12/4-ways-docker-changed-the-way-software-engineers-work-in-past-half-decade</id>

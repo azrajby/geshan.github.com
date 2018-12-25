@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: About Me | Geshan's Blog]]></title>
+  <title><![CDATA[Category: about me | Geshan's Blog]]></title>
   <link href="http://geshan.com.np/blog/categories/about-me/atom.xml" rel="self"/>
   <link href="http://geshan.com.np/"/>
-  <updated>2018-12-25T20:57:28+11:00</updated>
+  <updated>2018-12-26T08:37:14+11:00</updated>
   <id>http://geshan.com.np/</id>
   <author>
     <name><![CDATA[Geshan Manandhar]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Working as a Software Engineer for a Dev Shop With Projects vs a Product Company]]></title>
+    <title type="html"><![CDATA[Working as a software engineer for a dev shop with projects Vs a product company]]></title>
     <link href="http://geshan.com.np/blog/2013/06/working-for-dev-shop-with-projects-vs/"/>
     <updated>2013-06-09T02:27:00+10:00</updated>
     <id>http://geshan.com.np/blog/2013/06/working-for-dev-shop-with-projects-vs</id>

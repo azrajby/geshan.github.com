@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Agile | Geshan's Blog]]></title>
+  <title><![CDATA[Category: agile | Geshan's Blog]]></title>
   <link href="http://geshan.com.np/blog/categories/agile/atom.xml" rel="self"/>
   <link href="http://geshan.com.np/"/>
-  <updated>2018-12-25T20:57:28+11:00</updated>
+  <updated>2018-12-26T08:37:14+11:00</updated>
   <id>http://geshan.com.np/</id>
   <author>
     <name><![CDATA[Geshan Manandhar]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[5 Signs That Reveal Your Software Development Process Is Agile Only on Paper and Solutions for Them]]></title>
+    <title type="html"><![CDATA[5 signs that reveal your software development process is agile only on paper and solutions for them]]></title>
     <link href="http://geshan.com.np/blog/2018/11/5-signs-that-reveal-your-software-development-process-is-agile-only-on-paper-and-solutions-for-them/"/>
     <updated>2018-11-20T20:00:22+11:00</updated>
     <id>http://geshan.com.np/blog/2018/11/5-signs-that-reveal-your-software-development-process-is-agile-only-on-paper-and-solutions-for-them</id>

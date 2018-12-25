@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Talks | Geshan's Blog]]></title>
+  <title><![CDATA[Category: talks | Geshan's Blog]]></title>
   <link href="http://geshan.com.np/blog/categories/talks/atom.xml" rel="self"/>
   <link href="http://geshan.com.np/"/>
-  <updated>2018-12-25T20:57:28+11:00</updated>
+  <updated>2018-12-26T08:37:14+11:00</updated>
   <id>http://geshan.com.np/</id>
   <author>
     <name><![CDATA[Geshan Manandhar]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Moving From a and B to 150 Microservices, the Journey, and Learnings [Slides]]]></title>
+    <title type="html"><![CDATA[Moving from A and B to 150 microservices, the journey, and learnings [Slides]]]></title>
     <link href="http://geshan.com.np/blog/2018/10/moving-from-a-and-b-to-~150-microservices/"/>
     <updated>2018-10-27T08:08:00+11:00</updated>
     <id>http://geshan.com.np/blog/2018/10/moving-from-a-and-b-to-~150-microservices</id>
@@ -44,7 +44,7 @@ I want to thank the organizers for putting together such an amazing event. I wan
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Adopt a Painless Continuous Delivery Culture, Add More Business Value [Slides]]]></title>
+    <title type="html"><![CDATA[Adopt a painless continuous delivery culture, add more business value [Slides]]]></title>
     <link href="http://geshan.com.np/blog/2017/08/adopt-a-painless-continuous-delivery-culture/"/>
     <updated>2017-08-02T13:17:30+10:00</updated>
     <id>http://geshan.com.np/blog/2017/08/adopt-a-painless-continuous-delivery-culture</id>
@@ -86,7 +86,7 @@ talk titled &ldquo;Adopt a painless continuous delivery culture, add more busine
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Things I Wished I Knew as a Junior Developer for Developers Nepal Meetup #4 [Slides and Video]]]></title>
+    <title type="html"><![CDATA[Things I wished I knew as a junior developer for Developers Nepal Meetup #4 [Slides and Video]]]></title>
     <link href="http://geshan.com.np/blog/2017/02/things-i-wished-i-knew-as-a-junior-developer-slides/"/>
     <updated>2017-02-08T14:31:35+11:00</updated>
     <id>http://geshan.com.np/blog/2017/02/things-i-wished-i-knew-as-a-junior-developer-slides</id>
@@ -150,7 +150,7 @@ talk titled &ldquo;Adopt a painless continuous delivery culture, add more busine
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[#LaraconEU 2016 Was a Great Experience Overall]]></title>
+    <title type="html"><![CDATA[#LaraconEU 2016 was a great experience overall]]></title>
     <link href="http://geshan.com.np/blog/2016/08/number-laraconeu-2016-was-a-great-experience-overall/"/>
     <updated>2016-08-25T13:59:03+10:00</updated>
     <id>http://geshan.com.np/blog/2016/08/number-laraconeu-2016-was-a-great-experience-overall</id>
@@ -263,7 +263,7 @@ an amazing community. Cheers!</p></blockquote>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Career Paths for to Be Tech Graduates [Slides]]]></title>
+    <title type="html"><![CDATA[Career paths for to be tech graduates [Slides]]]></title>
     <link href="http://geshan.com.np/blog/2016/06/career-paths-for-to-be-tech-graduates-slides/"/>
     <updated>2016-06-28T20:03:05+10:00</updated>
     <id>http://geshan.com.np/blog/2016/06/career-paths-for-to-be-tech-graduates-slides</id>

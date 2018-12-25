@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Android | Geshan's Blog]]></title>
+  <title><![CDATA[Category: android | Geshan's Blog]]></title>
   <link href="http://geshan.com.np/blog/categories/android/atom.xml" rel="self"/>
   <link href="http://geshan.com.np/"/>
-  <updated>2018-12-25T20:57:28+11:00</updated>
+  <updated>2018-12-26T08:37:14+11:00</updated>
   <id>http://geshan.com.np/</id>
   <author>
     <name><![CDATA[Geshan Manandhar]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[5 Must Have Unique and Useful Android Apps Part 2]]></title>
+    <title type="html"><![CDATA[5 must have unique and useful Android apps part 2]]></title>
     <link href="http://geshan.com.np/blog/2014/04/5-must-have-unique-and-useful-android/"/>
     <updated>2014-04-12T14:38:00+10:00</updated>
     <id>http://geshan.com.np/blog/2014/04/5-must-have-unique-and-useful-android</id>
@@ -25,7 +25,7 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[5 Must Have Unique and Useful Android Apps]]></title>
+    <title type="html"><![CDATA[5 must have unique and useful Android apps]]></title>
     <link href="http://geshan.com.np/blog/2013/07/5-must-have-unique-and-useful-android/"/>
     <updated>2013-07-19T18:59:00+10:00</updated>
     <id>http://geshan.com.np/blog/2013/07/5-must-have-unique-and-useful-android</id>

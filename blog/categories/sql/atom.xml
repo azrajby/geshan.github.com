@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Sql | Geshan's Blog]]></title>
+  <title><![CDATA[Category: sql | Geshan's Blog]]></title>
   <link href="http://geshan.com.np/blog/categories/sql/atom.xml" rel="self"/>
   <link href="http://geshan.com.np/"/>
-  <updated>2018-12-25T20:57:28+11:00</updated>
+  <updated>2018-12-26T08:37:14+11:00</updated>
   <id>http://geshan.com.np/</id>
   <author>
     <name><![CDATA[Geshan Manandhar]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[You Can Do It in SQL, Stop Writing Extra Code for That]]></title>
+    <title type="html"><![CDATA[You can do it in SQL, stop writing extra code for that]]></title>
     <link href="http://geshan.com.np/blog/2018/12/you-can-do-it-in-sql/"/>
     <updated>2018-12-14T19:30:54+11:00</updated>
     <id>http://geshan.com.np/blog/2018/12/you-can-do-it-in-sql</id>

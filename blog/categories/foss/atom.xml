@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Foss | Geshan's Blog]]></title>
+  <title><![CDATA[Category: foss | Geshan's Blog]]></title>
   <link href="http://geshan.com.np/blog/categories/foss/atom.xml" rel="self"/>
   <link href="http://geshan.com.np/"/>
-  <updated>2018-12-25T20:57:28+11:00</updated>
+  <updated>2018-12-26T08:37:14+11:00</updated>
   <id>http://geshan.com.np/</id>
   <author>
     <name><![CDATA[Geshan Manandhar]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[5 Things to Do for Your Open Source PHP Projects, a Checklist]]></title>
+    <title type="html"><![CDATA[5 Things to do for your open source PHP projects, a checklist]]></title>
     <link href="http://geshan.com.np/blog/2015/07/5-things-to-do-for-your-open-source-php-projects/"/>
     <updated>2015-07-18T13:01:00+10:00</updated>
     <id>http://geshan.com.np/blog/2015/07/5-things-to-do-for-your-open-source-php-projects</id>
@@ -130,7 +130,7 @@ sent to the project. You can use the data-provider example as a base template fo
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Software Engineering Practices in Nepal Infographics Part 2 Includes Git, VCS Hosting, Code Review Culture Etc]]></title>
+    <title type="html"><![CDATA[Software Engineering Practices in Nepal Infographics Part 2 includes Git, VCS Hosting, Code Review Culture etc]]></title>
     <link href="http://geshan.com.np/blog/2015/05/software-engineering-practices-in-nepal-infographics-part-2-includes-git/"/>
     <updated>2015-05-22T12:40:58+10:00</updated>
     <id>http://geshan.com.np/blog/2015/05/software-engineering-practices-in-nepal-infographics-part-2-includes-git</id>
@@ -163,7 +163,7 @@ I will make the survey open till 2015 Q3 and post the final results in Oct 2015.
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Software Engineering Practices in Nepal Infographics Part 1 Includes Languages, Frameworks, IDEs Etc]]></title>
+    <title type="html"><![CDATA[Software Engineering Practices in Nepal Infographics Part 1 includes Languages, Frameworks, IDEs etc]]></title>
     <link href="http://geshan.com.np/blog/2015/05/software-engineering-practices-in-nepal-infographics-part-1-includes-languages/"/>
     <updated>2015-05-17T22:26:29+10:00</updated>
     <id>http://geshan.com.np/blog/2015/05/software-engineering-practices-in-nepal-infographics-part-1-includes-languages</id>
@@ -189,7 +189,7 @@ I will make the survey open till 2015 Q3 and post the final results in Oct 2015.
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[4 Git Tips Beyond the Basics]]></title>
+    <title type="html"><![CDATA[4 Git tips beyond the basics]]></title>
     <link href="http://geshan.com.np/blog/2014/07/4-git-tips-beyond-basics/"/>
     <updated>2014-07-28T16:23:00+10:00</updated>
     <id>http://geshan.com.np/blog/2014/07/4-git-tips-beyond-basics</id>
@@ -200,7 +200,7 @@ I will make the survey open till 2015 Q3 and post the final results in Oct 2015.
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[3 Bundles to Get Started With REST in Symfony 2 and Some Tips]]></title>
+    <title type="html"><![CDATA[3 Bundles to get started with REST in Symfony 2 and some tips]]></title>
     <link href="http://geshan.com.np/blog/2014/07/3-bundles-to-get-started-with-rest-in/"/>
     <updated>2014-07-18T16:55:00+10:00</updated>
     <id>http://geshan.com.np/blog/2014/07/3-bundles-to-get-started-with-rest-in</id>

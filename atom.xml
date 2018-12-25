@@ -4,7 +4,7 @@
   <title><![CDATA[Geshan's Blog]]></title>
   <link href="http://geshan.com.np/atom.xml" rel="self"/>
   <link href="http://geshan.com.np/"/>
-  <updated>2018-12-25T20:57:28+11:00</updated>
+  <updated>2018-12-26T08:37:14+11:00</updated>
   <id>http://geshan.com.np/</id>
   <author>
     <name><![CDATA[Geshan Manandhar]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[2018 in Review: 5 Most Viewed Posts of This Year]]></title>
+    <title type="html"><![CDATA[2018 in review: 5 most viewed posts of this year]]></title>
     <link href="http://geshan.com.np/blog/2018/12/2018-in-review-5-most-viewed-posts-of-this-year/"/>
     <updated>2018-12-25T18:55:50+11:00</updated>
     <id>http://geshan.com.np/blog/2018/12/2018-in-review-5-most-viewed-posts-of-this-year</id>
@@ -72,7 +72,7 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[The Most Important Tip for Beginner Software Engineers Is...]]></title>
+    <title type="html"><![CDATA[The most important tip for beginner software engineers is...]]></title>
     <link href="http://geshan.com.np/blog/2018/12/the-most-important-tip-for-beginner-software-engineers-is/"/>
     <updated>2018-12-21T19:47:44+11:00</updated>
     <id>http://geshan.com.np/blog/2018/12/the-most-important-tip-for-beginner-software-engineers-is</id>
@@ -212,7 +212,7 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[You Can Do It in SQL, Stop Writing Extra Code for That]]></title>
+    <title type="html"><![CDATA[You can do it in SQL, stop writing extra code for that]]></title>
     <link href="http://geshan.com.np/blog/2018/12/you-can-do-it-in-sql/"/>
     <updated>2018-12-14T19:30:54+11:00</updated>
     <id>http://geshan.com.np/blog/2018/12/you-can-do-it-in-sql</id>
@@ -376,7 +376,7 @@ With current data, it will give 3 rows like below:</p>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[5 Tech Medium Publications Software Engineers Should Strive to Write For]]></title>
+    <title type="html"><![CDATA[5 tech medium publications software engineers should strive to write for]]></title>
     <link href="http://geshan.com.np/blog/2018/12/5-tech-medium-publications-software-engineers-should-strive-to-write-for/"/>
     <updated>2018-12-05T19:16:06+11:00</updated>
     <id>http://geshan.com.np/blog/2018/12/5-tech-medium-publications-software-engineers-should-strive-to-write-for</id>
@@ -405,7 +405,7 @@ With current data, it will give 3 rows like below:</p>
 
 <h3><a href="https://hackernoon.com/">HackerNoon</a> - 403kK followers</h3>
 
-<p>HackerNoon is also another extremely popular publication. It is on Medium right now but it may not be there for long. They are going public with <a href="https://www.startengine.com/hackernoon">crowd sourcing</a>. From the content point of view, there is a sizable amount of content for software engineers. It also has lots of stories on cryptocurrencies. With 7 editors and 7K+ writers (includes me), this is a huge publication too. To write for them you need to send your draft to <a href="&#109;&#x61;&#105;&#108;&#116;&#111;&#58;&#x53;&#x74;&#x6f;&#114;&#x69;&#101;&#x73;&#64;&#65;&#x4d;&#105;&#x50;&#117;&#x62;&#108;&#x69;&#x63;&#x61;&#116;&#x69;&#111;&#x6e;&#115;&#x2e;&#x63;&#x6f;&#x6d;&#46;">&#x53;&#116;&#111;&#114;&#x69;&#x65;&#115;&#64;&#65;&#77;&#105;&#80;&#x75;&#x62;&#x6c;&#x69;&#99;&#x61;&#116;&#105;&#111;&#x6e;&#x73;&#x2e;&#99;&#x6f;&#109;&#x2e;</a> The wait time for each story is 1 week or more (I have already published 5 stories). It also has a writer&rsquo;s group on Facebook. You can include yourself as a &ldquo;Contributing Writer&rdquo; on <a href="https://www.linkedin.com/company/hackernoon/">LinkedIn</a> too.</p>
+<p>HackerNoon is also another extremely popular publication. It is on Medium right now but it may not be there for long. They are going public with <a href="https://www.startengine.com/hackernoon">crowd sourcing</a>. From the content point of view, there is a sizable amount of content for software engineers. It also has lots of stories on cryptocurrencies. With 7 editors and 7K+ writers (includes me), this is a huge publication too. To write for them you need to send your draft to <a href="&#109;&#97;&#x69;&#108;&#116;&#x6f;&#x3a;&#83;&#116;&#111;&#114;&#x69;&#x65;&#115;&#64;&#65;&#x4d;&#105;&#x50;&#117;&#98;&#108;&#x69;&#99;&#97;&#116;&#105;&#x6f;&#x6e;&#115;&#x2e;&#x63;&#111;&#109;&#x2e;">&#83;&#x74;&#111;&#114;&#105;&#x65;&#115;&#x40;&#65;&#77;&#x69;&#x50;&#117;&#98;&#108;&#105;&#99;&#97;&#x74;&#105;&#111;&#x6e;&#115;&#x2e;&#x63;&#x6f;&#109;&#46;</a> The wait time for each story is 1 week or more (I have already published 5 stories). It also has a writer&rsquo;s group on Facebook. You can include yourself as a &ldquo;Contributing Writer&rdquo; on <a href="https://www.linkedin.com/company/hackernoon/">LinkedIn</a> too.</p>
 
 <h3><a href="https://codeburst.io">CodeBurst.io</a> - 62K followers</h3>
 
@@ -438,7 +438,7 @@ With current data, it will give 3 rows like below:</p>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[4 Ways Docker Changed the Way Software Engineers Work in Past Half Decade]]></title>
+    <title type="html"><![CDATA[4 ways Docker changed the way software engineers work in past half decade]]></title>
     <link href="http://geshan.com.np/blog/2018/12/4-ways-docker-changed-the-way-software-engineers-work-in-past-half-decade/"/>
     <updated>2018-12-01T09:14:51+11:00</updated>
     <id>http://geshan.com.np/blog/2018/12/4-ways-docker-changed-the-way-software-engineers-work-in-past-half-decade</id>
@@ -500,7 +500,7 @@ With current data, it will give 3 rows like below:</p>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[5 Signs That Reveal Your Software Development Process Is Agile Only on Paper and Solutions for Them]]></title>
+    <title type="html"><![CDATA[5 signs that reveal your software development process is agile only on paper and solutions for them]]></title>
     <link href="http://geshan.com.np/blog/2018/11/5-signs-that-reveal-your-software-development-process-is-agile-only-on-paper-and-solutions-for-them/"/>
     <updated>2018-11-20T20:00:22+11:00</updated>
     <id>http://geshan.com.np/blog/2018/11/5-signs-that-reveal-your-software-development-process-is-agile-only-on-paper-and-solutions-for-them</id>
@@ -590,7 +590,7 @@ With current data, it will give 3 rows like below:</p>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Moving From a and B to 150 Microservices, the Journey, and Learnings [Slides]]]></title>
+    <title type="html"><![CDATA[Moving from A and B to 150 microservices, the journey, and learnings [Slides]]]></title>
     <link href="http://geshan.com.np/blog/2018/10/moving-from-a-and-b-to-~150-microservices/"/>
     <updated>2018-10-27T08:08:00+11:00</updated>
     <id>http://geshan.com.np/blog/2018/10/moving-from-a-and-b-to-~150-microservices</id>
@@ -620,7 +620,7 @@ I want to thank the organizers for putting together such an amazing event. I wan
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Deployment Is Not Release, Let's Use Feature Flags]]></title>
+    <title type="html"><![CDATA[Deployment is not Release, let's use feature flags]]></title>
     <link href="http://geshan.com.np/blog/2018/10/deployment-is-not-release/"/>
     <updated>2018-10-26T08:13:05+11:00</updated>
     <id>http://geshan.com.np/blog/2018/10/deployment-is-not-release</id>
@@ -666,7 +666,7 @@ I want to thank the organizers for putting together such an amazing event. I wan
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Don't Code Your Microservice Like a Monolith, Keep It Maintainable Not Over-engineered]]></title>
+    <title type="html"><![CDATA[Don't code your microservice like a monolith, keep it maintainable not over-engineered]]></title>
     <link href="http://geshan.com.np/blog/2018/10/dont-code-your-microservice-like-a-monolith/"/>
     <updated>2018-10-12T15:54:07+11:00</updated>
     <id>http://geshan.com.np/blog/2018/10/dont-code-your-microservice-like-a-monolith</id>
@@ -727,7 +727,7 @@ I want to thank the organizers for putting together such an amazing event. I wan
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Why Use Docker? 3 Reasons From a Development Perspective]]></title>
+    <title type="html"><![CDATA[Why use docker? 3 reasons from a development perspective]]></title>
     <link href="http://geshan.com.np/blog/2018/10/why-use-docker-3-reasons-from-a-development-perspective/"/>
     <updated>2018-10-10T15:29:22+11:00</updated>
     <id>http://geshan.com.np/blog/2018/10/why-use-docker-3-reasons-from-a-development-perspective</id>
@@ -775,7 +775,7 @@ I want to thank the organizers for putting together such an amazing event. I wan
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Don't Just Learn a New Language/framework, Implement It as a Running Open Source Project]]></title>
+    <title type="html"><![CDATA[Don't just learn a new language/framework, implement it as a running open source project]]></title>
     <link href="http://geshan.com.np/blog/2018/10/dont-just-learn-a-new-language-slash-framework/"/>
     <updated>2018-10-08T15:27:26+11:00</updated>
     <id>http://geshan.com.np/blog/2018/10/dont-just-learn-a-new-language-slash-framework</id>
@@ -824,7 +824,7 @@ If you have Dockerized your open source app I would recommend Zeit Now. With the
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[5 Practical Steps to Land Your First Tech Job]]></title>
+    <title type="html"><![CDATA[5 practical steps to land your first tech job]]></title>
     <link href="http://geshan.com.np/blog/2018/09/7-practical-steps-to-land-your-first-tech-job/"/>
     <updated>2018-09-29T15:55:58+10:00</updated>
     <id>http://geshan.com.np/blog/2018/09/7-practical-steps-to-land-your-first-tech-job</id>
@@ -890,7 +890,7 @@ If you have Dockerized your open source app I would recommend Zeit Now. With the
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[How to Do a Zero Downtime Database (DB) Migration (Schema Change) With a Practical Example]]></title>
+    <title type="html"><![CDATA[How to do a zero downtime database (DB) migration (schema change) with a practical example]]></title>
     <link href="http://geshan.com.np/blog/2018/05/how-to-do-a-zero-downtime-database-db-migration-schema-change-with-a-practical-example/"/>
     <updated>2018-05-01T04:00:41+10:00</updated>
     <id>http://geshan.com.np/blog/2018/05/how-to-do-a-zero-downtime-database-db-migration-schema-change-with-a-practical-example</id>
@@ -974,7 +974,7 @@ If you have Dockerized your open source app I would recommend Zeit Now. With the
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Convert Your Tech Hiring Funnel Into an Hour Glass, Retain Your Tech Talent]]></title>
+    <title type="html"><![CDATA[Convert your tech hiring funnel into an hour glass, retain your tech talent]]></title>
     <link href="http://geshan.com.np/blog/2017/08/convert-your-tech-hiring-funnel-into-an-hour-glass/"/>
     <updated>2017-08-19T02:52:05+10:00</updated>
     <id>http://geshan.com.np/blog/2017/08/convert-your-tech-hiring-funnel-into-an-hour-glass</id>
@@ -1042,7 +1042,7 @@ If you have Dockerized your open source app I would recommend Zeit Now. With the
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Adopt a Painless Continuous Delivery Culture, Add More Business Value [Slides]]]></title>
+    <title type="html"><![CDATA[Adopt a painless continuous delivery culture, add more business value [Slides]]]></title>
     <link href="http://geshan.com.np/blog/2017/08/adopt-a-painless-continuous-delivery-culture/"/>
     <updated>2017-08-02T13:17:30+10:00</updated>
     <id>http://geshan.com.np/blog/2017/08/adopt-a-painless-continuous-delivery-culture</id>
@@ -1132,7 +1132,7 @@ So any team could score between 25-100 (25 is level 1 on each point and 100 is l
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[How to Use Docker Compose With Virtual Hosts and Shared Services (Like Db) for Dev Environment]]></title>
+    <title type="html"><![CDATA[How to use docker compose with virtual hosts and shared services (like db) for dev environment]]></title>
     <link href="http://geshan.com.np/blog/2017/05/how-to-use-docker-compose-with-virtual-hosts-and-services-like-db-for-dev-environment/"/>
     <updated>2017-05-25T00:53:04+10:00</updated>
     <id>http://geshan.com.np/blog/2017/05/how-to-use-docker-compose-with-virtual-hosts-and-services-like-db-for-dev-environment</id>
@@ -1214,7 +1214,7 @@ as <a href="https://github.com/geshan/counter/blob/master/index.js#L4">mysql</a>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Things I Wished I Knew as a Junior Developer for Developers Nepal Meetup #4 [Slides and Video]]]></title>
+    <title type="html"><![CDATA[Things I wished I knew as a junior developer for Developers Nepal Meetup #4 [Slides and Video]]]></title>
     <link href="http://geshan.com.np/blog/2017/02/things-i-wished-i-knew-as-a-junior-developer-slides/"/>
     <updated>2017-02-08T14:31:35+11:00</updated>
     <id>http://geshan.com.np/blog/2017/02/things-i-wished-i-knew-as-a-junior-developer-slides</id>
@@ -1278,7 +1278,7 @@ as <a href="https://github.com/geshan/counter/blob/master/index.js#L4">mysql</a>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[3 Podcasts Every Software Engineer/developer Should Subscribe to - Part 3]]></title>
+    <title type="html"><![CDATA[3 Podcasts Every Software Engineer/developer Should Subscribe To - Part 3]]></title>
     <link href="http://geshan.com.np/blog/2017/01/3-podcasts-every-software-engineer-slash-developer-should-subscribe-to-part-3/"/>
     <updated>2017-01-04T16:47:54+11:00</updated>
     <id>http://geshan.com.np/blog/2017/01/3-podcasts-every-software-engineer-slash-developer-should-subscribe-to-part-3</id>
@@ -1323,7 +1323,7 @@ You even as a software engineer get to know important things about how to run a 
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Different Types of Web Hosting Compared to Types of Housing [Infographics]]]></title>
+    <title type="html"><![CDATA[Different types of web hosting compared to types of housing [Infographics]]]></title>
     <link href="http://geshan.com.np/blog/2016/11/different-types-of-web-hosting-compared-to-types-of-housing/"/>
     <updated>2016-11-29T22:28:50+11:00</updated>
     <id>http://geshan.com.np/blog/2016/11/different-types-of-web-hosting-compared-to-types-of-housing</id>

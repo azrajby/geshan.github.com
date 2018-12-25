@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Tutorial | Geshan's Blog]]></title>
+  <title><![CDATA[Category: tutorial | Geshan's Blog]]></title>
   <link href="http://geshan.com.np/blog/categories/tutorial/atom.xml" rel="self"/>
   <link href="http://geshan.com.np/"/>
-  <updated>2018-12-25T20:57:28+11:00</updated>
+  <updated>2018-12-26T08:37:14+11:00</updated>
   <id>http://geshan.com.np/</id>
   <author>
     <name><![CDATA[Geshan Manandhar]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Getting Started With PHP (LEMP) on Vagrant, the Easiest Way - 200th Post]]></title>
+    <title type="html"><![CDATA[Getting started with PHP (LEMP) on Vagrant, the easiest way - 200th post]]></title>
     <link href="http://geshan.com.np/blog/2014/07/getting-started-with-php-lemp-on-vagrant/"/>
     <updated>2014-07-05T20:34:00+10:00</updated>
     <id>http://geshan.com.np/blog/2014/07/getting-started-with-php-lemp-on-vagrant</id>
@@ -25,7 +25,7 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Using PHPUnit Data Provider for Less Code and Greater Coverage]]></title>
+    <title type="html"><![CDATA[Using PHPUnit data provider for less code and greater coverage]]></title>
     <link href="http://geshan.com.np/blog/2014/02/using-phpunit-data-provider-for-less/"/>
     <updated>2014-02-01T18:51:00+11:00</updated>
     <id>http://geshan.com.np/blog/2014/02/using-phpunit-data-provider-for-less</id>
@@ -36,7 +36,7 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Git Introduction and Hands on Usage Guide for Windows With Msysgit]]></title>
+    <title type="html"><![CDATA[Git introduction and hands on usage guide for windows with msysgit]]></title>
     <link href="http://geshan.com.np/blog/2012/02/git-introduction-and-hand-on-usage/"/>
     <updated>2012-02-16T19:43:00+11:00</updated>
     <id>http://geshan.com.np/blog/2012/02/git-introduction-and-hand-on-usage</id>
@@ -47,7 +47,7 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Drupal 7 Must Have Modules, Content Type Config and Views Intro [Slides]]]></title>
+    <title type="html"><![CDATA[Drupal 7 must have modules, content type config and views intro [Slides]]]></title>
     <link href="http://geshan.com.np/blog/2011/11/drupal-7-must-have-modules-content-type/"/>
     <updated>2011-11-22T03:01:00+11:00</updated>
     <id>http://geshan.com.np/blog/2011/11/drupal-7-must-have-modules-content-type</id>
@@ -58,7 +58,7 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[How to Install Drupal 7 and Basic Configs [Slides]]]></title>
+    <title type="html"><![CDATA[How to Install Drupal 7 and basic configs [Slides]]]></title>
     <link href="http://geshan.com.np/blog/2011/11/how-to-install-drupal-7-and-basic/"/>
     <updated>2011-11-18T16:41:00+11:00</updated>
     <id>http://geshan.com.np/blog/2011/11/how-to-install-drupal-7-and-basic</id>

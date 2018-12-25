@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Git | Geshan's Blog]]></title>
+  <title><![CDATA[Category: git | Geshan's Blog]]></title>
   <link href="http://geshan.com.np/blog/categories/git/atom.xml" rel="self"/>
   <link href="http://geshan.com.np/"/>
-  <updated>2018-12-25T20:57:28+11:00</updated>
+  <updated>2018-12-26T08:37:14+11:00</updated>
   <id>http://geshan.com.np/</id>
   <author>
     <name><![CDATA[Geshan Manandhar]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Don't Just Learn a New Language/framework, Implement It as a Running Open Source Project]]></title>
+    <title type="html"><![CDATA[Don't just learn a new language/framework, implement it as a running open source project]]></title>
     <link href="http://geshan.com.np/blog/2018/10/dont-just-learn-a-new-language-slash-framework/"/>
     <updated>2018-10-08T15:27:26+11:00</updated>
     <id>http://geshan.com.np/blog/2018/10/dont-just-learn-a-new-language-slash-framework</id>
@@ -63,7 +63,7 @@ If you have Dockerized your open source app I would recommend Zeit Now. With the
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[PHP Developers Nepal Meetup #16 a Round Up and My Talk on Simpilfied Gitflow With Slides]]></title>
+    <title type="html"><![CDATA[PHP Developers Nepal Meetup #16 a round up and my talk on simpilfied gitflow with slides]]></title>
     <link href="http://geshan.com.np/blog/2016/06/php-developers-nepal-meetup-number-16-a-round-up-and-my-simpilfied-gitflow-talk/"/>
     <updated>2016-06-25T21:50:35+10:00</updated>
     <id>http://geshan.com.np/blog/2016/06/php-developers-nepal-meetup-number-16-a-round-up-and-my-simpilfied-gitflow-talk</id>
@@ -113,7 +113,7 @@ This time I changed the slides and made it more general. I hope it was helpful t
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[3 Simple Rules for Less or No Git Conflicts]]></title>
+    <title type="html"><![CDATA[3 simple rules for less or no git conflicts]]></title>
     <link href="http://geshan.com.np/blog/2016/04/3-simple-rules-for-less-or-no-git-conflicts/"/>
     <updated>2016-04-28T16:14:43+10:00</updated>
     <id>http://geshan.com.np/blog/2016/04/3-simple-rules-for-less-or-no-git-conflicts</id>
@@ -194,7 +194,7 @@ Be logical, if you have a PR with 50 files changed and 700 new lines you will fa
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[How to Use Simplified Gitflow Branching Model [Video]]]></title>
+    <title type="html"><![CDATA[How to use simplified gitflow branching model [Video]]]></title>
     <link href="http://geshan.com.np/blog/2015/09/how-to-use-simplified-gitflow-branching-model-video/"/>
     <updated>2015-09-25T23:16:23+10:00</updated>
     <id>http://geshan.com.np/blog/2015/09/how-to-use-simplified-gitflow-branching-model-video</id>
@@ -230,7 +230,7 @@ on 11-Mar-2015. I know its a late post its like a part 2 of <a href="http://bit.
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Software Engineering Practices in Nepal Infographics Part 2 Includes Git, VCS Hosting, Code Review Culture Etc]]></title>
+    <title type="html"><![CDATA[Software Engineering Practices in Nepal Infographics Part 2 includes Git, VCS Hosting, Code Review Culture etc]]></title>
     <link href="http://geshan.com.np/blog/2015/05/software-engineering-practices-in-nepal-infographics-part-2-includes-git/"/>
     <updated>2015-05-22T12:40:58+10:00</updated>
     <id>http://geshan.com.np/blog/2015/05/software-engineering-practices-in-nepal-infographics-part-2-includes-git</id>

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Laravel | Geshan's Blog]]></title>
+  <title><![CDATA[Category: laravel | Geshan's Blog]]></title>
   <link href="http://geshan.com.np/blog/categories/laravel/atom.xml" rel="self"/>
   <link href="http://geshan.com.np/"/>
-  <updated>2018-12-25T20:57:28+11:00</updated>
+  <updated>2018-12-26T08:37:14+11:00</updated>
   <id>http://geshan.com.np/</id>
   <author>
     <name><![CDATA[Geshan Manandhar]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Getting Started With Laravel, MariaDB (MySQL) and Docker, Docker Compose]]></title>
+    <title type="html"><![CDATA[Getting started with Laravel, MariaDB (MySQL) and docker, docker compose]]></title>
     <link href="http://geshan.com.np/blog/2015/10/getting-started-with-laravel-mariadb-mysql-docker/"/>
     <updated>2015-10-24T18:49:48+11:00</updated>
     <id>http://geshan.com.np/blog/2015/10/getting-started-with-laravel-mariadb-mysql-docker</id>
@@ -275,7 +275,7 @@ opt for docker and docker-comopse. Happy Dockerizing and coding Laravel + PHP!</
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Getting Started With Unit Testing in Laravel]]></title>
+    <title type="html"><![CDATA[Getting started with unit testing in Laravel]]></title>
     <link href="http://geshan.com.np/blog/2015/07/getting-started-with-unit-testing-in-laravel/"/>
     <updated>2015-07-25T14:57:42+10:00</updated>
     <id>http://geshan.com.np/blog/2015/07/getting-started-with-unit-testing-in-laravel</id>

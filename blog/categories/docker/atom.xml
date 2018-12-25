@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Docker | Geshan's Blog]]></title>
+  <title><![CDATA[Category: docker | Geshan's Blog]]></title>
   <link href="http://geshan.com.np/blog/categories/docker/atom.xml" rel="self"/>
   <link href="http://geshan.com.np/"/>
-  <updated>2018-12-25T20:57:28+11:00</updated>
+  <updated>2018-12-26T08:37:14+11:00</updated>
   <id>http://geshan.com.np/</id>
   <author>
     <name><![CDATA[Geshan Manandhar]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[4 Ways Docker Changed the Way Software Engineers Work in Past Half Decade]]></title>
+    <title type="html"><![CDATA[4 ways Docker changed the way software engineers work in past half decade]]></title>
     <link href="http://geshan.com.np/blog/2018/12/4-ways-docker-changed-the-way-software-engineers-work-in-past-half-decade/"/>
     <updated>2018-12-01T09:14:51+11:00</updated>
     <id>http://geshan.com.np/blog/2018/12/4-ways-docker-changed-the-way-software-engineers-work-in-past-half-decade</id>
@@ -76,7 +76,7 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Why Use Docker? 3 Reasons From a Development Perspective]]></title>
+    <title type="html"><![CDATA[Why use docker? 3 reasons from a development perspective]]></title>
     <link href="http://geshan.com.np/blog/2018/10/why-use-docker-3-reasons-from-a-development-perspective/"/>
     <updated>2018-10-10T15:29:22+11:00</updated>
     <id>http://geshan.com.np/blog/2018/10/why-use-docker-3-reasons-from-a-development-perspective</id>
@@ -124,7 +124,7 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Don't Just Learn a New Language/framework, Implement It as a Running Open Source Project]]></title>
+    <title type="html"><![CDATA[Don't just learn a new language/framework, implement it as a running open source project]]></title>
     <link href="http://geshan.com.np/blog/2018/10/dont-just-learn-a-new-language-slash-framework/"/>
     <updated>2018-10-08T15:27:26+11:00</updated>
     <id>http://geshan.com.np/blog/2018/10/dont-just-learn-a-new-language-slash-framework</id>
@@ -173,7 +173,7 @@ If you have Dockerized your open source app I would recommend Zeit Now. With the
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[How to Use Docker Compose With Virtual Hosts and Shared Services (Like Db) for Dev Environment]]></title>
+    <title type="html"><![CDATA[How to use docker compose with virtual hosts and shared services (like db) for dev environment]]></title>
     <link href="http://geshan.com.np/blog/2017/05/how-to-use-docker-compose-with-virtual-hosts-and-services-like-db-for-dev-environment/"/>
     <updated>2017-05-25T00:53:04+10:00</updated>
     <id>http://geshan.com.np/blog/2017/05/how-to-use-docker-compose-with-virtual-hosts-and-services-like-db-for-dev-environment</id>
@@ -255,7 +255,7 @@ as <a href="https://github.com/geshan/counter/blob/master/index.js#L4">mysql</a>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Getting Started With Laravel, MariaDB (MySQL) and Docker, Docker Compose]]></title>
+    <title type="html"><![CDATA[Getting started with Laravel, MariaDB (MySQL) and docker, docker compose]]></title>
     <link href="http://geshan.com.np/blog/2015/10/getting-started-with-laravel-mariadb-mysql-docker/"/>
     <updated>2015-10-24T18:49:48+11:00</updated>
     <id>http://geshan.com.np/blog/2015/10/getting-started-with-laravel-mariadb-mysql-docker</id>

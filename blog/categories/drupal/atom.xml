@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Drupal | Geshan's Blog]]></title>
+  <title><![CDATA[Category: drupal | Geshan's Blog]]></title>
   <link href="http://geshan.com.np/blog/categories/drupal/atom.xml" rel="self"/>
   <link href="http://geshan.com.np/"/>
-  <updated>2018-12-25T20:57:28+11:00</updated>
+  <updated>2018-12-26T08:37:14+11:00</updated>
   <id>http://geshan.com.np/</id>
   <author>
     <name><![CDATA[Geshan Manandhar]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Drupal 7 Must Have Modules, Content Type Config and Views Intro [Slides]]]></title>
+    <title type="html"><![CDATA[Drupal 7 must have modules, content type config and views intro [Slides]]]></title>
     <link href="http://geshan.com.np/blog/2011/11/drupal-7-must-have-modules-content-type/"/>
     <updated>2011-11-22T03:01:00+11:00</updated>
     <id>http://geshan.com.np/blog/2011/11/drupal-7-must-have-modules-content-type</id>
@@ -25,7 +25,7 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[How to Install Drupal 7 and Basic Configs [Slides]]]></title>
+    <title type="html"><![CDATA[How to Install Drupal 7 and basic configs [Slides]]]></title>
     <link href="http://geshan.com.np/blog/2011/11/how-to-install-drupal-7-and-basic/"/>
     <updated>2011-11-18T16:41:00+11:00</updated>
     <id>http://geshan.com.np/blog/2011/11/how-to-install-drupal-7-and-basic</id>
@@ -36,7 +36,7 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Drupal CMS a Technical Introduction]]></title>
+    <title type="html"><![CDATA[Drupal CMS a technical introduction]]></title>
     <link href="http://geshan.com.np/blog/2011/11/drupal-cms-technical-introduction/"/>
     <updated>2011-11-01T00:53:00+11:00</updated>
     <id>http://geshan.com.np/blog/2011/11/drupal-cms-technical-introduction</id>
@@ -47,7 +47,7 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Drupal a Non Technical Introduction at BarCamp Kathmandu 2010 #barcampktm]]></title>
+    <title type="html"><![CDATA[Drupal a non technical introduction at BarCamp Kathmandu 2010 #barcampktm]]></title>
     <link href="http://geshan.com.np/blog/2010/08/drupal-non-technical-introduction-at/"/>
     <updated>2010-08-28T22:25:00+10:00</updated>
     <id>http://geshan.com.np/blog/2010/08/drupal-non-technical-introduction-at</id>
@@ -58,7 +58,7 @@ After some research and getting my head banged on the wall I could not find any 
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[7 Drupal Modules to Improve SEO of Your Drupal Website]]></title>
+    <title type="html"><![CDATA[7 Drupal Modules to improve SEO of your Drupal website]]></title>
     <link href="http://geshan.com.np/blog/2010/04/7-drupal-modules-to-improve-seo-of-your/"/>
     <updated>2010-04-25T02:17:00+10:00</updated>
     <id>http://geshan.com.np/blog/2010/04/7-drupal-modules-to-improve-seo-of-your</id>

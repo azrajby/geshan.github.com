@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Codeigniter | Geshan's Blog]]></title>
+  <title><![CDATA[Category: codeigniter | Geshan's Blog]]></title>
   <link href="http://geshan.com.np/blog/categories/codeigniter/atom.xml" rel="self"/>
   <link href="http://geshan.com.np/"/>
-  <updated>2018-12-25T20:57:28+11:00</updated>
+  <updated>2018-12-26T08:37:14+11:00</updated>
   <id>http://geshan.com.np/</id>
   <author>
     <name><![CDATA[Geshan Manandhar]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[3 CodeIgniter Libraries That Will Make Your Life Easier (EzAuth, Ocular and DataMapper)]]></title>
+    <title type="html"><![CDATA[3 CodeIgniter libraries that will make your life easier (EzAuth, Ocular and DataMapper)]]></title>
     <link href="http://geshan.com.np/blog/2010/03/3-codeigniter-libraries-that-will-make/"/>
     <updated>2010-03-27T16:20:00+11:00</updated>
     <id>http://geshan.com.np/blog/2010/03/3-codeigniter-libraries-that-will-make</id>

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Programming | Geshan's Blog]]></title>
+  <title><![CDATA[Category: programming | Geshan's Blog]]></title>
   <link href="http://geshan.com.np/blog/categories/programming/atom.xml" rel="self"/>
   <link href="http://geshan.com.np/"/>
-  <updated>2018-12-25T20:57:28+11:00</updated>
+  <updated>2018-12-26T08:37:14+11:00</updated>
   <id>http://geshan.com.np/</id>
   <author>
     <name><![CDATA[Geshan Manandhar]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[3 Podcasts Every Software Engineer/developer Should Subscribe to - Part 3]]></title>
+    <title type="html"><![CDATA[3 Podcasts Every Software Engineer/developer Should Subscribe To - Part 3]]></title>
     <link href="http://geshan.com.np/blog/2017/01/3-podcasts-every-software-engineer-slash-developer-should-subscribe-to-part-3/"/>
     <updated>2017-01-04T16:47:54+11:00</updated>
     <id>http://geshan.com.np/blog/2017/01/3-podcasts-every-software-engineer-slash-developer-should-subscribe-to-part-3</id>
@@ -59,7 +59,7 @@ You even as a software engineer get to know important things about how to run a 
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[3 Podcasts Every Software Engineer/developer Should Subscribe to - Part 2]]></title>
+    <title type="html"><![CDATA[3 Podcasts Every Software Engineer/developer Should Subscribe To - Part 2]]></title>
     <link href="http://geshan.com.np/blog/2016/05/3-podcasts-every-software-engineer-slash-developer-should-subscribe-to-part-2/"/>
     <updated>2016-05-03T15:29:42+10:00</updated>
     <id>http://geshan.com.np/blog/2016/05/3-podcasts-every-software-engineer-slash-developer-should-subscribe-to-part-2</id>
@@ -108,7 +108,7 @@ management and change management is important in our work life.</p>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[There Are Only Two Types of Automated Software Tests, Fast Ones and Not Fast Ones]]></title>
+    <title type="html"><![CDATA[There are only two types of automated software tests, fast ones and not fast ones]]></title>
     <link href="http://geshan.com.np/blog/2016/03/there-are-only-two-types-of-automated-software-tests/"/>
     <updated>2016-03-17T16:38:18+11:00</updated>
     <id>http://geshan.com.np/blog/2016/03/there-are-only-two-types-of-automated-software-tests</id>
@@ -171,7 +171,7 @@ of any solid software application. Happy testing hope your tests run in seconds 
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[10 Software Engineering Proverbs/quotes I Wrote in the Past Months]]></title>
+    <title type="html"><![CDATA[10 software engineering proverbs/quotes I wrote in the past months]]></title>
     <link href="http://geshan.com.np/blog/2016/03/10-software-engineering-proverbs-slash-quotes-i-wrote-in-the-past-months/"/>
     <updated>2016-03-14T22:30:20+11:00</updated>
     <id>http://geshan.com.np/blog/2016/03/10-software-engineering-proverbs-slash-quotes-i-wrote-in-the-past-months</id>
@@ -261,7 +261,7 @@ of any solid software application. Happy testing hope your tests run in seconds 
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[3 Weeklies Every Software Engineer/developer Should Subscribe To]]></title>
+    <title type="html"><![CDATA[3 weeklies every software engineer/developer should subscribe to]]></title>
     <link href="http://geshan.com.np/blog/2015/11/3-weeklies-every-software-engineer-slash-developer-should-subscribe-to/"/>
     <updated>2015-11-13T20:39:35+11:00</updated>
     <id>http://geshan.com.np/blog/2015/11/3-weeklies-every-software-engineer-slash-developer-should-subscribe-to</id>

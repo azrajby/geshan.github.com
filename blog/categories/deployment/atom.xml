@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Deployment | Geshan's Blog]]></title>
+  <title><![CDATA[Category: deployment | Geshan's Blog]]></title>
   <link href="http://geshan.com.np/blog/categories/deployment/atom.xml" rel="self"/>
   <link href="http://geshan.com.np/"/>
-  <updated>2018-12-25T20:57:28+11:00</updated>
+  <updated>2018-12-26T08:37:14+11:00</updated>
   <id>http://geshan.com.np/</id>
   <author>
     <name><![CDATA[Geshan Manandhar]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[How to Do a Zero Downtime Database (DB) Migration (Schema Change) With a Practical Example]]></title>
+    <title type="html"><![CDATA[How to do a zero downtime database (DB) migration (schema change) with a practical example]]></title>
     <link href="http://geshan.com.np/blog/2018/05/how-to-do-a-zero-downtime-database-db-migration-schema-change-with-a-practical-example/"/>
     <updated>2018-05-01T04:00:41+10:00</updated>
     <id>http://geshan.com.np/blog/2018/05/how-to-do-a-zero-downtime-database-db-migration-schema-change-with-a-practical-example</id>
@@ -95,7 +95,7 @@ ADD `commission_percent_recurring_customer` DECIMAL NULL AFTER `commission_perce
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Embrace chatOps, Stop Installing Deployment Software [Slides and Video]]]></title>
+    <title type="html"><![CDATA[Embrace chatOps, stop installing deployment software [Slides and Video]]]></title>
     <link href="http://geshan.com.np/blog/2016/04/embrace-chatops-stop-installing-deployment-software/"/>
     <updated>2016-04-03T20:03:09+10:00</updated>
     <id>http://geshan.com.np/blog/2016/04/embrace-chatops-stop-installing-deployment-software</id>
@@ -170,7 +170,7 @@ with hubot. In this session, I will uncover some real life use cases of chat bot
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Wercker CI the Best CI/CD Service Is Free Till Now, Use It [Slides]]]></title>
+    <title type="html"><![CDATA[Wercker CI the best CI/CD service is free till now, use it [Slides]]]></title>
     <link href="http://geshan.com.np/blog/2016/03/wercker-ci-the-best-ci-slash-cd-service-is-free-till-now/"/>
     <updated>2016-03-09T16:34:08+11:00</updated>
     <id>http://geshan.com.np/blog/2016/03/wercker-ci-the-best-ci-slash-cd-service-is-free-till-now</id>
@@ -208,7 +208,7 @@ We also discussed on how Continuous Delivery and Continuous Deployment are diffe
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[4 Pillars of a Solid Software Application and Tools to Support It]]></title>
+    <title type="html"><![CDATA[4 pillars of a solid software application and tools to support it]]></title>
     <link href="http://geshan.com.np/blog/2015/10/4-pillars-of-a-solid-software-application-and-tools-to-support-it/"/>
     <updated>2015-10-10T17:21:52+11:00</updated>
     <id>http://geshan.com.np/blog/2015/10/4-pillars-of-a-solid-software-application-and-tools-to-support-it</id>
@@ -264,7 +264,7 @@ We also discussed on how Continuous Delivery and Continuous Deployment are diffe
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[The Best Automated Deployment Tool Is... The One That Fits Your Needs]]></title>
+    <title type="html"><![CDATA[The best automated deployment tool is... the one that fits your needs]]></title>
     <link href="http://geshan.com.np/blog/2015/08/the-best-automated-deployment-tool-the-one-that-fits-your-needs/"/>
     <updated>2015-08-29T21:22:48+10:00</updated>
     <id>http://geshan.com.np/blog/2015/08/the-best-automated-deployment-tool-the-one-that-fits-your-needs</id>

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Infographics | Geshan's Blog]]></title>
+  <title><![CDATA[Category: infographics | Geshan's Blog]]></title>
   <link href="http://geshan.com.np/blog/categories/infographics/atom.xml" rel="self"/>
   <link href="http://geshan.com.np/"/>
-  <updated>2018-12-25T20:57:28+11:00</updated>
+  <updated>2018-12-26T08:37:14+11:00</updated>
   <id>http://geshan.com.np/</id>
   <author>
     <name><![CDATA[Geshan Manandhar]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Different Types of Web Hosting Compared to Types of Housing [Infographics]]]></title>
+    <title type="html"><![CDATA[Different types of web hosting compared to types of housing [Infographics]]]></title>
     <link href="http://geshan.com.np/blog/2016/11/different-types-of-web-hosting-compared-to-types-of-housing/"/>
     <updated>2016-11-29T22:28:50+11:00</updated>
     <id>http://geshan.com.np/blog/2016/11/different-types-of-web-hosting-compared-to-types-of-housing</id>
@@ -32,7 +32,7 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Software Engineering Practices in Nepal Infographics Part 4 Includes PM Methodology and Software, Testing Frameworks and Mobile Apps]]></title>
+    <title type="html"><![CDATA[Software Engineering Practices in Nepal Infographics Part 4 includes PM Methodology and Software, testing frameworks and mobile apps]]></title>
     <link href="http://geshan.com.np/blog/2015/05/software-engineering-practices-in-nepal-infographics-part-4-includes-project-management/"/>
     <updated>2015-05-29T13:07:59+10:00</updated>
     <id>http://geshan.com.np/blog/2015/05/software-engineering-practices-in-nepal-infographics-part-4-includes-project-management</id>
@@ -64,7 +64,7 @@ I will make the survey open till 2015 Q3 and post the final results in Oct 2015.
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Software Engineering Practices in Nepal Infographics Part 3 Includes devOps, Deployment, CI, Logs Monitoring Etc]]></title>
+    <title type="html"><![CDATA[Software Engineering Practices in Nepal Infographics Part 3 includes devOps, deployment, CI, logs monitoring etc]]></title>
     <link href="http://geshan.com.np/blog/2015/05/software-engineering-practices-in-nepal-infographics-part-3-includes-devops/"/>
     <updated>2015-05-23T15:36:02+10:00</updated>
     <id>http://geshan.com.np/blog/2015/05/software-engineering-practices-in-nepal-infographics-part-3-includes-devops</id>
@@ -97,7 +97,7 @@ I will make the survey open till 2015 Q3 and post the final results in Oct 2015.
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Software Engineering Practices in Nepal Infographics Part 2 Includes Git, VCS Hosting, Code Review Culture Etc]]></title>
+    <title type="html"><![CDATA[Software Engineering Practices in Nepal Infographics Part 2 includes Git, VCS Hosting, Code Review Culture etc]]></title>
     <link href="http://geshan.com.np/blog/2015/05/software-engineering-practices-in-nepal-infographics-part-2-includes-git/"/>
     <updated>2015-05-22T12:40:58+10:00</updated>
     <id>http://geshan.com.np/blog/2015/05/software-engineering-practices-in-nepal-infographics-part-2-includes-git</id>
@@ -130,7 +130,7 @@ I will make the survey open till 2015 Q3 and post the final results in Oct 2015.
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Software Engineering Practices in Nepal Infographics Part 1 Includes Languages, Frameworks, IDEs Etc]]></title>
+    <title type="html"><![CDATA[Software Engineering Practices in Nepal Infographics Part 1 includes Languages, Frameworks, IDEs etc]]></title>
     <link href="http://geshan.com.np/blog/2015/05/software-engineering-practices-in-nepal-infographics-part-1-includes-languages/"/>
     <updated>2015-05-17T22:26:29+10:00</updated>
     <id>http://geshan.com.np/blog/2015/05/software-engineering-practices-in-nepal-infographics-part-1-includes-languages</id>

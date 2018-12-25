@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Testing | Geshan's Blog]]></title>
+  <title><![CDATA[Category: testing | Geshan's Blog]]></title>
   <link href="http://geshan.com.np/blog/categories/testing/atom.xml" rel="self"/>
   <link href="http://geshan.com.np/"/>
-  <updated>2018-12-25T20:57:28+11:00</updated>
+  <updated>2018-12-26T08:37:14+11:00</updated>
   <id>http://geshan.com.np/</id>
   <author>
     <name><![CDATA[Geshan Manandhar]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[There Are Only Two Types of Automated Software Tests, Fast Ones and Not Fast Ones]]></title>
+    <title type="html"><![CDATA[There are only two types of automated software tests, fast ones and not fast ones]]></title>
     <link href="http://geshan.com.np/blog/2016/03/there-are-only-two-types-of-automated-software-tests/"/>
     <updated>2016-03-17T16:38:18+11:00</updated>
     <id>http://geshan.com.np/blog/2016/03/there-are-only-two-types-of-automated-software-tests</id>
@@ -77,7 +77,7 @@ of any solid software application. Happy testing hope your tests run in seconds 
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[10 Software Engineering Proverbs/quotes I Wrote in the Past Months]]></title>
+    <title type="html"><![CDATA[10 software engineering proverbs/quotes I wrote in the past months]]></title>
     <link href="http://geshan.com.np/blog/2016/03/10-software-engineering-proverbs-slash-quotes-i-wrote-in-the-past-months/"/>
     <updated>2016-03-14T22:30:20+11:00</updated>
     <id>http://geshan.com.np/blog/2016/03/10-software-engineering-proverbs-slash-quotes-i-wrote-in-the-past-months</id>
@@ -167,7 +167,7 @@ of any solid software application. Happy testing hope your tests run in seconds 
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[4 Pillars of a Solid Software Application and Tools to Support It]]></title>
+    <title type="html"><![CDATA[4 pillars of a solid software application and tools to support it]]></title>
     <link href="http://geshan.com.np/blog/2015/10/4-pillars-of-a-solid-software-application-and-tools-to-support-it/"/>
     <updated>2015-10-10T17:21:52+11:00</updated>
     <id>http://geshan.com.np/blog/2015/10/4-pillars-of-a-solid-software-application-and-tools-to-support-it</id>
@@ -223,7 +223,7 @@ of any solid software application. Happy testing hope your tests run in seconds 
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Getting Started With Unit Testing in Laravel]]></title>
+    <title type="html"><![CDATA[Getting started with unit testing in Laravel]]></title>
     <link href="http://geshan.com.np/blog/2015/07/getting-started-with-unit-testing-in-laravel/"/>
     <updated>2015-07-25T14:57:42+10:00</updated>
     <id>http://geshan.com.np/blog/2015/07/getting-started-with-unit-testing-in-laravel</id>
@@ -401,7 +401,7 @@ covers not only the code also its use cases will surely be a boon. Happy Unit te
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Using PHPUnit Data Provider for Less Code and Greater Coverage]]></title>
+    <title type="html"><![CDATA[Using PHPUnit data provider for less code and greater coverage]]></title>
     <link href="http://geshan.com.np/blog/2014/02/using-phpunit-data-provider-for-less/"/>
     <updated>2014-02-01T18:51:00+11:00</updated>
     <id>http://geshan.com.np/blog/2014/02/using-phpunit-data-provider-for-less</id>
