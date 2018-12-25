@@ -4,7 +4,7 @@
   <title><![CDATA[Category: deployment | Geshan's Blog]]></title>
   <link href="http://geshan.com.np/blog/categories/deployment/atom.xml" rel="self"/>
   <link href="http://geshan.com.np/"/>
-  <updated>2018-12-26T08:37:14+11:00</updated>
+  <updated>2018-12-26T09:01:44+11:00</updated>
   <id>http://geshan.com.np/</id>
   <author>
     <name><![CDATA[Geshan Manandhar]]></name>
@@ -20,7 +20,7 @@
     <id>http://geshan.com.np/blog/2018/05/how-to-do-a-zero-downtime-database-db-migration-schema-change-with-a-practical-example</id>
     <content type="html"><![CDATA[<p>Database migration on a production database is never simple. Depending on the volume of requests some teams schedule database migration to off hours. You can run your alter statements with zero or minimal downtime following the steps mentioned below with a practical example.</p>
 
-<p><img class="center" src="/images/db-migration/db-migration.png" title="&lsquo;How to do a zero downtime database&rsquo; &lsquo;How to do a zero downtime database&rsquo;" ></p>
+<p>{% img center /images/db-migration/db-migration.png &lsquo;How to do a zero downtime database&rsquo; &lsquo;How to do a zero downtime database&rsquo; %}</p>
 
 <!-- more -->
 
@@ -29,13 +29,13 @@
 
 <p>As an example for this post, let&rsquo;s assume you work for an E-commerce company which has both recurring and new customers. You have partners who publicize a discount code valid for a given date range and get a percent of the order&rsquo;s total tracked by their discount code. Below is the schema for the partner and coupon code. Below is the initial schema before any change:</p>
 
-<p><img class="center" src="/images/db-migration/schema-01.png" title="&lsquo;Initial DB schema&rsquo; &lsquo;Initial DB Schema&rsquo;" ></p>
+<p>{% img center /images/db-migration/schema-01.png &lsquo;Initial DB schema&rsquo; &lsquo;Initial DB Schema&rsquo; %}</p>
 
 <p>Now the new requirement is to track different commission percent for the new and recurring customer. New and recurring customers are evaluated by a different system/microservice and it is also responsible for commission calculation based on order total which is out of the scope of this focused example.</p>
 
 <p>To do commission tracking by customer type we would decide to add 2 new columns commission_percent_new_customer, commission_percent_recurring_customer, the difficult question is how to roll it out without downtime.</p>
 
-<p><img class="center" src="/images/db-migration/schema-02.png" title="&lsquo;Updated schema with 2 new columns&rsquo; &lsquo;Updated schema with 2 new columns&rsquo;" ></p>
+<p>{% img center /images/db-migration/schema-02.png &lsquo;Updated schema with 2 new columns&rsquo; &lsquo;Updated schema with 2 new columns&rsquo; %}</p>
 
 <h3>Migration script (DB schema alter statement)</h3>
 
@@ -75,7 +75,7 @@ ADD `commission_percent_recurring_customer` DECIMAL NULL AFTER `commission_perce
 
 <h3>Final schema after dropping commission_percent column</h3>
 
-<p><img class="center" src="/images/db-migration/schema-03.png" title="&lsquo;Updated schema with 1 column less&rsquo; &lsquo;Updated schema with 1 column less&rsquo;" ></p>
+<p>{% img center /images/db-migration/schema-03.png &lsquo;Updated schema with 1 column less&rsquo; &lsquo;Updated schema with 1 column less&rsquo; %}</p>
 
 <h2>Things to consider</h2>
 
@@ -110,7 +110,7 @@ The main topics of the talk were:</p>
 </ol>
 
 
-<p><img class="center" src="/images/chatops/chatops-hubot.jpg" title="&lsquo;Embrace chatOps, stop installing deployment software [Slides and Video]&rsquo; &lsquo;Embrace chatOps, stop installing deployment software [Slides and Video]&rsquo;" >
+<p>{% img center /images/chatops/chatops-hubot.jpg &lsquo;Embrace chatOps, stop installing deployment software [Slides and Video]&rsquo; &lsquo;Embrace chatOps, stop installing deployment software [Slides and Video]&rsquo; %}
 (Illustration by Anjan Shrestha - AnjHero.me)</p>
 
 <p>This post has the slides and the video of the whole talk.</p>
@@ -121,11 +121,11 @@ The main topics of the talk were:</p>
 <p>I liked the overall experience of being a conference  speaker :).
 I think the audience also had something new to fiddle around with by the end of the talk.</p>
 
-<p><img class="center" src="/images/chatops/speaker.jpg" title="&lsquo;Speaker at Codemotion Dubai 2016&rsquo; &lsquo;Speaker at Codemotion Dubai 2016&rsquo;" ></p>
+<p>{% img center /images/chatops/speaker.jpg &lsquo;Speaker at Codemotion Dubai 2016&rsquo; &lsquo;Speaker at Codemotion Dubai 2016&rsquo; %}</p>
 
 <p>The speaker lineup for day 1 was very good:</p>
 
-<p><img class="center" src="/images/chatops/codemodubai-speakers-day-1.jpg" title="&lsquo;Codemotion Dubai 2016 Speaker lineup&rsquo; &lsquo;Codemotion Dubai 2016 Speaker lineup&rsquo;" ></p>
+<p>{% img center /images/chatops/codemodubai-speakers-day-1.jpg &lsquo;Codemotion Dubai 2016 Speaker lineup&rsquo; &lsquo;Codemotion Dubai 2016 Speaker lineup&rsquo; %}</p>
 
 <p>For all the other news and views check the <a href="https://twitter.com/hashtag/codemodubai?src=hash">#codemodubai</a> hash tag on twitter
 and on <a href="https://www.facebook.com/codemotiondubai/">facebook</a>.</p>
@@ -149,7 +149,7 @@ with hubot. In this session, I will uncover some real life use cases of chat bot
 </ol>
 
 
-<p><img class="center" src="/images/chatops/chatops-talk.jpg" title="&lsquo;Embrace chatOps, stop installing deployment software [Slides and Video]&rsquo; &lsquo;Embrace chatOps, stop installing deployment software [Slides and Video]&rsquo;" ></p>
+<p>{% img center /images/chatops/chatops-talk.jpg &lsquo;Embrace chatOps, stop installing deployment software [Slides and Video]&rsquo; &lsquo;Embrace chatOps, stop installing deployment software [Slides and Video]&rsquo; %}</p>
 
 <h3>Slides</h3>
 
@@ -177,7 +177,7 @@ with hubot. In this session, I will uncover some real life use cases of chat bot
     <content type="html"><![CDATA[<p>On 7-Mar-2016 I did a short talk titled &ldquo;The best CI/CD service is free (till now), lets use it&rdquo; at <a href="http://namshi.com">Namshi</a>.
 It was a quick rundown of <a href="http://wercker.com/">Wercker</a> CI (Continuous Integration) features and how it works.</p>
 
-<p><img class="center" src="/images/wercker/wercker-talk.jpg" title="&lsquo;Wercker CI the best CI-CD service is free till now, use it&rsquo; &lsquo;Wercker CI the best CI-CD service is free till now, use it&rsquo;" ></p>
+<p>{% img center /images/wercker/wercker-talk.jpg &lsquo;Wercker CI the best CI-CD service is free till now, use it&rsquo; &lsquo;Wercker CI the best CI-CD service is free till now, use it&rsquo; %}</p>
 
 <!-- more -->
 
@@ -216,7 +216,7 @@ We also discussed on how Continuous Delivery and Continuous Deployment are diffe
 
 <p>I have seen some software development teams are slow because they have a lot of technical debt. Some teams are naive, the members don&rsquo;t want to explore new things . They are stuck with 5 year old technology like FTP, old legacy framework etc. In this post, I will shed some light on the four basic and important things of a solid software application. This contents of post is language and framework agnostic. It is applicable to any software project.</p>
 
-<p><img class="center" src="/images/4-pillars-software-application/4-pillars-software-application.png" title="&lsquo;4 pillars of a solid software application&rsquo; &lsquo;4 pillars of a solid software application&rsquo;" ></p>
+<p>{% img center /images/4-pillars-software-application/4-pillars-software-application.png &lsquo;4 pillars of a solid software application&rsquo; &lsquo;4 pillars of a solid software application&rsquo; %}</p>
 
 <!-- more -->
 
@@ -276,7 +276,7 @@ deployment, basically it was a necessary evil at that time.</p>
 
 <p>If you still use FTP at this time like <a href="http://bit.ly/sw-eng-np-pt3">22%</a> of Nepali developers you really need to move on. In this post I will briefly mention some deployment tools and try to analyze their pros and cons. Still as the title reads the best automated deployment tool is the one that best fits your needs.</p>
 
-<p><img class="center" src="/images/deployment-tools/fabric-deployment.png" title="&lsquo;Automated Deployment demo&rsquo; &lsquo;Automated Deployment demo&rsquo;" ></p>
+<p>{% img center  /images/deployment-tools/fabric-deployment.png &lsquo;Automated Deployment demo&rsquo; &lsquo;Automated Deployment demo&rsquo; %}</p>
 
 <!-- more -->
 

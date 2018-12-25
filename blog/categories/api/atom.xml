@@ -4,7 +4,7 @@
   <title><![CDATA[Category: api | Geshan's Blog]]></title>
   <link href="http://geshan.com.np/blog/categories/api/atom.xml" rel="self"/>
   <link href="http://geshan.com.np/"/>
-  <updated>2018-12-26T08:37:14+11:00</updated>
+  <updated>2018-12-26T09:01:44+11:00</updated>
   <id>http://geshan.com.np/</id>
   <author>
     <name><![CDATA[Geshan Manandhar]]></name>
@@ -24,7 +24,7 @@ products on <a href="http://www.producthunt.com/">Product Hunt</a> and think how
 amazing products. If you are planning to build your software product, this post will unfold why
 you should make your web Application Programming Interface (API) working first.</p>
 
-<p><img class="center" src="/images/product-http-api/rest-json.jpg" title="&lsquo;JSON APIs&rsquo; &lsquo;JSON APIs&rsquo;" ></p>
+<p>{% img center  /images/product-http-api/rest-json.jpg &lsquo;JSON APIs&rsquo; &lsquo;JSON APIs&rsquo; %}</p>
 
 <!-- more -->
 
