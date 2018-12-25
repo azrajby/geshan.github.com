@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Misc | Geshan's Blog]]></title>
   <link href="http://geshan.com.np/blog/categories/misc/atom.xml" rel="self"/>
   <link href="http://geshan.com.np/"/>
-  <updated>2018-12-25T19:54:13+11:00</updated>
+  <updated>2018-12-25T20:57:28+11:00</updated>
   <id>http://geshan.com.np/</id>
   <author>
     <name><![CDATA[Geshan Manandhar]]></name>
@@ -20,7 +20,7 @@
     <id>http://geshan.com.np/blog/2018/12/2018-in-review-5-most-viewed-posts-of-this-year</id>
     <content type="html"><![CDATA[<p>I have never done this in the past 11 years of blogging, this time it is going to be different. I am listing the 5 most viewed posts from this blog in 2018. All posts are not from 2018 but they have been viewed more than the others. I am using my Google Analytics stats to compile this list. So, here I present the most popular blog posts of 2018 on <a href="https://geshan.com.np">Geshan.com.np</a>:</p>
 
-<p>{% img center /images/top-5-2018/everest.jpg &lsquo;5 most viewed posts of 2018 a recap&rsquo; &lsquo;5 most viewed posts of 2018 a recap&rsquo; %}</p>
+<p><img class="center" src="/images/top-5-2018/everest.jpg" title="&lsquo;5 most viewed posts of 2018 a recap&rsquo; &lsquo;5 most viewed posts of 2018 a recap&rsquo;" ></p>
 
 <!-- more -->
 
@@ -31,7 +31,7 @@
 
 <blockquote><p>Use SQL to do math like sum, average etc. Utilize it for grouping one to many relational values like getting categories of product. Leverage SQL for string manipulation like using CONCAT_WS for concating first name and last name. Exploit SQL to sort by a custom priority formula.</p></blockquote>
 
-<p>{% img center /images/do-it-in-sql/tea-lights.jpg &lsquo;You can do it in SQL, stop writing extra code for that&rsquo; &lsquo;You can do it in SQL, stop writing extra code for that&rsquo; %}</p>
+<p><img class="center" src="/images/do-it-in-sql/tea-lights.jpg" title="&lsquo;You can do it in SQL, stop writing extra code for that&rsquo; &lsquo;You can do it in SQL, stop writing extra code for that&rsquo;" ></p>
 
 <h2>2. <a href="https://geshan.com.np/blog/2018/12/4-ways-docker-changed-the-way-software-engineers-work-in-past-half-decade/">4 Ways Docker Changed the Way Software Engineers Work in Past Half Decade</a></h2>
 
@@ -39,7 +39,7 @@
 
 <blockquote><p>With Docker, you ship the whole stack not only your code. Allocate minimum required resources to containers then scale them horizontally. With containers security generally already comes baked In. With Docker and Kubernetes you can get zero downtime and faster deployments leading to business profit.</p></blockquote>
 
-<p>{% img center /images/4-ways-docker/docker-whale.jpg &lsquo;4 ways Docker changed the way software engineers work in past half decade&rsquo; &lsquo;4 ways Docker changed the way software engineers work in past half decade&rsquo; %}</p>
+<p><img class="center" src="/images/4-ways-docker/docker-whale.jpg" title="&lsquo;4 ways Docker changed the way software engineers work in past half decade&rsquo; &lsquo;4 ways Docker changed the way software engineers work in past half decade&rsquo;" ></p>
 
 <h2>3. <a href="https://geshan.com.np/blog/2017/05/how-to-use-docker-compose-with-virtual-hosts-and-services-like-db-for-dev-environment/">How to Use Docker Compose With Virtual Hosts and Shared Services (Like Db) for Dev Environment</a></h2>
 
@@ -47,7 +47,7 @@
 
 <blockquote><p>Use docker and docker-compose with external_links to reuse services like a database across multiple projects. Using Ngnix proxy with virtual hosts can simplify multi-project setup and operation.</p></blockquote>
 
-<p>{% img center /images/docker-compose-vhost/docker-compose-vhost.jpg &lsquo;Docker compose with vhost and shared services&rsquo; &lsquo;Docker compose with vhost and shared services&rsquo; %}</p>
+<p><img class="center" src="/images/docker-compose-vhost/docker-compose-vhost.jpg" title="&lsquo;Docker compose with vhost and shared services&rsquo; &lsquo;Docker compose with vhost and shared services&rsquo;" ></p>
 
 <h2>4. <a href="https://geshan.com.np/blog/2016/04/3-simple-rules-for-less-or-no-git-conflicts/">3 Simple Rules for Less or No Git Conflicts</a></h2>
 
@@ -55,7 +55,7 @@
 
 <blockquote><p>Keep your changes small. Rebase your working branch with main branch often. And, review pull requests faster and merge them to main branch.</p></blockquote>
 
-<p>{% img center /images/3-rules-git-conflict/git-conflict.png &lsquo;3 simple rules for less or no git conflicts&rsquo; &lsquo;3 simple rules for less or no git conflicts&rsquo; %}</p>
+<p><img class="center" src="/images/3-rules-git-conflict/git-conflict.png" title="&lsquo;3 simple rules for less or no git conflicts&rsquo; &lsquo;3 simple rules for less or no git conflicts&rsquo;" ></p>
 
 <h2>5. <a href="https://geshan.com.np/blog/2018/10/dont-code-your-microservice-like-a-monolith/">Don’t Code Your Microservice Like a Monolith, Keep It Maintainable Not Over-engineered</a></h2>
 
@@ -63,7 +63,7 @@
 
 <blockquote><p>Microservices are small software systems. You can safely ditch MVC. Say no to ORM and also not take the design pattern baggage for microservices. Focus on code performance, readability, and maintainability not some old rules and patterns. Those patterns were made when people were not doing microservices.</p></blockquote>
 
-<p>{% img center /images/microservice-code/lego.jpg &lsquo;Do not code your microservice like a monolith, keep it maintainable not over-engineered&rsquo; &lsquo;Do not code your microservice like a monolith, keep it maintainable not over-engineered&rsquo; %}</p>
+<p><img class="center" src="/images/microservice-code/lego.jpg" title="&lsquo;Do not code your microservice like a monolith, keep it maintainable not over-engineered&rsquo; &lsquo;Do not code your microservice like a monolith, keep it maintainable not over-engineered&rsquo;" ></p>
 
 <h2>Conclusion</h2>
 
@@ -78,7 +78,7 @@
     <id>http://geshan.com.np/blog/2018/12/the-most-important-tip-for-beginner-software-engineers-is</id>
     <content type="html"><![CDATA[<p>Most of the tutorials you have read or watched till now usually do one thing, spoon-feeding. This is &ldquo;OK&rdquo; to learn a new thing but not good when you need to <code>solve</code> a task. A task usually involves reaching a goal by overcoming a problem. This post unveils the most important &ldquo;tip&rdquo; for all beginner software engineers.</p>
 
-<p>{% img center /images/tip-beginner-sw-eng/puzzle.jpg &lsquo;The most important tip for beginner software engineers is&rsquo; &lsquo;The most important tip for beginner software engineers is&rsquo; %}</p>
+<p><img class="center" src="/images/tip-beginner-sw-eng/puzzle.jpg" title="&lsquo;The most important tip for beginner software engineers is&rsquo; &lsquo;The most important tip for beginner software engineers is&rsquo;" ></p>
 
 <!-- more -->
 
@@ -105,7 +105,7 @@
 
 <p>You have to do a task, it is to create a refund with payments. A refund always has a reason like damaged, late delivery etc and the payments for that item can be maximum of 2. One of type cash another of type credit (store credit). You are also given the database schema. This is a back-end task and you need to create a POST <code>/refunds</code> API that can create the refund and its related payments. The database structure is as below:</p>
 
-<p>{% img center /images/tip-beginner-sw-eng/refund-schema-v2.png &lsquo;refund schema v2&rsquo; &lsquo;refund schema example&rsquo; %}</p>
+<p><img class="center" src="/images/tip-beginner-sw-eng/refund-schema-v2.png" title="&lsquo;refund schema v2&rsquo; &lsquo;refund schema example&rsquo;" ></p>
 
 <p>You could discuss the API payload too with one of the team members and agreed on the below JSON payload:</p>
 
@@ -204,7 +204,7 @@
 
 <p>This is quite prevalent in software engineers who work in web applications. This post aims to enlighten you about the powers of SQL you might know but generally don&rsquo;t use.</p>
 
-<p>{% img center /images/do-it-in-sql/tea-lights.jpg &lsquo;You can do it in SQL, stop writing extra code for that&rsquo; &lsquo;You can do it in SQL, stop writing extra code for that&rsquo; %}</p>
+<p><img class="center" src="/images/do-it-in-sql/tea-lights.jpg" title="&lsquo;You can do it in SQL, stop writing extra code for that&rsquo; &lsquo;You can do it in SQL, stop writing extra code for that&rsquo;" ></p>
 
 <!-- more -->
 
@@ -217,7 +217,7 @@
 
 <p>It will be easier to explain the superpowers of SQL putting it in action on an example. Below is a basic schema with 2 tables in MYSQL for a refunds microservice:</p>
 
-<p>{% img center /images/do-it-in-sql/refund-schema.png &lsquo;You can do it in SQL- refund schema&rsquo; &lsquo;You can do it in SQL - refund schema example&rsquo; %}</p>
+<p><img class="center" src="/images/do-it-in-sql/refund-schema.png" title="&lsquo;You can do it in SQL- refund schema&rsquo; &lsquo;You can do it in SQL - refund schema example&rsquo;" ></p>
 
 <p>There are 2 refunds and 7 related payments as example <a href="http://sqlfiddle.com/#!9/b242d/5">data</a>.</p>
 
@@ -246,7 +246,7 @@ FROM payment WHERE fk_item=2001;
 
 <p>With current data, it will give 3 rows like below:</p>
 
-<p>{% img center /images/do-it-in-sql/01result-without-group.png &lsquo;Result without grouping and aggregate function sum&rsquo; &lsquo;Result without grouping and aggregate function sum&rsquo; %}</p>
+<p><img class="center" src="/images/do-it-in-sql/01result-without-group.png" title="&lsquo;Result without grouping and aggregate function sum&rsquo; &lsquo;Result without grouping and aggregate function sum&rsquo;" ></p>
 
 <p>With these 3 rows, we would loop over them. If it is cash accumulate it to cashBalance variable, if not sum it up to creditBalace variable. Rather than that it would be a lot easier (probably faster) to do in SQL like:</p>
 
@@ -259,7 +259,7 @@ GROUP BY fk_item, is_cash;
 
 <p>Resulting in:</p>
 
-<p>{% img center /images/do-it-in-sql/02result-with-grouping.png &lsquo;Result with grouping and aggregate function sum&rsquo; &lsquo;Result with grouping and aggregate function sum&rsquo; %}</p>
+<p><img class="center" src="/images/do-it-in-sql/02result-with-grouping.png" title="&lsquo;Result with grouping and aggregate function sum&rsquo; &lsquo;Result with grouping and aggregate function sum&rsquo;" ></p>
 
 <p>The result is easy now if you need the total refund for the item just change the GROUP BY to be on fk_item and it&rsquo;s done. For 2 and 3 records it won&rsquo;t feel significant. If there were say 20 refunds for that item, the first solution with a loop is writing more code with no gain.  Like sum, other SQL functions can be used too. Simple math operations like <a href="https://www.w3schools.com/sql/func_mysql_sum.asp">sum</a>, multiply, <a href="https://www.w3schools.com/sql/func_mysql_avg.asp">average</a> etc can be easy with SQL. This means no more loops.</p>
 
@@ -274,7 +274,7 @@ WHERE fk_item = 2001;
 
 <p>This results in:</p>
 
-<p>{% img center /images/do-it-in-sql/03result-group-concat.png &lsquo;Result with group_concat&rsquo; &lsquo;Result with group_concat&rsquo; %}</p>
+<p><img class="center" src="/images/do-it-in-sql/03result-group-concat.png" title="&lsquo;Result with group_concat&rsquo; &lsquo;Result with group_concat&rsquo;" ></p>
 
 <p>Now we know that item 2001 has been refunded twice for 2 refunds. It will be easy to explode the refund Ids with <code>,</code> and proceed with any related operation.</p>
 
@@ -292,7 +292,7 @@ FROM refund;
 
 <p>Resulting in:</p>
 
-<p>{% img center /images/do-it-in-sql/04result-concat-ws.png &lsquo;Result with concat_ws&rsquo; &lsquo;Result with concat_ws&rsquo; %}</p>
+<p><img class="center" src="/images/do-it-in-sql/04result-concat-ws.png" title="&lsquo;Result with concat_ws&rsquo; &lsquo;Result with concat_ws&rsquo;" ></p>
 
 <p>If this needs to be shown on the credit note document, for example, no extra code is needed to join the values again. SQL makes it one step easier again.</p>
 
@@ -317,7 +317,7 @@ ORDER BY priority DESC
 
 <p>The results are below:</p>
 
-<p>{% img center /images/do-it-in-sql/05result-priority-formula.png &lsquo;Result with sorting based on custom formula&rsquo; &lsquo;Result with sorting based on custom formula&rsquo; %}</p>
+<p><img class="center" src="/images/do-it-in-sql/05result-priority-formula.png" title="&lsquo;Result with sorting based on custom formula&rsquo; &lsquo;Result with sorting based on custom formula&rsquo;" ></p>
 
 <p>With proper use of IF in SQL sorting by a custom priority formula is a lot easier than trying to do it with loops in code. Notice that even smaller amounts like 7.5 (750 cents) and 9.0 (900 cents) came to highest priority as these refund payment amounts were associated with premium customers.</p>
 
@@ -340,7 +340,7 @@ ORDER BY priority DESC
     <id>http://geshan.com.np/blog/2018/12/5-tech-medium-publications-software-engineers-should-strive-to-write-for</id>
     <content type="html"><![CDATA[<p>Starting a tech blog has changed in the last few years. 10 years back starting a blog without your website, you had 2 options Blogger or Wordpress. Both gave you a free sub-domain. Things did not change much for quite some time, but in 2012 medium came with a storm. It gained a lot of traction with its simplistic interface in 2014-2015. With the publication feature, Medium makes it very easy for a group of writers to collaborate.  These days I would suggest most people start their blog on it.</p>
 
-<p>{% img center /images/5-tech-medium-publications/library.jpg &lsquo;5 tech medium publication software engineers should strive to write for&rsquo; &lsquo;5 tech medium publication software engineers should strive to write for&rsquo; %}</p>
+<p><img class="center" src="/images/5-tech-medium-publications/library.jpg" title="&lsquo;5 tech medium publication software engineers should strive to write for&rsquo; &lsquo;5 tech medium publication software engineers should strive to write for&rsquo;" ></p>
 
 <!-- more -->
 
@@ -363,7 +363,7 @@ ORDER BY priority DESC
 
 <h3><a href="https://hackernoon.com/">HackerNoon</a> - 403kK followers</h3>
 
-<p>HackerNoon is also another extremely popular publication. It is on Medium right now but it may not be there for long. They are going public with <a href="https://www.startengine.com/hackernoon">crowd sourcing</a>. From the content point of view, there is a sizable amount of content for software engineers. It also has lots of stories on cryptocurrencies. With 7 editors and 7K+ writers (includes me), this is a huge publication too. To write for them you need to send your draft to <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#111;&#x3a;&#83;&#x74;&#111;&#x72;&#x69;&#x65;&#x73;&#64;&#65;&#x4d;&#105;&#80;&#117;&#98;&#108;&#105;&#99;&#97;&#116;&#105;&#111;&#110;&#115;&#x2e;&#x63;&#x6f;&#109;&#46;">&#x53;&#116;&#x6f;&#x72;&#x69;&#101;&#x73;&#64;&#x41;&#77;&#x69;&#x50;&#x75;&#x62;&#x6c;&#x69;&#99;&#97;&#x74;&#105;&#111;&#x6e;&#115;&#x2e;&#x63;&#111;&#109;&#46;</a> The wait time for each story is 1 week or more (I have already published 5 stories). It also has a writer&rsquo;s group on Facebook. You can include yourself as a &ldquo;Contributing Writer&rdquo; on <a href="https://www.linkedin.com/company/hackernoon/">LinkedIn</a> too.</p>
+<p>HackerNoon is also another extremely popular publication. It is on Medium right now but it may not be there for long. They are going public with <a href="https://www.startengine.com/hackernoon">crowd sourcing</a>. From the content point of view, there is a sizable amount of content for software engineers. It also has lots of stories on cryptocurrencies. With 7 editors and 7K+ writers (includes me), this is a huge publication too. To write for them you need to send your draft to <a href="&#109;&#x61;&#105;&#x6c;&#x74;&#x6f;&#x3a;&#83;&#x74;&#x6f;&#x72;&#x69;&#101;&#115;&#64;&#x41;&#77;&#x69;&#80;&#117;&#98;&#108;&#105;&#99;&#x61;&#x74;&#105;&#x6f;&#110;&#115;&#46;&#99;&#x6f;&#109;&#x2e;">&#83;&#116;&#111;&#114;&#x69;&#101;&#x73;&#64;&#65;&#x4d;&#105;&#80;&#117;&#98;&#108;&#105;&#99;&#97;&#116;&#105;&#x6f;&#110;&#115;&#46;&#99;&#111;&#109;&#46;</a> The wait time for each story is 1 week or more (I have already published 5 stories). It also has a writer&rsquo;s group on Facebook. You can include yourself as a &ldquo;Contributing Writer&rdquo; on <a href="https://www.linkedin.com/company/hackernoon/">LinkedIn</a> too.</p>
 
 <h3><a href="https://codeburst.io">CodeBurst.io</a> - 62K followers</h3>
 
@@ -402,7 +402,7 @@ ORDER BY priority DESC
     <id>http://geshan.com.np/blog/2018/12/4-ways-docker-changed-the-way-software-engineers-work-in-past-half-decade</id>
     <content type="html"><![CDATA[<p>10 years back it was Git that transformed the way software engineers worked. Half a decade back it was <a href="https://www.docker.com/">Docker</a> that brought the container to the masses. Before Docker, container was like a sacred secret in companies like Google and Heroku. Docker is a software and a company too. It tried to build a broader ecosystem but <a href="https://kubernetes.io/">Kubernetes</a> stole the thunder along the way keeping <a href="https://docs.docker.com/engine/swarm/">swarm</a> at bay. This post is not about how some Docker tools are not popular. It is about how Docker has changed the way we work in the past 5 years.</p>
 
-<p>{% img center /images/4-ways-docker/docker-whale.jpg &lsquo;4 ways Docker changed the way software engineers work in past half decade&rsquo; &lsquo;4 ways Docker changed the way software engineers work in past half decade&rsquo; %}</p>
+<p><img class="center" src="/images/4-ways-docker/docker-whale.jpg" title="&lsquo;4 ways Docker changed the way software engineers work in past half decade&rsquo; &lsquo;4 ways Docker changed the way software engineers work in past half decade&rsquo;" ></p>
 
 <!-- more -->
 
