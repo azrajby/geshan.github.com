@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: feature flags | Geshan's Blog]]></title>
+  <link href="http://geshan.com.np/blog/categories/feature-flags/atom.xml" rel="self"/>
+  <link href="http://geshan.com.np/"/>
+  <updated>2018-12-26T18:47:05+11:00</updated>
+  <id>http://geshan.com.np/</id>
+  <author>
+    <name><![CDATA[Geshan Manandhar]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Deployment is not Release, let's use feature flags]]></title>
+    <link href="http://geshan.com.np/blog/2018/10/deployment-is-not-release/"/>
+    <updated>2018-10-26T08:13:05+11:00</updated>
+    <id>http://geshan.com.np/blog/2018/10/deployment-is-not-release</id>
+    <content type="html"><![CDATA[<p>Breaking down a big feature to epics and stories is always tricky. Then you have sub-stories making the process complicated. If you could deploy the finished task that delivers value to the business it would help. Enter feature flags, using this you can deploy your code to production behind a gate. Code and feature are on production but not fully released to everyone. This post is going to help you adjust your mental model for getting more benefits with feature flags.</p>
+
+<p>{% img center /images/deployment-not-release/flags.jpg &lsquo;Deployment is not Release, lets use feature flags&rsquo; &lsquo;Deployment is not Release, lets use feature flags&rsquo; %}
+[Image Source <a href="https://unsplash.com/photos/jCBzW_Q_UGI">Unspalsh</a>]</p>
+
+<!-- more -->
+
+
+<h2>Why use feature flags?</h2>
+
+<p>Have you ever faced a situation that you need to deploy an epic but it is not possible as it is 80% completed? It is an epic that has to be &ldquo;released&rdquo; all or nothing. That is where the power of feature flag comes into play. You can deploy (not release to everyone) each new value addition to production. The trick here is to put it behind a simple logic like if email ends in @yourcompany.com. You can check a minimal code <a href="https://geshan.com.np/blog/2016/09/how-to-do-a-minimum-viable-feature-switch/">example</a>.</p>
+
+<blockquote><p>You have to separate the technical deployment process from the business process of releasing a new feature.</p></blockquote>
+
+<h2>How to use feature flags?</h2>
+
+<p>Feature switch, feature toggle are some of the other names of feature flags. It can be effortless like if the logged in user&rsquo;s email is in our white-list we show this form. It can even be a feature that shows up when you add a specific cookie with a defined value in the browser. It can be highly orchestrated too with the use of a SAAS for feature flags. <a href="https://launchdarkly.com/">Launch Darkly</a> is a feature flag as a service company. You can use it if you have the time and resource to invest in it.</p>
+
+<p>Any path you take simple or complex the result is you have control over who can access a new feature. The feature is not released to everyone. The difference is how to activate/deactivate a feature flag. It can be as easy as clicking a checkbox or doing another deployment to open up a feature to everyone.</p>
+
+<blockquote><p>My suggestion is to start small, do an if condition in code and start experimenting. If it works well try other ways like a white-list or even a special cookie from the browser.</p></blockquote>
+
+<h2>Advantages of feature flags</h2>
+
+<p>There are many advantages of using feature flags in production. Lets list down a few highlights:</p>
+
+<ol>
+<li>Ability to test a feature on production in private with a select group of users.</li>
+<li>Ability to easily add or remove users who can use that feature.</li>
+<li>The confidence of releasing near bug-free features. Software engineers and QA can test on production even multiple times. Release the feature after bug fixes only when they are confident.</li>
+<li>There will be lesser code conflicts. When the task is complete, code changes are merged to the main branch before/after deployment. This also saves some valuable development time.</li>
+<li>The benefit of experimenting some things to a white-list of people in production. This can even lead to good feedback and positive changes.</li>
+</ol>
+
+
+<h2>Conclusion</h2>
+
+<p>You can deploy even small tasks to production with a proper use of feature flags. Think about adding value to the customer and deploying often. Test on production and when you are confident release it to everyone. Always remember Deployment != Release. Happy Feature flagging!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[How to do a minimum viable feature switch, includes a simple code example]]></title>
+    <link href="http://geshan.com.np/blog/2016/09/how-to-do-a-minimum-viable-feature-switch/"/>
+    <updated>2016-09-26T15:55:05+10:00</updated>
+    <id>http://geshan.com.np/blog/2016/09/how-to-do-a-minimum-viable-feature-switch</id>
+    <content type="html"><![CDATA[<p>Feature switch is a way to switch off or on a feature on a working software during runtime. We can use configuration or condition to achieve this. Feature switch is also known as feature flag, feature toggle and conditional feature. In this post I will reveal why to do <a href="https://en.wikipedia.org/wiki/Feature_toggle">feature switch</a> and how to do it with a simple if condition.</p>
+
+<p>{% img center /images/feature-switch/feature-switch.jpg &lsquo;Minimum viable feature switch, with code example&rsquo; &lsquo;Minimum viable feature switch, with code example&rsquo; %}</p>
+
+<!-- more -->
+
+
+<h2>Why do a feature switch/flag?</h2>
+
+<p>My first experience with feature flag was when we had to deploy <code>PayPal</code> as a payment method. We wanted to be sure that it works without issues on production. How we did it then was to have a <a href="https://launchdarkly.com/featureflags.html">feature flag</a> with a condition that the user email ends in <code>@namshi.com</code>.</p>
+
+<p>You can do feature switch for various reasons, some of them are:</p>
+
+<ol>
+<li>A very important feature needs to go into production and you need to test it in production. It can&rsquo;t be released to everyone unless everything is fine like a new payment method.</li>
+<li>You want to deploy a big feature in steps and until the last step is done the feature is not complete.</li>
+<li>You want your changes pushed to production and merged with the main branch. But the new changes are not public yet.</li>
+<li>You don&rsquo;t want to spend hours fighting merge conflicts. You are working on it for days and your code has not been merged to the main branch.</li>
+<li>You want to schedule a feature in future, you could have a feature switch based on date or time.</li>
+</ol>
+
+
+<h2>How to do feature switch?</h2>
+
+<p>There are many ways to do a feature switch for this post as an example I will add a new payment method to a checkout. For this task, I will use a simple <code>if</code> condition. Other ways of doing feature switch can be with a <code>cookie</code> or even some <code>settings in the database</code>.</p>
+
+<h3>Checkout Scenario</h3>
+
+<p>The simple checkout already has 2 payment methods <code>Cash</code> and <code>CreditCard</code>. We will add <code>PayPal</code> to it. The current proof of concept implementation only shows the order total. For, Cash it shows 5 more than credit card as it adds <code>Cash On Delivery (COD)</code> fees.</p>
+
+<p>The code is an addition to my previous post on <a href="http://geshan.com.np/blog/2015/07/getting-started-with-unit-testing-in-laravel/">unit testing with Laravel</a>. If you have not read it, I highly recommend you to do it. This example has <a href="https://github.com/geshan/laravel-unit-test-example/pull/4/files#diff-b3678da71dcc0bd1aa883f9f930c1ca5R34">tests</a> too.</p>
+
+<h3>Checkout Example with PayPal</h3>
+
+<p>Let us take the example of a simple feature switch with adding a new payment method Paypal. It should be accessible only if your email ends in <code>@gmail.com</code>. You should use <code>yourcompany.com</code> email but for an example, I will use <code>gmail.com</code>.</p>
+
+<h3>Example Code</h3>
+
+<p>There is a simple <code>Checkout</code> service that has a <code>calculateTotal</code> method. It calculates the total depending on the payment method and now email.</p>
+
+<script src="https://gist.github.com/geshan/3da1d181ae26f18a0ec365a063aa5d99.js"></script>
+
+
+<p>The feature flag/switch code is in line 21-23. It checks if the payment method is <code>PayPal</code> and email does not end with <code>@gmail.com</code>. The
+<code>endsWith</code> method in Laravel <a href="https://laravel.com/docs/5.3/helpers#method-ends-with">helpers</a> came handy to do it. So <code>PayPal</code> is only available if your email ends in <code>@gmail.com</code>. You can check this <a href="https://github.com/geshan/laravel-unit-test-example/pull/4/files">pull request</a> for full changes and related tests.</p>
+
+<h3>Turn it off</h3>
+
+<p>So let&rsquo;s assume, that you tested <code>PayPal</code> intensively on your production environment. When you are satisfied you just remove the condition and fix the related tests and you are done. Deploy again do a final round of testing and you have <code>PayPal</code> on production, all your customers can use it after that.</p>
+
+<h2>Conclusion</h2>
+
+<p>Stop making big tasks/tickets that take weeks to complete. Apply feature switch and deploy small things. Test them on production without anyone noticing.</p>
+
+<p>Always test critical things on production in a hidden way like a new payment method. Practice feature switch and get your code passed through your work flow to production.</p>
+
+<blockquote><p>Hope you will benefit from feature switch and suggest it to solve complex problems.</p></blockquote>
+]]></content>
+  </entry>
+  
+</feed>

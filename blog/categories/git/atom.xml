@@ -4,7 +4,7 @@
   <title><![CDATA[Category: git | Geshan's Blog]]></title>
   <link href="http://geshan.com.np/blog/categories/git/atom.xml" rel="self"/>
   <link href="http://geshan.com.np/"/>
-  <updated>2018-12-26T09:01:44+11:00</updated>
+  <updated>2018-12-26T18:47:05+11:00</updated>
   <id>http://geshan.com.np/</id>
   <author>
     <name><![CDATA[Geshan Manandhar]]></name>
@@ -25,7 +25,11 @@
 <!-- more -->
 
 
-<p>Now if you think how will I do this new project I don&rsquo;t even know language &lsquo;X&rsquo; or framework &lsquo;Y&rsquo; stop complaining. Maybe you are a new starter in tech or coding but you need to know how to learn new things. The best way to learn something new is by doing it. This post will focus on getting some common things right. It will help you get from I want to learn &lsquo;X&rsquo; to I have a project running in &lsquo;X&rsquo;, so follow on. If you are convinced about doing a project to learn something new, open source it. Github is the de facto service to host your open source projects. Then you can leverage lots of services for free. This post will be equally useful for coding new starters as well as experienced software engineers.</p>
+<p>Now if you think how will I do this new project I don&rsquo;t even know language &lsquo;X&rsquo; or framework &lsquo;Y&rsquo; stop complaining. Maybe you are a new starter in tech or coding but you need to know how to learn new things. The best way to learn something new is by doing it.</p>
+
+<blockquote><p>This post will focus on getting some common things right. It will help you get from I want to learn &lsquo;X&rsquo; to I have a project running in &lsquo;X&rsquo;, so follow on.</p></blockquote>
+
+<p>If you are convinced about doing a project to learn something new, open source it. Github is the de facto service to host your open source projects. Then you can leverage lots of services for free. This post will be equally useful for coding new starters as well as experienced software engineers.</p>
 
 <h2>TLDR;</h2>
 
@@ -35,30 +39,49 @@
 
 <h2>Don&rsquo;t just watch courses, read the docs and find solutions</h2>
 
-<p>Nowadays, there are a plethora of choices to learn new things. Still, video courses are one of the most popular media. You can learn something new on <a href="https://www.udemy.com">Udemy</a>, <a href="https://www.pluralsight.com/">Pluralsight</a> or even <a href="https://youtube.com">Youtube</a>. Until you learn by doing, watching the videos is only going to help to a certain level. It is better for you to go through the official documentation. For instance, reading the React JS docs is better than only going through a React JS course. You find out the creators&#8217; perspective. The reason behind creating another Javascript framework/library helping you find proper solutions.</p>
+<p>Nowadays, there are a plethora of choices to learn new things. Still, video courses are one of the most popular media. You can learn something new on <a href="https://www.udemy.com">Udemy</a>, <a href="https://www.pluralsight.com/">Pluralsight</a> or even <a href="https://youtube.com">Youtube</a>.</p>
+
+<blockquote><p>Until you learn by doing, watching the videos is only going to help to a certain level. It is better for you to go through the official documentation.</p></blockquote>
+
+<p>For instance, reading the React JS docs is better than only going through a React JS course. You find out the creators&#8217; perspective. The reason behind creating another Javascript framework/library helping you find proper solutions.</p>
 
 <h2>Learn Git to collaborate</h2>
 
-<p>&ldquo;No man is an island&rdquo;, especially in tech you generally don&rsquo;t work alone. You are part of a team. So even when learning something new try to find someone who you can collaborate with. Git is immensely <a href="https://trends.google.com/trends/explore?q=git,svn,mercurial,bazaar">popular</a> compared to any of its competition. It is beneficial when there is more than 1 person writing code for a project. You should learn git by doing, check the Github <a href="https://try.github.io/">tutorial</a>. I would highly recommend the learn by doing section. After you push it to Github anyone can potentially contribute to it.</p>
+<p>&ldquo;No man is an island&rdquo;, especially in tech you generally don&rsquo;t work alone. You are part of a team. So even when learning something new try to find someone who you can collaborate with.</p>
+
+<blockquote><p>Git is immensely <a href="https://trends.google.com/trends/explore?q=git,svn,mercurial,bazaar">popular</a> compared to any of its competition. It is beneficial when there is more than 1 person writing code for a project.</p></blockquote>
+
+<p>You should learn git by doing, check the Github <a href="https://try.github.io/">tutorial</a>. I would highly recommend the learn by doing section. After you push it to Github anyone can potentially contribute to it.</p>
 
 <h2>Implement docker, get over works on my machine syndrome</h2>
 
-<p>In 2018, if you want to make your application more accessible, use <a href="https://www.docker.com/">Docker</a>. This will also help a lot in increasing contribution for your open source project. Running your project locally with docker compose will be like executing 2 commands. Docker has many advantages. For a beginner, it is a way to make sure your app runs the same way on your machine, your friend&rsquo;s machine. It will also be the same on the server you deploy your app to. As long as it runs on Docker well, you can rest assured it will run without issues on any environment.</p>
+<p>In 2018, if you want to make your application more accessible, use <a href="https://www.docker.com/">Docker</a>. This will also help a lot in increasing contribution for your open source project. Running your project locally with docker compose will be like executing 2 commands.</p>
+
+<blockquote><p>Docker has many advantages. For a beginner, it is a way to make sure your app runs the same way on your machine, your friend&rsquo;s machine.</p></blockquote>
+
+<p>It will also be the same on the server you deploy your app to. As long as it runs on Docker well, you can rest assured it will run without issues on any environment.</p>
 
 <h2>Add code quality check</h2>
 
-<p>Just making it work should not be your priority. Writing quality should also be in your priority. Add code quality checks for the open source project you created for learning. Depending on the language/framework you could choose any service. I would highly recommend <a href="https://codeclimate.com/quality/">Code Climate</a>. Code Climate supports a wide array of languages from Javascript to PHP and from Java/Kotlin to Swift for mobile developers. With the new <a href="https://codeclimate.com/browser-extension/">browser plugin</a>, you get insights about your code in a Github pull request screen. You just connect it once to your Github repo and start seeing your code quality report. You can then better your code quality too. You can have a look at this <a href="https://codeclimate.com/github/geshan/currency-api/src/exchangeRates.js/source">example</a>.</p>
+<p>Just making it work should not be your priority. Writing quality should also be in your priority. Add code quality checks for the open source project you created for learning. Depending on the language/framework you could choose any service.</p>
+
+<blockquote><p>I would highly recommend <a href="https://codeclimate.com/quality/">Code Climate</a>. Code Climate supports a wide array of languages from Javascript to PHP and from Java/Kotlin to Swift for mobile developers.</p></blockquote>
+
+<p>With the new <a href="https://codeclimate.com/browser-extension/">browser plugin</a>, you get insights about your code in a Github pull request screen. You just connect it once to your Github repo and start seeing your code quality report. You can then better your code quality too. You can have a look at this <a href="https://codeclimate.com/github/geshan/currency-api/src/exchangeRates.js/source">example</a>.</p>
 
 <h2>Deploy your project</h2>
 
 <p>Now you are writing a new project to learn your favorite &lsquo;X&rsquo; or &lsquo;Y&rsquo;. You have written some parts of it, you are collaborating with Git and have the code open source on Github. You have Docker in place and code quality checks run on each push, great! But you can&rsquo;t show it to your friend who is living in a different city/country right? Wrong!</p>
 
-<p>You can use different services to deploy your web application. With a URL you can show it to your friend, a recruiter or anyone who knows the URL. You can deploy it for free to services like <a href="https://www.heroku.com">Heroku</a> or <a href="https://zeit.co/now">Zeit Now</a>.
-If you have Dockerized your open source app I would recommend Zeit Now. With the recent <a href="https://zeit.co/github">Github integration</a>, Zeit Now will give a new URL to each pull request. This makes testing a breeze. You can check an example on a demo <a href="https://github.com/geshan/currency-api/pull/9">currency converter API</a> app I wrote.</p>
+<p>You can use different services to deploy your web application. With a URL you can show it to your friend, a recruiter or anyone who knows the URL.</p>
+
+<blockquote><p>You can deploy it for free to services like <a href="https://www.heroku.com">Heroku</a> or <a href="https://zeit.co/now">Zeit Now</a>. If you have Dockerized your open source app I would recommend Zeit Now.</p></blockquote>
+
+<p>With the recent <a href="https://zeit.co/github">Github integration</a>, Zeit Now will give a new URL to each pull request. This makes testing a breeze. You can check an example on a demo <a href="https://github.com/geshan/currency-api/pull/9">currency converter API</a> app I wrote.</p>
 
 <h2>Conclusion</h2>
 
-<p>To conclude, learning by doing is the best way to learn a new thing. Your aim should be to not only make it work but do it following the best practices. That is where code quality comes into play. If you can add automated tests and continuous integration it will be icing on the cake for a starter. Wish you all the best for learning by doing!</p>
+<blockquote><p>To conclude, learning by doing is the best way to learn a new thing. Your aim should be to not only make it work but do it following the best practices. That is where code quality comes into play. If you can add automated tests and continuous integration it will be icing on the cake for a starter. Wish you all the best for learning by doing!</p></blockquote>
 ]]></content>
   </entry>
   
