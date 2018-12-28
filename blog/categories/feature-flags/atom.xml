@@ -4,7 +4,7 @@
   <title><![CDATA[Category: feature flags | Geshan's Blog]]></title>
   <link href="http://geshan.com.np/blog/categories/feature-flags/atom.xml" rel="self"/>
   <link href="http://geshan.com.np/"/>
-  <updated>2018-12-26T18:47:05+11:00</updated>
+  <updated>2018-12-28T22:35:38+11:00</updated>
   <id>http://geshan.com.np/</id>
   <author>
     <name><![CDATA[Geshan Manandhar]]></name>
@@ -20,7 +20,7 @@
     <id>http://geshan.com.np/blog/2018/10/deployment-is-not-release</id>
     <content type="html"><![CDATA[<p>Breaking down a big feature to epics and stories is always tricky. Then you have sub-stories making the process complicated. If you could deploy the finished task that delivers value to the business it would help. Enter feature flags, using this you can deploy your code to production behind a gate. Code and feature are on production but not fully released to everyone. This post is going to help you adjust your mental model for getting more benefits with feature flags.</p>
 
-<p>{% img center /images/deployment-not-release/flags.jpg &lsquo;Deployment is not Release, lets use feature flags&rsquo; &lsquo;Deployment is not Release, lets use feature flags&rsquo; %}
+<p><img class="center" src="/images/deployment-not-release/flags.jpg" title="&lsquo;Deployment is not Release, lets use feature flags&rsquo; &lsquo;Deployment is not Release, lets use feature flags&rsquo;" >
 [Image Source <a href="https://unsplash.com/photos/jCBzW_Q_UGI">Unspalsh</a>]</p>
 
 <!-- more -->
@@ -66,7 +66,7 @@
     <id>http://geshan.com.np/blog/2016/09/how-to-do-a-minimum-viable-feature-switch</id>
     <content type="html"><![CDATA[<p>Feature switch is a way to switch off or on a feature on a working software during runtime. We can use configuration or condition to achieve this. Feature switch is also known as feature flag, feature toggle and conditional feature. In this post I will reveal why to do <a href="https://en.wikipedia.org/wiki/Feature_toggle">feature switch</a> and how to do it with a simple if condition.</p>
 
-<p>{% img center /images/feature-switch/feature-switch.jpg &lsquo;Minimum viable feature switch, with code example&rsquo; &lsquo;Minimum viable feature switch, with code example&rsquo; %}</p>
+<p><img class="center" src="/images/feature-switch/feature-switch.jpg" title="&lsquo;Minimum viable feature switch, with code example&rsquo; &lsquo;Minimum viable feature switch, with code example&rsquo;" ></p>
 
 <!-- more -->
 

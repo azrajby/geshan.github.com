@@ -4,7 +4,7 @@
   <title><![CDATA[Category: database | Geshan's Blog]]></title>
   <link href="http://geshan.com.np/blog/categories/database/atom.xml" rel="self"/>
   <link href="http://geshan.com.np/"/>
-  <updated>2018-12-26T18:47:05+11:00</updated>
+  <updated>2018-12-28T22:35:38+11:00</updated>
   <id>http://geshan.com.np/</id>
   <author>
     <name><![CDATA[Geshan Manandhar]]></name>
@@ -26,7 +26,7 @@
 
 <p>This is quite prevalent in software engineers who work in web applications. This post aims to enlighten you about the powers of SQL you might know but generally don&rsquo;t use.</p>
 
-<p>{% img center /images/do-it-in-sql/tea-lights.jpg &lsquo;You can do it in SQL, stop writing extra code for that&rsquo; &lsquo;You can do it in SQL, stop writing extra code for that&rsquo; %}</p>
+<p><img class="center" src="/images/do-it-in-sql/tea-lights.jpg" title="&lsquo;You can do it in SQL, stop writing extra code for that&rsquo; &lsquo;You can do it in SQL, stop writing extra code for that&rsquo;" ></p>
 
 <!-- more -->
 
@@ -39,7 +39,7 @@
 
 <p>It will be easier to explain the superpowers of SQL putting it in action on an example. Below is a basic schema with 2 tables in MYSQL for a refunds microservice:</p>
 
-<p>{% img center /images/do-it-in-sql/refund-schema.png &lsquo;You can do it in SQL- refund schema&rsquo; &lsquo;You can do it in SQL - refund schema example&rsquo; %}</p>
+<p><img class="center" src="/images/do-it-in-sql/refund-schema.png" title="&lsquo;You can do it in SQL- refund schema&rsquo; &lsquo;You can do it in SQL - refund schema example&rsquo;" ></p>
 
 <p>There are 2 refunds and 7 related payments as example <a href="http://sqlfiddle.com/#!9/b242d/5">data</a>.</p>
 
@@ -68,7 +68,7 @@ FROM payment WHERE fk_item=2001;
 
 <p>With current data, it will give 3 rows like below:</p>
 
-<p>{% img center /images/do-it-in-sql/01result-without-group.png &lsquo;Result without grouping and aggregate function sum&rsquo; &lsquo;Result without grouping and aggregate function sum&rsquo; %}</p>
+<p><img class="center" src="/images/do-it-in-sql/01result-without-group.png" title="&lsquo;Result without grouping and aggregate function sum&rsquo; &lsquo;Result without grouping and aggregate function sum&rsquo;" ></p>
 
 <p>With these 3 rows, we would loop over them. If it is cash accumulate it to cashBalance variable, if not sum it up to creditBalace variable. Rather than that it would be a lot easier (probably faster) to do in SQL like:</p>
 
@@ -81,7 +81,7 @@ GROUP BY fk_item, is_cash;
 
 <p>Resulting in:</p>
 
-<p>{% img center /images/do-it-in-sql/02result-with-grouping.png &lsquo;Result with grouping and aggregate function sum&rsquo; &lsquo;Result with grouping and aggregate function sum&rsquo; %}</p>
+<p><img class="center" src="/images/do-it-in-sql/02result-with-grouping.png" title="&lsquo;Result with grouping and aggregate function sum&rsquo; &lsquo;Result with grouping and aggregate function sum&rsquo;" ></p>
 
 <p>The result is easy now if you need the total refund for the item just change the GROUP BY to be on fk_item and it&rsquo;s done. For 2 and 3 records it won&rsquo;t feel significant. If there were say 20 refunds for that item, the first solution with a loop is writing more code with no gain.  Like sum, other SQL functions can be used too. Simple math operations like <a href="https://www.w3schools.com/sql/func_mysql_sum.asp">sum</a>, multiply, <a href="https://www.w3schools.com/sql/func_mysql_avg.asp">average</a> etc can be easy with SQL. This means no more loops.</p>
 
@@ -96,7 +96,7 @@ WHERE fk_item = 2001;
 
 <p>This results in:</p>
 
-<p>{% img center /images/do-it-in-sql/03result-group-concat.png &lsquo;Result with group_concat&rsquo; &lsquo;Result with group_concat&rsquo; %}</p>
+<p><img class="center" src="/images/do-it-in-sql/03result-group-concat.png" title="&lsquo;Result with group_concat&rsquo; &lsquo;Result with group_concat&rsquo;" ></p>
 
 <p>Now we know that item 2001 has been refunded twice for 2 refunds. It will be easy to explode the refund Ids with <code>,</code> and proceed with any related operation.</p>
 
@@ -114,7 +114,7 @@ FROM refund;
 
 <p>Resulting in:</p>
 
-<p>{% img center /images/do-it-in-sql/04result-concat-ws.png &lsquo;Result with concat_ws&rsquo; &lsquo;Result with concat_ws&rsquo; %}</p>
+<p><img class="center" src="/images/do-it-in-sql/04result-concat-ws.png" title="&lsquo;Result with concat_ws&rsquo; &lsquo;Result with concat_ws&rsquo;" ></p>
 
 <p>If this needs to be shown on the credit note document, for example, no extra code is needed to join the values again. SQL makes it one step easier again.</p>
 
@@ -139,7 +139,7 @@ ORDER BY priority DESC
 
 <p>The results are below:</p>
 
-<p>{% img center /images/do-it-in-sql/05result-priority-formula.png &lsquo;Result with sorting based on custom formula&rsquo; &lsquo;Result with sorting based on custom formula&rsquo; %}</p>
+<p><img class="center" src="/images/do-it-in-sql/05result-priority-formula.png" title="&lsquo;Result with sorting based on custom formula&rsquo; &lsquo;Result with sorting based on custom formula&rsquo;" ></p>
 
 <p>With proper use of IF in SQL sorting by a custom priority formula is a lot easier than trying to do it with loops in code. Notice that even smaller amounts like 7.5 (750 cents) and 9.0 (900 cents) came to highest priority as these refund payment amounts were associated with premium customers.</p>
 
@@ -162,7 +162,7 @@ ORDER BY priority DESC
     <id>http://geshan.com.np/blog/2018/05/how-to-do-a-zero-downtime-database-db-migration-schema-change-with-a-practical-example</id>
     <content type="html"><![CDATA[<p>Database migration on a production database is never simple. Depending on the volume of requests some teams schedule database migration to off hours. You can run your alter statements with zero or minimal downtime following the steps mentioned below with a practical example.</p>
 
-<p>{% img center /images/db-migration/db-migration.png &lsquo;How to do a zero downtime database&rsquo; &lsquo;How to do a zero downtime database&rsquo; %}</p>
+<p><img class="center" src="/images/db-migration/db-migration.png" title="&lsquo;How to do a zero downtime database&rsquo; &lsquo;How to do a zero downtime database&rsquo;" ></p>
 
 <!-- more -->
 
@@ -171,13 +171,13 @@ ORDER BY priority DESC
 
 <p>As an example for this post, let&rsquo;s assume you work for an E-commerce company which has both recurring and new customers. You have partners who publicize a discount code valid for a given date range and get a percent of the order&rsquo;s total tracked by their discount code. Below is the schema for the partner and coupon code. Below is the initial schema before any change:</p>
 
-<p>{% img center /images/db-migration/schema-01.png &lsquo;Initial DB schema&rsquo; &lsquo;Initial DB Schema&rsquo; %}</p>
+<p><img class="center" src="/images/db-migration/schema-01.png" title="&lsquo;Initial DB schema&rsquo; &lsquo;Initial DB Schema&rsquo;" ></p>
 
 <p>Now the new requirement is to track different commission percent for the new and recurring customer. New and recurring customers are evaluated by a different system/microservice and it is also responsible for commission calculation based on order total which is out of the scope of this focused example.</p>
 
 <p>To do commission tracking by customer type we would decide to add 2 new columns commission_percent_new_customer, commission_percent_recurring_customer, the difficult question is how to roll it out without downtime.</p>
 
-<p>{% img center /images/db-migration/schema-02.png &lsquo;Updated schema with 2 new columns&rsquo; &lsquo;Updated schema with 2 new columns&rsquo; %}</p>
+<p><img class="center" src="/images/db-migration/schema-02.png" title="&lsquo;Updated schema with 2 new columns&rsquo; &lsquo;Updated schema with 2 new columns&rsquo;" ></p>
 
 <h3>Migration script (DB schema alter statement)</h3>
 
@@ -217,7 +217,7 @@ ADD `commission_percent_recurring_customer` DECIMAL NULL AFTER `commission_perce
 
 <h3>Final schema after dropping commission_percent column</h3>
 
-<p>{% img center /images/db-migration/schema-03.png &lsquo;Updated schema with 1 column less&rsquo; &lsquo;Updated schema with 1 column less&rsquo; %}</p>
+<p><img class="center" src="/images/db-migration/schema-03.png" title="&lsquo;Updated schema with 1 column less&rsquo; &lsquo;Updated schema with 1 column less&rsquo;" ></p>
 
 <h2>Things to consider</h2>
 
